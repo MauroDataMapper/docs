@@ -7,7 +7,7 @@ date: 19th Aug 2019
 ---
 
 The Metadata Catalogue API conforms to standard [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) principles.  The API has 
-resource-oriented URLs, accepts XML and JSON bodyu content (or form-encoded parameters where applicable), and can return data in XML or JSON 
+resource-oriented URLs, accepts XML and JSON body content (or form-encoded parameters where applicable), and can return data in XML or JSON 
 formats. Each call uses standard HTTP response codes, authentication, and verbs.
 
 ## Requests
