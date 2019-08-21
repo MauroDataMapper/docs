@@ -4,13 +4,36 @@ parameter
 to the query.  The response will always return the total number of objects, along with a list of 'items' corresponding to the specified 'page' of 
 results.
 
+## Parameter format
+
+To manually specify the `offset` and `max` values, these should be passed as form paramters - for example the request:
+
+!!! abstract "API Endpoint"
+    ```http
+    GET /api/folders?offset=10&max=5
+    ```
+
+would return folders 10-14 inclusive in the overall list.
+
+To specify that all results should be returned, the boolean parameter `all` can be passed - for example the request:
+
+!!! abstract "API Endpoint"
+    ```http
+    GET /api/folders?all=true
+    ```
+
+will return the complete list of visible folders.
+
+The `all` parameter is an alternative, and should not be specified at the same time as `offset` and `max`.
+
+
 ##Response format 
 
 For example, consider the endpoint that lists all folders in the system:
 
 !!! abstract "API Endpoint"
     ```http
-    POST /api/folders
+    GET /api/folders
     ```
 The response body would look something like:
 
@@ -26,30 +49,8 @@ The response body would look something like:
         ]
     }
     ```
-where `n` is the total number of folders available.  
+where `n` is the total number of folders available.  The number of `items` returned will be at most `max` items.
 
-
-## Parameter format
-
-To manually specify the `offset` and `max` values, these should be passed as form paramters - for example the request:
-
-!!! abstract "API Endpoint"
-    ```http
-    POST /api/folders?offset=10&max=5
-    ```
-
-would return folders 10-14 inclusive in the overall list.
-
-To specify that all results should be returned, the boolean parameter `all` can be passed - for example the request:
-
-!!! abstract "API Endpoint"
-    ```http
-    POST /api/folders?all=true
-    ```
-
-will return the complete list of visible folders.
-
-The `all` parameter is an alternative, and should not be specified at the same time as `offset` and `max`.
 
 ## Default settings 
 
