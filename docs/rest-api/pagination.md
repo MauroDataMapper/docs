@@ -8,6 +8,13 @@ results.
 
 To manually specify the `offset` and `max` values, these should be passed as form paramters - for example the request:
 
+<endpoint class="get">/api/folders?offset=10&max=5</endpoint>
+<endpoint class="post">/api/folders?offset=10&max=5</endpoint>
+<endpoint class="put">/api/folders?offset=10&max=5</endpoint>
+<endpoint class="delete">/api/folders?offset=10&max=5</endpoint>
+    
+
+
 !!! abstract "API Endpoint"
     ```http
     GET /api/folders?offset=10&max=5

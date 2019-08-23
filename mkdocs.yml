@@ -6,6 +6,8 @@ theme:
         primary: 'blue grey'
         accent: 'deep orange'
     logo: 'images/logo-inv.png'
+extra_css:
+    - 'stylesheets/extra.css'
 markdown_extensions:
     -   admonition
     -   codehilite:
