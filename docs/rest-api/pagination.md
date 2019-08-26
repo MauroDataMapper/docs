@@ -6,28 +6,19 @@ results.
 
 ## Parameter format
 
+In these examples we consider the endpoint endpoint for listing all folders:
+
+<endpoint class="get">/api/folders</endpoint>
+
 To manually specify the `offset` and `max` values, these should be passed as form paramters - for example the request:
-
-<endpoint class="get">/api/folders?offset=10&max=5</endpoint>
-<endpoint class="post">/api/folders?offset=10&max=5</endpoint>
-<endpoint class="put">/api/folders?offset=10&max=5</endpoint>
-<endpoint class="delete">/api/folders?offset=10&max=5</endpoint>
     
-
-
-!!! abstract "API Endpoint"
-    ```http
-    GET /api/folders?offset=10&max=5
-    ```
+<endpoint class="get">/api/folders?offset=10&max=5</endpoint>
 
 would return folders 10-14 inclusive in the overall list.
 
 To specify that all results should be returned, the boolean parameter `all` can be passed - for example the request:
 
-!!! abstract "API Endpoint"
-    ```http
-    GET /api/folders?all=true
-    ```
+<endpoint class="get">/api/folders?all=true</endpoint>
 
 will return the complete list of visible folders.
 
@@ -36,12 +27,8 @@ The `all` parameter is an alternative, and should not be specified at the same t
 
 ##Response format 
 
-For example, consider the endpoint that lists all folders in the system:
+Again consider the endpoint endpoint for listing all folders described above.
 
-!!! abstract "API Endpoint"
-    ```http
-    GET /api/folders
-    ```
 The response body would look something like:
 
 !!! abstract "Response body"

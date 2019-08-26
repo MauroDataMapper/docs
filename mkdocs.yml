@@ -70,3 +70,4 @@ nav:
                     -   Terminology: 'rest-api/resources/terminology.md'
                     -   User: 'rest-api/resources/user.md'
                     -   User group: 'rest-api/resources/user-group.md'
+            - Admin functions: 'rest-api/admin.md'

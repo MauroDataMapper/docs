@@ -10,10 +10,7 @@ manually terminated through a call to the `logout` resource.   At any point the 
 
 To login to the server, `POST` to the following API endpoint 
 
-!!! abstract "API Endpoint"
-    ```http
-    POST /api/authentication/login
-    ```
+<endpoint class="post">/api/authentication/login</endpoint>
 
 The request body should contain the username, and the password.  The username is not case-sensitive:
 
@@ -66,10 +63,7 @@ Further requests without the session cookie will be treated as anonymous request
 
 In order to validate whether a session is currently active, or has expired (by logging out, or timed-out due to inactivity), 
 
-!!! abstract "API Endpoint"
-    ```http 
-    GET /api/authentication/isValidSession
-    ```
+<endpoint class="get">/api/authentication/isValidSession</endpoint>   
 
 No request body or parameters are required for this request.  The response will be simply `true` or `false` depending on the validity of the 
 session whose `JSESSIONID` is passed in as part of the request headers
@@ -84,10 +78,7 @@ session whose `JSESSIONID` is passed in as part of the request headers
 Every session should ideally be closed manually, rather than leaving it to expire through inactivity.  In order to close a user session, you should
  call the logout endpoint, again including the `JSESSIONID` cookie as part of the request headers   
 
-!!! abstract "API Endpoint"
-    ```http 
-    POST /api/authentication/logout
-    ```
+<endpoint class="get">/api/authentication/logout</endpoint>
 
 The response should include the status `200: OK`, and the successful response is simply the following text:
 
