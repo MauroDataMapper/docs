@@ -44,7 +44,6 @@ nav:
             -   Errors: 'rest-api/errors.md'
             -   Pagination: 'rest-api/pagination.md'
             -   Core resources:
-                    -   Annotation: 'rest-api/resources/annotation.md'
                     -   Catalogue item: 'rest-api/resources/catalogue-item.md'
                     -   Classifier: 'rest-api/resources/classifier.md'
                     -   Codeset: 'rest-api/resources/codeset.md'
@@ -56,7 +55,6 @@ nav:
                     -   Data type: 'rest-api/resources/data-type.md'
                     -   Email: 'rest-api/resources/email.md'
                     -   Enumeration value: 'rest-api/resources/enumeration-value.md'
-                    -   File: 'rest-api/resources/file.md'
                     -   Folder: 'rest-api/resources/folder.md'
                     -   Importer: 'rest-api/resources/importer.md'
                     -   Exporter: 'rest-api/resources/exporter.md'
