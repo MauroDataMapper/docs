@@ -1,0 +1,16 @@
+<endpoint class="post">/api/folders/**{folderId}**/folders</endpoint>
+<endpoint class="get">/api/folders/**{folderId}**/folders</endpoint>
+<endpoint class="delete">/api/folders/**{folderId}**/readByAuthenticated</endpoint>
+<endpoint class="put">/api/folders/**{folderId}**/readByAuthenticated</endpoint>
+<endpoint class="delete">/api/folders/**{folderId}**/readByEveryone</endpoint>
+<endpoint class="put">/api/folders/**{folderId}**/readByEveryone</endpoint>
+<endpoint class="delete">/api/folders/**{folderId}**/folders/**{id}**</endpoint>
+<endpoint class="put">/api/folders/**{folderId}**/folders/**{id}**</endpoint>
+<endpoint class="get">/api/folders/**{folderId}**/folders/**{id}**</endpoint>
+<endpoint class="post">/api/folders</endpoint>
+<endpoint class="get">/api/folders</endpoint>
+<endpoint class="delete">/api/folders/**{id}**</endpoint>
+<endpoint class="put">/api/folders/**{id}**</endpoint>
+<endpoint class="get">/api/folders/**{id}**</endpoint>
+<endpoint class="put">/api/folders/**{folderId}**/**{type}**/**{share}**/**{shareId}**?</endpoint>
+<endpoint class="delete">/api/folders/**{folderId}**/**{type}**/**{share}**/**{shareId}**</endpoint>

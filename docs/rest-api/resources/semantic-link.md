@@ -1,0 +1,10 @@
+<endpoint class="post">/api/terminologies/**{terminologyId}**/terms/**{termId}**/semanticLinks</endpoint>
+<endpoint class="get">/api/terminologies/**{terminologyId}**/terms/**{termId}**/semanticLinks</endpoint>
+<endpoint class="delete">/api/terminologies/**{terminologyId}**/terms/**{termId}**/semanticLinks/**{id}**</endpoint>
+<endpoint class="put">/api/terminologies/**{terminologyId}**/terms/**{termId}**/semanticLinks/**{id}**</endpoint>
+<endpoint class="get">/api/terminologies/**{terminologyId}**/terms/**{termId}**/semanticLinks/**{id}**</endpoint>
+<endpoint class="post">/api/catalogueItems/**{catalogueItemId}**/semanticLinks</endpoint>
+<endpoint class="get">/api/catalogueItems/**{catalogueItemId}**/semanticLinks</endpoint>
+<endpoint class="delete">/api/catalogueItems/**{catalogueItemId}**/semanticLinks/**{id}**</endpoint>
+<endpoint class="put">/api/catalogueItems/**{catalogueItemId}**/semanticLinks/**{id}**</endpoint>
+<endpoint class="get">/api/catalogueItems/**{catalogueItemId}**/semanticLinks/**{id}**</endpoint>

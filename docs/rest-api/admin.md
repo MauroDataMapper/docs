@@ -64,6 +64,5 @@ There are a number of system-wide properties that can be updated by administrato
  
  
 
-|   GET    |  | Action: status  |
- |   POST   | /api/admin/modules| Action: modulesWithCredentials                  |
- |   GET    | /api/admin/modules| Action: modules |
+## Emails
+<endpoint class="get">/api/admin/emails</endpoint>

@@ -1,0 +1,14 @@
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/content</endpoint>
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataClasses/**{otherDataModelId}**/**{otherDataClassId}**</endpoint>
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/allDataClasses</endpoint>
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{id}**</endpoint>
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{otherDataModelId}**/**{otherDataClassId}**</endpoint>

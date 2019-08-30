@@ -26,9 +26,6 @@
 <endpoint class="post">/api/catalogueUsers/search</endpoint>
  
  
- 
-
-
 
 ## Profile images
 

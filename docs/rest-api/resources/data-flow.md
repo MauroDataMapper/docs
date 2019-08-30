@@ -1,0 +1,10 @@
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataFlows/import/**{importerNamespace}**/**{importerName}**/**{importerVersion}**</endpoint>
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataFlows/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataFlows/**{dataFlowId}**/dataClassFlows</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/dataFlows/**{dataFlowId}**/diagramLayout</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataFlows/**{dataFlowId}**/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataFlows</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataFlows</endpoint>
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/dataFlows/**{id}**</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/dataFlows/**{id}**</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataFlows/**{id}**</endpoint>
