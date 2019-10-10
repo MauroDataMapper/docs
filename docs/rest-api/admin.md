@@ -36,7 +36,7 @@ The `post` version of the endpoint can be called in order to pass authentication
 
 ### Plugins
 
-To find out which plugins are currently installed, use one of the following endpoint
+To find out which plugins are currently installed, use one of the following endpoints:
 
 <endpoint class="get">/api/admin/plugins/exporters</endpoint>
 <endpoint class="get">/api/admin/plugins/emailers</endpoint>
@@ -65,4 +65,6 @@ There are a number of system-wide properties that can be updated by administrato
  
 
 ## Emails
+
+Retrieve the list of emails (recipient, message, date/time) sent by the system.
 <endpoint class="get">/api/admin/emails</endpoint>

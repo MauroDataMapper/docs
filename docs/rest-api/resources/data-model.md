@@ -10,22 +10,24 @@
 <endpoint class="get">/api/admin/dataModels/modelSuperseded</endpoint>
 <endpoint class="get">/api/admin/dataModels/documentSuperseded</endpoint>
 
+## Get information about a particular data model
+
+<endpoint class="get">/api/dataModels/types</endpoint>
 
 ## Create data model
+
 
 ## Update data model
 
 ## Delete data model
  
-<endpoint class="get">/api/admin/dataModels/deleted</endpoint>
-<endpoint class="get">/api/admin/dataModels/modelSuperseded</endpoint>
-<endpoint class="get">/api/admin/dataModels/documentSuperseded</endpoint>
-<endpoint class="get">/api/dataModels/types</endpoint>
+## Import / export a data model
+
 <endpoint class="post">/api/dataModels/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
 <endpoint class="post">/api/dataModels/import/**{importerNamespace}**/**{importerName}**/**{importerVersion}**</endpoint>
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/dataClasses/clean</endpoint>
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/dataTypes/clean</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataElements/**{dataElementId}**/suggestLinks/**{otherDataModelId}**</endpoint>
+
+
+
 <endpoint class="get">/api/folders/**{folderId}**/dataModels</endpoint>
 <endpoint class="get">/api/dataModels/**{dataModelId}**/hierarchy</endpoint>
 <endpoint class="put">/api/dataModels/**{dataModelId}**/newVersion</endpoint>
@@ -48,3 +50,4 @@
 <endpoint class="get">/api/dataModels/**{id}**</endpoint>
 <endpoint class="put">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**?</endpoint>
 <endpoint class="delete">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**</endpoint>
+
