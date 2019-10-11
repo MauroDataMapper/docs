@@ -56,7 +56,6 @@ nav:
                     -   Enumeration value: 'rest-api/resources/enumeration-value.md'
                     -   Folder: 'rest-api/resources/folder.md'
                     -   Plugin: 'rest-api/resources/plugin.md'
-                    -   Reference file: 'rest-api/resources/folder.md'
                     -   Semantic link: 'rest-api/resources/semantic-link.md'
                     -   Term: 'rest-api/resources/term.md'
                     -   Term relationship: 'rest-api/resources/term-relationship.md'

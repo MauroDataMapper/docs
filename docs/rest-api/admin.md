@@ -62,7 +62,15 @@ There are a number of system-wide properties that can be updated by administrato
 
 <endpoint class="post">/api/admin/editProperties</endpoint>
  
- 
+## DataModels
+
+The following endpoints provide paginated lists of datamodels (for cleaning / monitoring processes).  They list those models which have been 
+deleted, superseded by new model, and superseded by new documentation, respectively:
+
+<endpoint class="get">/api/admin/dataModels/deleted</endpoint>
+<endpoint class="get">/api/admin/dataModels/modelSuperseded</endpoint>
+<endpoint class="get">/api/admin/dataModels/documentSuperseded</endpoint>
+
 
 ## Emails
 
