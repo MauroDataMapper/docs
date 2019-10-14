@@ -1,4 +1,178 @@
+A _Catalogue Item_ in the catalogue is an abstract class containing properties that are common to most objects in the catalogue - for example 
+DataModels, DataClasses, DataElements, DataTypes, EnumerationValues, Terminologies, etc.  These properties include _metadata (properties)_, _summary 
+metadata_, _permissions_, _annotations (comments)_ and so on.  In some cases the url for each endpoint uses the word 'facet'; in others the data 
+type (DataModel, DataClass, etc) are used.  This page lists all the endpoints and describes the structure of each property. 
+
+
+
+## Metadata
+
+The _metadata_, or _properties_, of a Catalogue Item are extensible key/value pairs to store any further information about an object - including 
+technical properies, or field conforming to an external model.  A single item of metadata is structured as follows:
+
+```json tab="JSON"
+{
+    "id": "c9a36d30-2c6a-4dd0-a792-a337a2eca9c8",
+    "namespace": "ox.softeng.metadatacatalogue.dataloaders.hdf",
+    "key": "Volumes",
+    "value": "Varies annually: in 2013/14, 18.2m finished consultant episodes (FCEs) and 15.5m Finished Admission Episodes (FAEs)",
+    "lastUpdated": "2019-10-03T09:15:12.082Z"
+}
+```
+
+The fields are as follows:
+
+- **id** (UUID): The unique identifier of this property
+- **namespace** (String): a namespace used to group particular properties - and can be used to filter properties for particular uses
+- **key** (String): the title or label of this property.  The combination of **namespace** and **key** should be unique for this object.
+- **value** (String): the value that this property holds.  This field may take HTML or MarkDown syntax, and may include links to other objects in 
+the catalogue.
+- **lastUpdated** (DateTime): The date/time when this Metadata property was last modified
+
+The endpoints for using metadata properties are listed below.
+
+To retrieve all the properties for a particular object, use the following endpoint.  The metadata properties are returned in a [paginated list](../pagination.md) 
+
+<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata</endpoint>
+
+To get a specific property (whose **id** field is known), use the following endpoint:
+
+<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+
+To add a new property to an object you have write-access to, post a structure similar to the one displayed above (ignoring **id** and 
+**lastUpdated** fields, which will be automatically set to the following endpoint:
+
+<endpoint class="post">/api/facets/**{facetOwnerId}**/metadata</endpoint>
+
+To edit an existing property (whose **id** field is known), use the following endpoint:
+
+<endpoint class="put">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+
+To delete an existing property (whose **id** field is known), use the following endpoint:
+
+<endpoint class="delete">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+
+The following endpoint returns all known namespaces for a particular object (given by the **id** field).  To find all namespaces across the whole 
+catalogue, the final component of the URL can be left off.
+
+<endpoint class="get">/api/metadata/namespaces/**{id}**?</endpoint>
+
+
+
+## Permissions
+
+Logged in users may query to discover who is able to read or write a particular object (that they themselves have read-access to).  The structure 
+of a response is as follows:
+
+```json tab="JSON"
+{
+    "readableByEveryone": false,
+    "readableByAuthenticated": true,
+    "readableByGroups": [],
+    "writeableByGroups": [
+        {
+            "id": "cb1b7f4e-6955-41ba-8f91-2ca92b97c189",
+            "label": "Test Group",
+            "createdBy": {
+                "id": "dc7a7c25-5622-4cb0-869f-6d0e688b490f",
+                "emailAddress": "joebloggs@test.com",
+                "firstName": "Joe",
+                "lastName": "Bloggs",
+                "userRole": "EDITOR",
+                "disabled": false
+            }
+        },
+    ],
+    "readableByUsers": [
+        {
+            "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
+            "emailAddress": "joebloggs@test.com",
+            "firstName": "Joe",
+            "lastName": "Bloggs",
+            "userRole": "EDITOR",
+            "disabled": false
+        }
+    ],
+    "writeableByUsers": [
+        {
+            "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
+            "emailAddress": "joebloggs@test.com",
+            "firstName": "Joe",
+            "lastName": "Bloggs",
+            "userRole": "EDITOR",
+            "disabled": false
+        }
+    ]
+}
+```
+
+The fields are as follows:
+
+- **readableByEveryone** (Boolean): whether the object in question is publicly available - i.e. can be read by any un-authenticated user of the 
+system
+- **readableByAuthenticated** (Boolean): whether the object in question can be read by any authenticated (logged-in) user of the system
+- **readableByGroups** (Set(Group)): the set of groups who have permission to read a particular object.  The group has a label, an identifier, and 
+the details of the user responsible for creating that group
+- **writeableByGroups** (Set(Group)): the set of groups who have permission to edit a particular object.  Note that this set of groups is always a 
+subset of the groups listed in **readableByGroups**
+- **readableByUsers** (Set(User)): the set of users who have permission to read a particular object.  The user has an identifier, first name, last 
+name, email address and flag indicating whether their access is currently valid or disabled
+- **writeableByGroups** (Set(Group)): the set of users who have permission to edit a particular object.  Note that this set of users is always a 
+subset of the users listed in **readableByUsers**
+
+!!! Note
+    Note that read/write permissions are propagated through folders and sub-folders, and the list of permissions given is the inferred list.  So 
+    changes to that list may not always have an affect if they are contradicted by another assertion further up the tree.
+
+
+The endpoint for getting the permissions each of DataModel, Terminology, Folder, CodeSet and Classifier are listed below.  The details for updating
+ permissions are listed on their respective pages. 
+
+<endpoint class="get">/api/dataModels/**{dataModelId}**/permissions</endpoint>
+<endpoint class="get">/api/terminologies/**{terminologyId}**/permissions</endpoint>
+<endpoint class="get">/api/folders/**{folderId}**/permissions</endpoint>
+<endpoint class="get">/api/codeSets/**{codeSetId}**/permissions</endpoint>
+<endpoint class="get">/api/classifiers/**{classifierId}**/permissions</endpoint>
+
+
 ##Annotations
+
+Annotations, or comments, can be attached to any item in the catalogue.  The structure is as follows:
+
+```json tab="JSON"
+{
+    "count": 2,
+    "items": [
+        {
+            "id": "da3d6229-b152-4cbb-8667-eede523c7eb1",
+            "description": "DataModel finalised by Ollie Freeman on 2018-09-28T20:21:35.995Z",
+            "createdBy": {
+                "id": "5b96991a-d350-4470-958a-29bfac557ed0",
+                "emailAddress": "oliver.freeman@ndm.ox.ac.uk",
+                "firstName": "Ollie",
+                "lastName": "Freeman",
+                "userRole": "ADMINISTRATOR",
+                "disabled": false
+            },
+            "lastUpdated": "2018-09-28T20:21:37.655Z",
+            "label": "Finalised Model"
+        },
+        {
+            "id": "670e7c31-00fd-425f-903f-6d024845e63e",
+            "createdBy": {
+                "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
+                "emailAddress": "ollie.freeman@gmail.com",
+                "firstName": "Oliver",
+                "lastName": "Freeman",
+                "userRole": "EDITOR",
+                "disabled": false
+            },
+            "lastUpdated": "2018-07-17T15:51:45.643Z",
+            "label": "Broken if trying to export to psd"
+        }
+    ]
+}
+```
 
 ### Listing annotations
 
@@ -38,22 +212,7 @@
 <endpoint class="get">/api/classifiers/**{classifierId}**/edits</endpoint>
 <endpoint class="get">/api/userGroups/**{userGroupId}**/edits</endpoint>
 
-## Metadata
 
-<endpoint class="get">/api/metadata/namespaces/**{id}**?</endpoint>
-<endpoint class="post">/api/facets/**{facetOwnerId}**/metadata</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata</endpoint>
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
-<endpoint class="put">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
-
-## Properties
-
-<endpoint class="get">/api/terminologies/**{terminologyId}**/permissions</endpoint>
-<endpoint class="get">/api/folders/**{folderId}**/permissions</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/permissions</endpoint>
-<endpoint class="get">/api/codeSets/**{codeSetId}**/permissions</endpoint>
-<endpoint class="get">/api/classifiers/**{classifierId}**/permissions</endpoint>
 
 ## Reference files
 
