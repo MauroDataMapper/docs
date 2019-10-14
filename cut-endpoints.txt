@@ -1,3 +1,6 @@
 <endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/dataElements/**{dataElementId}**/suggestLinks/**{otherDataModelId}**</endpoint>
 <endpoint class="delete">/api/dataModels/**{dataModelId}**/dataClasses/clean</endpoint>
 <endpoint class="delete">/api/dataModels/**{dataModelId}**/dataTypes/clean</endpoint>
+
+<endpoint class="get">/api/dataModels/**{dataModelId}**/suggestLinks/**{otherDataModelId}**</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/diff/**{otherDataModelId}**</endpoint>

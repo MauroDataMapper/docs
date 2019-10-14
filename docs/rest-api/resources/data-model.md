@@ -1,4 +1,4 @@
-## Data Model object description
+## DataModel object description
 
 In its simplest form, a DataModel can be represented as follows:
 
@@ -71,48 +71,116 @@ This endpoint provides the default information about a DataModel, as per the JSO
 
 <endpoint class="get">/api/dataModels/**{id}**</endpoint>
 
-The 'hierarchy' endpoint provides 
+The 'hierarchy' endpoint provides a structured representation of the entire datamodel - child DataClasses, sub-DataClasses, and their child
+ DataElements.   
+
+!!! Warning 
+    This call can take a long time for large data models
 
 <endpoint class="get">/api/dataModels/**{dataModelId}**/hierarchy</endpoint>
+
+The 'types' endpoint lists all the datatypes for a given datamodel.  This returns primitive, reference, enumeration and terminology types owned by
+ the data model, whether used or not.
 
 <endpoint class="get">/api/dataModels/types</endpoint>
 
 ## Create data model
 
+To create a new data model from scratch, use the following _post_ endpoint.  Within the body of this call, you should include a folder identifier.
+
+<endpoint class="post">/api/dataModels</endpoint>
+
+There are two types of versioning in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
+
 <endpoint class="put">/api/dataModels/**{dataModelId}**/newVersion</endpoint>
+
+The name must be different to the original model.
+
+To create a new 'documentation version', use the following endpoint:
+
 <endpoint class="put">/api/dataModels/**{dataModelId}**/newDocumentationVersion</endpoint>
+
+By default, this will supersede the original data model.
 
 
 ## Update data model
 
+To edit the primitive properties of a data model, use the following endpoint, with a body similar to the JSON described at the top of this page:
 
-### 
+<endpoint class="put">/api/dataModels/**{id}**</endpoint>
+
+To move a data model from one folder to another, call the following, using the id fields for the data model, and the new folder:
+
+<endpoint class="put">/api/folders/**{folderId}**/dataModels/**{dataModelId}**</endpoint>
+
+Alternatively, you can call this equivalent endpoint:
+
+<endpoint class="put">/api/dataModels/**{dataModelId}**/folder/**{folderId}**</endpoint>
+
+
+
+To move a data model from a draft state to 'finalised', use the following endpoint:
+
 <endpoint class="put">/api/dataModels/**{dataModelId}**/finalise</endpoint>
+
+### Sharing:
+
+To allow a user or user group to view or edit a model, use the following endpoint.  Here, the **type** parameter should be one of 'readable' or
+ 'writeable'; the **share** parameter should be one of either 'user' or 'group', and the **shareId** parameter should be the identifier of either
+  the user or group in question.
+     
+<endpoint class="put">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**?</endpoint>
+
+Similarly, to remove the user/group, use the following _delete_ endpoint:
+
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**</endpoint>
+
+
+To allow a model to be read by any authenticated user of the system, use the following endpoint:
+
 <endpoint class="delete">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
+
+... and to remove this flag, use the following:
+
 <endpoint class="put">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
+
+Similarly, to allow the model to be publicly readable - ie. readable by any unauthenticated user of the system, 
+use the following endpoint: 
+
 <endpoint class="delete">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
+
+... and the following to remove this flag:
+
 <endpoint class="put">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
 
 
 ## Delete data model
+
+To delete a data model, use the following endpoint.  The **permanent** parameter is a boolean value that controls whether a 'hard' or 'soft' delete
+ is used if the user is an administrator.
+ 
+<endpoint class="delete">/api/dataModels/**{id}**</endpoint>
+
  
 ## Import / export a data model
 
+To export a data model using a particular export plugin, you will need to know the namespace, the name, and the version of the plugin.  The
+ following endpoint can be used to export multiple data models: 
+
 <endpoint class="post">/api/dataModels/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
+
+To export a single model, you can use the following endpoint with the id of the data model specified:
+
+<endpoint class="get">/api/dataModels/**{dataModelId}**/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
+
+
+Similarly, to import one or more data models, the namespace, name and version of the import plugin must be known.  The body of this method should
+ be the parameters for the import, including any files that are required.
+
 <endpoint class="post">/api/dataModels/import/**{importerNamespace}**/**{importerName}**/**{importerVersion}**</endpoint>
 
 
 
-<endpoint class="put">/api/folders/**{folderId}**/dataModels/**{dataModelId}**</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/suggestLinks/**{otherDataModelId}**</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/diff/**{otherDataModelId}**</endpoint>
-<endpoint class="put">/api/dataModels/**{dataModelId}**/folder/**{folderId}**</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/export/**{exporterNamespace}**/**{exporterName}**/**{exporterVersion}**</endpoint>
-<endpoint class="post">/api/dataModels</endpoint>
-<endpoint class="get">/api/dataModels</endpoint>
-<endpoint class="delete">/api/dataModels</endpoint>
-<endpoint class="delete">/api/dataModels/**{id}**</endpoint>
-<endpoint class="put">/api/dataModels/**{id}**</endpoint>
-<endpoint class="put">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**?</endpoint>
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**</endpoint>
+
+
 
