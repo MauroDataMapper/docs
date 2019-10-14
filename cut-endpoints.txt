@@ -4,3 +4,10 @@
 
 <endpoint class="get">/api/dataModels/**{dataModelId}**/suggestLinks/**{otherDataModelId}**</endpoint>
 <endpoint class="get">/api/dataModels/**{dataModelId}**/diff/**{otherDataModelId}**</endpoint>
+
+
+<endpoint class="get">/api/catalogueItems/search</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/search</endpoint>
+<endpoint class="get">/api/classifiers/**{classifierId}**/catalogueItems</endpoint>
+<endpoint class="get">/api/folders/**{folderId}**/search</endpoint>
+<endpoint class="get">/api/dataModels/**{dataModelId}**/search</endpoint>

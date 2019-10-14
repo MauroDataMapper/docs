@@ -2,7 +2,7 @@ endpoint::before {
     display: inline-block;
     width: 5em;
     padding: .5em;
-    margin-right: 1rem;
+    margin-right: .5rem;
     color: white;
     font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     border-radius: .1rem;

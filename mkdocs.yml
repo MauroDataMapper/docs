@@ -34,10 +34,10 @@ markdown_extensions:
 nav:
     -   Home: 'index.md'
     -   Introduction: 'introduction.md'
+    -   Tutorial:
+            - Using the Metadata Catalogue to Document Health Datasets: 'tutorial/document-assets/index.md'
     -   Getting started:
             -   Creating a model: 'start/creating-model.md'
-    -   User documentation:
-            -   Models: 'user/models.md'
     -   REST API:
             -   Introduction: 'rest-api/introduction.md'
             -   Authentication: 'rest-api/authentication.md'

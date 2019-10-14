@@ -117,13 +117,11 @@ Alternatively, you can call this equivalent endpoint:
 
 <endpoint class="put">/api/dataModels/**{dataModelId}**/folder/**{folderId}**</endpoint>
 
-
-
 To move a data model from a draft state to 'finalised', use the following endpoint:
 
 <endpoint class="put">/api/dataModels/**{dataModelId}**/finalise</endpoint>
 
-### Sharing:
+### Sharing
 
 To allow a user or user group to view or edit a model, use the following endpoint.  Here, the **type** parameter should be one of 'readable' or
  'writeable'; the **share** parameter should be one of either 'user' or 'group', and the **shareId** parameter should be the identifier of either

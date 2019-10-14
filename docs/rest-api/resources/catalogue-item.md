@@ -145,13 +145,13 @@ Annotations, or comments, can be attached to any item in the catalogue.  The str
     "items": [
         {
             "id": "da3d6229-b152-4cbb-8667-eede523c7eb1",
-            "description": "DataModel finalised by Ollie Freeman on 2018-09-28T20:21:35.995Z",
+            "description": "DataModel finalised by Joe Bloggs on 2018-09-28T20:21:35.995Z",
             "createdBy": {
                 "id": "5b96991a-d350-4470-958a-29bfac557ed0",
-                "emailAddress": "oliver.freeman@ndm.ox.ac.uk",
-                "firstName": "Ollie",
-                "lastName": "Freeman",
-                "userRole": "ADMINISTRATOR",
+                "emailAddress": "joebloggs@test.com",
+                "firstName": "Joe",
+                "lastName": "Bloggs",
+                "userRole": "EDITOR",
                 "disabled": false
             },
             "lastUpdated": "2018-09-28T20:21:37.655Z",
@@ -161,14 +161,14 @@ Annotations, or comments, can be attached to any item in the catalogue.  The str
             "id": "670e7c31-00fd-425f-903f-6d024845e63e",
             "createdBy": {
                 "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
-                "emailAddress": "ollie.freeman@gmail.com",
-                "firstName": "Oliver",
-                "lastName": "Freeman",
+                "emailAddress": "joebloggs@test.com",
+                "firstName": "Joe",
+                "lastName": "Bloggs",
                 "userRole": "EDITOR",
                 "disabled": false
             },
             "lastUpdated": "2018-07-17T15:51:45.643Z",
-            "label": "Broken if trying to export to psd"
+            "label": "Is this model is ready for finalisation?"
         }
     ]
 }
@@ -176,42 +176,165 @@ Annotations, or comments, can be attached to any item in the catalogue.  The str
 
 ### Listing annotations
 
+To get all the annotations for a particular object, use the following endpoint. The results are returned in a [paginated list](../pagination.md)
+
 <endpoint class="get">/api/facets/**{facetOwnerId}**/annotations</endpoint>
-<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations</endpoint>
+
+To get the details of a particular annotation / comment, whose **id** is known, use the following endpoint:
+
 <endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{id}**</endpoint>
+
+To create a new top-level annotation, post to the following endpoint, with a body similar to the JSON above (but without the **id** and
+ **lastUpdated** fields)
+   
+<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations</endpoint>
+
+To delete an annotation / comment whose identifier is known, use the following _delete_ endpoint:
+
 <endpoint class="delete">/api/facets/**{facetOwnerId}**/annotations/**{id}**</endpoint>
 
 ### Child annotations (responses)
 
+Comments can have child comments (or replies).  To get all the child comments for a particular comment, use the following endpoint. The
+ results are returned in a [paginated list](../pagination.md)
+
 <endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations</endpoint>
-<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations</endpoint>
+
+To get the details of a particular child annotation / comment, whose **id** is known, use the following endpoint:
+
 <endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
+
+To create a new child annotation, post to the following endpoint, with a body similar to the JSON above (but without the **id** and
+ **lastUpdated** fields)
+
+<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations</endpoint>
+
+To delete a child annotation / comment whose identifier is known, use the following _delete_ endpoint:
+
 <endpoint class="delete">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
  
 
 ## Searching
 
+An advanced search is powered by Lucene.  The parameters for an advanced search can be provided as the body of a _post_ request as follows:
 
-<endpoint class="get">/api/catalogueItems/search</endpoint>
+!!! abstract "Request body"
+    ```json 
+    {
+        "searchTerm":"smoking",
+        "limit":20,
+        "offset":0,
+        "domainTypes":[],
+        "labelOnly":false,
+        "dataModelTypes":null,
+        "classifiers":[],
+        "classifierFilter":null,
+        "lastUpdatedAfter":null,
+        "lastUpdatedBefore":null,
+        "createdAfter":null,
+        "createdBefore":null
+    }  
+    ```
+
+The fields are defined as follows:
+
+- **searchTerm** (String): the search string - this can take a number of standard search operators - for example "smoking + pregnancy"
+- **limit** (Integer): the number of results returned in a [paginated list](../pagination.md)
+- **offset** (Integer): the index of the first result returned in a [paginated list](../pagination.md)
+- **domainTypes** (Set(String)): the catalogue object types that should be searched - for example "DataModel", "DataClass
+- **labelOnly** (Boolean): whether the search should only query the label of all objects
+- **dataModelTypes** (Set(String)): the types of data model that should be searched - for example "Data Asset", "Data Standard" 
+- **classifiers** (Set(String)): a set of classifier labels, such that all results must be classified by one of those tags
+- **classifierFilter** (?? Unknown): Currently undocumented
+- **lastUpdatedAfter** (DateTime): Only include objects in the search results if they have been modified more recently than the given date
+- **lastUpdatedBefore** (DateTime): Only include objects in the search results if they have been modified earlier than the given date 
+- **createdAfter** (DateTime): Only include objects in the search results if they were created more recently than the given date
+- **createdBefore** (DateTime): Only include objects in the search results if they were created earlier than the given date 
+
+The response will be a [paginated list](../pagination.md) of items, where each item has the following structure:
+
+!!! abstract "Response body"
+    ```json 
+    {
+        "id": "127bdf61-cbfe-47dc-9854-fdce276f13bf",
+        "domainType": "DataElement",
+        "label": "AGE AT ONSET OF SYMPTOMS (CHILDREN TEENAGERS AND YOUNG ADULTS CANCER)",
+        "description": "AGE BAND AT SMOKING QUIT DATE is derived as the number of completed years between the PERSON BIRTH DATE of the PERSON and the SMOKING QUIT DATE of the Person Stop Smoking Episode.  Permitted National Codes:  01  Under 18 years of age  02  18 to 34 years of age  03  35 - 44 years of age  04  45 - 59 years of age  05  60 and over years of age",
+        "breadcrumbs": [
+            {
+                "id": "078955c7-6c0f-4fc2-a30e-55629a85b9da",
+                "label": "NHS Data Dictionary",
+                "domainType": "DataModel",
+                "finalised": true
+            },
+            {
+                "id": "012e8dd5-b4b1-4d26-82aa-17430baf2e2b",
+                "label": "All Data Elements",
+                "domainType": "DataClass"
+            }
+        ]
+    }
+    ```
+where the fields are defined as follows:
+
+- **id** (UUID): The identifier of the returned object
+- **domainType** (String): The type of the returned object - for example "DataModel", "DataClass", "DataElement"
+- **label** (String): The name of the returned object
+- **description** (String): The description of the returned object.  This may include formatting specified in HTML, or MarkDown.
+- **breadcrumbs** (List(Breadcrumb)): An ordered list of, e.g. DataModels and DataClasses to show the location of an object in the hierarchy of a
+ model.  This will include, for each component of the breadcrumb, an **id**, a **label** and a **domainType**.  
+
+To search across the whole catalogue, use the following endpoint:
+ 
 <endpoint class="post">/api/catalogueItems/search</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/search</endpoint>
-<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/search</endpoint>
-<endpoint class="get">/api/classifiers/**{classifierId}**/catalogueItems</endpoint>
-<endpoint class="get">/api/folders/**{folderId}**/search</endpoint>
+
+To restrict the search to items within a particular folder, use the following endpoint:
+
 <endpoint class="post">/api/folders/**{folderId}**/search</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/search</endpoint>
+
+Similarly, to search within a particular data model, use the following:
+
 <endpoint class="post">/api/dataModels/**{dataModelId}**/search</endpoint>
+
+Finally, to search within a specific Data Class, use the following:
+
+<endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/search</endpoint>
 
 
 ## Edit History
 
+The edit history for various catalogue items can be retrieved using the endpoints listed below.  The format of a response is a paginated list of
+ edits, with the following structure:
+```json tab="JSON"
+{
+    "dateCreated": "2018-07-17T15:53:17.276Z",  
+    "createdBy": {
+        "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
+        "emailAddress": "ollie.freeman@gmail.com",
+        "firstName": "Oliver",
+        "lastName": "Freeman",
+        "userRole": "EDITOR",
+        "disabled": false
+    }
+    "description": "[Data Standard:HIC: Hepatitis v2.0.0] changed properties [folder]"
+}
+```
+
+The fields have the following definition:
+
+- **dateCreated** (DateTime): the date and time when this modification was made
+- **createdBy** (User): the user responsible for making the edit.  This will include their **id**, **emailAddress**, **firstName**, **lastName
+**, **userRole** and whether the user account is currently **disabled**.  It may also include the profile image of the user in question
+- **description** (String): The human-readable description of the edit made.  These descriptions are automatically generated by the catalogue 
+ 
+The endpoints for getting the edit history for each of DataModel, Terminology, Folder, CodeSet, Classifier and UserGroup are listed below. 
+
+<endpoint class="get">/api/dataModels/**{dataModelId}**/edits</endpoint>
 <endpoint class="get">/api/terminologies/**{terminologyId}**/edits</endpoint>
 <endpoint class="get">/api/folders/**{folderId}**/edits</endpoint>
-<endpoint class="get">/api/dataModels/**{dataModelId}**/edits</endpoint>
 <endpoint class="get">/api/codeSets/**{codeSetId}**/edits</endpoint>
 <endpoint class="get">/api/classifiers/**{classifierId}**/edits</endpoint>
 <endpoint class="get">/api/userGroups/**{userGroupId}**/edits</endpoint>
-
 
 
 ## Reference files
