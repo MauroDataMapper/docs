@@ -38,6 +38,7 @@ nav:
             - Using the Metadata Catalogue to Document Health Datasets: 'tutorial/document-assets/index.md'
     -   Getting started:
             -   Creating a model: 'start/creating-model.md'
+    -   Glossary / Model: 'model/glossary.md'
     -   REST API:
             -   Introduction: 'rest-api/introduction.md'
             -   Authentication: 'rest-api/authentication.md'
@@ -63,4 +64,5 @@ nav:
                     -   User: 'rest-api/resources/user.md'
                     -   User group: 'rest-api/resources/user-group.md'
             - Trees: 'rest-api/trees.md'
+            - Import / Export: 'rest-api/importexport.md'
             - Admin functions: 'rest-api/admin.md'
