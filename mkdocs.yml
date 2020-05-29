@@ -1,13 +1,21 @@
 site_name: Documentation
+copyright: 'Copyright © 2020 Clinical Informatics, NIHR Oxford Biomedical Research Centre'
 theme:
     name: 'material'
     custom_dir: 'theme/'
     palette:
-        primary: 'blue grey'
-        accent: 'deep orange'
-    logo: 'images/logo-inv.png'
+        scheme: default
+        primary: 'primary'
+        accent: 'accent'
+    logo: 'assets/images/logo.png'
+    favicon: assets/images/favicon.ico
+    font: 
+        text: Nunito Sans
+        code: Nunito Sans
 extra_css:
-    - 'stylesheets/extra.css'
+    - assets/stylesheets/extra.css
+extra_javascript:
+    - assets/javascripts/extra.js
 markdown_extensions:
     -   admonition
     -   codehilite:
