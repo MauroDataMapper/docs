@@ -1,4 +1,4 @@
-# Metadata Catalogue documentation
+# Mauro Data Mapper documentation
 
 
 !!! Warning
