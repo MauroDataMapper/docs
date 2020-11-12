@@ -40,8 +40,8 @@ markdown_extensions:
           custom_checkbox: true
     - pymdownx.tilde
 nav:
-    -   Home: 'index.md'
-    -   About: 'about.md'
+    -   Home: 'home/home.md'
+    -   About: 'about/about.md'
     -   Tutorial:
             - Using the Metadata Catalogue to Document Health Datasets: 'tutorial/document-assets/index.md'
     -   Getting started:
