@@ -7,6 +7,28 @@ The Mauro Data Mapper, is a toolkit for combining, developing and standardising 
 
 ---
 
+## **Why is metadata important?**
+
+To fully understand the meaning of data, first we need to know some further information about its context, known as metadata. For example, consider a blood pressure reading. Although this has standard units, the method and state of the patient at the time the measurement was taken, will affect the recorded value. Therefore, by outlining this additional information, the reading can be understood and interpreted more accurately. In this way, metadata allows data to be more searchable, comparable and standardised, enabling interoperability. 
+
+---
+
+## **How does Mauro Data Mapper work?**
+
+The Mauro Data Mapper consists of a large number of **data models** which are defined as a structured collection of **metadata** and effectively model the data that they describe. 
+
+Each **data model** consists of several **data classes**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. Data classes can sometimes also contain nested data classes.
+
+Within each **data class** is then a number of **data elements** which are the descriptions of an individual field or variable.
+
+In the example below, the entire Webform is the data model and this is made up of two data classes: Personal details and Contact details. Within Contact details there is a nested data class, called the Correspondence Address. Each data class consists of several data elements which give the various details of the patient. 
+
+![Data Model structure](data-model-structure.png)
+
+By organising metadata in this way, the Mauro Data Mapper allows users to easily search data but also automatically import database schemas and export forms; helping to record data in standardised formats.
+
+---
+
 ## **Who is Mauro?**
 The Mauro Data Mapper is named after Fra Mauro who was a 15th century Venetian Monk and also a famous cartographer. He created the most detailed map of the world at the time, which featured thousands of texts and illustrations.
 
