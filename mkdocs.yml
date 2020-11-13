@@ -42,10 +42,12 @@ markdown_extensions:
 nav:
     -   Home: 'home/home.md'
     -   About: 'about/about.md'
+    -   User Guides:
+            - Getting Started:   
+                    - Create a Data Model: 'user-guides/getting-started/create-a-data-model/create-a-data-model.md'
+                    - Create a Data Model_original: 'start/creating-model.md'
     -   Tutorial:
             - Using the Metadata Catalogue to Document Health Datasets: 'tutorial/document-assets/index.md'
-    -   Getting started:
-            -   Creating a model: 'start/creating-model.md'
     -   Glossary / Model: 'model/glossary.md'
     -   REST API:
             -   Introduction: 'rest-api/introduction.md'
