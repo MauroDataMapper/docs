@@ -46,8 +46,9 @@ nav:
             - Getting Started:   
                     - Create a Data Model: 'user-guides/getting-started/create-a-data-model/create-a-data-model.md'
                     - Create a Data Model_original: 'start/creating-model.md'
+                    - Document a Health Dataset: 'user-guides/getting-started/document-a-health-dataset/document-a-health-dataset.md'
     -   Tutorial:
-            - Using the Metadata Catalogue to Document Health Datasets: 'tutorial/document-assets/index.md'
+            - Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
     -   Glossary / Model: 'model/glossary.md'
     -   REST API:
             -   Introduction: 'rest-api/introduction.md'
