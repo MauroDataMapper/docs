@@ -1,49 +1,40 @@
 This user guide will explain the steps you need to follow to add a health dataset to the **[Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home)**.
 
+---
+
 ## **1. Create a Data Model**
-Datasets are stored in their own Data Models within the Mauro Data Mapper. Therefore, the first step is to create a new Data Model. To do this follow the steps in our **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
+Datasets are stored in their own **[Data Models](../../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../../glossary/data-model/data-model.md)**. To do this follow the steps in our **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
 
 
 Once you have reached step **[3. Complete New Data Model form](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
 
+Complete the rest of the steps until you have successfully submitted your **[Data Model](../../../glossary/data-model/data-model.md)**. 
 
-
-This document explains how to create a standard description for a health dataset using the metadata catalogue.   Such a description will come in
- two parts:
-
-1.	a description of the dataset as a whole
-2.	descriptions of the individual data items within the dataset, and of the structural relationships between them 
-
-There is no single, applicable standard for the first part.  For the moment, pending the development of the gateway interface, we require only a
- minimal set of properties, sufficient to uniquely identify the dataset in question.  A slightly longer list will be required once the gateway
-  specification has been agreed. 
-
-For the second part, we are able to adapt and extend an existing international standard for metadata registration: ISO/IEC 11179.  We specify a
- list of properties that should be recorded for each item, and each relationship; this list will remain unchanged, although the information
-  provided may be updated over time. 
-
-If the dataset is held in a relational datastore, then we may be able to determine the name and type of each data item, and the structural
- relationships between them, automatically.  We will not, however, be able to determine an __adequate, human-readable explanation__ of each item
- ; this will need to be entered by hand and/or carefully extracted from existing, electronic documentation. 
+---
 
 ## **2. Describe the dataset**
-It's important to record further characteristics of the dataset, particularly to help gateway providers when designing interfaces. 
-To do this, first, select the **'Properties'** tab on the panel below the model overview and then click **'+ Add Property'**.
+Once you've created your **[Data Model](../../../glossary/data-model/data-model.md)**, it's important to record further characteristics of the corresponding dataset, particularly to help gateway providers when designing interfaces. For example adding a contact email address.
+
+To do this, select your **[Data Model](../../../glossary/data-model/data-model.md)** in the Model tree, then click the **'Properties'** tab on the panel below the model overview. Next, click **'+ Add Property'** and this will add a row in the property table, as shown in the video below.
 
 <iframe src="https://player.vimeo.com/video/480691755" width="640" height="346" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
+You will then need to complete the details of your new property as follows:
 
+* **Namespace**  
+	This will be used to select the correct properties by the gateway interface. Select **‘uk.ac.hdrukgateway'** from the dropdown menu.
 
-![Data model 'properties' tab](properties-tab.png)
+* **Key**  
+	Enter a property name such as 'contact email'.
+	
+* **Value**  
+	This is the value of the given property, for example ‘enquiries-mydataset@hub.org’.
 
-- __namespace__:	This will be used to select the correct properties by the gateway interface.  You should choose the value ‘uk.ac.hdruk.dataset
-’ from the drop-down provided
-- __key__:	This is the property name - e.g. ‘contact email’.  You should add a property for each of the names listed below, but may add further
- properties if you wish.
-- __value__:	This is the value of the given property - e.g. ‘enquiries-mydataset@hub.org’.
+Once completed click the green tick **'Save'** and your new property should now be permanently displayed in the **'Properties'** tab. 
 
+![Add a new property](add-a-new-property.png)
 
-## Describing the data items
+## **3. Describe data items**
 
 Data items are created and managed within data classes.  If a dataset is managed as a collection of tables, then you may wish to create a class
  for each table.  This is the default approach.  Alternatively, you may wish to create a set of classes to provide a more abstract account of the
@@ -220,4 +211,24 @@ Having chosen to import from a relational database, the next set of options allo
 
 The catalogue toolkit has a range of related functions for creating and updating models of datasets and data standards.   As the features of the 
 gateway interface are determined, we will update this documentation to address any additional metadata requirements, and to describe any 
-additional functions that have become relevant.   We will update it also to describe any improvements made to the functions described above.    
+additional functions that have become relevant.   We will update it also to describe any improvements made to the functions described above.   
+
+
+
+This document explains how to create a standard description for a health dataset using the metadata catalogue.   Such a description will come in
+ two parts:
+
+1.	a description of the dataset as a whole
+2.	descriptions of the individual data items within the dataset, and of the structural relationships between them 
+
+There is no single, applicable standard for the first part.  For the moment, pending the development of the gateway interface, we require only a
+ minimal set of properties, sufficient to uniquely identify the dataset in question.  A slightly longer list will be required once the gateway
+  specification has been agreed. 
+
+For the second part, we are able to adapt and extend an existing international standard for metadata registration: ISO/IEC 11179.  We specify a
+ list of properties that should be recorded for each item, and each relationship; this list will remain unchanged, although the information
+  provided may be updated over time. 
+
+If the dataset is held in a relational datastore, then we may be able to determine the name and type of each data item, and the structural
+ relationships between them, automatically.  We will not, however, be able to determine an __adequate, human-readable explanation__ of each item
+ ; this will need to be entered by hand and/or carefully extracted from existing, electronic documentation.  

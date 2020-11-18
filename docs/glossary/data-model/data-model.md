@@ -3,7 +3,6 @@
 A **Data Model** is a description of an existing collection of metadata, or a specification of data that is to be collected. Models which contain existing data are known as a **Data Asset**, while models which contain templates for data collection are known as a **Data Standard**. Both are called models as they are effectively representations of the data that they describe. 
 
 ---
-
 ##**How are Data Models used?**
 
 **Data Models** make the connection between the names of columns, fields or variables and our understanding of how the corresponding data is acquired, managed and interpreted. The Mauro Data Mapper acts as a directory for these **Data Models** and allows us to create, search and share these data descriptions.
