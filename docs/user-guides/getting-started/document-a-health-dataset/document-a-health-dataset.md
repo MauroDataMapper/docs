@@ -3,16 +3,18 @@ This user guide will explain the steps you need to follow to add a health datase
 ---
 
 ## **1. Create a Data Model**
+
 Datasets are stored in their own **[Data Models](../../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../../glossary/data-model/data-model.md)**. To do this follow the steps in our **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
 
 
-Once you have reached step **[3. Complete New Data Model form](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
+Once you have reached step **['3. Complete New Data Model form'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
 
 Complete the rest of the steps until you have successfully submitted your **[Data Model](../../../glossary/data-model/data-model.md)**. 
 
 ---
 
-## **2. Describe the dataset**
+## **2. Add a property**
+
 Once you've created your **[Data Model](../../../glossary/data-model/data-model.md)**, it's important to record further characteristics of the corresponding dataset, particularly to help gateway providers when designing interfaces. For example adding a contact email address.
 
 To do this, select your **[Data Model](../../../glossary/data-model/data-model.md)** in the Model tree, then click the **'Properties'** tab on the panel below the model overview. Next, click **'+ Add Property'** and this will add a row in the property table, as shown in the video below.
@@ -34,40 +36,54 @@ Once completed click the green tick **'Save'** and your new property should now 
 
 ![Add a new property](add-a-new-property.png)
 
-## **3. Describe data items**
+---
 
-Data items are created and managed within data classes.  If a dataset is managed as a collection of tables, then you may wish to create a class
- for each table.  This is the default approach.  Alternatively, you may wish to create a set of classes to provide a more abstract account of the
-  data set - grouping and presenting the data items in a way that is quite different from the way in which they are stored and managed.
+## <a name="create-a-data-class"></a> **3. Create a Data Class**
+
+Each **[Data Model](../../../glossary/data-model/data-model.md)** is made up of several Data Classes which is where data items are both created and managed. 
+
+If your dataset is a collection of tables, the conventional approach is to create a new class for each table. Alternatively, you can create a set of classes to provide a more abstract account of the data set which group and present the data differently to how it is stored and managed.
    
-To create a new class, select a data model from the model tree, choose the ‘DataClasses’ tab, and click the ‘+’ button:
+To create a new **Data Class**, select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** from the Model tree and click the **'Data Classes'** tab on the panel below the model overview. Then click **'+ Add'** and a **'New Data Class'** form will appear on the right.
 
-![Data classes tab](data-classes-tab.png)
+To document an existing data set, select **'Create a New Data Class'** and then click **'Next step'**. 
 
-![How do you want to add a new Data Class?](how-add-data-class.png)
+![Create a Data Class](create-a-data-class.png)
 
-In documenting an existing data set, you will be creating rather than copying classes, so choose the first option and click ‘__Next__’.   You should
- then choose a name or label for your class. 
- 
-![Adding Data Class details](enter-data-class-details.png) 
- 
-Again, you will be able to add further names later, as aliases, if you wish. The __description__ of a class may explain what kind of data items are
- grouped together here; alternatively, it may explain some common context for the items it contains, to avoid the need to include that information
-  in the description of each individual item. 
-  
-The multiplicity values specify the number of instances of that class that may appear in an instance of the model.   For example, if a class were
- to correspond to a table in a relational database, the multiplicity values would be the minimum, and the maximum, number of rows allowed in the
-  table.  In a model of a dataset, there is usually no need to specify the multiplicity of a class.
-    
-Once all mandatory fields have been completed, you may click ‘__Submit__’ to create the new data class.  This will take you to the page for the newly
--created class.  You can click the link back to the parent data model to continue adding further classes of data as necessary.
+You will then need to enter the **'Data Class Details'** as per the following: 
 
-You may also choose to add further ‘child’ classes to this class: choose the 'Content’ tab on the DataClass page, and click the ‘+’ symbol to add
- a new data class.
- 
-![Adding a child Data Class](add-child-data-class.png)
+* **Label**  
+	Enter the name of your new Data Class.
 
-Data items are represented as ‘data elements’ within the model.  To start adding data elements to a class, visit its DataClass page, and click the
+* **Description**  
+	Complete a description of the Data Class which explains the types of data itmes that are grouped together here. Also include contextual details which are common to the data itmes, to avoid having to include these in each individual data items description.
+
+* **Multiplicity**  
+	The **Multiplicity** specifies the minimum and maximum number of times that **Data Class** will appear in an instance of the model. For example, for a **Data Class** that corresponds to a table in a relational database, the **Multiplicity** values would be the minimum and maximum number of rows allowed in the table. However, in a model of a dataset, there is usually no need to specify the **Multiplicity** of a **Data Class** and so, leave these fields blank. 
+	
+![Data Class Details form](data-class-details-form.png)
+
+Once you have completed the **'Data Class Details'** form, click **'Submit Data Class'** and your new **Data Class** will now be permanently displayed under the **'Data Classes'** tab of your model and in the Model tree. You can add as many **Data Classes** as necessary.
+
+---
+
+## **4. Add a nested Data Class**
+
+Nested Data Classes are essentially a **Data Class** within a **Data Class** and can be a useful way of managing complex data sets. In the **[Data Model](../../../glossary/data-model/data-model.md)** below which describes a webform of a Patients details, the **'Correspondance Address Data Class'** is actually nested within the **'Contact details Data Class'**. 
+
+![Nested Data Class](nested-data-class-graphic.png)
+
+To add a nested Data Class, click the relevant Data Class from the Model tree and click the **'Content'** tab on the panel below the model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained above in step **['3. Create a Data Class'](document-a-health-dataset.md#create-a-data-class)**
+
+![Add nested Data Class](add-nested-data-class.png)
+
+---
+
+## **5. Add Data Elements**
+
+Data items are represented as **Data Elements** which each belong to a specific **Data Class**. To add a **Data Element**
+
+To start adding data elements to a class, visit its DataClass page, and click the
  ‘+’ button on the ‘Content’ tab.  This will give you two options - to create a new contained ‘child’ class, as above, or to create a new data
   element - choose the second option.
   
