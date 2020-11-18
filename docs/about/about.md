@@ -15,9 +15,9 @@ To fully understand the meaning of data, first we need to know some further info
 
 ## **How does Mauro Data Mapper work?**
 
-The Mauro Data Mapper consists of a large number of **data models** which are defined as a structured collection of **metadata** and effectively model the data that they describe. 
+The Mauro Data Mapper consists of a large number of **[Data Models](../glossary/data-model/data-model.md)** which are defined as a structured collection of **metadata** and effectively model the data that they describe. 
 
-Each **data model** consists of several **data classes**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. Data classes can sometimes also contain nested data classes.
+Each **[Data Models](../glossary/data-model/data-model.md)** consists of several **data classes**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. Data classes can sometimes also contain nested data classes.
 
 Within each **data class** is then a number of **data elements** which are the descriptions of an individual field or variable.
 

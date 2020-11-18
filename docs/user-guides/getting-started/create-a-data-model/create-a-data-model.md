@@ -17,7 +17,8 @@ To add a Data Model, right click your new folder or sub-folder and select **'Add
 
 ![Add data model](add-data-model.png)
 
-## **3. Complete New Data Model form**
+## <a name="complete-new-data-model-form"></a> **3. Complete New Data Model form**
+
 
 Please complete both the mandatory and optional fields on the New Data Model form, with the defintions of each field detailed below:
 
@@ -33,7 +34,7 @@ Please complete both the mandatory and optional fields on the New Data Model for
 * **Description**  
 	Enter a detailed description of the data asset or standard and include  information on any important characteristics of the data.
 
-* **Type**  
+* <a name="complete-new-data-model-form-type"></a>**Type**  
 	Select whether this model is a **'Data Asset'** or a **'Data Standard'** from the dropdown menu. A **Data Asset** is a collection of pre-existing data such as a database or a number of completed forms. While a **Data Standard** is a template for data that is to be colleced such as a form or schema.
 
 * **Classifier**  
@@ -45,7 +46,7 @@ Once all the fields have been populated click **'Next Step'**.
 
 ## **4. Select Default Data Type**
 
-Now you need to select the relevant **'Default Data Type'** from the dropdown menu. Select a category that you expect to have all its data types within your Data Model.
+Now you need to select the relevant set of **'Default Data Types'** from the dropdown menu to be imported into your model. Select a category that you expect to have all its data types within your Data Model. However, if you are unsure at this stage, leave the field blank and you can import these later on. 
 
 ![New Data Model Form 2](new-data-model-form-2.png)
 

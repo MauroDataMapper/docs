@@ -1,9 +1,10 @@
 This user guide will explain the steps you need to follow to add a health dataset to the **[Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home)**.
 
 ## **1. Create a Data Model**
-Datasets are stored in their own Data Models within the Mauro Data Mapper. Therefore, the first step is to create a new Data Model. To do this follow the steps in our **[Create a Data Model user guide](../docs/docs/user-guides/getting-started/create-a-data-model/create-a-data-model.md)**.
+Datasets are stored in their own Data Models within the Mauro Data Mapper. Therefore, the first step is to create a new Data Model. To do this follow the steps in our **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
 
 
+Once you have reached step **[3. Complete New Data Model form](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
 
 
 
@@ -25,28 +26,13 @@ If the dataset is held in a relational datastore, then we may be able to determi
  relationships between them, automatically.  We will not, however, be able to determine an __adequate, human-readable explanation__ of each item
  ; this will need to be entered by hand and/or carefully extracted from existing, electronic documentation. 
 
-## Describing the dataset
+## **2. Describe the dataset**
+It's important to record further characteristics of the dataset, particularly to help gateway providers when designing interfaces. 
+To do this, first, select the **'Properties'** tab on the panel below the model overview and then click **'+ Add Property'**.
 
-  
-   
-For __type__, choose ‘data asset’. 
+<iframe src="https://player.vimeo.com/video/480691755" width="640" height="346" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-Once you have entered all mandatory fields, labelled with ‘__*__’, you can click ‘__Next__’ to choose a default set of data types to be imported into
- your model.
- 
-![Adding default data types](import-data-types.png)   
 
-For example, you may choose to import the default datatypes of a MS SQL Server database.  If you are unsure at this stage, you can leave the field
- blank - you can always import these later on.
-
-Click ‘__Submit__’ to finish creating the new data model.  This will take you to the ‘overview page’ of your new model.
-
-![Overview page of data model](data-model-details.png)
-
-You are welcome to record further characteristics of the dataset - this could help the gateway providers when the come to design their interface
-.   If you wish to do this, 
-
-Click the ‘__Properties__’  tab on the panel below, and choose the ‘__+__’ button to add each new property.
 
 ![Data model 'properties' tab](properties-tab.png)
 
