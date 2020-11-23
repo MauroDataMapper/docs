@@ -13,3 +13,4 @@ Within each **Data Model** lies several **Data Classes** which are groups of dat
 
 ![Data Model UML](data-model-uml.png)
 
+---

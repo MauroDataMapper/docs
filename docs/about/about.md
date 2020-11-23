@@ -17,11 +17,11 @@ To fully understand the meaning of data, first we need to know some further info
 
 The Mauro Data Mapper consists of a large number of **[Data Models](../glossary/data-model/data-model.md)** which are defined as a structured collection of **metadata** and effectively model the data that they describe. 
 
-Each **[Data Models](../glossary/data-model/data-model.md)** consists of several **data classes**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. Data classes can sometimes also contain nested data classes.
+Each **[Data Model](../glossary/data-model/data-model.md)** consists of several **[Data Classes](../glossary/data-class/data-class.md)**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. **[Data Classes](../glossary/data-class/data-class.md)** can sometimes also contain **Nested Data Classes**.
 
-Within each **data class** is then a number of **data elements** which are the descriptions of an individual field or variable.
+Within each **[Data Class](../glossary/data-class/data-class.md)** is then a number of **Data Elements** which are the descriptions of an individual field or variable.
 
-In the example below, the entire Webform is the data model and this is made up of two data classes: Personal details and Contact details. Within Contact details there is a nested data class, called the Correspondence Address. Each data class consists of several data elements which give the various details of the patient. 
+In the example below, the entire Webform is the **[Data Model](../glossary/data-model/data-model.md)** and this is made up of two **[Data Classes](../glossary/data-class/data-class.md)**: Personal details and Contact details. Within Contact details there is a **Nested Data Class**, called the Correspondence Address. Each **[Data Class](../glossary/data-class/data-class.md)** consists of several **Data Elements** which give the various details of the patient. 
 
 ![Data Model structure](data-model-structure.png)
 
