@@ -9,40 +9,56 @@ A **Data Class** is a collection of data, also known as **Data Elements**, that 
 
 You can also have a **Data Class** within a **Data Class**, known as a **Nested Data Class**, which can be a useful way of managing complex sets of data. There is no limit on the number of **Nested Data Classes** you can include. 
 
-![Nested Data Classes](nested-data-class-graphic-2.png)
+For example, in a webform, there may be a section called **'Contact details'**, which would be one **Data Class**. Within that section however, there may be another labelled **'Correspondance Address'**, which would be a **Nested Data Class**.  
+
+![Nested Data Class in a webform and a Data Model flowchart](nested-data-class.png)
 
 
 Each **Data Class** has a:
 
-* **Label** - the name of the **Data Class** which has to be unique within the **[Data Model](../data-model/data-model.md)** or parent **Data Class**.
+* **[Label](../label/label.md)**  
+	This is the name of the **Data Class** which has to be unique within the **[Data Model](../data-model/data-model.md)** or parent **Data Class**.
 
-* **Aliases** - alternative names that can help locate this **Data Class** when searched for. A **Data Class** must have one primary **Label**, but can have many **Aliases**.
+* **Aliases**  
+	Alternative names that can help locate the **Data Class** when searched for.
 
-* **Description** - a textual definition which explains the types of data items that are grouped together within the **Data Class**, as well as any contextual details.
+* **Description**  
+	A textual definition which explains the types of data items that are grouped together within the **Data Class**, as well as any contextual details.
+	
+* **Parent**  
+	This can either be the **[Data Model](../data-model/data-model.md)** itself, in which case it is described as a ‘top level data class’. Or, if it is a **Nested Data Class**, its parent **Data Class**.
+	
+* **Multiplicity**  
+	This specifies the minimum and maximum number of times the **Data Class** appears within its parent. Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of ‘*’ which represents ‘-1’ internally.
 
-* **Parent** - this can either be the **[Data Model](../data-model/data-model.md)** itself, in which case it is described as a ‘top level data class’. Or, if it is a **Nested Data Class**, its parent **Data Class**.
+* **Classifications**  
+	These are effectively tags that you can apply to the **Data Class**. 
 
-* **Multiplicity** - this specifies the minimum and maximum number of times the **Data Class** appears within its parent. For example, optional data may have a minimum multiplicity of 0 and a maximum of 1, whereas mandatory data may have a minimum multiplicity of 1. Data which occurs any number of times is given by a multiplicity of ‘*’ which represents ‘-1’ internally.
-
-* **Classifications** – tags that you can apply to the **Data Class**. 
-
-The above are all shown in the main box of the details panel, when the **Data Class** is selected, as highlighted in blue below. While other characteristics are displayed in the tabs highlighted in red.
+The above are all shown on the left hand side of the details panel, when the **Data Class** is selected in the **Model Tree**.
 
 
 ![Data Class details](data-class-details.png)
 
 
-* **Content** - this refers to the various **Data Elements** and **Nested Data Classes** within the selected **Data Class**.
+Other characteristics are displayed in the tabs underneath the details panel, when the **Data Class** is selected in the **Model Tree**.
 
-* **Properties** – arbitrary additional metadata about this **Data Class**.
+* **Content**  
+	This refers to the various **Data Elements** and **Nested Data Classes** within the selected **Data Class**.
+	
+* **Properties**  
+	Arbitrary additional metadata about this **Data Class**.
 
-* **Comments** – any relevant comments or notes. 
+* **Comments**  
+	Any relevant comments or notes. 
 
-* **Links** – **Semantic links** between relevant data classes.
+* **Links**  
+	**Semantic links** between relevant data classes.
 
-* **Summary** – further metadata information on the nature of the **Data Elements** within the **Data Class**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
+* **Summary**  
+	Further metadata information on the nature of the **Data Elements** within the **Data Class**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
 
-* **Attachments** – files can be added to the **Data Class**, providing additional information and context. 
+* **Attachments**  
+	Files can be added to provide additional information and context. 
 
 ---
 
