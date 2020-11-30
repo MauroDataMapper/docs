@@ -6,3 +6,7 @@
 ### **[Data Model](../glossary/data-model/data-model.md)**     
 
 ---
+
+## **L**
+---
+### **[Label](../glossary/label/label.md)** 
