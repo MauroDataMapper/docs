@@ -14,6 +14,9 @@ For example, there can only be one **[Data Class](../data-class/data-class.md)**
 
 It is likely that two different **[Data Models](../data-model/data-model.md)** within the catalogue could consist of a **[Data Class](../data-class/data-class.md)** with the same **Label**, such as **'Personal details'**. However, because these two **[Data Classes](../data-class/data-class.md)** are each associated with their own unique parent **[Data Model](../data-model/data-model.md)**, then this is acceptable. Only when two items are within the same parent must they each have a unique **Label**.  
 
+---
+
+##**How do you edit a Label?**
 
 You can edit the **Label** of any item by selecting it in the **Model Tree** and clicking the **‘Edit’** pencil icon which is located at the bottom right of the details panel. 
 
