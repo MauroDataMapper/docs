@@ -10,7 +10,7 @@ An **Alias** is an alternative name for a catalogue item which helps to locate i
 
 This helps users access the catalogue item they need, without having to know the exact **[Label](../label/label.md)**.
  
-![Example of aliases](alias-example.png)
+![Aliases in detail panel highlighted](alias-example.png)
 
 ---
 
@@ -20,7 +20,7 @@ To add ore remove **Aliases** click the **‘Edit’** pencil icon at the bottom
 
 Type the name of the new **Alias** and click the green **'+'** sign on the right to add it. To delete an **Alias**, click the red **'x'** to the right of the **Alias** you wish to remove. 
 
-![Editing an Alias](edit-alias.png)
+![Edit view of Aliases in details panel](edit-alias.png)
 
 Once you have finished editing, click **'Save changes'** at the bottom right of the details panel. A green box should then appear at the bottom right of the screen, confirming that the catalogue item has been successfully updated.
 
