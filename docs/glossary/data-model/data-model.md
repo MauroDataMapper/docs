@@ -35,7 +35,7 @@ Each **Data Model** has a:
 	This defines whether the **Data Model** is a **Data Asset**, which contains existing data, or a **Data Standard**, which contains templates for data collection. 
 
 * **Classifications**  
-	These are effectively tags that you can apply to the **Data Model**.
+	These are effectively tags that you can apply to the **Data Model**, which will help users find this collection of data points. 
 
 The above are all shown within the details panel, when the **Data Model** is selected in the **Model Tree**.
 
@@ -47,10 +47,13 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	This is a list of all the **[Data Classes](../data-class/data-class.md)** within the **Data Model**.
 
 * **Types**  
-	The various **Data Types** within the **Data Model**. These can be created by the user or imported from other **Data Models** within Mauro Data Mapper. **Data Types** can either be Enumeration, Primitive, Reference or Terminology. 
+	The various **Data Types** within the **Data Model**. **Data Types** can either be:
+	* 	 **Enumeration:** a list of possible values
+	* 	 **Primitive:** a string or number
+	* 	 **Reference & Terminology:** linked to another definition which gives a more accurate description of the dataset. This can be a Terminology, CodeSet or ReferenceDataModel
 
 * **Properties**  
-	Arbitrary additional metadata about this **Data Model**.
+	Additional metadata about this **Data Model**. This can include technical information such as where the data is located, as well as information for users such as the type of data, coverage, geography and accessibility.
 
 * **Summary**  
 	Further metadata information on the nature of the **[Data Classes](../data-class/data-class.md)** within the **Data Model**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
@@ -71,6 +74,6 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	Files can be added to provide additional information and context. 
 	
 * **Dataflow**  
-	A diagram illustrating where the data within the **Data Model** has come from and how it has moved across different databases and organisations. This gives users valuable information on the history of the data and how it has been manipulated.  
+	A diagram illustrating where the data within the **Data Model** has come from and how it has moved across different databases and organisations. This gives users valuable information on the history of each data point and how it has been manipulated.  
 
 ---
