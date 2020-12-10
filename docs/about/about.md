@@ -15,7 +15,7 @@ To fully understand the meaning of data, first we need to know some further info
 
 ## **How does Mauro Data Mapper work?**
 
-The Mauro Data Mapper consists of a large number of **[Data Models](../glossary/data-model/data-model.md)** which are defined as a structured collection of **metadata** and effectively model the data that they describe. 
+The Mauro Data Mapper is a web based tool which stores and manages descriptions of data. These can be descriptions of data already collected, such as databases or csv files. Or these can be descriptions of data you wish to collect or transfer between organisations, such as a specification for a webform or an XML schema. The Mauro Data Mapper represents both types of descriptions of data as **[Data Models](../glossary/data-model/data-model.md)**. These are defined as a structured collection of **metadata** and effectively model the data that they describe. 
 
 Each **[Data Model](../glossary/data-model/data-model.md)** consists of several **[Data Classes](../glossary/data-class/data-class.md)**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. **[Data Classes](../glossary/data-class/data-class.md)** can sometimes also contain **Nested Data Classes**.
 
