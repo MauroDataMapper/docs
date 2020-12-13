@@ -1,56 +1,65 @@
 ## **1. Create a new folder**
-Data Models are stored in their own folders and subfolders which are displayed in the Model tree. Therefore, to create a new Data Model, first you need to either create a new folder, or add a subfolder.
-To create a new folder click the **'Create a new Folder'** icon at the top right of the Finder Panel. Enter a Folder name and click **'Add folder'**. Your new folder should now appear in the Model tree. 
+**[Data Models](../../../glossary/data-model/data-model.md)** are stored in their own folders and subfolders which are displayed in the **Model Tree**. Therefore, to create a new **[Data Model](../../../glossary/data-model/data-model.md)**, first you need to either create a new folder, or add a subfolder.
 
-![Create a new Folder](create-a-new-folder.png)
+To create a new folder click the **'Create a new Folder'** icon at the top right of the  **Model Tree**. Enter a **'Folder name'** and click **'Add folder'**. The new folder should now appear in the **Model Tree**. 
 
-To create a new subfolder, right click on the existing folder you want and select **'Add Folder'**. Enter a folder name and click **'Add folder'**. Your new subfolder should appear within the relevant folder in the Model tree.
+![Create a new Folder illustration](create-a-new-folder.png)
 
-![Create a new subfolder](create-a-new-subfolder.png) 
+To create a new subfolder, right click on the existing folder and select **'Add Folder'**. Enter a **'Folder name'** and click **'Add folder'**. The new subfolder should now appear in the **Model Tree**.
 
-Whenever you create a folder you should also enter a short description detailing the purpose of the folder. To do this, select your new folder in the Model tree and click the **'Edit'** button. This will allow you to enter text into the description box. Once completed, click **'Save changes'** and the description will now display whenever the folder is selected.
+![Create a new subfolder illustration](create-a-new-subfolder.png) 
 
-![Add folder description](add-folder-description.png)
+To add a short description to the folder, select the folder in the **Model Tree** and its details will then be displayed on the right. Click the pencil **'Edit'** button and enter a description into the box. Once completed, click **'Save changes'** and the description will now display whenever the folder is selected.
+
+![Add folder description illustration](add-folder-description.png)
+
+---
 
 ## **2. Add Data Model**
-To add a Data Model, right click your new folder or sub-folder and select **'Add Data Model'**. A **'New Data Model'** form should appear on the right. 
+To add a **[Data Model](../../../glossary/data-model/data-model.md)**, right click the relevant folder and select **'Add Data Model'**. A **'New Data Model'** form will appear on the right. 
 
-![Add data model](add-data-model.png)
+![Add data model illustration](add-data-model.png)
+
+---
 
 ## <a name="complete-new-data-model-form"></a> **3. Complete New Data Model form**
 
+### **3.1. Complete Data Model Details**
 
-Please complete both the mandatory and optional fields on the New Data Model form, with the defintions of each field detailed below:
+Please complete both the mandatory and optional fields of the New Data Model form. The defintions of each field are detailed below:
 
-* **Label**  
-	Enter the name you want to give your new Data Model which should uniquely identify it. Please include any asset version information, as two models cannot have the same label.
- 
+* **[Label](../../../glossary/label/label.md)**  
+	Enter a unique name for the **[Data Model](../../../glossary/data-model/data-model.md)**  and include any version information, as two **[Data Models](../../../glossary/data-model/data-model.md)** cannot share the same **[Label](../../../glossary/label/label.md)**.
+	
 * **Author**  
-	Use this field to record the name(s) of the authors who are creating and maintaining this Data Model.
+	Use this field to record the name(s) of the authors who are creating and maintaining this **[Data Model](../../../glossary/data-model/data-model.md)**.
 
 * **Organisation**  
-	This is the name of the organisation responsible for the Data Model, or the underlying data asset or standard.
+	Type the name of the organisation responsible for the **[Data Model](../../../glossary/data-model/data-model.md)**, or the underlying data.
 
 * **Description**  
-	Enter a detailed description of the data asset or standard and include  information on any important characteristics of the data.
+	Enter a detailed description of the **Data Asset** or **Standard** in either plain text or html. Include any important contextual details relating to the **[Data Model](../../../glossary/data-model/data-model.md)**.
 
-* <a name="complete-new-data-model-form-type"></a>**Type**  
-	Select whether this model is a **'Data Asset'** or a **'Data Standard'** from the dropdown menu. A **Data Asset** is a collection of pre-existing data such as a database or a number of completed forms. While a **Data Standard** is a template for data that is to be colleced such as a form or schema.
+* <a name="complete-new-data-model-form-type"></a>**Select a Data Model Type**  
+	Select whether the **[Data Model](../../../glossary/data-model/data-model.md)** is a **'Data Asset'** or a **'Data Standard'** from the dropdown menu. A **Data Asset** is a collection of existing data, such as a database or a completed form. While a **Data Standard** is a specification template to collect new data, such as a form or schema.
 
-* **Classifier**  
-	Enter the relevant classifier by either selecting from the existing list in the dropdown menu, or by typing a name to create a new classifier. You may enter multiple classifiers.
+* **Classifications**  
+	Select any relevant **Classifications** (also known as tags) from the dropdown menu. You can select as many **Classifications** as you like. 
 
-![New Data Model Form 1](new-data-model-form-1.png)
+Once all the fields have been populated click **'Next Step'** to complete the **Default Data Types** section of the form. 
+	
+### **3.2. Select Default Data Types**
 
-Once all the fields have been populated click **'Next Step'**. 
+Select the relevant set of **'Default Data Types'** from the dropdown menu. These will be imported into your **[Data Model](../../../glossary/data-model/data-model.md)**. You should select the category that includes all the **Data Types** that you will likely have within your **[Data Model](../../../glossary/data-model/data-model.md)**, however if you're unsure at this stage, then leave this field blank and import them later on.
 
-## **4. Select Default Data Type**
 
-Now you need to select the relevant set of **'Default Data Types'** from the dropdown menu to be imported into your model. Select a category that you expect to have all its data types within your Data Model. However, if you are unsure at this stage, leave the field blank and you can import these later on. 
+![New Data Model Form showing Default Data Types section](new-data-model-form-2.png)
 
-![New Data Model Form 2](new-data-model-form-2.png)
+---
 
-## **5. Submit Data Model**
-Once completed, click **'Submit Data Model'** and your new Data Model will be added to your folder and will appear in the Finder Panel.
+## **4. Submit Data Model**
+Once completed, click **'Submit Data Model'** and your new **[Data Model](../../../glossary/data-model/data-model.md)** will be added. When selected in the **Model Tree** the details of the **[Data Model](../../../glossary/data-model/data-model.md)** will now be displayed on the right.
 
-![Final Data Model added](final-data-model-added.png)
+![New Data Model details](final-data-model-added.png)
+
+---
