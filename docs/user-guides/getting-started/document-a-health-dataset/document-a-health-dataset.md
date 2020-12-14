@@ -1,69 +1,79 @@
-This user guide will explain the steps you need to follow to add a health dataset to the **[Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home)**.
+### This user guide will explain the steps you need to follow to add a health dataset to the **[Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home)**.
 
 ---
 
 ## **1. Create a Data Model**
 
-Datasets are stored in their own **[Data Models](../../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../../glossary/data-model/data-model.md)**. To do this follow the steps in our **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
+Datasets are stored in their own **[Data Models](../../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../../glossary/data-model/data-model.md)**. To do this, follow the steps in the **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
 
+Once you have reached step **[3. Complete New Data Model form](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Data Model Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
 
-Once you have reached step **['3. Complete New Data Model form'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **[Type](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
-
-Complete the rest of the steps until you have successfully submitted your **[Data Model](../../../glossary/data-model/data-model.md)**. 
+Fill in the rest of the New Data Model form and submit the **[Data Model](../../../glossary/data-model/data-model.md)** as explained in steps 3.2 and 4 of the **[Create a Data Model user guide](../create-a-data-model/create-a-data-model.md)**.
 
 ---
 
 ## **2. Add a property**
 
-Once you've created your **[Data Model](../../../glossary/data-model/data-model.md)**, it's important to record further characteristics of the corresponding dataset, particularly to help gateway providers when designing interfaces. For example adding a contact email address.
+Once you've created your **[Data Model](../../../glossary/data-model/data-model.md)**, it's important to record further characteristics of the corresponding dataset, particularly to help gateway providers when designing interfaces.
 
-To do this, select your **[Data Model](../../../glossary/data-model/data-model.md)** in the Model tree, then click the **'Properties'** tab on the panel below the model overview. Next, click **'+ Add Property'** and this will add a row in the property table, as shown in the video below.
+To do this, select the **[Data Model](../../../glossary/data-model/data-model.md)** in the **Model Tree** and then click the **'Properties'** tab underneath the **[Data Model](../../../glossary/data-model/data-model.md)** details panel on the right. An **'+ Add Property'** button will then appear on the right. Click this to add a row to the property table.
 
 <iframe src="https://player.vimeo.com/video/480691755" width="640" height="346" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-You will then need to complete the details of your new property as follows:
+Complete the details of the new property as follows:
 
 * **Namespace**  
 	This will be used to select the correct properties by the gateway interface. Select **‘uk.ac.hdrukgateway'** from the dropdown menu.
 
 * **Key**  
-	Enter a property name such as 'contact email'.
+	Enter a relevant property name such as 'contact email'.
 	
 * **Value**  
-	This is the value of the given property, for example ‘enquiries-mydataset@hub.org’.
+	This is the value of the given property, for example ‘enquiries-mydataset@hub.org’.  
+	You can also add a relevant element to the value of a property. Click **'+ Add Element'** in the **'Value'** column and select the element type from the menu. Search for the element you require and once selected, it will automatically import to the **'Value'** column of the properties table.     
 
-Once completed click the green tick **'Save'** and your new property should now be permanently displayed in the **'Properties'** tab. 
-
-![Add a new property](add-a-new-property.png)
+Once you've filled in the details of the property, click the green **'Save'** tick and the new property will be added to the table in the **'Properties'** tab. 
 
 ---
 
-## <a name="create-a-data-class"></a> **3. Create a Data Class**
+## <a name="create-a-data-class"></a> **3. Create a [Data Class](../../../glossary/data-class/data-class.md)**
 
-Each **[Data Model](../../../glossary/data-model/data-model.md)** is made up of several Data Classes which is where data items are both created and managed. 
+Each **[Data Model](../../../glossary/data-model/data-model.md)** is made up of several **[Data Classes](../../../glossary/data-class/data-class.md)** which is where data items are both created and managed. 
 
 If your dataset is a collection of tables, the conventional approach is to create a new class for each table. Alternatively, you can create a set of classes to provide a more abstract account of the data set which group and present the data differently to how it is stored and managed.
    
-To create a new **Data Class**, select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** from the Model tree and click the **'Data Classes'** tab on the panel below the model overview. Then click **'+ Add'** and a **'New Data Class'** form will appear on the right.
+To create a new **[Data Class](../../../glossary/data-class/data-class.md)**, select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** in the **Model Tree** and click the **'Data Classes'** tab on the panel below the **[Data Model](../../../glossary/data-model/data-model.md)** details. Click the **'+ Add'** button on the right and a **'New Data Class'** form will appear.
 
-To document an existing data set, select **'Create a New Data Class'** and then click **'Next step'**. 
+There are two ways to import a **[Data Class](../../../glossary/data-class/data-class.md)** into a **[Data Model](../../../glossary/data-model/data-model.md)**. You can either create a new **[Data Class](../../../glossary/data-class/data-class.md)** or copy a **[Data Class](../../../glossary/data-class/data-class.md)** from another **[Data Model](../../../glossary/data-model/data-model.md)**. 
 
-![Create a Data Class](create-a-data-class.png)
+### **3.1 Create a New [Data Class](../../../glossary/data-class/data-class.md)**
 
-You will then need to enter the **'Data Class Details'** as per the following: 
+To create a new **[Data Class](../../../glossary/data-class/data-class.md)**, select this option in the first section of the **'New Data Class'** form and click the **'Next step'** button.
 
-* **Label**  
-	Enter the name of your new Data Class.
+![New Data Class form section one](create-a-new-data-class-1.png)
+
+Now you need to complete the **'Data Class Details'** section of the form as follows: 
+
+* **[Label](../../../glossary/label/label.md)**  
+	Enter a name for the new **[Data Class](../../../glossary/data-class/data-class.md)** which has to be unique within the **[Data Model](../../../glossary/data-model/data-model.md)**.
 
 * **Description**  
-	Complete a description of the Data Class which explains the types of data itmes that are grouped together here. Also include contextual details which are common to the data itmes, to avoid having to include these in each individual data items description.
+	Complete a description in either html or plain text which explains the types of data items grouped together within this **[Data Class](../../../glossary/data-class/data-class.md)**. Also include contextual details which are common to the data items, to avoid having to add descriptions to each individual data item.
 
 * **Multiplicity**  
-	The **Multiplicity** specifies the minimum and maximum number of times that **Data Class** will appear in an instance of the model. For example, for a **Data Class** that corresponds to a table in a relational database, the **Multiplicity** values would be the minimum and maximum number of rows allowed in the table. However, in a model of a dataset, there is usually no need to specify the **Multiplicity** of a **Data Class** and so, leave these fields blank. 
-	
-![Data Class Details form](data-class-details-form.png)
+	The **Multiplicity** specifies the minimum and maximum number of times that the **[Data Class](../../../glossary/data-class/data-class.md)** will appear within the **[Data Model](../../../glossary/data-model/data-model.md)**. 	
+	For example, for a **[Data Class](../../../glossary/data-class/data-class.md)** that corresponds to a table in a relational database, the **Multiplicity** values would be the minimum and maximum number of rows allowed in the table. However, in a model of a dataset, there is usually no need to specify the **Multiplicity** of a **Data Class**, so leave these fields blank. 
 
-Once you have completed the **'Data Class Details'** form, click **'Submit Data Class'** and your new **Data Class** will now be permanently displayed under the **'Data Classes'** tab of your model and in the Model tree. You can add as many **Data Classes** as necessary.
+![New Data Class form section two](create-a-new-data-class-2.png)
+
+Once you have completed the **'Data Class Details'** form, click **'Submit Data Class'** and the new **[Data Class](../../../glossary/data-class/data-class.md)** will now be permanently displayed under the **'Data Classes'** tab of the **[Data Model](../../../glossary/data-model/data-model.md)**. You can add as many **[Data Classes](../../../glossary/data-class/data-class.md)** as necessary.
+
+
+
+
+
+### **3.2 Create a New [Data Class](../../../glossary/data-class/data-class.md)**
+
 
 ---
 

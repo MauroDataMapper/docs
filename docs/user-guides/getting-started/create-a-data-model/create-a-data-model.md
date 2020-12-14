@@ -24,7 +24,7 @@ To add a **[Data Model](../../../glossary/data-model/data-model.md)**, right cli
 
 ## <a name="complete-new-data-model-form"></a> **3. Complete New Data Model form**
 
-### **3.1. Complete Data Model Details**
+### **3.1 Complete Data Model Details**
 
 Please complete both the mandatory and optional fields of the New Data Model form. The defintions of each field are detailed below:
 
@@ -48,7 +48,7 @@ Please complete both the mandatory and optional fields of the New Data Model for
 
 Once all the fields have been populated click **'Next Step'** to complete the **Default Data Types** section of the form. 
 	
-### **3.2. Select Default Data Types**
+### **3.2 Select Default Data Types**
 
 Select the relevant set of **'Default Data Types'** from the dropdown menu. These will be imported into your **[Data Model](../../../glossary/data-model/data-model.md)**. You should select the category that includes all the **Data Types** that you will likely have within your **[Data Model](../../../glossary/data-model/data-model.md)**, however if you're unsure at this stage, then leave this field blank and import them later on.
 
