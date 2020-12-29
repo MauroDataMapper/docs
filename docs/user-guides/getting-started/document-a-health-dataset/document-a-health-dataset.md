@@ -18,7 +18,7 @@ Once you've created your **[Data Model](../../../glossary/data-model/data-model.
 
 To do this, select the **[Data Model](../../../glossary/data-model/data-model.md)** in the **Model Tree** and then click the **'Properties'** tab underneath the **[Data Model](../../../glossary/data-model/data-model.md)** details panel on the right. An **'+ Add Property'** button will then appear on the right. Click this to add a row to the property table.
 
-<iframe src="https://player.vimeo.com/video/480691755" width="640" height="346" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/495442791" width="640" height="346" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 Complete the details of the new property as follows:
 
@@ -44,7 +44,7 @@ If your dataset is a collection of tables, the conventional approach is to creat
    
 To create a new **[Data Class](../../../glossary/data-class/data-class.md)**, select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** in the **Model Tree** and click the **'Data Classes'** tab on the panel below the **[Data Model](../../../glossary/data-model/data-model.md)** details. Click the **'+ Add'** button on the right and a **'New Data Class'** form will appear.
 
-There are two ways to import a **[Data Class](../../../glossary/data-class/data-class.md)** into a **[Data Model](../../../glossary/data-model/data-model.md)**. You can either create a new **[Data Class](../../../glossary/data-class/data-class.md)** or copy a **[Data Class](../../../glossary/data-class/data-class.md)** from another **[Data Model](../../../glossary/data-model/data-model.md)**. 
+There are two ways to import a **[Data Class](../../../glossary/data-class/data-class.md)** into a **[Data Model](../../../glossary/data-model/data-model.md)**. You can either create a new **[Data Class](../../../glossary/data-class/data-class.md)** or copy a **[Data Class](../../../glossary/data-class/data-class.md)** from an existing **[Data Model](../../../glossary/data-model/data-model.md)**. 
 
 ### **3.1 Create a New [Data Class](../../../glossary/data-class/data-class.md)**
 
@@ -61,27 +61,33 @@ Now you need to complete the **'Data Class Details'** section of the form as fol
 	Complete a description in either html or plain text which explains the types of data items grouped together within this **[Data Class](../../../glossary/data-class/data-class.md)**. Also include contextual details which are common to the data items, to avoid having to add descriptions to each individual data item.
 
 * **Multiplicity**  
-	The **Multiplicity** specifies the minimum and maximum number of times that the **[Data Class](../../../glossary/data-class/data-class.md)** will appear within the **[Data Model](../../../glossary/data-model/data-model.md)**. 	
-	For example, for a **[Data Class](../../../glossary/data-class/data-class.md)** that corresponds to a table in a relational database, the **Multiplicity** values would be the minimum and maximum number of rows allowed in the table. However, in a model of a dataset, there is usually no need to specify the **Multiplicity** of a **Data Class**, so leave these fields blank. 
+	The **Multiplicity** specifies the minimum and maximum number of times that the **[Data Class](../../../glossary/data-class/data-class.md)** will appear within the **[Data Model](../../../glossary/data-model/data-model.md)**. 
+	Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of ‘*’ which represents ‘-1’ internally.		
 
 ![New Data Class form section two](create-a-new-data-class-2.png)
 
 Once you have completed the **'Data Class Details'** form, click **'Submit Data Class'** and the new **[Data Class](../../../glossary/data-class/data-class.md)** will now be permanently displayed under the **'Data Classes'** tab of the **[Data Model](../../../glossary/data-model/data-model.md)**. You can add as many **[Data Classes](../../../glossary/data-class/data-class.md)** as necessary.
 
 
+### **3.2 Copy a [Data Class](../../../glossary/data-class/data-class.md)**
 
+To import **[Data Classes](../../../glossary/data-class/data-class.md)** from an existing **[Data Model](../../../glossary/data-model/data-model.md)**, select the **'Copy Data Classes(s) from...'** option in the first section of the **'New Data Class'** form. Select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** by either typing the name in the box or clicking the menu icon to the right of the red cross. This will display the **Model Tree** from which you can select the relevant **[Data Model](../../../glossary/data-model/data-model.md)**. Once selected, click **'Next step'**.
 
+The **'Data Class Details'** section of the form will then appear, with a list of all the **[Data Classes](../../../glossary/data-class/data-class.md)** within the selected **[Data Model](../../../glossary/data-model/data-model.md)**. Select the **[Data Classes](../../../glossary/data-class/data-class.md)** you wish to import and then click **'Submit Data Class'**. The selected **[Data Classes](../../../glossary/data-class/data-class.md)** will then be imported into your original **[Data Model](../../../glossary/data-model/data-model.md)**, with the progress illustrated by a green loading bar at the bototm of the form. 
 
-### **3.2 Create a New [Data Class](../../../glossary/data-class/data-class.md)**
-
+<iframe src="https://player.vimeo.com/video/495442830" width="640" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ---
 
-## **4. Add a nested Data Class**
+## **4. Add a Nested Data Class**
 
-Nested Data Classes are essentially a **Data Class** within a **Data Class** and can be a useful way of managing complex data sets. In the **[Data Model](../../../glossary/data-model/data-model.md)** below which describes a webform of a Patients details, the **'Correspondance Address Data Class'** is actually nested within the **'Contact details Data Class'**. 
+A useful way of managing complex data sets is to use **Nested Data Classes** which are essentially a **[Data Class](../../../glossary/data-class/data-class.md)** within a **[Data Class](../../../glossary/data-class/data-class.md)**.
 
-![Nested Data Class](nested-data-class-graphic.png)
+For example, in a webform, there may be a section called **'Contact details'**, which would be one **[Data Class](../../../glossary/data-class/data-class.md)**. Within that section however, there may be another labelled **'Correspondence Address'**, which would be a **Nested Data Class**.  
+
+![A Nested Data Class example illustrated in a webform and a Data Model](../../../glossary/data-class/nested-data-class.png)
+
+
 
 To add a nested Data Class, click the relevant Data Class from the Model tree and click the **'Content'** tab on the panel below the model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained above in step **['3. Create a Data Class'](document-a-health-dataset.md#create-a-data-class)**
 
