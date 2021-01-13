@@ -101,7 +101,7 @@ To create a **Data Element** you can use the same approach as creating a **[Data
 
 Similar to adding a **[Data Class](../../../glossary/data-class/data-class.md)**, there are two ways to import a **Data Element**. You can either create a new **Data Element** or copy a **Data Element** from an existing **[Data Class](../../../glossary/data-class/data-class.md)**.
 
-### **5.1 Create a New Data Element**
+### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
 Follow the steps in **[3.1 Create a new Data Class](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class)** until you have completed the **['Label'](../../../glossary/label/label.md)**, **'Description'** and **'Multiplicity'** fields for the **Data Element**. 
 
@@ -121,25 +121,31 @@ To add a new Data Type, click **'Add a new Data Type'** on the **'Data Element D
 
 A Data Type can either be:  
 
+* **Enumeration:** a list of possible values  
+	If **'Enumeration'** has been selected, an additional table will appear where you can add several **Enumerations** and specify a **Group**, **Key** and **Value**. 
 * **Primitive:** a string or number
-* **Enumeration:** a list of possible values
-* **Reference:** 
-* **Terminology:**
+* **Reference:**   
+	If **Reference** has been selected, the **Reference Data Class** can be selected from a dropdown menu. 
+* **Terminology:**   
+	Similarly, if Terminology has been selected, the relevant category can be chosen from a dropdown menu
 
-You can then assign several relevant **'Classifications'** by selecting them from the dropdown menu. Once all fields are complete, click **'Submit Data Element'** to add the new **Data Element** to the **[Data Class](../../../glossary/data-class/data-class.md)**. Repeat this process to add other **Data Elements**.   
+You can then assign several relevant **'Classifications'** by selecting them from the dropdown menu. 
+
+Once all fields are complete, click **'Submit Data Element'** to add the new **Data Element** to the **[Data Class](../../../glossary/data-class/data-class.md)**. Go back to step **[5.1 Create a new Data Element](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-element)** and repeat the process to add other **Data Elements**.   
 
 ADD SCREENSHOT
 
 ### **5.2 Copy a Data Element**
 
-To import **Data Elements** 
 
 
-
-
-from an existing **[Data Model](../../../glossary/data-model/data-model.md)**, select the **'Copy Data Classes(s) from...'** option in the first section of the **'New Data Class'** form. Select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** by either typing the name in the box or clicking the menu icon to the right of the red cross. This will display the **Model Tree** from which you can select the relevant **[Data Model](../../../glossary/data-model/data-model.md)**. Once selected, click **'Next step'**.
+To import **[Data Classes](../../../glossary/data-class/data-class.md)** from an existing **[Data Model](../../../glossary/data-model/data-model.md)**, select the **'Copy Data Classes(s) from...'** option in the first section of the **'New Data Class'** form. Select the relevant **[Data Model](../../../glossary/data-model/data-model.md)** by either typing the name in the box or clicking the menu icon to the right of the red cross. This will display the **Model Tree** from which you can select the relevant **[Data Model](../../../glossary/data-model/data-model.md)**. Once selected, click **'Next step'**.
 
 The **'Data Class Details'** section of the form will then appear, with a list of all the **[Data Classes](../../../glossary/data-class/data-class.md)** within the selected **[Data Model](../../../glossary/data-model/data-model.md)**. Select the **[Data Classes](../../../glossary/data-class/data-class.md)** you wish to import and then click **'Submit Data Class'**. The selected **[Data Classes](../../../glossary/data-class/data-class.md)** will then be imported into your original **[Data Model](../../../glossary/data-model/data-model.md)**, with the progress illustrated by a green loading bar at the bototm of the form. 
+
+
+
+
 
 
 ---
