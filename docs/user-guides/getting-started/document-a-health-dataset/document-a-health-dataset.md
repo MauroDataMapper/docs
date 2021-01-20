@@ -121,12 +121,15 @@ To add a new **Data Type**, click **'Add a new Data Type'** on the **'Data Eleme
 
 A **Data Type** can either be:  
 
-* **Enumeration:** a relatively short list of possible values  
+* **Enumeration:** A constrained set of possible values. Each **Enumeration Type** defines a number of **Enumeration Values** which have a coded key and a human-readable value.   
 	If **'Enumeration'** has been selected, an additional table will appear where you can add several **Enumerations** and specify a **'Group'**, **'Key'** and **'Value'**. 
-* **Primitive:** a string or number
-* **Reference:** Data with detailed properties   
+	
+* **Primitive:** A string, date or integer.
+
+* **Reference:** Data with detailed properties which is used to describe relationships between different **[Data Classes](../../../glossary/data-class/data-class.md)** within the same **[Data Model](../../../glossary/data-model/data-model.md)**.   
 	If **Reference** has been selected, the **Reference Data Class** can be selected from a dropdown menu. 
-* **Terminology:** Structured data which has relationships between different terms   
+	
+* **Terminology:** A structured collection of enumerated values which has relationships between different data terms.   
 	Similarly, if **Terminology** has been selected, the relevant category can be chosen from a dropdown menu.
 
 You can then assign several **'Classifications'** by selecting them from the dropdown menu. 
