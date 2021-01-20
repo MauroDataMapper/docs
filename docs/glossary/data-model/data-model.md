@@ -7,9 +7,9 @@ A **Data Model** is a description of an existing collection of metadata, or a sp
 
 **Data Models** make the connection between the names of columns, fields or variables and our understanding of how the corresponding data is acquired, managed and interpreted. The **Mauro Data Mapper** acts as a directory for these **Data Models** and allows us to create, search and share these data descriptions.
 
-Within each **Data Model** lies several **[Data Classes](../data-class/data-class.md)** which are groups of data that are related in some way. **[Data Classes](../data-class/data-class.md)** contain **Data Elements** which are the descriptions of an individual field or variable. 
+Within each **Data Model** lies several **[Data Classes](../data-class/data-class.md)** which are groups of data that are related in some way. **[Data Classes](../data-class/data-class.md)** contain **[Data Elements](../data-element/data-element.md)** which are the descriptions of an individual field or variable. 
 
-For example, a webform where patients enter their details would be a **Data Model**. The **'Personal details'** and **'Contact details'** sections within the webform would each be a **[Data Class](../data-class/data-class.md)**. While the individual entries such as **'First Name'**, **'Last Name'**, **'Date of Birth'** etc would each be a **Data Element**. 
+For example, a webform where patients enter their details would be a **Data Model**. The **'Personal details'** and **'Contact details'** sections within the webform would each be a **[Data Class](../data-class/data-class.md)**. While the individual entries such as **'First Name'**, **'Last Name'**, **'Date of Birth'** etc would each be a **[Data Element](../data-element/data-element.md)**. 
 
 The **'Correspondence Address'** section is within the **'Contact details'** section and would therefore be a **Nested Data Class**.
 
@@ -47,10 +47,15 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	This is a list of all the **[Data Classes](../data-class/data-class.md)** within the **Data Model**.
 
 * **Types**  
-	The various **Data Types** within the **Data Model**. **Data Types** can either be:
-	* 	 **Enumeration:** a list of possible values
-	* 	 **Primitive:** a string or number
-	* 	 **Reference & Terminology:** linked to another definition which gives a more accurate description of the dataset. This can be a Terminology, CodeSet or ReferenceDataModel
+	The various **Data Types** within the **Data Model**.  
+	**Data Types** can either be:
+	* **Enumeration:** A constrained set of possible values. Each **Enumeration Type** defines a number of **Enumeration Values** which have a coded key and a human-readable value.
+
+	* **Primitive:** A string, date or integer.
+
+	* **Reference:** Data with detailed properties which is used to describe relationships between different **[Data Classes](../data-class/data-class.md)** within the same **Data Model**.
+
+	* **Terminology:** A structured collection of **Enumerated Values** which has relationships between different data terms.
 
 * **Properties**  
 	Additional metadata about this **Data Model**. This can include technical information such as where the data is located, as well as information for users such as the type of data, coverage, geography and accessibility.
@@ -65,7 +70,7 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	A detailed record of user, date, time and description of all the changes made to the **Data Model**. 
 
 * **Diagram**  
-	A UML diagram which is a graphical way of summarising the **[Data Classes](../data-class/data-class.md)** and **Data Elements** within the **Data Model**. 
+	A UML diagram which is a graphical way of summarising the **[Data Classes](../data-class/data-class.md)** and **[Data Element](../data-element/data-element.md)** within the **Data Model**. 
 
 * **Links**  
 	**Semantic links** between relevant **Data Models**.

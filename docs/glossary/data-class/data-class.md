@@ -1,11 +1,11 @@
 ##**What is a Data Class?**
 
-A **Data Class** is a collection of data, also known as **Data Elements**, that are related to each other in some way. For example, each **Data Element** could appear in the same table of a database, or the same section within a form.
+A **Data Class** is a collection of data, also known as **[Data Elements](../data-element/data-element.md)**, that are related to each other in some way. For example, each **[Data Element](../data-element/data-element.md)** could appear in the same table of a database, or the same section within a form.
 
 ---
 ##**How are Data Classes used?**
 
-**Data Classes** are the building blocks of a **[Data Model](../data-model/data-model.md)**. Within each **Data Class** lies several **Data Elements** and these are the descriptions of an individual field, variable, column or property. 
+**Data Classes** are the building blocks of a **[Data Model](../data-model/data-model.md)**. Within each **Data Class** lies several **[Data Elements](../data-element/data-element.md)** and these are the descriptions of an individual field, variable, column or property. 
 
 You can also have a **Data Class** within a **Data Class**, known as a **Nested Data Class**, which can be a useful way of managing complex sets of data. There is no limit on the number of **Nested Data Classes** you can include. 
 
@@ -43,7 +43,7 @@ The above are all shown within the details panel, when the **Data Class** is sel
 Other characteristics are displayed in the tabs underneath the details panel, when the **Data Class** is selected in the **Model Tree**.
 
 * **Content**  
-	This refers to the various **Data Elements** and **Nested Data Classes** within the selected **Data Class**.
+	This refers to the various **[Data Elements](../data-element/data-element.md)** and **Nested Data Classes** within the selected **Data Class**.
 	
 * **Properties**  
 	Arbitrary additional metadata about this **Data Class**.
@@ -52,15 +52,13 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	Any relevant comments or notes. 
 
 * **Links**  
-	**Semantic links** between relevant data classes.
+	**Semantic links** between relevant **Data Classes**.
 
 * **Summary**  
-	Further metadata information on the nature of the **Data Elements** within the **Data Class**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
+	Further metadata information on the nature of the **[Data Elements](../data-element/data-element.md)** within the **Data Class**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
 
 * **Attachments**  
 	Files can be added to provide additional information and context. 
 
 ---
-
-
 

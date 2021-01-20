@@ -1,6 +1,6 @@
 ##**What is an Alias?**
 
-An **Alias** is an alternative name for a catalogue item which helps to locate it when searched for. **[Data Models](../data-model/data-model.md)**, **[Data Classes](../data-class/data-class.md)** and **Data Elements** must have one primary **[Label](../label/label.md)**, but can have many **Aliases**. 
+An **Alias** is an alternative name for a catalogue item which helps to locate it when searched for. **[Data Models](../data-model/data-model.md)**, **[Data Classes](../data-class/data-class.md)** and **[Data Elements](../data-element/data-element.md)** must have one primary **[Label](../label/label.md)**, but can have many **Aliases**. 
 
 ---
 

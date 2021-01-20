@@ -19,9 +19,9 @@ The Mauro Data Mapper is a web based tool which stores and manages descriptions 
 
 Each **[Data Model](../glossary/data-model/data-model.md)** consists of several **[Data Classes](../glossary/data-class/data-class.md)**, which are groups of data that are related in some way. For example, a group of data that appears in the same table of a database or the same section of a form. **[Data Classes](../glossary/data-class/data-class.md)** can sometimes also contain **Nested Data Classes**.
 
-Within each **[Data Class](../glossary/data-class/data-class.md)** is then a number of **Data Elements** which are the descriptions of an individual field or variable.
+Within each **[Data Class](../glossary/data-class/data-class.md)** is then a number of **[Data Elements](../glossary/data-element/data-element.md)** which are the descriptions of an individual field or variable.
 
-In the example below, the entire Webform is the **[Data Model](../glossary/data-model/data-model.md)** and this is made up of two **[Data Classes](../glossary/data-class/data-class.md)**: Personal details and Contact details. Within Contact details there is a **Nested Data Class**, called the Correspondence Address. Each **[Data Class](../glossary/data-class/data-class.md)** consists of several **Data Elements** which give the various details of the patient. 
+In the example below, the entire Webform is the **[Data Model](../glossary/data-model/data-model.md)** and this is made up of two **[Data Classes](../glossary/data-class/data-class.md)**: Personal details and Contact details. Within Contact details there is a **Nested Data Class**, called the Correspondence Address. Each **[Data Class](../glossary/data-class/data-class.md)** consists of several **[Data Elements](../glossary/data-element/data-element.md)** which give the various details of the patient. 
 
 ![Data Model structure](data-model-structure.png)
 
