@@ -44,10 +44,10 @@ markdown_extensions:
 nav:
     -   Home: 'index.md'
     -   About: 'about/about.md'
-    -   User Guides:
-            - Getting Started:   
-                    - Create a Data Model: 'user-guides/getting-started/create-a-data-model/create-a-data-model.md'
-                    - Document a Health Dataset: 'user-guides/getting-started/document-a-health-dataset/document-a-health-dataset.md'
+    -   User Guides: 
+        - Create a Data Model: 'user-guides/create-a-data-model/create-a-data-model.md'
+        - Document a Health Dataset: 'user-guides/document-a-health-dataset/document-a-health-dataset.md'
+        - Import a Data Model from Excel: 'user-guides/import-data-model-from-excel/import-data-model-from-excel.md'
     -   Tutorial:
          - Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
     -   Glossary: 'glossary/glossary.md'
