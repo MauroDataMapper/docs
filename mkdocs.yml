@@ -9,72 +9,103 @@ theme:
         accent: 'accent'
     logo: 'assets/images/logo.png'
     favicon: assets/images/favicon.ico
-    font: 
+    font:
         text: Nunito Sans
         code: Nunito Sans
 plugins:
-    - search 
+    - search
 extra_css:
     - assets/stylesheets/extra.css
 extra_javascript:
     - assets/javascripts/extra.js
 markdown_extensions:
-    -   admonition
+    - admonition
+    - footnotes
     -   codehilite:
             guess_lang: false
     -   toc:
             permalink: true
-    -   meta
+    - meta
     - pymdownx.arithmatex
-    - pymdownx.betterem:
-          smart_enable: all
+    -   pymdownx.betterem:
+            smart_enable: all
     - pymdownx.caret
     - pymdownx.critic
     - pymdownx.details
-    - pymdownx.emoji:
-          emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    -   pymdownx.emoji:
+            emoji_generator: !!python/name:pymdownx.emoji.to_svg
     - pymdownx.inlinehilite
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.smartsymbols
     - pymdownx.superfences
-    - pymdownx.tasklist:
-          custom_checkbox: true
+    -   pymdownx.tasklist:
+            custom_checkbox: true
     - pymdownx.tilde
 nav:
     -   Home: 'index.md'
-    -   About: 'about/about.md'
-    -   User Guides:
-            - Getting Started:   
-                    - Create a Data Model: 'user-guides/getting-started/create-a-data-model/create-a-data-model.md'
-                    - Document a Health Dataset: 'user-guides/getting-started/document-a-health-dataset/document-a-health-dataset.md'
-    -   Tutorial:
-         - Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
-    -   Glossary: 'glossary/glossary.md'
-    -   REST API:
-            -   Introduction: 'rest-api/introduction.md'
-            -   Authentication: 'rest-api/authentication.md'
-            -   Errors: 'rest-api/errors.md'
-            -   Pagination: 'rest-api/pagination.md'
-            -   Core resources:
-                    -   Catalogue item: 'rest-api/resources/catalogue-item.md'
-                    -   Classifier: 'rest-api/resources/classifier.md'
-                    -   Codeset: 'rest-api/resources/codeset.md'
-                    -   Data class: 'rest-api/resources/data-class.md'
-                    -   Data element: 'rest-api/resources/data-element.md'
-                    -   Data flow: 'rest-api/resources/data-flow.md'
-                    -   Data flow component: 'rest-api/resources/data-flow-component.md'
-                    -   Data model: 'rest-api/resources/data-model.md'
-                    -   Data type: 'rest-api/resources/data-type.md'
-                    -   Enumeration value: 'rest-api/resources/enumeration-value.md'
-                    -   Folder: 'rest-api/resources/folder.md'
-                    -   Plugin: 'rest-api/resources/plugin.md'
-                    -   Semantic link: 'rest-api/resources/semantic-link.md'
-                    -   Term: 'rest-api/resources/term.md'
-                    -   Term relationship: 'rest-api/resources/term-relationship.md'
-                    -   Terminology: 'rest-api/resources/terminology.md'
-                    -   User: 'rest-api/resources/user.md'
-                    -   User group: 'rest-api/resources/user-group.md'
-            - Trees: 'rest-api/trees.md'
-            - Import / Export: 'rest-api/importexport.md'
-            - Admin functions: 'rest-api/admin.md'
+    -   About:
+            -   Introduction: 'about/introduction.md'
+            -   History: 'about/history.md'
+            -   Research: 'about/research.md'
+            -   Mauro: 'about/mauro.md'
+            -   Release Notes: 'about/release-notes.md'
+            -   Development Roadmap: 'about/development-roadmap.md'
+    -   Using Mauro:
+            -   User Guides:
+                    -   Getting Started:
+                            -   Create a Data Model: 'user-guides/getting-started/create-a-data-model/create-a-data-model.md'
+                            -   Document a Health Dataset: 'user-guides/getting-started/document-a-health-dataset/document-a-health-dataset.md'
+            -   Tutorials:
+                    -   Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
+            -   Glossary: 'glossary/glossary.md'
+    -   Installing and Administration:
+            -   Installation:
+                    -   Docker Install: 'installing/docker.md'
+            -   Administration: 'installing/administration.md'
+            -   Plugins: 'installing/plugins.md'
+            -   Migrating Old Data: 'installing/migration.md'
+    -   Developer Resources:
+            -   Technical Architecture: 'resources/architecture.md'
+            -   REST API:
+                    -   Introduction: 'rest-api/introduction.md'
+                    -   Authentication: 'rest-api/authentication.md'
+                    -   API Keys: 'rest-api/apikeys.md'
+                    -   Errors: 'rest-api/errors.md'
+                    -   Pagination: 'rest-api/pagination.md'
+                    -   Core resources:
+                            -   Catalogue item: 'rest-api/resources/catalogue-item.md'
+                            -   Classifier: 'rest-api/resources/classifier.md'
+                            -   Codeset: 'rest-api/resources/codeset.md'
+                            -   Data class: 'rest-api/resources/data-class.md'
+                            -   Data element: 'rest-api/resources/data-element.md'
+                            -   Data flow: 'rest-api/resources/data-flow.md'
+                            -   Data flow component: 'rest-api/resources/data-flow-component.md'
+                            -   Data model: 'rest-api/resources/data-model.md'
+                            -   Data type: 'rest-api/resources/data-type.md'
+                            -   Enumeration value: 'rest-api/resources/enumeration-value.md'
+                            -   Folder: 'rest-api/resources/folder.md'
+                            -   Plugin: 'rest-api/resources/plugin.md'
+                            -   Semantic link: 'rest-api/resources/semantic-link.md'
+                            -   Term: 'rest-api/resources/term.md'
+                            -   Term relationship: 'rest-api/resources/term-relationship.md'
+                            -   Terminology: 'rest-api/resources/terminology.md'
+                            -   User: 'rest-api/resources/user.md'
+                            -   User group: 'rest-api/resources/user-group.md'
+                    -   Trees: 'rest-api/trees.md'
+                    -   Import / Export: 'rest-api/importexport.md'
+                    -   Admin functions: 'rest-api/admin.md'
+            -   Client Libraries:
+                    -   Java: 'resources/client/java.md'
+                    -   Typescript: 'resources/client/typescript.md'
+                    -   .NET: 'resources/client/net.md'
+            -   Technical Plugins:
+                    -   Freemarker Templating: 'plugins/freemarker.md'
+                    -   SPARQL: 'plugins/sparql.md'
+    -   Community:
+            -   Support: 'community/support.md'
+            -   Contribute to Documentation: 'community/contribute-documentation.md'
+            -   Contribute to Code:
+                    -   Building Plugins: 'community/build-plugins.md'
+                    -   Fixing bugs: 'community/fix-bugs.md'
+            - Sharing Models: 'community/share-models.md'
