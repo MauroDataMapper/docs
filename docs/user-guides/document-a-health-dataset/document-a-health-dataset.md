@@ -111,7 +111,7 @@ Each **Data Element** then needs to be assigned a relevant **Data Type**. This c
 	
 Click the **'Search'** box and a dropdown list of existing **Data Types** will appear. Select the relevant **Data Type**. 
 
-You can then assign several **Classifications** to the **Data Type** by selecting them from the dropdown menu. Once all fields are complete, click **'Submit Data Element'** to add the **Data Element** to the **[Data Class](../../glossary/data-class/data-class.md)**. Repeat this process to add other **Data Elements**.   
+You can then assign several **Classifications** to the **Data Type** by selecting them from the dropdown menu. Once all fields are complete, click **'Submit Data Element'** to add the **[Data Element](../../glossary/data-element/data-element.md)** to the **[Data Class](../../glossary/data-class/data-class.md)**. Repeat this process to add other **Data Elements**.   
   
 ![New Data Element form section two](add-existing-data-type.png)
 
