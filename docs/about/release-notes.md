@@ -8,6 +8,8 @@ In general, we try to use [Semantic Versioning](https://semver.org). In particul
 the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, but 'bleeding edge' features may be available within '
 develop' or any feature branch.
 
+Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts, and dependencies.
+
 ## Core
 
 <table width="100%">

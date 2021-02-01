@@ -73,6 +73,7 @@ nav:
                     -   API Keys: 'rest-api/apikeys.md'
                     -   Errors: 'rest-api/errors.md'
                     -   Pagination: 'rest-api/pagination.md'
+                    -   Postman Library: 'rest-api/postman.md'
                     -   Core resources:
                             -   Catalogue item: 'rest-api/resources/catalogue-item.md'
                             -   Classifier: 'rest-api/resources/classifier.md'
