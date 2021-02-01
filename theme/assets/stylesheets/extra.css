@@ -118,6 +118,12 @@ header.md-header nav.md-header-nav {
     margin-top: 0.5rem;
 }
 
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    font-weight: bold;
+}
+
 
 @media screen and (min-width: 60em) {
     .md-search__input, .md-search__input:hover { 
