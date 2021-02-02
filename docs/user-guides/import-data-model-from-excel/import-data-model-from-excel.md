@@ -134,10 +134,6 @@ The following columns must be completed:
 For example, if you were entering the information for a **[Data Element](../../glossary/data-element/data-element.md)** that was an **Enumeration Data Type** then the **[Data Model key sheet](../import-data-model-from-excel/import-data-model-from-excel.md#key-sheet)** would look similar to the below: 
 
 ![Screenshot of Data Model key sheet including the information of an example Data Element of Enumeration Data Type. The first two rows of all the relevant columns have been merged to match the pair of Enumeration Key and Value entries](data-element-enumeration-example.png)
-
-If you were entering the information for a **[Data Element](../../glossary/data-element/data-element.md)** that was a **Reference Data Type** then the **[Data Model key sheet](../import-data-model-from-excel/import-data-model-from-excel.md#key-sheet)** would look similar to the below: 
-
-(Example screenshot to follow)
 	
  ---
 
