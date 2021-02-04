@@ -28,19 +28,19 @@ Once you have amended your details, click **'Save profile'** and your changes wi
 
 ## 2. Change your profile picture
 
-To add or edit your profile picture, navigate to the **'My profile'** page and click the pencil icon on your profile picture. A dropdown menu will appear with the option to either **'Change image'** or **'Remove image'**. 
+To add or edit an image to your profile picture, navigate to the **'My profile'** page and click the pencil icon on your profile picture. A dropdown menu will appear with the option to either **'Change image'** or **'Remove image'**. 
 
 ![Screenshot of profile picture menu](user-profile-picture.png)
 
-To add or change the image for your profile picture, select **'Change image'** and the file explorer on your computer will open. Navigate to the image you would like to use for your profile, select it and then click **'Open'**. 
+To change the image for your profile picture, select **'Change image'** and the file explorer on your computer will open. Navigate to the image you would like to use and then click **'Open'**. 
 
-The image will then be imported into your **'My profile'** page, with a preview displayed on the right. You can then resize the image by hovering over the corners of the highlighted box until an arrow appears. Click and hold the left mouse button and drag the box until it is the desired size. 
+This image will then be imported into your **'My profile'** page, with a preview displayed on the right. You can then resize the image by hovering over the corners of the highlighted box until an arrow appears. Click and hold the left mouse button and drag the box until it is the desired size. 
 
 To drag the entire highlighted box, hover your cursor inside the box until the 4 headed arrow appears. Click and hold the left mouse button until the box is in the desired location. 
 
 Once you have finished adjusting your profile picture, click **'Update profile image'** and a notification will appear on the bottom right of your screen to confirm the update. Then click **'Save profile'** to save all changes.
 
-To remove a profile picture, click the pencil icon and select **'Remove image'** from the dropdown menu. Again, a notification will appear at the bottom right of your screen to confirm the change and then click **'Save profile'**.  
+To remove a profile picture, click the pencil icon and select **'Remove image'** from the dropdown menu. Again, a notification will appear at the bottom right of your screen to confirm the change. Then click **'Save profile'**.  
 
 <iframe src="https://player.vimeo.com/video/507538609" width="640" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
@@ -51,7 +51,7 @@ To remove a profile picture, click the pencil icon and select **'Remove image'**
 You can also specify some interface preferences that are permanently saved to your user profile. To do this, navigate to the **'Preferences'** page on your user profile and choose the options that suit you. 
 
 * **Number of records per table**  
-	By default this is set to 20. However depending on screen size, you may wish to view 5, 10 or 50, in which case select the most suitable option. 
+	By default this is set to 20. However depending on screen size, you may wish to view 5, 10 or 50.
 
 * **Always expand descriptions**  
 	The next option allows descriptions to be expanded automatically, regardless of the character count. This is unchecked by default. However, those with larger screens may prefer to always expand descriptions in tables. If so, check this box.  
@@ -61,10 +61,18 @@ You can also specify some interface preferences that are permanently saved to yo
 
 Once you have selected all your preferences, click **'Save preferences'** and these will now be saved for future sessions.
 
-image
+![Screenshot of the preferences page](preferences-page.png)
 
 ---
 
 ## 4. Change your password
+
+To change your password, go to the **'Password'** page under **'Account settings'**. Enter your old password in the first box and your new password in the second box. 
+
+The colour bar underneath will automatically change from red to green when you start typing. The width of the green bar will then change according to the strength of your chosen password. You can use both lower and upper case letters as well as special characters and numbers. If the colour bar changes to dark blue, then the password is too long and won't be accepted. To view or hide your passwords, click the eye icon to the right of each box.
+
+Once you have finalised your password, re-enter it into the **'Confirm password'** box and then click **'Change password'** to confirm the change. 
+
+![Screenshot of the password page](change-password.png)
 
 ---
