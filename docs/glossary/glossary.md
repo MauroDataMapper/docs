@@ -1,17 +1,19 @@
-## **A**
+## A
 ---
-### **[Aliases](../glossary/aliases/aliases.md)**  
+### [Aliases](../glossary/aliases/aliases.md)  
 
 ---
 
-## **D**
+## D
 ---
-### **[Data Class](../glossary/data-class/data-class.md)**  
-### **[Data Element](../glossary/data-element/data-element.md)**  
-### **[Data Model](../glossary/data-model/data-model.md)**     
+###[Data Asset](../glossary/data-asset/data-asset.md)  
+###[Data Class](../glossary/data-class/data-class.md)  
+###[Data Element](../glossary/data-element/data-element.md)  
+###[Data Model](../glossary/data-model/data-model.md)   
+###[Data Standard](../glossary/data-standard/data-standard.md)   
 
 ---
 
-## **L**
+## L
 ---
-### **[Label](../glossary/label/label.md)** 
+###[Label](../glossary/label/label.md) 
