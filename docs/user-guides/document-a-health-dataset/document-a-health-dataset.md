@@ -4,11 +4,11 @@ This user guide will explain the steps you need to follow to manually add a heal
 
 ## **1. Create a Data Model**
 
-Datasets are stored in their own **[Data Models](../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../glossary/data-model/data-model.md)**. To do this, follow the steps in the **['Create a Data Model user guide'](../create-a-data-model/create-a-data-model.md)**.
+Datasets are stored in their own **[Data Models](../../glossary/data-model/data-model.md)** within the Mauro Data Mapper. Therefore, you first need to create a new **[Data Model](../../glossary/data-model/data-model.md)**. To do this, follow the steps in the **['Create a Data Model user guide'](../../create-a-data-model/create-a-data-model.md)**.
 
-Once you have reached step **3**, **['Complete New Data Model form'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **['Data Model Type'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **'Data Asset'** from the dropdown menu.
+Once you have reached step **3**, **['Complete New Data Model form'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form)** you will need to select the **['Data Model Type'](../create-a-data-model/create-a-data-model.md#complete-new-data-model-form-type)** as **[Data Asset](../../glossary/data-asset/data-asset.md)** from the dropdown menu.
 
-Fill in the rest of the **'New Data Model'** form and submit the **[Data Model](../../glossary/data-model/data-model.md)** as explained in steps **3.2** and **4** of the **['Create a Data Model user guide'](../create-a-data-model/create-a-data-model.md)**.
+Fill in the rest of the **'New Data Model'** form and submit the **[Data Model](../../glossary/data-model/data-model.md)** as explained in steps **3.2** and **4** of the **['Create a Data Model user guide'](../../user-guides/create-a-data-model/create-a-data-model.md)**.
 
 ---
 
@@ -95,23 +95,23 @@ To add a nested Data Class, click the relevant Data Class from the Model tree an
 
 ## **5. Add Data Elements**
 
-Within each **[Data Class](../../glossary/data-class/data-class.md)** lies several **Data Elements** which are the descriptions of an individual field, variable, column or property of a data item. 
+Within each **[Data Class](../../glossary/data-class/data-class.md)** lies several **[Data Elements](../../glossary/data-element/data-element.md)** which are the descriptions of an individual field, variable, column or property of a data item. 
 
-To create a **Data Element** you can use the same approach as creating a **[Data Class](../../glossary/data-class/data-class.md)**. Select the relevant **[Data Class](../../glossary/data-class/data-class.md)** in the **Model Tree** and click the **'Content'** tab on the panel below the **[Data Class](../../glossary/data-class/data-class.md)** details. Click the **'+ Add'** button on the right and you will be given the choice to either add a **[Data Class](../../glossary/data-class/data-class.md)** or a **Data Element**. Select **'Add Data Element'** and a **'New Data Element'** form will appear. 
+To create a **[Data Element](../../glossary/data-element/data-element.md)**  you can use the same approach as creating a **[Data Class](../../glossary/data-class/data-class.md)**. Select the relevant **[Data Class](../../glossary/data-class/data-class.md)** in the **Model Tree** and click the **'Content'** tab on the panel below the **[Data Class](../../glossary/data-class/data-class.md)** details. Click the **'+ Add'** button on the right and you will be given the choice to either add a **[Data Class](../../glossary/data-class/data-class.md)** or a **[Data Element](../../glossary/data-element/data-element.md)**. Select **'Add Data Element'** and a **'New Data Element'** form will appear. 
 
-Similar to adding a **[Data Class](../../glossary/data-class/data-class.md)**, there are two ways to import a **Data Element**. You can either create a new **Data Element** or copy a **Data Element** from an existing **[Data Class](../../glossary/data-class/data-class.md)**.
+Similar to adding a **[Data Class](../../glossary/data-class/data-class.md)**, there are two ways to import a **[Data Element](../../glossary/data-element/data-element.md)** . You can either create a new **[Data Element](../../glossary/data-element/data-element.md)** or copy a **[Data Elements](../../glossary/data-element/data-element.md)** from an existing **[Data Class](../../glossary/data-class/data-class.md)**.
 
 ### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
-Follow the steps in **['3.1 Create a new Data Class'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class)** until you have completed the **['Label'](../../glossary/label/label.md)**, **'Description'** and **'Multiplicity'** fields for the **Data Element**. 
+Follow the steps in **['3.1 Create a new Data Class'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class)** until you have completed the **['Label'](../../glossary/label/label.md)**, **'Description'** and **'Multiplicity'** fields for the **[Data Element](../../glossary/data-element/data-element.md)**. 
 
-Each **Data Element** then needs to be assigned a relevant **Data Type**. This can either be selected from an existing list, or you can add a new **Data Type**. 
+Each **[Data Element](../../glossary/data-element/data-element.md)** then needs to be assigned a relevant **Data Type**. This can either be selected from an existing list, or you can add a new **Data Type**. 
 
 #### **5.1.1 Select an existing Data Type**  
 	
 Click the **'Search'** box and a dropdown list of existing **Data Types** will appear. Select the relevant **Data Type**. 
 
-You can then assign several **Classifications** to the **Data Type** by selecting them from the dropdown menu. Once all fields are complete, click **'Submit Data Element'** to add the **[Data Element](../../glossary/data-element/data-element.md)** to the **[Data Class](../../glossary/data-class/data-class.md)**. Repeat this process to add other **Data Elements**.   
+You can then assign several **Classifications** to the **Data Type** by selecting them from the dropdown menu. Once all fields are complete, click **'Submit Data Element'** to add the **[Data Element](../../glossary/data-element/data-element.md)** to the **[Data Class](../../glossary/data-class/data-class.md)**. Repeat this process to add other **[Data Element](../../glossary/data-element/data-element.md)**.   
   
 ![New Data Element form section two](add-existing-data-type.png)
 
@@ -134,18 +134,18 @@ A **Data Type** can either be:
 
 You can then assign several **'Classifications'** by selecting them from the dropdown menu. 
 
-Once all fields are complete, click **'Submit Data Element'** to add the new **Data Element** to the **[Data Class](../../glossary/data-class/data-class.md)**. Go back to step **5.1** **['Create a new Data Element'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-element)** and repeat the process to add other **Data Elements**.
+Once all fields are complete, click **'Submit Data Element'** to add the new **[Data Element](../../glossary/data-element/data-element.md)** to the **[Data Class](../../glossary/data-class/data-class.md)**. Go back to step **5.1** **['Create a new Data Element'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-element)** and repeat the process to add other **[Data Element](../../glossary/data-element/data-element.md)**.
 
 <iframe src="https://player.vimeo.com/video/500131247" width="640" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ### **5.2 Copy a Data Element**
 
-To import **Data Elements** from an existing **[Data Class](../../glossary/data-class/data-class.md)**, select the **'Copy Data Element(s) from...'** option in the first section of the **'New Data Element'** form. Select the relevant **[Data Class](../../glossary/data-class/data-class.md)** by either typing the name in the box or clicking the menu icon to the right of the red cross. This will display the **Model Tree** from which you can select the relevant **[Data Model](../../glossary/data-model/data-model.md)** and **[Data Class](../../glossary/data-class/data-class.md)**. Once selected, click **'Next step'**.
+To import **[Data Element](../../glossary/data-element/data-element.md)** from an existing **[Data Class](../../glossary/data-class/data-class.md)**, select the **'Copy Data Element(s) from...'** option in the first section of the **'New Data Element'** form. Select the relevant **[Data Class](../../glossary/data-class/data-class.md)** by either typing the name in the box or clicking the menu icon to the right of the red cross. This will display the **Model Tree** from which you can select the relevant **[Data Model](../../glossary/data-model/data-model.md)** and **[Data Class](../../glossary/data-class/data-class.md)**. Once selected, click **'Next step'**.
 
-The **'Data Element Details'** section of the form will then appear, with a list of all the **Data Elements** within the selected **[Data Class](../../glossary/data-class/data-class.md)**. Select the **Data Elements** you wish to import by ticking the relevant boxes and the chosen **Data Elements** will appear in a **'Summary of Selected Data Elements'** table at the bottom of the form. Once you have checked this table is correct, click **'Submit Data Element'**. 
+The **'Data Element Details'** section of the form will then appear, with a list of all the **[Data Elements](../../glossary/data-element/data-element.md)** within the selected **[Data Class](../../glossary/data-class/data-class.md)**. Select the **[Data Elements](../../glossary/data-element/data-element.md)** you wish to import by ticking the relevant boxes and the chosen **[Data Elements](../../glossary/data-element/data-element.md)** will appear in a **'Summary of Selected Data Elements'** table at the bottom of the form. Once you have checked this table is correct, click **'Submit Data Element'**. 
 
 ![Data Element details form](copy-data-elements.png)
 
-The selected **Data Elements** will then be imported into your original **[Data Class](../../glossary/data-class/data-class.md)**, with the progress illustrated by a green loading bar at the bottom of the form. 
+The selected **[Data Elements](../../glossary/data-element/data-element.md)** will then be imported into your original **[Data Class](../../glossary/data-class/data-class.md)**, with the progress illustrated by a green loading bar at the bottom of the form. 
 
 ---

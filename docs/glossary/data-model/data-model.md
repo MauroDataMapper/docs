@@ -1,6 +1,6 @@
 ##**What is a Data Model?**
 
-A **Data Model** is a description of an existing collection of metadata, or a specification of data that is to be collected. **Data Models** which contain existing data are known as a **Data Asset**, while models which contain templates for data collection are known as a **Data Standard**. Both are called models as they are effectively representations of the data that they describe. 
+A **Data Model** is a description of an existing collection of metadata, or a specification of data that is to be collected. **Data Models** which contain existing data are known as a **[Data Asset](../data-asset/data-asset.md)**, while models which contain templates for data collection are known as a **[Data Standard](../data-standard/data-standard.md)**. Both are called models as they are effectively representations of the data that they describe. 
 
 ---
 ##**How are Data Models used?**
@@ -32,7 +32,7 @@ Each **Data Model** has a:
 	A definition either written in html or plain text which explains further contextual details relating to the **Data Model**.
 
 * **Type**  
-	This defines whether the **Data Model** is a **Data Asset**, which contains existing data, or a **Data Standard**, which contains templates for data collection. 
+	This defines whether the **Data Model** is a **[Data Asset](../data-asset/data-asset.md)**, which contains existing data, or a **[Data Standard](../data-standard/data-standard.md)**, which contains templates for data collection. 
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Model**, which will help users find this collection of data points. 

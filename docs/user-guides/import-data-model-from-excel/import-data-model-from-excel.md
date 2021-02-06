@@ -41,7 +41,7 @@ The following columns must be completed:
 	Type the name of the organisation responsible for the **[Data Model](../../glossary/data-model/data-model.md)**, or the underlying data.
 	
 * **Type**  
-	This is the type of the **[Data Model](../../glossary/data-model/data-model.md)**, which can either be a **Data Asset** or a **Data Standard**. A **Data Asset** is a collection of existing data, such as a database or a completed form. While a **Data Standard** is a specification template to collect new data, such as a form or schema.
+	This is the type of the **[Data Model](../../glossary/data-model/data-model.md)**, which can either be a **[Data Asset](../../glossary/data-asset/data-asset.md)** or a **[Data Standard](../../glossary/data-standard/data-standard.md)**. A **[Data Asset](../../glossary/data-asset/data-asset.md)** is a collection of existing data, such as a database or a completed form. While a **[Data Standard](../../glossary/data-standard/data-standard.md)** is a specification template to collect new data, such as a form or schema.
 	
 * **Adding properties**  
 	Any other relevant properties or metadata relating to the **[Data Model](../../glossary/data-model/data-model.md)** can be included in additional columns to the right of the core columns. Metadata can have the following properties:

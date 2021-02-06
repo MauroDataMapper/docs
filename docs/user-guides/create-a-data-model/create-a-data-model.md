@@ -1,4 +1,4 @@
-This user guide will explain the steps you need to follow create a new **[Data Model](../../glossary/data-model/data-model.md)**. 
+This user guide will explain the steps you need to follow to create a new **[Data Model](../../glossary/data-model/data-model.md)**. 
 
 ---
 ## **1. Create a new folder**
@@ -41,10 +41,10 @@ Please complete both the mandatory and optional fields of the New Data Model for
 	Type the name of the organisation responsible for the **[Data Model](../../glossary/data-model/data-model.md)**, or the underlying data.
 
 * **Description**  
-	Enter a detailed description of the **Data Asset** or **Standard** in either plain text or html. Include any important contextual details relating to the **[Data Model](../../glossary/data-model/data-model.md)**.
+	Enter a detailed description of the **[Data Asset](../../glossary/data-asset/data-asset.md)** or **[Data Standard](../../glossary/data-standard/data-standard.md)** in either plain text or html. Include any important contextual details relating to the **[Data Model](../../glossary/data-model/data-model.md)**.
 
 * <a name="complete-new-data-model-form-type"></a>**Select a Data Model Type**  
-	Select whether the **[Data Model](../../glossary/data-model/data-model.md)** is a **'Data Asset'** or a **'Data Standard'** from the dropdown menu. A **Data Asset** is a collection of existing data, such as a database or a completed form. While a **Data Standard** is a specification template to collect new data, such as a form or schema.
+	Select whether the **[Data Model](../../glossary/data-model/data-model.md)** is a **[Data Asset](../../glossary/data-asset/data-asset.md)** or a **[Data Standard](../../glossary/data-standard/data-standard.md)** from the dropdown menu. A **[Data Asset](../../glossary/data-asset/data-asset.md)** is a collection of existing data, such as a database or a completed form. While a **[Data Standard](../../glossary/data-standard/data-standard.md)** is a specification template to collect new data, such as a form or schema.
 
 * **Classifications**  
 	Select any relevant **Classifications** (also known as tags) from the dropdown menu. You can select as many **Classifications** as you like. 
