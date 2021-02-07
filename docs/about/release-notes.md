@@ -1,7 +1,7 @@
 This page describes the changes for each component: 'core', 'ui', and the various centrally-maintained plugins and client libraries. For each, a table
 is presented with version number, notable new features, notable pull requests, and any dependencies.
 
-For more information about the structure and architecture of the code, please see our [system architecture](/resources/architecture) pages.
+For more information about the structure and architecture of the code, please see our [system architecture](/resources/architecture/) pages.
 
 In general, we try to use [Semantic Versioning](https://semver.org). In particular note that any version tagged as `0.x.y` should be considered
 'beta' or for testing purposes only. In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), and so

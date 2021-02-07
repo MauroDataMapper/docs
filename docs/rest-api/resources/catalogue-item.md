@@ -10,15 +10,16 @@ type (DataModel, DataClass, etc) are used.  This page lists all the endpoints an
 The _metadata_, or _properties_, of a Catalogue Item are extensible key/value pairs to store any further information about an object - including 
 technical properies, or field conforming to an external model.  A single item of metadata is structured as follows:
 
-```json tab="JSON"
-{
-    "id": "c9a36d30-2c6a-4dd0-a792-a337a2eca9c8",
-    "namespace": "ox.softeng.metadatacatalogue.dataloaders.hdf",
-    "key": "Volumes",
-    "value": "Varies annually: in 2013/14, 18.2m finished consultant episodes (FCEs) and 15.5m Finished Admission Episodes (FAEs)",
-    "lastUpdated": "2019-10-03T09:15:12.082Z"
-}
-```
+=== "Response body (JSON)"
+    ```json
+    {
+        "id": "c9a36d30-2c6a-4dd0-a792-a337a2eca9c8",
+        "namespace": "ox.softeng.metadatacatalogue.dataloaders.hdf",
+        "key": "Volumes",
+        "value": "Varies annually: in 2013/14, 18.2m finished consultant episodes (FCEs) and 15.5m Finished Admission Episodes (FAEs)",
+        "lastUpdated": "2019-10-03T09:15:12.082Z"
+    }
+    ```
 
 The fields are as follows:
 
@@ -64,47 +65,48 @@ catalogue, the final component of the URL can be left off.
 Logged in users may query to discover who is able to read or write a particular object (that they themselves have read-access to).  The structure 
 of a response is as follows:
 
-```json tab="JSON"
-{
-    "readableByEveryone": false,
-    "readableByAuthenticated": true,
-    "readableByGroups": [],
-    "writeableByGroups": [
-        {
-            "id": "cb1b7f4e-6955-41ba-8f91-2ca92b97c189",
-            "label": "Test Group",
-            "createdBy": {
-                "id": "dc7a7c25-5622-4cb0-869f-6d0e688b490f",
+=== "Response body (JSON)"
+    ```json
+    {
+        "readableByEveryone": false,
+        "readableByAuthenticated": true,
+        "readableByGroups": [],
+        "writeableByGroups": [
+            {
+                "id": "cb1b7f4e-6955-41ba-8f91-2ca92b97c189",
+                "label": "Test Group",
+                "createdBy": {
+                    "id": "dc7a7c25-5622-4cb0-869f-6d0e688b490f",
+                    "emailAddress": "joebloggs@test.com",
+                    "firstName": "Joe",
+                    "lastName": "Bloggs",
+                    "userRole": "EDITOR",
+                    "disabled": false
+                }
+            }
+        ],
+        "readableByUsers": [
+            {
+                "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
                 "emailAddress": "joebloggs@test.com",
                 "firstName": "Joe",
                 "lastName": "Bloggs",
                 "userRole": "EDITOR",
                 "disabled": false
             }
-        },
-    ],
-    "readableByUsers": [
-        {
-            "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
-            "emailAddress": "joebloggs@test.com",
-            "firstName": "Joe",
-            "lastName": "Bloggs",
-            "userRole": "EDITOR",
-            "disabled": false
-        }
-    ],
-    "writeableByUsers": [
-        {
-            "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
-            "emailAddress": "joebloggs@test.com",
-            "firstName": "Joe",
-            "lastName": "Bloggs",
-            "userRole": "EDITOR",
-            "disabled": false
-        }
-    ]
-}
-```
+        ],
+        "writeableByUsers": [
+            {
+                "id": "5e70dbc8-4a1f-4c97-82dd-b05438ba7fae",
+                "emailAddress": "joebloggs@test.com",
+                "firstName": "Joe",
+                "lastName": "Bloggs",
+                "userRole": "EDITOR",
+                "disabled": false
+            }
+        ]
+    }
+    ```
 
 The fields are as follows:
 
@@ -139,40 +141,41 @@ The endpoint for getting the permissions each of DataModel, Terminology, Folder,
 
 Annotations, or comments, can be attached to any item in the catalogue.  The structure is as follows:
 
-```json tab="JSON"
-{
-    "count": 2,
-    "items": [
-        {
-            "id": "da3d6229-b152-4cbb-8667-eede523c7eb1",
-            "description": "DataModel finalised by Joe Bloggs on 2018-09-28T20:21:35.995Z",
-            "createdBy": {
-                "id": "5b96991a-d350-4470-958a-29bfac557ed0",
-                "emailAddress": "joebloggs@test.com",
-                "firstName": "Joe",
-                "lastName": "Bloggs",
-                "userRole": "EDITOR",
-                "disabled": false
+=== "Response body (JSON)"
+    ```json
+    {
+        "count": 2,
+        "items": [
+            {
+                "id": "da3d6229-b152-4cbb-8667-eede523c7eb1",
+                "description": "DataModel finalised by Joe Bloggs on 2018-09-28T20:21:35.995Z",
+                "createdBy": {
+                    "id": "5b96991a-d350-4470-958a-29bfac557ed0",
+                    "emailAddress": "joebloggs@test.com",
+                    "firstName": "Joe",
+                    "lastName": "Bloggs",
+                    "userRole": "EDITOR",
+                    "disabled": false
+                },
+                "lastUpdated": "2018-09-28T20:21:37.655Z",
+                "label": "Finalised Model"
             },
-            "lastUpdated": "2018-09-28T20:21:37.655Z",
-            "label": "Finalised Model"
-        },
-        {
-            "id": "670e7c31-00fd-425f-903f-6d024845e63e",
-            "createdBy": {
-                "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
-                "emailAddress": "joebloggs@test.com",
-                "firstName": "Joe",
-                "lastName": "Bloggs",
-                "userRole": "EDITOR",
-                "disabled": false
-            },
-            "lastUpdated": "2018-07-17T15:51:45.643Z",
-            "label": "Is this model is ready for finalisation?"
-        }
-    ]
-}
-```
+            {
+                "id": "670e7c31-00fd-425f-903f-6d024845e63e",
+                "createdBy": {
+                    "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
+                    "emailAddress": "joebloggs@test.com",
+                    "firstName": "Joe",
+                    "lastName": "Bloggs",
+                    "userRole": "EDITOR",
+                    "disabled": false
+                },
+                "lastUpdated": "2018-07-17T15:51:45.643Z",
+                "label": "Is this model is ready for finalisation?"
+            }
+        ]
+    }
+    ```
 
 ### Listing annotations
 
@@ -218,7 +221,7 @@ To delete a child annotation / comment whose identifier is known, use the follow
 
 An advanced search is powered by Lucene.  The parameters for an advanced search can be provided as the body of a _post_ request as follows:
 
-!!! abstract "Request body"
+=== "Request body (JSON)"
     ```json 
     {
         "searchTerm":"smoking",
@@ -253,7 +256,7 @@ The fields are defined as follows:
 
 The response will be a [paginated list](../pagination.md) of items, where each item has the following structure:
 
-!!! abstract "Response body"
+=== "Response body (JSON)"
     ```json 
     {
         "id": "127bdf61-cbfe-47dc-9854-fdce276f13bf",
@@ -305,20 +308,22 @@ Finally, to search within a specific Data Class, use the following:
 
 The edit history for various catalogue items can be retrieved using the endpoints listed below.  The format of a response is a paginated list of
  edits, with the following structure:
-```json tab="JSON"
-{
-    "dateCreated": "2018-07-17T15:53:17.276Z",  
-    "createdBy": {
-        "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
-        "emailAddress": "ollie.freeman@gmail.com",
-        "firstName": "Oliver",
-        "lastName": "Freeman",
-        "userRole": "EDITOR",
-        "disabled": false
+
+=== "Response body (JSON)"
+    ```json
+    {
+        "dateCreated": "2018-07-17T15:53:17.276Z",  
+        "createdBy": {
+            "id": "6c02358a-d3e3-4bee-93d5-839ead6a0acd",
+            "emailAddress": "ollie.freeman@gmail.com",
+            "firstName": "Oliver",
+            "lastName": "Freeman",
+            "userRole": "EDITOR",
+            "disabled": false
+        }
+        "description": "[Data Standard:HIC: Hepatitis v2.0.0] changed properties [folder]"
     }
-    "description": "[Data Standard:HIC: Hepatitis v2.0.0] changed properties [folder]"
-}
-```
+    ```
 
 The fields have the following definition:
 

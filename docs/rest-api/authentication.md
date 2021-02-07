@@ -14,15 +14,16 @@ To login to the server, `POST` to the following API endpoint
 
 The request body should contain the username, and the password.  The username is not case-sensitive:
 
-!!! abstract "Request body"
-    ```json tab="JSON"
+=== "Request body (JSON)"
+    ```json
     { 
         "username" : "joe.bloggs@test.com",
         "password" : "pa55w0rd"
     }
     ```
-    
-    ```xml tab="XML"
+
+=== "Request body (XML)"
+    ```xml
     <user>
         <username>joe.bloggs@test.com</username>
         <password>pa55w0rd"</password>
@@ -32,8 +33,8 @@ The request body should contain the username, and the password.  The username is
 If successful, the response body will contain the user's `id`, email address, first and last names, their user role, and whether or not that 
 user's account has been disabled (typically false in the case of a successful login)
 
-!!! abstract "Response body"
-    ```json tab="JSON"
+=== "Response body (JSON)"
+    ```json
     {
         "id": "01234567-0123-0123-0123-01234567",
         "emailAddress": "joe.bloggs@test.com",
@@ -68,8 +69,8 @@ In order to validate whether a session is currently active, or has expired (by l
 No request body or parameters are required for this request.  The response will be simply `true` or `false` depending on the validity of the 
 session whose `JSESSIONID` is passed in as part of the request headers
 
-!!! abstract "Response body"
-    ```json tab="JSON"
+=== "Response body (JSON)"
+    ```json
     true
     ```
 
@@ -82,7 +83,7 @@ Every session should ideally be closed manually, rather than leaving it to expir
 
 The response should include the status `200: OK`, and the successful response is simply the following text:
 
-!!! abstract "Response body"
-    ```text tab="Text"
+=== "Response body (Text)"
+    ```text
     Successfully logged out
     ``` 

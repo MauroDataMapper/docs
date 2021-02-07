@@ -83,9 +83,16 @@ curl -X GET http://localhost:8080/api/test
 
 This will return the following JSON:
 
-```json
-{"message":"Not Found","error":404,"path":null,"object":null,"id":null}
-```
+=== "Response body (JSON)"
+    ```json
+    {
+       "message":"Not Found",
+       "error":404,
+       "path":null,
+       "object":null,
+       "id":null
+    }
+    ```
 
 
 

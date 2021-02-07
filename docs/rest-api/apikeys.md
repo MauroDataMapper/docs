@@ -101,24 +101,25 @@ Once [authenticated](authentication.md), the endpoint for listing existing API k
 
 This returns a [paginated](pagination.md) list of API keys as follows:
 
-```json
-{
-  "count": X,
-  "items": [
+=== "Response body (JSON)"
+    ```json
     {
-        "id": "b845e98b-8a42-4332-9323-0c1fc6f5f1db",
-        "apiKey": "b845e98b-8a42-4332-9323-0c1fc6f5f1db",
-        "name": "Test API Key",
-        "expiryDate": "2022-02-03",
-        "expired": false,
-        "disabled": true,
-        "refreshable": false,
-        "createdDate": "2021-02-03"
-    },
-    ...
-  ]
-}
-```
+      "count": X,
+      "items": [
+        {
+            "id": "b845e98b-8a42-4332-9323-0c1fc6f5f1db",
+            "apiKey": "b845e98b-8a42-4332-9323-0c1fc6f5f1db",
+            "name": "Test API Key",
+            "expiryDate": "2022-02-03",
+            "expired": false,
+            "disabled": true,
+            "refreshable": false,
+            "createdDate": "2021-02-03"
+        },
+        ...
+      ]
+    }
+    ```
 The parameters are as described above; the `id` field is the global primary key identifer for the key.
 
 To create a new API key, post to the following endpoint:
@@ -127,13 +128,14 @@ To create a new API key, post to the following endpoint:
 
 The body of the post method should be structured as follows:
 
-```json
-{
-  "name":"My Name",
-  "expiresInDays":365,
-  "refreshable":true
-}
-```
+=== "Request body (JSON)"
+    ```json
+    {
+      "name":"My Name",
+      "expiresInDays":365,
+      "refreshable":true
+    }
+    ```
 
 where the parameters are as described above.
 To enable an existing, disabled API Key, you can use its ID (as described above), with the following endpoint:

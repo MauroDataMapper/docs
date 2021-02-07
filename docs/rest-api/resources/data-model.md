@@ -2,31 +2,32 @@
 
 In its simplest form, a DataModel can be represented as follows:
 
-```json tab="JSON"
-{
-    "id": "81d00110-40e3-4ec0-b279-6004fa1b9b52",
-    "domainType": "DataModel",
-    "label": "Diagnostic Imaging Dataset",
-    "aliases": [
-        "DID"
-    ],
-    "description": "Central collection of detailed information about diagnostic imaging tests carried out on NHS patients (such as x-rays and MRI scans).  Any organisation providing diagnostic imaging tests to NHS patients in England, i.e.:\n* NHS (Foundation) trusts / hospitals\n* NHS-funded activity with independent sector providers\nNOT included are breast screening services or any other diagnostic imaging tests not typically recorded on the local provider's Radiology Information Systems.\nDiagnostic Imaging Dataset (DID) does not store the images themselves, or the outcomes/diagnoses related to these images.",
-    "author": "NHS Digital",
-    "organisation": "NHS Digital",
-    "editable": true,
-    "documentationVersion": "2.0.0",
-    "lastUpdated": "2019-10-03T12:00:05.95Z",
-    "classifiers": [
-        {
-            "id": "2fd9e8c7-4545-42f4-99a3-f93f14d35786",
-            "label": "NIHR Health Data Finder",
-            "lastUpdated": "2019-10-03T09:15:37.323Z"
-        }
-    ],
-    "type": "Data Asset",
-    "finalised": false,
-}
-``` 
+=== "Response body (JSON)"
+    ```json
+    {
+        "id": "81d00110-40e3-4ec0-b279-6004fa1b9b52",
+        "domainType": "DataModel",
+        "label": "Diagnostic Imaging Dataset",
+        "aliases": [
+            "DID"
+        ],
+        "description": "Central collection of detailed information about diagnostic imaging tests carried out on NHS patients (such as x-rays and MRI scans).  Any organisation providing diagnostic imaging tests to NHS patients in England, i.e.:\n* NHS (Foundation) trusts / hospitals\n* NHS-funded activity with independent sector providers\nNOT included are breast screening services or any other diagnostic imaging tests not typically recorded on the local provider's Radiology Information Systems.\nDiagnostic Imaging Dataset (DID) does not store the images themselves, or the outcomes/diagnoses related to these images.",
+        "author": "NHS Digital",
+        "organisation": "NHS Digital",
+        "editable": true,
+        "documentationVersion": "2.0.0",
+        "lastUpdated": "2019-10-03T12:00:05.95Z",
+        "classifiers": [
+            {
+                "id": "2fd9e8c7-4545-42f4-99a3-f93f14d35786",
+                "label": "NIHR Health Data Finder",
+                "lastUpdated": "2019-10-03T09:15:37.323Z"
+            }
+        ],
+        "type": "Data Asset",
+        "finalised": false,
+    }
+    ``` 
 
 The fields are as follows:
 

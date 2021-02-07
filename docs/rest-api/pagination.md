@@ -31,8 +31,8 @@ Again consider the endpoint endpoint for listing all folders described above.
 
 The response body would look something like:
 
-!!! abstract "Response body"
-    ```json tab="JSON"
+=== "Response body (JSON)"
+    ```json
     {
         "count": n,
         "items": [
