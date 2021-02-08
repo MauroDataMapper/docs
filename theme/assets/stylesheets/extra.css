@@ -135,6 +135,19 @@ header.md-header nav.md-header-nav {
     text-decoration-style: dotted;
 }
 
+.md-typeset iframe {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.md-typeset p img {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+
 @media screen and (min-width: 60em) {
     .md-search__input, .md-search__input:hover { 
         background-color: #fff;
