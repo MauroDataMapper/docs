@@ -1,14 +1,14 @@
 ##**What is an Alias?**
 
-An **Alias** is an alternative name for a catalogue item which helps to locate it when searched for. **[Data Models](../data-model/data-model.md)**, **[Data Classes](../data-class/data-class.md)** and **[Data Elements](../data-element/data-element.md)** must have one primary **[Label](../label/label.md)**, but can have many **Aliases**. 
+An **Alias** is an alternative name for a catalogue item which helps to locate it when searched for. [Data Models](../data-model/data-model.md), [Data Classes](../data-class/data-class.md) and [Data Elements](../data-element/data-element.md) must have one primary [Label](../label/label.md), but can have many **Aliases**. 
 
 ---
 
 ##**How are Aliases used?**
 
-**Aliases** appear in the first row of the details panel when an item is selected in the **Model Tree**. An example of some suitable **Aliases** for the **[Data Model](../data-model/data-model.md)** labelled **‘Head and Neck Cancer Audit (HANA)’** could be **‘Neck Cancer’**, **‘Head Cancer’**, **‘Head and Neck Cancer’** and **‘HANA’**. Therefore, if one of these items is searched for the **‘Head and Neck Cancer Audit (HANA)’** **[Data Model](../data-model/data-model.md)** will appear in the search results. 
+**Aliases** appear in the first row of the details panel when an item is selected in the **Model Tree**. An example of some suitable **Aliases** for the [Data Model](../data-model/data-model.md) labelled **‘Head and Neck Cancer Audit (HANA)’** could be **‘Neck Cancer’**, **‘Head Cancer’**, **‘Head and Neck Cancer’** and **‘HANA’**. Therefore, if one of these items is searched for the **‘Head and Neck Cancer Audit (HANA)’** [Data Model](../data-model/data-model.md) will appear in the search results. 
 
-This helps users access the catalogue item they need, without having to know the exact **[Label](../label/label.md)**.
+This helps users access the catalogue item they need, without having to know the exact [Label](../label/label.md).
  
 ![Aliases in detail panel highlighted](alias-example.png)
 

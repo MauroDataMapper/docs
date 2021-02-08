@@ -6,13 +6,13 @@ A **Label** is a name that describes and uniquely identifies each item within th
 ---
 
 ##**How are Labels used?**
-The **Label** of each item must be unique within its parent group so that no two items share the same **Label**. Therefore, each **[Data Model](../data-model/data-model.md)** must have a unique **Label**. Each **[Data Class](../data-class/data-class.md)** must have a unique **Label** within its parent **[Data Model](../data-model/data-model.md)**. Each **[Data Element](../data-element/data-element.md)** must have a unique **Label** within its parent **[Data Class](../data-class/data-class.md)**. 
+The **Label** of each item must be unique within its parent group so that no two items share the same **Label**. Therefore, each [Data Model](../data-model/data-model.md) must have a unique **Label**. Each [Data Class](../data-class/data-class.md) must have a unique **Label** within its parent [Data Model](../data-model/data-model.md). Each [Data Element](../data-element/data-element.md) must have a unique **Label** within its parent [Data Class](../data-class/data-class.md). 
 
-For example, there can only be one **[Data Class](../data-class/data-class.md)** called **‘Personal details’** within a particular **[Data Model](../data-model/data-model.md)**. Therefore, if you need to add a similar **[Data Class](../data-class/data-class.md)**, include version information within the **Label** such as **‘Personal details 2.0’** to uniquely identify it. 
+For example, there can only be one [Data Class](../data-class/data-class.md) called **‘Personal details’** within a particular [Data Model](../data-model/data-model.md). Therefore, if you need to add a similar [Data Class](../data-class/data-class.md), include version information within the **Label** such as **‘Personal details 2.0’** to uniquely identify it. 
 
 ![Unique Labels for similar folders, Data Models and Data Classes highlighted](unique-label-example.png)
 
-It is likely that two different **[Data Models](../data-model/data-model.md)** within the catalogue could consist of a **[Data Class](../data-class/data-class.md)** with the same **Label**, such as **'Personal details'**. However, because these two **[Data Classes](../data-class/data-class.md)** are each associated with their own unique parent **[Data Model](../data-model/data-model.md)**, then this is acceptable. Only when two items are within the same parent must they each have a unique **Label**.  
+It is likely that two different [Data Models](../data-model/data-model.md) within the catalogue could consist of a [Data Class](../data-class/data-class.md) with the same **Label**, such as **'Personal details'**. However, because these two [Data Classes](../data-class/data-class.md) are each associated with their own unique parent [Data Model](../data-model/data-model.md), then this is acceptable. Only when two items are within the same parent must they each have a unique **Label**.  
 
 ---
 
