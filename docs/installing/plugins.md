@@ -80,13 +80,13 @@ the [Intallating](/installing/docker) page.
             <td><b>schema.org</b><br/>1.2.2-SNAPSHOT</td>
             <td> ?? </td>
             <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:1.2.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
             <td><b>HDR UK</b><br/>1.2.2-SNAPSHOT</td>
             <td> ?? </td>
             <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:1.2.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
     </tbody>
 </table>
@@ -107,7 +107,7 @@ the [Intallating](/installing/docker) page.
             <td><b>Keycloak Authentication</b><br/>1.0.1</td>
             <td> ?? </td>
             <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.0.1</td>
-            <td>Core &gt; 4.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
     </tbody>
 </table>
@@ -128,13 +128,13 @@ the [Intallating](/installing/docker) page.
             <td><b>Freemarker Templating</b><br/>1.0.0</td>
             <td>5th Feb 2021</td>
             <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.0.0</td>
-            <td>Core &gt; 4.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
             <td><b>Sparql</b><br/>1.0.0-SNAPSHOT</td>
             <td> ?? </td>
             <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:1.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
     </tbody>
 </table>
