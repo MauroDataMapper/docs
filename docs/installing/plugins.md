@@ -20,46 +20,46 @@ the [Intallating](/installing/docker) page.
     </thead>
     <tbody>
         <tr>
-            <td><b>Excel</b><br/>2.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>Excel</b><br/>2.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>CSV</b><br/>2.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>CSV</b><br/>2.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>MS SQL Server</b><br/>3.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:3.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>MS SQL Server</b><br/>3.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:3.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>PostgreSQL</b><br/>2.1.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:2.1.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>PostgreSQL</b><br/>3.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:3.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>MySQL</b><br/>1.0.1-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:1.0.1-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>MySQL</b><br/>2.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:2.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>Oracle SQL</b><br/>1.0.1-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:1.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>Oracle SQL</b><br/>3.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:3.0.0</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>AWS Glue</b><br/>1.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.0.0-SNAPSHOT</td>
-            <td>Core &gt; 4.0.0</td>
+            <td><b>AWS Glue</b><br/>1.0.1</td>
+            <td>8th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.0.1</td>
+            <td>Core &gt;= 4.0.0</td>
         </tr>
     </tbody>
 </table>
@@ -125,9 +125,9 @@ the [Intallating](/installing/docker) page.
     </thead>
     <tbody>
         <tr>
-            <td><b>Freemarker Templating</b><br/>1.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.0.0-SNAPSHOT</td>
+            <td><b>Freemarker Templating</b><br/>1.0.0</td>
+            <td>5th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.0.0</td>
             <td>Core &gt; 4.0.0</td>
         </tr>
         <tr>

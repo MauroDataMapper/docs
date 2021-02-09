@@ -12,6 +12,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ## Core
 
+[GitHub](https://github.com/MauroDataMapper/mdm-core)
 <table width="100%">
     <thead>
         <tr>
@@ -22,8 +23,8 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>4.0.0</b><br/><a href="">(GitHub Link)</a></td>
-            <td>??</td>
+            <td><b>4.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.0.0">(GitHub Link)</a></td>
+            <td>5th Feb 2021</td>
             <td>
                 <em>Listing major changes since last release of Metadata Catalogue</em>
                 <ul>
@@ -31,7 +32,6 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
                     <li>Complete refactoring of code and underlying database</li>
                     <li>Modular code structure</li>
                     <li>Reference Data Model</li> 
-                    <li>Structured profiling</li>
                     <li>Removed access controls for individuals, increased the options for groups</li>
                     <li>Updated Security Module</li>
                     <li>API Keys / Access Tokens</li>
@@ -44,6 +44,8 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ## UI
 
+[GitHub](https://github.com/MauroDataMapper/mdm-ui)
+
 <table width="100%">
     <thead>
         <tr>
@@ -54,8 +56,8 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>4.0.0</b><br/><a href="">(GitHub Link)</a></td>
-            <td>??</td>
+            <td><b>5.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/5.0.0">(GitHub Link)</a></td>
+            <td>5th Feb 2021</td>
             <td>
                 <em>Listing major changes since last release of Metadata Catalogue</em>
                 <ul>
@@ -63,7 +65,6 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
                     <li>Modular code structure</li>
                     <li>Refactored, simplified layout to all screens</li>
                     <li>Reference Data Model</li> 
-                    <li>Structured profiling</li>
                     <li>API Keys / access tokens</li>
                     <li>WYSIWYG HTML editor</li>
                     <li>Much-improved support for branching and merging</li>
@@ -76,6 +77,8 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 ## Client Libraries
 
 ### Java
+
+[GitHub](https://github.com/MauroDataMapper/mdm-api-java-restful)
 <table width="100%">
     <thead>
         <tr>
@@ -86,14 +89,16 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>4.0.0</b><br/><a href="">(GitHub Link)</a></td>
-            <td>??</td>
+            <td><b>2.0.0</b><br/><a href="">(GitHub Link)</a></td>
+            <td>TBC</td>
             <td>First major Mauro release</td>
         </tr>
     </tbody>
 </table>
 
 ### .NET
+
+[GitHub](https://github.com/MauroDataMapper/mdm-api-dotnet-restful)
 <table width="100%">
     <thead>
         <tr>
@@ -104,14 +109,16 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>4.0.0</b><br/><a href="">(GitHub Link)</a></td>
-            <td>??</td>
+            <td><b>???</b><br/><a href="">(GitHub Link)</a></td>
+            <td>TBC</td>
             <td>First major Mauro release</td>
         </tr>
     </tbody>
 </table>
 
 ### Typescript
+
+[GitHub](https://github.com/MauroDataMapper/mdm-resources)
 <table width="100%">
     <thead>
         <tr>
@@ -122,8 +129,8 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>4.0.0</b><br/><a href="">(GitHub Link)</a></td>
-            <td>??</td>
+            <td><b>4.2.0</b><br/><a href="">(GitHub Link)</a></td>
+            <td>5th Feb 2021</td>
             <td>First major Mauro release</td>
         </tr>
     </tbody>
@@ -135,8 +142,159 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ### Importers / Exporters
 
+**AWS Glue** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-awsglue))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>1.0.1</b><br/></td>
+            <td>8th Feb 2021</td>
+            <td>Fix dependencies</td>
+        </tr>
+        <tr>
+            <td><b>1.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+**CSV** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-csv))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>2.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+**MySQL** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-database-mysql))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>2.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+**Oracle DB** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-database-oracle))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>3.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+
+**PostgreSQL** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-database-postgresql))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>3.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+**MS SQL Server** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-database-sqlserver))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>3.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+**MS Excel** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-excel))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>2.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
+
+
 ### Profiles
 
 ### Technical
+
+**Apache Freemarker** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-freemarker))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>1.0.0</b></td>
+            <td>5th Feb 2021</td>
+            <td>First major Mauro release</td>
+        </tr>
+    </tbody>
+</table>
 
 
