@@ -59,7 +59,8 @@ The header key should be `apiKey` and the value should be the UUID value of the 
 
 ## Using Postman
 
-If you are using [Postman](postman.md) as a client, there are two ways to configure the API key for a request, which both have the same result.  
+If you are using [Postman](../postman) as a client, there are two ways to configure the API key for a request, which both have the same 
+result.  
 You can use the 'Authorization' tab to set the details, as shown in the screenshot below.  You should set the **Key** field to be the text 
 `apiKey`, the **Value** field to be the value of the API key, and in the **Add to** drop-down, select "Header".  The API key must be passed in the 
 headers, not in the query parameters, which is the alternative option.

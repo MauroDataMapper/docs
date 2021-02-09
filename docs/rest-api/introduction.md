@@ -65,7 +65,7 @@ Typically, a session identifier is 32 characters long and uses hexadecimal chara
 
 ## Tools
 
-We use [Postman](https://www.getpostman.com/downloads) for testing API calls during development.  It has an intuitive interface that lets you set 
+We use [Postman](../postman) for testing API calls during development.  It has an intuitive interface that lets you set 
 parameters, headers, and message bodies, and preview structured responses.  It can also be used as part of an automated testing or debugging requests.
 
 If you're looking for a more lightweight solution, [curl](https://curl.haxx.se/docs/manpage.html) is a suitable command-line tool which can be 
