@@ -1,3 +1,7 @@
+---
+title: Data Model
+---
+
 ##**What is a Data Model?**
 
 A **Data Model** is a description of an existing collection of metadata, or a specification of data that is to be collected. **Data Models** which contain existing data are known as a [Data Asset](../data-asset/data-asset.md), while models which contain templates for data collection are known as a [Data Standard](../data-standard/data-standard.md). Both are called models as they are effectively representations of the data that they describe. 

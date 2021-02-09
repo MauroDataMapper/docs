@@ -1,3 +1,7 @@
+---
+title: Data Class
+---
+
 ##**What is a Data Class?**
 
 A **Data Class** is a collection of data, also known as [Data Elements](../data-element/data-element.md), that are related to each other in some way. For example, each [Data Element](../data-element/data-element.md) could appear in the same table of a database, or the same section within a form.

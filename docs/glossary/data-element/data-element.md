@@ -1,3 +1,7 @@
+---
+title: Data Element
+---
+
 ##**What is a Data Element?**
 
 A **Data Element** is a description of an individual field, variable, column or property of a data item. Each **Data Element** has a name and a **Data Type**. 

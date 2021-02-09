@@ -1,3 +1,7 @@
+---
+title: Data Asset
+---
+
 ##What is a Data Asset?
 
 There are two types of [Data Models](../data-model/data-model.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home): a **Data Asset** and a [Data Standard](../data-standard/data-standard.md). 

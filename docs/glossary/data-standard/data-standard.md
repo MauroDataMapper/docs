@@ -1,3 +1,7 @@
+---
+title: Data Standard
+---
+
 ##What is a Data Standard?
 
 There are two types of [Data Models](../data-model/data-model.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home): a [Data Asset](../data-asset/data-asset.md) and a **Data Standard**. A **Data Standard** is essentially a template for collecting new data. This can be a form, schema or a specification for distributed data collection.
