@@ -5,7 +5,7 @@ of [Artifactory](https://jenkins.cs.ox.ac.uk/artifactory).
 
 Below is a list of all available plugins, along with their latest version number, release date, and any dependencies it has. More details about the
 changes in each release can be found on the [Release Notes](/about/release-notes) page. To install a plugin, use the 'artefact name' as directed in
-the [Intallating](/installing/docker) page.
+the [Installing](../docker) page.
 
 # Importers / Exporters
 
