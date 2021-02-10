@@ -56,9 +56,9 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
-            <td><b>AWS Glue</b><br/>1.0.1</td>
-            <td>8th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.0.1</td>
+            <td><b>AWS Glue</b><br/>1.1.1</td>
+            <td>10th Feb 2021</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.1.1</td>
             <td>Core &gt;= 4.0.0</td>
         </tr>
     </tbody>

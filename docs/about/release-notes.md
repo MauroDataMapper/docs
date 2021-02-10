@@ -153,6 +153,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>1.1.1</b><br/></td>
+            <td>10th Feb 2021</td>
+            <td>Fix regression bug relating to saving data models</td>
+        </tr>
+        <tr>
             <td><b>1.0.1</b><br/></td>
             <td>8th Feb 2021</td>
             <td>Fix dependencies</td>
