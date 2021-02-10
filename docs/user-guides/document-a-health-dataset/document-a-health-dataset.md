@@ -60,9 +60,9 @@ Now you need to complete the **'Data Class Details'** section of the form as fol
 * **Description**  
 	Complete a description in either html or plain text which explains the types of data items grouped together within this [Data Class](../../glossary/data-class/data-class.md). Also include contextual details which are common to the data items, to avoid having to add descriptions to each individual data item.
 
-* **Multiplicity**  
-	The **Multiplicity** specifies the minimum and maximum number of times that the [Data Class](../../glossary/data-class/data-class.md) will appear within the [Data Model](../../glossary/data-model/data-model.md). 
-	Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of ‘*’ which represents ‘-1’ internally.		
+* [Multiplicity](../../glossary/multiplicity/multiplicity.md)  
+	 The [Multiplicity](../../glossary/multiplicity/multiplicity.md) specifies the minimum and maximum number of times that the [Data Class](../../glossary/data-class/data-class.md) will appear within the [Data Model](../../glossary/data-model/data-model.md). 
+	Optional data may have a minimum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of 0 and a maximum of 1, whereas mandatory data has a minimum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of 1. Data which occurs any number of times is given by a [Multiplicity](../../glossary/multiplicity/multiplicity.md) of ‘*’ which represents ‘-1’ internally.		
 
 ![New Data Class form section two](create-a-new-data-class-2.png)
 
@@ -103,7 +103,7 @@ Similar to adding a [Data Class](../../glossary/data-class/data-class.md), there
 
 ### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
-Follow the steps in ['3.1 Create a new Data Class'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class) until you have completed the ['Label'](../../glossary/label/label.md), **'Description'** and **'Multiplicity'** fields for the [Data Element](../../glossary/data-element/data-element.md). 
+Follow the steps in ['3.1 Create a new Data Class'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class) until you have completed the ['Label'](../../glossary/label/label.md), **'Description'** and [Multiplicity](../../glossary/multiplicity/multiplicity.md) fields for the [Data Element](../../glossary/data-element/data-element.md). 
 
 Each [Data Element](../../glossary/data-element/data-element.md) then needs to be assigned a relevant **Data Type**. This can either be selected from an existing list, or you can add a new **Data Type**. 
 

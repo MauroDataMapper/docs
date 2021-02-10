@@ -84,13 +84,13 @@ The following columns must be completed:
 * **Description**  
 	Enter a description which explains any contextual details relating to the [Data Element](../../glossary/data-element/data-element.md) or [Data Class](../../glossary/data-class/data-class.md).
 
-* **Minimum Multiplicity**  
+* [Minimum Multiplicity](../../glossary/multiplicity/multiplicity.md)  
 	The minimum number of instances of the [Data Class](../../glossary/data-class/data-class.md) or [Data Element](../../glossary/data-element/data-element.md) within the [Data Model](../../glossary/data-model/data-model.md). 
-	Optional data has a minimum **Multiplicity** of 0, whereas mandatory data has a minimum **Multiplicity** of 1.
+	Optional data has a minimum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of 0, whereas mandatory data has a minimum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of 1.
 	
-* **Maximum Multiplicity**  
+* [Maximum Multiplicity](../../glossary/multiplicity/multiplicity.md)  
 	The maximum number of instances of the [Data Class](../../glossary/data-class/data-class.md) or [Data Element](../../glossary/data-element/data-element.md) within the [Data Model](../../glossary/data-model/data-model.md). 
-	Optional data has a maximum **Multiplicity** of 1, whereas data which occurs any number of times and therefore has no upper bound has a maximum **Multiplicity** of ‘*’ which represents ‘-1’ internally.
+	Optional data has a maximum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of 1, whereas data which occurs any number of times and therefore has no upper bound has a maximum [Multiplicity](../../glossary/multiplicity/multiplicity.md) of ‘*’ which represents ‘-1’ internally.
 	
 * **DataType Name**  
 	This is the name given to the **Data Type** of the [Data Element](../../glossary/data-element/data-element.md) being described and must be included when entering information for [Data Elements](../../glossary/data-element/data-element.md). 

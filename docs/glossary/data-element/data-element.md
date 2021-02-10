@@ -39,8 +39,8 @@ Each **Data Element** has a:
 * **Parent Hierarchy**  
 	Details the parent [Data Class](../data-class/data-class.md) and [Data Model](../data-model/data-model.md) of the **Data Element**.
 	
-* **Multiplicity**  
-	This specifies the minimum and maximum number of times the **Data Element** appears within its parent. Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of ‘*’ which represents ‘-1’ internally.
+* [Multiplicity](../multiplicity/multiplicity.md)  
+	This specifies the minimum and maximum number of times the **Data Element** appears within its parent. Optional data may have a minimum [Multiplicity](../multiplicity/multiplicity.md) of 0 and a maximum of 1, whereas mandatory data has a minimum [Multiplicity](../multiplicity/multiplicity.md) of 1. Data which occurs any number of times is given by a [Multiplicity](../multiplicity/multiplicity.md) of ‘*’ which represents ‘-1’ internally.
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Element**. 
