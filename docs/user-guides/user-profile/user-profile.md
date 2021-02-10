@@ -8,10 +8,11 @@ When logged in to [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/
 
 ![Screenshot of user profile menu](user-profile-menu.png)
 
-To edit your profile, select the **'My profile'** option from the dropdown menu. This will take you to a page displaying your details, with the compulsory fields (indicated by *) completed according to the information entered when you were registered. 
+To edit your profile, select the **'My profile'** option from the dropdown menu. This will take you to a page displaying your details, with the compulsory fields indicated by a *. These will already be completed according to the information entered when you were registered. 
 
 ![Screenshot of 'My profile' details page](my-profile-page.png)
 
+Complete the fields below:
 
 * **First and last name**  
 	This is used for identification.
@@ -51,13 +52,13 @@ To remove a profile picture, click the pencil icon and select **'Remove image'**
 You can also specify some interface preferences that are permanently saved to your user profile. To do this, navigate to the **'Preferences'** page on your user profile and choose the options that suit you. 
 
 * **Number of records per table**  
-	By default this is set to 20. However depending on screen size, you may wish to view 5, 10 or 50.
+	By default this is set to 20. However depending on screen size, you may wish to view 5, 10 or 50. Select the option that you prefer.
 
 * **Always expand descriptions**  
 	The next option allows descriptions to be expanded automatically, regardless of the character count. This is unchecked by default. However, those with larger screens may prefer to always expand descriptions in tables. If so, check this box.  
 
 * **Include Superseded Document Models in Data Model Tree**  
-	The final option determines whether you want the **Finder Panel** to show superseded document models within the **Data Model Tree view**. This is unchecked by default as typically these models represent invalid or outdated descriptions. However, feel free to check the box to change this. 
+	The final option determines whether you want the **Finder Panel** to show superseded document models within the **Data Model Tree** view. This is unchecked by default as typically these models represent invalid or outdated descriptions. However, feel free to check this box to change this. 
 
 Once you have selected all your preferences, click **'Save preferences'** and these will now be saved for future sessions.
 
@@ -69,7 +70,9 @@ Once you have selected all your preferences, click **'Save preferences'** and th
 
 To change your password, go to the **'Password'** page under **'Account settings'**. Enter your old password in the first box and your new password in the second box. 
 
-The colour bar underneath will automatically change from red to green when you start typing. The width of the green bar will then change according to the strength of your chosen password. You can use both lower and upper case letters as well as special characters and numbers. If the colour bar changes to dark blue, then the password is too long and won't be accepted. To view or hide your passwords, click the eye icon to the right of each box.
+The colour bar underneath will automatically change from red to green when you start typing. The width of the green bar will then change according to the strength of your chosen password. You can use both lower and upper case letters as well as special characters and numbers. 
+
+If the colour bar changes to dark blue, then the password is too long and won't be accepted. To view or hide your passwords, click the eye icon to the right of each box.
 
 Once you have finalised your password, re-enter it into the **'Confirm password'** box and then click **'Change password'** to confirm the change. 
 
