@@ -1,5 +1,5 @@
 ##**What is a Label?**
-A **Label** is a name that describes and uniquely identifies each item within the Mauro Data Mapper. This **Label** will appear in the **Model Tree** on the left hand side of the catalogue and at the top of the page when the item is selected. The **Label** is also used to identify the item when searched for. 
+A **Label** is a name that describes and uniquely identifies each item within the [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). This **Label** will appear in the **Model Tree** on the left hand side of the catalogue and at the top of the page when the item is selected. The **Label** is also used to identify the item when searched for. 
 
 ![Label highlighted in Model Tree and at top of page](label-highlighted.png)
 
@@ -18,7 +18,7 @@ It is likely that two different [Data Models](../data-model/data-model.md) withi
 
 ##**How do you edit a Label?**
 
-You can edit the **Label** of any item by selecting it in the **Model Tree** and clicking the **‘Edit’** pencil icon which is located at the bottom right of the details panel. 
+You can edit the **Label** of any item by selecting it in the **Model Tree** and clicking the **‘Edit’** pencil icon which is located at the bottom right of the details panel. You will then be able to amend the **Label** at the top of the details panel. 
 
 ![Location of edit pencil icon](edit-label.png)
 
