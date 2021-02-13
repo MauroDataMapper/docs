@@ -4,7 +4,12 @@ title: Data Standard
 
 ##What is a Data Standard?
 
-There are two types of [Data Models](../data-model/data-model.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home): a [Data Asset](../data-asset/data-asset.md) and a **Data Standard**. A **Data Standard** is essentially a template for collecting new data. This can be a form, schema or a specification for distributed data collection.
+There are two types of [Data Models](../data-model/data-model.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home): 
+
+* [Data Asset](../data-asset/data-asset.md)
+* **Data Standard**
+
+A **Data Standard** is essentially a template for collecting new data. This can be a form, schema or a specification for distributed data collection.
 
 ---
 ##How are Data Standards used?
@@ -13,11 +18,11 @@ A [Data Model](../data-model/data-model.md) which is a **Data Standard** is repr
 
 ![Screenshot of Data Standard icon](data-standard-icon.png)
 
-As a **Data Standard** does not contain any collected data, there will be no summary metadata properties or **Data Flows** associated with this type of model. 
+As a **Data Standard** does not contain any collected data, there will be no summary metadata properties or [Dataflows](../dataflow/dataflow.md) associated with this type of model. 
 
-You will need to assign a [Data Model](../data-model/data-model.md) type whenever you are adding or importing a [Data Model](../data-model/data-model.md). 
+###Selecting a Data Model type
 
-When adding a [Data Model](../data-model/data-model.md), you will need to select the type on the **'Data Model Details form'**. For further information on how to do this, visit our ['Create a Data Model user guide'](../../user-guides/create-a-data-model/create-a-data-model.md). 
+You will need to assign a [Data Model](../data-model/data-model.md) type whenever you are adding or importing a [Data Model](../data-model/data-model.md). On the **'Data Model Details form'** select the [Data Model](../data-model/data-model.md) type from the dropdown menu. For further information on how to do this, visit our ['Create a Data Model user guide'](../../user-guides/create-a-data-model/create-a-data-model.md). 
 
 ![Screenshot of Data Type section of Data Model details form](data-model-details-form-data-type-standard.png)
 
