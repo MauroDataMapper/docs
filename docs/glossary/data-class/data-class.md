@@ -30,10 +30,10 @@ Each **Data Class** has a:
 	A definition either written in html or plain text which explains the types of data items that are grouped together within the **Data Class**, as well as any contextual details.
 	
 * **Parent Hierarchy**  
-	The **Parent** of a **Data Class** can either be the [Data Model](../data-model/data-model.md) itself, in which case it is described as a ‘top level data class’. Or, if it is a **Nested Data Class**, its parent **Data Class**.
+	The parent of a **Data Class** can either be the [Data Model](../data-model/data-model.md) itself, in which case it is described as a **‘top level data class’**. Or, if it is a **Nested Data Class**, its parent **Data Class**.
 	
-* [Multiplicity](../multiplicity/multiplicity.md) 
-	This specifies the minimum and maximum number of times the **Data Class** appears within its parent. Optional data may have a minimum [Multiplicity](../multiplicity/multiplicity.md) of 0 and a maximum of 1, whereas mandatory data has a minimum [Multiplicity](../multiplicity/multiplicity.md) of 1. Data which occurs any number of times is given by a [Multiplicity](../multiplicity/multiplicity.md) of ‘*’ which represents ‘-1’ internally.
+* [Multiplicity](../multiplicity/multiplicity.md)  
+	This specifies the minimum and maximum number of times the **Data Class** appears within its parent. Optional data may have a minimum [Multiplicity](../multiplicity/multiplicity.md) of 0 and a maximum of 1, whereas mandatory data has a minimum [Multiplicity](../multiplicity/multiplicity.md) of 1. Data which occurs any number of times is given by a [Multiplicity](../multiplicity/multiplicity.md) of ‘*’ which represents -1 internally.
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Class**. 
