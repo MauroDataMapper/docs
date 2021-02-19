@@ -3,7 +3,7 @@
 Mauro is built using a fairly common 'onion' design. At the heart is a standard, relational database where all data is primarily stored. All
 interaction with the database is controlled through business logic within the '[Core](#core)' layer.
 
-![System Acrhitecture](/images/architecture1.jpg)
+![System Architecture](../images/architecture1.jpg)
 
 ### Relational Database
 
