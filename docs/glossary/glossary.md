@@ -12,6 +12,13 @@
 ###[Dataflow](../glossary/dataflow/dataflow.md)  
 ###[Data Model](../glossary/data-model/data-model.md)   
 ###[Data Standard](../glossary/data-standard/data-standard.md)   
+###[Data Type](../glossary/data-type/data-type.md)  
+ 
+---
+
+## E
+---
+###[Enumeration Data Type](../glossary/enumeration-data-type/enumeration-data-type.md) 
 
 ---
 
@@ -24,3 +31,11 @@
 ## M
 ---
 ###[Multiplicity](../glossary/multiplicity/multiplicity.md) 
+
+---
+
+## P
+---
+###[Primitive Data Type](../glossary/primitive-data-type/primitive-data-type.md) 
+
+---
