@@ -6,11 +6,11 @@ This user guide will show you how to add and edit information in your user profi
 
 When logged in to [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home), your user profile is displayed on the top right of the menu header. Click the white arrow and a dropdown menu will appear. The options available in this menu will depend on whether you are an **'Editor'** or an **'Administrator'**. 
 
-![Screenshot of user profile menu](user-profile-menu.png)
+![User profile menu](user-profile-menu.png)
 
 To edit your profile, select the **'My profile'** option from the dropdown menu. This will take you to a page displaying your details, with the compulsory fields indicated by a *. These will already be completed according to the information entered when you were registered. 
 
-![Screenshot of 'My profile' details page](my-profile-page.png)
+![My profile details page](my-profile-page.png)
 
 Complete the fields below:
 
@@ -18,10 +18,10 @@ Complete the fields below:
 	This is used for identification.
 
 * **Organisation**  
-	This allows other [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) users to know which organisation you belong to.
+	This allows other **Mauro Data Mapper** users to know which organisation you belong to.
 
 * **Role in Organisation**  
-	This allows other [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) users to know your role within your organisation.
+	This allows other **Mauro Data Mapper** users to know your role within your organisation.
 
 Once you have amended your details, click **'Save profile'** and your changes will be updated.
 
@@ -31,7 +31,7 @@ Once you have amended your details, click **'Save profile'** and your changes wi
 
 To add or edit an image to your profile picture, navigate to the **'My profile'** page and click the pencil icon on your profile picture. A dropdown menu will appear with the option to either **'Change image'** or **'Remove image'**. 
 
-![Screenshot of profile picture menu](user-profile-picture.png)
+![Profile picture menu](user-profile-picture.png)
 
 To change the image for your profile picture, select **'Change image'** and the file explorer on your computer will open. Navigate to the image you would like to use and then click **'Open'**. 
 
@@ -62,7 +62,7 @@ You can also specify some interface preferences that are permanently saved to yo
 
 Once you have selected all your preferences, click **'Save preferences'** and these will now be saved for future sessions.
 
-![Screenshot of the preferences page](preferences-page.png)
+![Preferences page](preferences-page.png)
 
 ---
 
@@ -76,6 +76,6 @@ If the colour bar changes to dark blue, then the password is too long and won't 
 
 Once you have finalised your password, re-enter it into the **'Confirm password'** box and then click **'Change password'** to confirm the change. 
 
-![Screenshot of the password page](change-password.png)
+![Password page](change-password.png)
 
 ---
