@@ -1,11 +1,9 @@
-## A
----
+# A
 ### [Aliases](../glossary/aliases/aliases.md)  
 
 ---
 
-## D
----
+# D
 ###[Data Asset](../glossary/data-asset/data-asset.md)  
 ###[Data Class](../glossary/data-class/data-class.md)  
 ###[Data Element](../glossary/data-element/data-element.md)  
@@ -16,38 +14,32 @@
  
 ---
 
-## E
----
+# E
 ###[Enumeration Data Type](../glossary/enumeration-data-type/enumeration-data-type.md) 
 
 ---
 
-## L
----
+# L
 ###[Label](../glossary/label/label.md) 
 
 ---
 
-## M
----
+# M
 ###[Multiplicity](../glossary/multiplicity/multiplicity.md) 
 
 ---
 
-## P
----
+# P
 ###[Primitive Data Type](../glossary/primitive-data-type/primitive-data-type.md) 
 
 ---
 
-## R
----
+# R
 ###[Reference Data Type](../glossary/reference-data-type/reference-data-type.md) 
 
 ---
 
-## T
----
+# T
 ###[Terminology Data Type](../glossary/terminology-data-type/terminology-data-type.md) 
 
 
