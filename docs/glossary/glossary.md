@@ -39,3 +39,15 @@
 ###[Primitive Data Type](../glossary/primitive-data-type/primitive-data-type.md) 
 
 ---
+
+## R
+---
+###[Reference Data Type](../glossary/reference-data-type/reference-data-type.md) 
+
+---
+
+## T
+---
+###[Terminology Data Type](../glossary/terminology-data-type/terminology-data-type.md) 
+
+
