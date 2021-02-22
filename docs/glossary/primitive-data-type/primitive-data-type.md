@@ -18,7 +18,7 @@ Further details of the particular **Primitive Data Type** can be found in its de
 
 ![Primitive Data Type details panel](primitive-data-type-details-panel.png) 
 
-You can also view all the [Data Elements](../data-element/data-element.md) that use that **Primitive Data Type** by selecting the **‘Data Elements’** tab underneath the details panel. This will display the [Multiplicity](../multiplicity/multiplicity.md), **Name** and **Description** of each **Data Element**. 
+You can also view all the **Data Elements** that use that **Primitive Data Type** by selecting the **‘Data Elements’** tab underneath the details panel. This will display the [Multiplicity](../multiplicity/multiplicity.md), **Name** and **Description** of each **Data Element**. 
 
 ![List of Data Elements that use the Primitive Data Type](primitive-data-elements.png) 
 
