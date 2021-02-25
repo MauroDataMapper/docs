@@ -61,7 +61,7 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	Any relevant comments or notes.
 
 * **Links**  
-	**Semantic links** between relevant **Data Types**.
+	[Semantic links](../semantic-links/semantic-links.md) between relevant **Data Types**.
 
 * **Attachments**  
 	Files can be added to provide additional information and context.
