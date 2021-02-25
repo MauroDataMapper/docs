@@ -39,7 +39,12 @@
 
 ---
 
+# S
+###[Semantic links](../glossary/semantic-links/semantic-links.md) 
+
+---
+
 # T
 ###[Terminology Data Type](../glossary/terminology-data-type/terminology-data-type.md) 
 
-
+---
