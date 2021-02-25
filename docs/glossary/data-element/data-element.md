@@ -2,22 +2,22 @@
 title: Data Element
 ---
 
-##**What is a Data Element?**
+##What is a Data Element?
 
-A **Data Element** is a description of an individual field, variable, column or property of a data item. Each **Data Element** has a name and a **Data Type**. 
+A **Data Element** is a description of an individual field, variable, column or property of a data item. Each **Data Element** has a name and a [Data Type](../data-type/data-type.md). 
 
 
 ---
-##**How are Data Elements used?**
+##How are Data Elements used?
 
-**Data Elements** that are related to each other in some way are grouped together in [Data Classes](../data-class/data-class.md). These [Data Classes](../data-class/data-class.md) are the building blocks of [Data Models](../data-model/data-model.md). For example, a **Data Element** could be an individual field such as **‘Postcode’** within a webform. 
+**Data Elements** that are related to each other in some way are grouped together in [Data Classes](../data-class/data-class.md). These **Data Classes** are the building blocks of [Data Models](../data-model/data-model.md). For example, a **Data Element** could be an individual field such as **‘Postcode’** within a webform. 
 
-![A webform and Data Model flowchart illustrating an example of a Data Element](data-element-flowchart.png)
+![A webform example illustrating a Data Element](data-element-flowchart.png)
 
 Each **Data Element** has a:
 
 * [Label](../label/label.md)  
-	This is the name of the **Data Element** which has to be unique within its parent [Data Class](../data-class/data-class.md).
+	This is the name of the **Data Element** which has to be unique within its parent **Data Class**.
 
 * [Aliases](../aliases/aliases.md)  
 	Alternative names that can help locate the **Data Element** when searched for.
@@ -26,21 +26,27 @@ Each **Data Element** has a:
 	A definition either written in html or plain text which explains any contextual details relating to the **Data Element**.
 	
 * **Data Type**  
-	The **Data Type** describes the range of possible values that the **Data Element** may take. The **Data Types** stored within [Data Models](../data-model/data-model.md) are: 
+	The **Data Type** describes the range of possible values that the **Data Element** may take. The **Data Types** stored within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) are: 
 
-	* **Enumeration:** A constrained set of possible values. Each **Enumeration Type** defines a number of **Enumeration Values** which have a coded key and a human-readable value.
+	* [Enumeration Data Type](../enumeration-data-type/enumeration-data-type.md)  
+	This is a constrained set of possible **Enumeration values**, which are typically used to describe lists of data.  
+	 For example, an ethnicity **Enumeration Data Type** would include a list of different ethnic categories, each defined by a coded key and a human readable description.
 
-	* **Primitive:** A string, date or integer.
+	* [Primitive Data Type](../primitive-data-type/primitive-data-type.md)  
+	Data without further details on structure or referencing. **Primitive Data Types** include **‘String’**, **‘Integer’** or **‘Date’**.
+	
+	* [Reference Data Type](../reference-data-type/reference-data-type.md)  
+	Data which refers to another **Data Class** within the same **Data Model**. 
 
-	* **Reference:** Data with detailed properties which is used to describe relationships between different [Data Classes](../data-class/data-class.md) within the same [Data Model](../data-model/data-model.md).
-
-	* **Terminology:** A structured collection of **Enumerated Values** which has relationships between different data terms.
+	* [Terminology Data Type](../terminology-data-type/terminology-data-type.md)  
+	A structured collection of **Enumerated Values** which have relationships between different data terms.
 	
 * **Parent Hierarchy**  
-	Details the parent [Data Class](../data-class/data-class.md) and [Data Model](../data-model/data-model.md) of the **Data Element**.
+	Details the parent **Data Class** and **Data Model** of the **Data Element**.
 	
 * [Multiplicity](../multiplicity/multiplicity.md)  
-	This specifies the minimum and maximum number of times the **Data Element** appears within its parent. Optional data may have a minimum [Multiplicity](../multiplicity/multiplicity.md) of 0 and a maximum of 1, whereas mandatory data has a minimum [Multiplicity](../multiplicity/multiplicity.md) of 1. Data which occurs any number of times is given by a [Multiplicity](../multiplicity/multiplicity.md) of ‘*’ which represents ‘-1’ internally.
+	This specifies the minimum and maximum number of times the **Data Element** appears within its parent.   
+	 Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of * which represents -1 internally.
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Element**. 
@@ -58,7 +64,7 @@ Other characteristics are displayed in the tabs underneath the details panel, wh
 	Any relevant comments or notes. 
 
 * **Links**  
-	**Semantic links** between relevant **Data Elements**.
+		[Semantic links](../semantic-links/semantic-links.md) between relevant **Data Elements**.
 
 * **Summary**  
 	Further metadata information on the nature of the **Data Elements**. This can include aggregate data such as the number of entries or distribution information as well as textual information detailing aspects like the geographic representation of the data set or the duration of collection. 
