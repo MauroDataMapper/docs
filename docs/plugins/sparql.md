@@ -164,10 +164,91 @@ PREFIX mdm: <http://metadata-catalogue.org/>
 SELECT ?dcl WHERE { 
     ?dm mdm:label "Complex Test DataModel" .
     ?dm a mdm:datamodel .
-    ?dm mdm:component_class ?dc .
+    ?dc mdm:child_class_of ?dm .
     ?dc mdm:id ?dcl
 }
 ```
+
+#### Example 4: Relations, multiple results
+
+Find the enumeration values which have 'value' of "Not known": find their keys and the label of the containing data type
+
+```sparql
+PREFIX mdm: <http://metadata-catalogue.org/>
+
+SELECT ?dtl ?evk  WHERE { 
+    ?ev a mdm:enumerationvalue .
+    ?ev mdm:value "Not known" .
+    ?ev mdm:key ?evk .
+    ?dt mdm:component_value ?ev .
+    ?dt mdm:label ?dtl
+}
+```
+
+#### Example 5: Finding metadata
+
+Find the `schema.org` `abstract` property from a data model
+
+```sparql
+PREFIX mdm: <http://metadata-catalogue.org/>
+PREFIX so: <http://metadata-catalogue.org/schema.org/>
+
+SELECT ?a WHERE { 
+    ?dm a mdm:datamodel .
+    ?dm mdm:label "Complex Test DataModel" .
+    ?dm so:abstract ?a .
+}
+```
+
+#### Example 6: Transitive searches
+
+The first query finds the immediate child classes of a model:
+
+```sparql
+PREFIX mdm: <http://metadata-catalogue.org/>
+
+SELECT ?l WHERE { 
+    ?dm a mdm:datamodel .
+    ?dm mdm:label "Complex Test DataModel" .
+    ?dc mdm:child_class_of ?dm .
+    ?dc mdm:label ?l
+}
+```
+
+
+
+Compare this with the second, which transitively follows the `child_class_of` relationship to find child classes of that class:
+
+```sparql
+PREFIX mdm: <http://metadata-catalogue.org/>
+
+SELECT ?l WHERE {
+?dm a mdm:datamodel .
+?dm mdm:label "Complex Test DataModel" .
+?dc mdm:child_class_of+ ?dm .
+?dc mdm:label ?l
+}
+```
+
+#### Example 7: Transitive Searches on Terminologies
+
+This search recursively finds all terms narrower than another, and provides their code and definition:
+
+```sparql
+PREFIX mdm: <http://metadata-catalogue.org/>
+
+SELECT ?code ?definition WHERE { 
+    ?ut mdm:code "N20-N23" .
+    ?tm mdm:label "International Classification of Diseases (ICD) Version 10 Edition 5" .
+    ?t mdm:term_of ?tm .
+    ?ut mdm:term_of ?tm .
+    ?t mdm:narrowerThan+ ?ut .
+    ?t mdm:code ?code .
+    ?t mdm:definition ?definition .
+} ORDER BY ASC(?code)
+```
+
+
 
 ## Links to SPARQL Tutorials
 
