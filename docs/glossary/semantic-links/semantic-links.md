@@ -18,9 +18,11 @@ There are two types of **Semantic links** used within [Mauro Data Mapper](https:
 
 The most common type of semantic relationship is a **‘Refines’** link. Refine means to improve and in this context it signifies improving the quality and amount of information provided. Consequently, when one description refines another, it means that everything that is true about one description is also true about the other description, whilst often adding more information or context. 
 
-For example, if a description of a column in a database specification refines an item in a [Data Standard](../../glossary/data-standard/data-standard.md), then everything the **Data Standard** says about that data item applies to the column. The rest of the database specification may contain more information about that column, such as specific conditions or constraints, but the description in the **Data Standard** still applies.
+For example, if a description of a column in a database specification **Refines** an item in a [Data Standard](../../glossary/data-standard/data-standard.md), then everything the **Data Standard** says about that data item applies to the column. The rest of the database specification may contain more information about that column, such as specific conditions or constraints, but the description in the **Data Standard** still applies.
 
 This type of **Semantic link** can be created between [Data Models](../../glossary/data-model/data-model.md), [Data Classes](../../glossary/data-class/data-class.md) and [Data Elements](../../glossary/data-element/data-element.md).
+
+### Does not refine
 
 Similarly, you can also create a **‘does not refine’** link which is used to indicate that the present definition is not intended as a refinement of another. 
 
