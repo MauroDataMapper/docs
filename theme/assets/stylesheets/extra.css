@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+    src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+    src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
 :root {
     /* Default color shades */
     --md-default-fg-color:               #333;
@@ -160,6 +172,19 @@ table.front-page-links td {
     text-align: center;
 }
 
+
+.md-typeset a[href*='//']::after {
+    margin-left: 0.4em;
+    content: "\f08e";
+    font-family: "FontAwesome";
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-color: white;
+    -webkit-text-decoration-color: white; /* safari still uses vendor prefix */
+    text-underline-offset: 0px;
+    text-decoration-style: unset;
+}
 
 @media screen and (min-width: 60em) {
     .md-search__input, .md-search__input:hover { 
