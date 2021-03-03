@@ -147,6 +147,19 @@ header.md-header nav.md-header-nav {
     margin: auto;
 }
 
+table.front-page-links {
+    width: 100%
+}
+
+table.front-page-links img {
+    height: 8em;
+    text-align: center;
+}
+
+table.front-page-links td {
+    text-align: center;
+}
+
 
 @media screen and (min-width: 60em) {
     .md-search__input, .md-search__input:hover { 
