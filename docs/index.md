@@ -11,4 +11,15 @@
 Here you will find everything you need to understand, use and navigate the Mauro Data Mapper as well as API guides for software developers.
 
 
-![Homepage menu visual](homepage-menu-visual.png)
+![About button](../home/about-button-rsz.png)
+
+![Glossary button](../home/glossary-button-rsz.png)
+
+![User guides button](../home/user-guides-button-rsz.png)
+
+![Tutorials button](../home/tutorials-button-rsz.png)
+
+![API documentation button](../home/api-documentation-button-rsz.png)
+
+![Community button](../home/community-button-rsz.png)
+
