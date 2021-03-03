@@ -18,7 +18,7 @@ System administrators with access to the database can access the data directly, 
 [taking backups](../../installing/administration). However, editing or interpreting the data directly through the database is not recommended, as this
 will bypass the business logic in the core, with potential loss of system integrity.
 
-### Core
+## Core
 
 The 'Core' component is built using [Grails](https://grails.org) (version 4), which is a Java-based Model-View-Controller framework. Code is typically
 written in Groovy, which itself compiles down to Java. Much of the Grails framework is built on top of the widely-used Spring components.
@@ -26,7 +26,7 @@ written in Groovy, which itself compiles down to Java. Much of the Grails framew
 The 'Core' codebase defines the object-oriented domain model, which specifies the structure and constraints on the underlying model. All program logic
 is contained within _Services_ and _Controllers_, with _Views_ defining the structure of any outputs to procedures or requests.
 
-### REST API
+## REST API
 
 The REST API is a logical layer, defined completely within the 'Core' component, and is the standard way of interacting with the platform. A
 standard [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-style interface makes use of standard HTTP commands - for example
@@ -37,7 +37,7 @@ easier. Plugins may extend the API with new endpoints.
 Each endpoint typically receives and responds in JSON; some can use XML but this is less well tested. Custom data formats apply in particular
 circumstances - for example when dealing with file attachments.
 
-### Programming APIs
+## Programming APIs
 
 The programming APIs wrap REST commands in programming constructs to make it easier for programmers to interact with the Mauro platform without being
 concerned with the technical details of the REST API. Of the three current APIs, the [Java library](../client/java) is most mature, and is able to
@@ -48,7 +48,7 @@ Java client also supports connections to multiple instances, making it a good to
 The [Typescript API](../client/typescript) is a much simpler wrapper around those endpoints used by the web interface. It is hosted as a separate
 component and can be installed using `npm`, the standard package manager for javascript applications.
 
-### User Interface
+## User Interface
 
 The web-based user interface is defined in [Angular 9](https://angular.io) using the [Angular Material](https://material.angular.io) library for
 look-and-feel. It is a self-contained, single-page web application which makes use of some additional typescript libraries (for rendering diagrams,
@@ -56,7 +56,7 @@ providing notifications, etc) on top of the standard ones provided by Angular. I
 communicate with the core, and is built in a modular fashion to allow easy extensibility. Many of the components can be easily re-used in the creation
 of other web interfaces.
 
-### Grails Plugins
+## Grails Plugins
 
 The Grails core provides an easy mechanism for extension, through standard Grails plugins. A number of pre-defined extension points are available -
 for example to implement new importers, exporters, profiles, or authentication mechanisms. However plugins may also arbitrarily extend the REST API
@@ -68,7 +68,7 @@ complex queries may affect the performance of the server.
 The core component is itself made up of a number of plugins, and can be disassembled for particular use-cases. For example, it is possible to disable
 support for API Keys by compiling a version of the core with that plugin removed.
 
-### Search Index
+## Search Index
 
 The search index is an in-memory, and direct file index used to improve the performance of searching. In some places in the Core, it may also be used
 to speed up access to particular model contents. The index is built using [Apache Lucene](https://lucene.apache.org), but managed in the code through
