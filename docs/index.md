@@ -56,6 +56,7 @@ To find out more about the Mauro platform and tools, head straight to our [Intro
         </div>
     </div>
 </a>
+
 <a href="community/support">
     <div class="home-page-button">
         <img src="home/Community%20icon_edited.jpg"/>

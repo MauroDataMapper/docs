@@ -200,6 +200,7 @@ div.home-page-button {
 
 }
 
+
 div.home-page-button:hover {
     /*border: 2px solid var(--md-accent-fg-color);*/
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -231,6 +232,24 @@ div.home-page-button-text span.home-page-button-title {
 }
 div.home-page-button-text span.home-page-button-summary {
     font-weight: normal;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    div.home-page-button {
+        width: 95%;
+    }
+
+    div.home-page-button img{
+        width: 15%;
+    }
+
+    div.home-page-button-text{
+        text-align: center;
+        float: right;
+        display: inline-block;
+        width: 85%
+    }
 }
 
 
