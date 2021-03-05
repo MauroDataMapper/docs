@@ -1,10 +1,10 @@
 # Mauro Data Mapper: Documentation
 
-Here you will find everything you need to understand, use and navigate the Mauro Data Mapper as well as API guides for software developers.
+#### Welcome to the Mauro Data Mapper documentation site.
 
-Use the menu on the left hand side to browse through the documentation, or follow the links below to go straight to our popular pages.
+Here you will find everything you need to understand, use and navigate the **Mauro Data Mapper** tool as well as API documentation for software developers.
 
-To find out more about the Mauro platform and tools, head straight to our [Introduction](about/introduction) page.
+To browse through the documentation, use the menu on the left. Alternatively, click the buttons below to go straight to our most popular pages.
 
 
 <a href="about/introduction">
