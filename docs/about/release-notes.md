@@ -1,16 +1,19 @@
 This page describes the changes for each component: 'core', 'ui', and the various centrally-maintained plugins and client libraries. For each, a table
 is presented with version number, notable new features, notable pull requests, and any dependencies.
 
+
 For more information about the structure and architecture of the code, please see our [system architecture](/resources/architecture/) pages.
 
-In general, we try to use [Semantic Versioning](https://semver.org). In particular note that any version tagged as `0.x.y` should be considered
-'beta' or for testing purposes only. In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), and so
-the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, but 'bleeding edge' features may be available within '
-develop' or any feature branch.
+In general, we try to use [Semantic Versioning.](https://semver.org) In particular note that any version tagged as `0.x.y` should be considered
+'beta' or for testing purposes only. 
 
-Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts, and dependencies.
+In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), and so the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, but 'bleeding edge' features may be available within 'develop' or any feature branch.
 
-## Core
+Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
+
+---
+
+## 1. Core
 
 [GitHub](https://github.com/MauroDataMapper/mdm-core)
 <table width="100%">
@@ -34,15 +37,17 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
                     <li>Reference Data Model</li> 
                     <li>Removed access controls for individuals, increased the options for groups</li>
                     <li>Updated Security Module</li>
-                    <li>API Keys / Access Tokens</li>
-                    <li>Much-improved support for branching and merging</li>
+                    <li>API Keys / access tokens</li>
+                    <li>Much improved support for branching and merging</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-## UI
+---
+
+## 2. UI
 
 [GitHub](https://github.com/MauroDataMapper/mdm-ui)
 
@@ -67,16 +72,18 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
                     <li>Reference Data Model</li> 
                     <li>API Keys / access tokens</li>
                     <li>WYSIWYG HTML editor</li>
-                    <li>Much-improved support for branching and merging</li>
+                    <li>Much improved support for branching and merging</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-## Client Libraries
+---
 
-### Java
+## 3. Client Libraries
+
+### 3.1 Java
 
 [GitHub](https://github.com/MauroDataMapper/mdm-api-java-restful)
 <table width="100%">
@@ -91,12 +98,12 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>2.0.0</b><br/><a href="">(GitHub Link)</a></td>
             <td>TBC</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
 
-### .NET
+### 3.2 .NET
 
 [GitHub](https://github.com/MauroDataMapper/mdm-api-dotnet-restful)
 <table width="100%">
@@ -109,14 +116,14 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
-            <td><b>???</b><br/><a href="">(GitHub Link)</a></td>
+            <td><b>TBC</b><br/><a href="">(GitHub Link)</a></td>
             <td>TBC</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
 
-### Typescript
+### 3.3 Typescript
 
 [GitHub](https://github.com/MauroDataMapper/mdm-resources)
 <table width="100%">
@@ -131,16 +138,16 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>4.2.0</b><br/><a href="">(GitHub Link)</a></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
 
+---
 
+## 4. Plugins
 
-## Plugins
-
-### Importers / Exporters
+### 4.1 Importers / Exporters
 
 **AWS Glue** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-awsglue))
 <table width="100%">
@@ -155,7 +162,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>1.1.1</b><br/></td>
             <td>10th Feb 2021</td>
-            <td>Fix regression bug relating to saving data models</td>
+            <td>Fix regression bug relating to saving Data Models</td>
         </tr>
         <tr>
             <td><b>1.0.1</b><br/></td>
@@ -165,7 +172,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>1.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -183,7 +190,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -201,7 +208,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -219,7 +226,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -238,7 +245,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -256,7 +263,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
@@ -274,15 +281,15 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
 
 
-### Profiles
+### 4.2 Profiles
 
-### Technical
+### 4.3 Technical
 
 **Apache Freemarker** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-freemarker))
 <table width="100%">
@@ -297,9 +304,9 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         <tr>
             <td><b>1.0.0</b></td>
             <td>5th Feb 2021</td>
-            <td>First major Mauro release</td>
+            <td>First major Mauro Data Mapper release</td>
         </tr>
     </tbody>
 </table>
 
-
+---
