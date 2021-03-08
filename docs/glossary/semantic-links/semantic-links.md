@@ -30,7 +30,7 @@ Similarly, you can also create a **‘does not refine’** link which is used to
 If a **Data Model**, **Data Class** or **Data Element** contain any **Semantic links**, these are summarised in a **'Links'** table below the details panel when the relevant data is selected in the **Model Tree**. This table displays a hyperlink to the target data the **Semantic link** refers to, as well as the type and total number of links.
 
 
-Links can be edited, created or removed in the **'Links'** tab below the details panel. To edit the type of link or the target, click the **'Edit'** encil icon to the right. 
+Links can be edited, created or removed in the **'Links'** tab below the details panel. To edit the type of link or the target, click the **'Edit'** pencil icon to the right. 
 
 To add a link click **'+ Add Link'** and you will be able to specify the type of link and select the target. Click the green tick to confirm and save your changes. 
 
