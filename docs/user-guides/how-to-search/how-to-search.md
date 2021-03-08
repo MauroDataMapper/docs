@@ -60,6 +60,7 @@ In some cases you can also filter your search by **Classifiers** by clicking the
 
 ![Classifiers dropdown menu](search-classifiers.png)
 
+---
 
 ## 2. How search works
 
