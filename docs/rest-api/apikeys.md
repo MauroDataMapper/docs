@@ -1,51 +1,52 @@
-API keys offer an alternative way to authenticate to the Mauro REST API instead of logging in with a username and password, and saving session 
-cookies.  This is the recommended method for authenticating when you:
+API keys offer an alternative way to authenticate to the **Mauro Data Mapper REST API** instead of logging in with a username and password and saving session cookies. This is the recommended method for authenticating when you:
 
-- have long-running processing scripts which could cause sessions to time-out between calls
-- need to store authentication details in clear text for an external application to use
+* Have long-running processing scripts which could cause sessions to timeout between calls
+* Need to store authentication details in clear text for an external application to use
 
-Each user can create multiple API keys, and so when sharing with multiple applications, can disable access individually.  API keys are also 
+Each user can create multiple API keys, and so when sharing with multiple applications, can disable access individually. API keys are also 
 configured with a default expiry date for additional security.   
+
+---
 
 ## Creating an API Key
 
-API keys may be setup through the web interface or via the API.  To generate a first API key, the user must be logged ni using a username and 
+API keys may be set up through the web interface or via the API. To generate a first API key, the user must be logged in using a username and 
 password - either through the web interface, or through the REST API.  
 
-Select 'API keys' from the user drop-down
+On the top right of the menu header, click the white arrow next to your user profile and select **'API keys'** from the dropdown menu.
 
-![The API keys menu item in the User drop-down list](../images/apikeys/apikeys-menu.png)
+![API keys menu item in the User dropdown list](../images/apikeys/apikeys-menu.png)
 
-This will take you to a list of existing API keys where you can edit or revoke existing keys, or create new ones.
-The list displays, for each API key belonging to the user:
+This will take you to a list of existing API keys that belong to you. Here, you can enable or re-enable existing keys by clicking the three vertical dots to the right of each item in the list. This dropdown menu also allows you to delete keys.
 
 ![The list of existing API keys](../images/apikeys/apikeys-list.png)
 
+For each API belonging to the user, the list displays:
+
 * **Name**  
-  This is a human-readable name for each API key, which must be unique per-user.  Users can use the name to differentiate between different keys 
+  This is a human readable name for each API key, which must be unique for each user. Users can use the name to differentiate between different keys 
   used for different purposes.
+ 
+* **Key**  
+  This is the key itself, which is a UUID, unique to this user. Keys can be copied to your clipboard by clicking **'Copy'** on the right of the key box.
+
+* **Expiry date**  
+  This is the date from which the API key will no longer be valid. For security purposes, every API key is given an expiry date, but may be 
+  **'refreshed'** before expiry.
   
-* **Key**
-  This is the key itself, which is a UUID, unique to this user.  Click 'copy' to copy this key to your clipboard.  
-  
-* **Expiry date**
-  This is the date from which the API key will no-longer be valid.  For security purposes, every API key is given an expiry date, but may be 
-  'refreshed' before expiry.
-  
-* **Refreshable**
-  Whether this API key may be refreshed once it has expired.
-  
-* **Status**
-  Whether this API key is 'active', or 'disabled'.
-  
-At the end of each row is a drop-down which offers options to disable active keys (or re-enable those that are disabled), and to delete keys.
-To create a new API key, click the 'Create Key' button in the top right, which will open up the dialog below. 
+* **Refreshable**  
+  Specifies whether an API key can be refreshed once it has expired.
+
+* **Status**  
+  Details whether an API key is **'Active'** or **'Disabled'**.
+
+To create a new API key, click the **'Create Key'** button at the top right of the list. This will open a **'Create an API Key'** form which you will need to complete.
+
+Enter the human-readable name of the API key (as described above), choose a number of days before expiry and select whether the key is to be refreshable on expiry or not. Once completed, click **'Create Key'** to confirm your changes.
 
 ![Dialog for creating a new API Key](../images/apikeys/apikeys-create.png)
 
-In the form, you must complete the human-readable name, as described above, choose a number of days before expiry, and choose whether the key is 
-to be refreshable on expiry or not.  Click 'Create Key' to complete API creation.
-
+---
 
 ## Using an API Key
 
@@ -56,39 +57,40 @@ To use an API Key, simply add it into the headers of any REST API call.
 
 The header key should be `apiKey` and the value should be the UUID value of the API key itself.
 
+---
 
 ## Using Postman
 
-If you are using [Postman](../postman) as a client, there are two ways to configure the API key for a request, which both have the same 
-result.  
-You can use the 'Authorization' tab to set the details, as shown in the screenshot below.  You should set the **Key** field to be the text 
-`apiKey`, the **Value** field to be the value of the API key, and in the **Add to** drop-down, select "Header".  The API key must be passed in the 
-headers, not in the query parameters, which is the alternative option.
+If you are using [Postman](../postman) as a client, there are two ways to configure the API key for a request, which both have the same result.  
+
+Firstly, select the **'Authorization'** tab which will display several fields that you need to complete. From the **'TYPE'** dropdown menu, select **'API Key'**. In the **'Key'** box on the right hand side type `apiKey`. Enter the value of the API key in the **'Value'** field and select **'Header'** from the **'Add to'** dropdown menu.
 
 ![Setting an API key in Postman using the Authorization tab](../images/apikeys/apikeys-postman-auth.png)
 
-This method sets the headers automatically; you can also set them manually as shown in the screenshot below.  Again, you should use the header 
-**key** field of `apiKey`, and the **value** field should be populated with the API key value.   
+The API key must be passed in the headers, not in the query parameters, which is the second method. This method sets the headers automatically, although you can also set them manually. Select the **'Headers'** tab which will display a list of **Keys** and **Values**. Again, set the **'Key'** field to `apiKey` and the **'Value'** field to the API key value.   
 
 ![Setting an API key in Postman using the Headers tab](../images/apikeys/apikeys-postman-headers.png)
 
+---
+
 ## Refreshing an expired API key
 
-When an API key has expired, and it has previously been marked as 'refreshable', then it may be refreshed - a new expiry date may be set.  
-To do this, go to the API key list as above, and note that the 'expiry date' field now says that it has expired.  The '...' options at the end of 
-the row now offer the option to refresh the APi key.  Choose this option, and in the next dialog, choose a new number of days for expiry.
+When an API key has expired and it has previously been marked as **'Refreshable'**, then it may be refreshed with a new expiry date. 
+
+To do this, navigate to the list of **'API keys'** via your user profile. Identify which API keys have **'API Key expired'** in the **'Expiry date'** column. Click the three vertical dots to the right of the relevant API key and you will now have the option to **'Refresh API Key'** in the dropdown menu. Select this option and then enter a new number of days for expiry. 
 
 ![Refreshing an expired API key](../images/apikeys/apikeys-refresh.png)
 
+---
+
 ## Revoking an API key
 
-To revoke a particular API key, you can mark it as 'disabled'.  On the list of API keys, choose the '...' drop-down list of options, and choose 
-'disable'.    The same option will allow you to re-enable the key if necessary.
+To revoke a particular API key, you can mark it as **'Disabled'**. Navigate to the **'API Keys'** list and click the three vertical dots to the right of the relevant API key. Select **'Disable'** from the dropdown menu. The same option will allow you to re-enable the key if necessary.
 
 !!! info
-    It is good practice to set up different API keys for each application - in this way it is easy to revoke access to a single application 
-    without having to recreate all other keys and updating other application settings.
+    It is good practise to set up different API keys for each application. In this way it is easy to revoke access to a single application without having to recreate all other keys and update other application settings.
 
+---
 
 ## Managing keys through the REST API
 
@@ -121,7 +123,7 @@ This returns a [paginated](pagination.md) list of API keys as follows:
       ]
     }
     ```
-The parameters are as described above; the `id` field is the global primary key identifer for the key.
+The parameters are as described above. The `id` field is the global primary key identifer for the key.
 
 To create a new API key, post to the following endpoint:
 
@@ -138,8 +140,9 @@ The body of the post method should be structured as follows:
     }
     ```
 
-where the parameters are as described above.
-To enable an existing, disabled API Key, you can use its ID (as described above), with the following endpoint:
+Where the parameters are as described above.
+
+To enable an existing, disabled API key, you can use it's ID (as described above), with the following endpoint:
 
 <endpoint class="put">/api/catalogueUsers/**{catalogueUserId}**/apiKeys/**{apiKeyId}**/enable</endpoint> 
 
@@ -155,3 +158,4 @@ Finally, to delete an API key identified by a particular UUID:
 
 <endpoint class="delete">/api/catalogueUsers/**{catalogueUserId}**/apiKeys/**{id}**</endpoint>
 
+---
