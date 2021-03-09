@@ -12,7 +12,7 @@ Therefore, a **Semantic link** indicates that there is some sort of relationship
 
 ##How are Semantic links used?
 
-There are two types of **Semantic links** used within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). 
+There are two types of **Semantic links** used within **Mauro Data Mapper**. 
 
 ### Refines
 

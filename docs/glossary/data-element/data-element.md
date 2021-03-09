@@ -23,10 +23,10 @@ Each **Data Element** has a:
 	Alternative names that can help locate the **Data Element** when searched for.
 
 * **Description**  
-	A definition either written in html or plain text which explains any contextual details relating to the **Data Element**.
+	A definition either written in HTML, Markdown, or plain text which explains any contextual details relating to the **Data Element**.
 	
 * **Data Type**  
-	The **Data Type** describes the range of possible values that the **Data Element** may take. The **Data Types** stored within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) are: 
+	The **Data Type** describes the range of possible values that the **Data Element** may take. The **Data Types** stored within **Mauro Data Mapper** are: 
 
 	* [Enumeration Data Type](../enumeration-data-type/enumeration-data-type.md)  
 	This is a constrained set of possible **Enumeration values**, which are typically used to describe lists of data.  
@@ -46,7 +46,7 @@ Each **Data Element** has a:
 	
 * [Multiplicity](../multiplicity/multiplicity.md)  
 	This specifies the minimum and maximum number of times the **Data Element** appears within its parent.   
-	 Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of * which represents -1 internally.
+	 Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of '*' (which is represented by '-1' internally).
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Element**. 

@@ -1,6 +1,6 @@
 ## Overview
 
-[Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) is built using a fairly common layered design. At the heart is a standard, relational database where all data is primarily stored. 
+**Mauro Data Mapper** is built using a fairly common layered design. At the heart is a standard, relational database where all data is primarily stored. 
 
 All interaction with the database is controlled through business logic within the '[Core](#core)' layer. Interfaces around the core allow interaction at
 different levels of abstraction
@@ -16,7 +16,7 @@ rebuild against other database implementations, but we've yet to try. The only e
 database is used in order to speed up testing.
 
 System administrators with access to the database can access the data directly, and this is the preferred route for
-[taking backups](../../installing/administration). However, editing or interpreting the data directly through the database is not recommended, as this will bypass the business logic in the core, with potential loss of system integrity.
+[taking backups](../../installing/administration#backing-up-the-database). However, editing or interpreting the data directly through the database is not recommended, as this will bypass the business logic in the core, with potential loss of system integrity.
 
 ---
 

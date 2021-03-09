@@ -8,7 +8,7 @@ A **Data Type** describes the range of possible values that each [Data Element](
 ---
 
 ##How are Data Types used?
-There are four different **Data Types** stored within [Data Models](../data-model/data-model.md) of [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home):
+There are four different **Data Types** stored within [Data Models](../data-model/data-model.md) of **Mauro Data Mapper**:
 
 * [Enumeration Data Type](../enumeration-data-type/enumeration-data-type.md)  
 	This is a constrained set of possible **Enumeration values**, which are typically used to describe lists of data.  

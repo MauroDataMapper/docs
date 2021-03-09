@@ -1,4 +1,4 @@
-The search function within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) is extremely powerful and allows you to search for datasets or specifications throughout the whole catalogue. This user guide will explain how to effectively search for an item as well as the methods **Mauro Data Mapper** uses for searching. 
+The search function within **Mauro Data Mapper** is extremely powerful and allows you to search for datasets or specifications throughout the whole catalogue. This user guide will explain how to effectively search for an item as well as the methods **Mauro Data Mapper** uses for searching. 
 
 ---
 

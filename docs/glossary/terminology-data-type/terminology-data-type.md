@@ -4,7 +4,7 @@ title: Terminology Data Type
 
 ##What is a Terminology Data Type?
 
-A **Terminology Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). It is used to describe a structured collection of **Enumerated Values** which have relationships between different data terms. 
+A **Terminology Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within **Mauro Data Mapper**. It is used to describe a structured collection of **Enumerated Values** which have relationships between different data terms. 
 
 ---
 

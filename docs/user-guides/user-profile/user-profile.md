@@ -4,7 +4,7 @@ This user guide will show you how to add and edit information in your user profi
 
 ## 1. Edit your profile
 
-When logged in to [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home), your user profile is displayed on the top right of the menu header. Click the white arrow and a dropdown menu will appear. The options available in this menu will depend on whether you are an **'Editor'** or an **'Administrator'**. 
+When logged in to **Mauro Data Mapper**, your user profile is displayed on the top right of the menu header. Click the white arrow and a dropdown menu will appear. The options available in this menu will depend on whether you are an **'Editor'** or an **'Administrator'**. 
 
 ![User profile menu](user-profile-menu.png)
 

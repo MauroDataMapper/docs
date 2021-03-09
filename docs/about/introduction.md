@@ -1,6 +1,9 @@
 ## What is Mauro Data Mapper?
 
-Collecting accurate and reliable data takes a huge amount of time, money and resource. Therefore, it’s vital that researchers are able to extract the maximum value from this data for both current and future research projects. This is why the [National Institute for Health Research (NIHR)](https://www.nihr.ac.uk/) has collaborated with Universities to develop the [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) formerly known as the Metadata Catalogue.
+Collecting accurate and reliable data takes a huge amount of time, money and resource. Therefore, it’s vital that researchers are able to extract 
+the maximum value from this data for both current and future research projects.  This is why the [University of Oxford](https://www.ox.ac.uk), with 
+funding from [National Institute for Health Research (NIHR)](https://www.nihr.ac.uk/) and additional support from [NHS Digital](https://digital.
+nhs.uk) has developed the **Mauro Data Mapper** tool.
 
 **Mauro Data Mapper**, is a toolkit for combining, developing and standardising data, helping users to effectively record and analyse contextual data. This central hub of clinical informatics allows users to easily access the metadata they require, avoiding the need to repeat research tasks; saving time, reducing costs and boosting productivity. 
 
@@ -14,7 +17,7 @@ Furthermore, by employing standard definitions, terminologies and [Data Models](
 
 To fully understand the meaning of data, first we need to know some further information about its context, known as metadata. 
 
-For example, consider a blood pressure reading. Although this has standard units, the method and state of the patient at the time the measurement was taken, will affect the recorded value. Therefore, by outlining this additional information, the reading can be understood and interpreted more accurately. In this way, metadata allows data to be more searchable, comparable and standardised enabling further interoperability.
+For example, consider a blood pressure reading. Although this has standard units, the method and state of the patient at the time the measurement was taken will affect the recorded value. Therefore, by outlining this additional information, the reading can be understood and interpreted more accurately. In this way, metadata allows data to be more searchable, comparable and standardised enabling further interoperability.
 
 ---
 

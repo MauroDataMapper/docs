@@ -4,7 +4,7 @@ title: Reference Data Type
 
 ##What is a Reference Data Type?
 
-A **Reference Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). It is used to describe relationships between different [Data Classes](../data-class/data-class.md) within the same [Data Model](../data-model/data-model.md). Typically, **Reference Data Types** ‘refer’ and consequently link to another specified **Data Class**.  
+A **Reference Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within **Mauro Data Mapper**. It is used to describe relationships between different [Data Classes](../data-class/data-class.md) within the same [Data Model](../data-model/data-model.md). Typically, **Reference Data Types** ‘refer’ and consequently link to another specified **Data Class**.  
 
 ---
 

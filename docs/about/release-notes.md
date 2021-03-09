@@ -13,7 +13,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ---
 
-## 1. Core
+## Core
 
 [GitHub](https://github.com/MauroDataMapper/mdm-core)
 <table width="100%">
@@ -26,8 +26,30 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>4.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.2.0">(GitHub Link)</a></td>
+            <td>4th Mar 2021</td>
+            <td>
+                <ul>
+                    <li>DataModel component import feature</li>
+                    <li>Dataflow importer / exporter in XML / JSON </li>
+                    <li>Fix for Lucene indexing failure</li>
+                    <li>Fix for exception during model import</li>
+                    <li>Back-end performance improvements</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>4.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.1.0">(GitHub Link)</a></td>
+            <td>10th Feb 2021</td>
+            <td>
+                <ul>
+                    <li>Fix for multi-model imports</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td><b>4.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.0.0">(GitHub Link)</a></td>
-            <td>5th Feb 2021</td>
+            <td>1st Feb 2021</td>
             <td>
                 <em>Listing major changes since last release of Metadata Catalogue</em>
                 <ul>
@@ -47,7 +69,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ---
 
-## 2. UI
+## UI
 
 [GitHub](https://github.com/MauroDataMapper/mdm-ui)
 
@@ -60,6 +82,17 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>5.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/5.1.0">(GitHub Link)</a></td>
+            <td>4th Mar 2021</td>
+            <td>
+                <ul>
+                    <li>Global progress indicator</li>
+                    <li>Fix for Markdown link editing</li>
+                    <li>Other fixes / performance improvements</li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>5.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/5.0.0">(GitHub Link)</a></td>
             <td>5th Feb 2021</td>
@@ -81,9 +114,9 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ---
 
-## 3. Client Libraries
+## Client Libraries
 
-### 3.1 Java
+### Java
 
 [GitHub](https://github.com/MauroDataMapper/mdm-api-java-restful)
 <table width="100%">
@@ -103,7 +136,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </tbody>
 </table>
 
-### 3.2 .NET
+### .NET
 
 [GitHub](https://github.com/MauroDataMapper/mdm-api-dotnet-restful)
 <table width="100%">
@@ -123,7 +156,7 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </tbody>
 </table>
 
-### 3.3 Typescript
+### Typescript
 
 [GitHub](https://github.com/MauroDataMapper/mdm-resources)
 <table width="100%">
@@ -145,9 +178,9 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 
 ---
 
-## 4. Plugins
+## Plugins
 
-### 4.1 Importers / Exporters
+### Importers / Exporters
 
 **AWS Glue** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-awsglue))
 <table width="100%">
@@ -159,6 +192,16 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>1.3.0</b><br/></td>
+            <td>4th Mar 2021</td>
+            <td>Add parameter to filter particular databases</td>
+        </tr>
+        <tr>
+            <td><b>1.2.0</b><br/></td>
+            <td>11th Feb 2021</td>
+            <td>Update dependencies</td>
+        </tr>
         <tr>
             <td><b>1.1.1</b><br/></td>
             <td>10th Feb 2021</td>
@@ -188,6 +231,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>2.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
+        <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
             <td>First major Mauro Data Mapper release</td>
@@ -206,6 +254,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>2.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
+        <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
             <td>First major Mauro Data Mapper release</td>
@@ -223,6 +276,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>3.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
         <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
@@ -243,6 +301,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>3.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
+        <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
             <td>First major Mauro Data Mapper release</td>
@@ -260,6 +323,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>3.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
         <tr>
             <td><b>3.0.0</b></td>
             <td>5th Feb 2021</td>
@@ -279,6 +347,11 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>2.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>Update core dependency to fix exception on import</td>
+        </tr>
+        <tr>
             <td><b>2.0.0</b></td>
             <td>5th Feb 2021</td>
             <td>First major Mauro Data Mapper release</td>
@@ -287,9 +360,9 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
 </table>
 
 
-### 4.2 Profiles
+### Profiles
 
-### 4.3 Technical
+### Technical
 
 **Apache Freemarker** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-freemarker))
 <table width="100%">
@@ -309,4 +382,21 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </tbody>
 </table>
 
+**SPARQL** ([GitHub](https://github.com/MauroDataMapper-Plugins/mdm-plugin-sparql))
+<table width="100%">
+    <thead>
+        <tr>
+            <th width="25%"><b>Version</b></th>
+            <th width="25%"><b>Release Date</b></th>
+            <th width="50%"><b>Major Changes</b><img height="1px" width="500px"/></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>1.1.0</b></td>
+            <td>4th Mar 2021</td>
+            <td>First release - SPARQL API endpoint</td>
+        </tr>
+    </tbody>
+</table>
 ---

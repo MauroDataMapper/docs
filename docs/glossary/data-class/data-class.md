@@ -26,14 +26,16 @@ Each **Data Class** has a:
 	Alternative names that can help locate the **Data Class** when searched for.
 
 * **Description**  
-	A definition either written in html or plain text which explains the types of data items that are grouped together within the **Data Class**, as well as any contextual details.
+	A definition either written in HTML, Markdown, or plain text which explains the types of data items that are grouped together within the **Data 
+  Class**, as well as any contextual details.
 	
 * **Parent Hierarchy**  
 	The parent of a **Data Class** can either be the **Data Model** itself, in which case it is described as a **‘top level data class’**. Or, if it is a **Nested Data Class**, its parent **Data Class**.
 	
 * [Multiplicity](../multiplicity/multiplicity.md)  
 	This specifies the minimum and maximum number of times the **Data Class** appears within its parent.   
-	Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data which occurs any number of times is given by a **Multiplicity** of * which represents -1 internally.
+	Optional data may have a minimum **Multiplicity** of 0 and a maximum of 1, whereas mandatory data has a minimum **Multiplicity** of 1. Data 
+  which occurs any number of times is given by a **Multiplicity** of '*' (which is represented by '-1' internally).
 
 * **Classifications**  
 	These are effectively tags that you can apply to the **Data Class**. 

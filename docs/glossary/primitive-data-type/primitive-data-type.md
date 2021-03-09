@@ -4,7 +4,7 @@ title: Primitive Data Type
 
 ##What is a Primitive Data Type?
 
-A **Primitive Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). It describes data which has no further details about structure or referencing. 
+A **Primitive Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within **Mauro Data Mapper**. It describes data which has no further details about structure or referencing. 
 
 For example, if a [Data Element](../data-element/data-element.md) is a name, then it’s **Primitive Data Type** would be **‘String’**. Whereas, if a **Data Element** is a number, then it’s **Primitive Data Type** would be **‘Integer’**.
 

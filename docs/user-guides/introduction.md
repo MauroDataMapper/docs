@@ -1,4 +1,4 @@
-**In this section you will find a variety of user guides which explain how to use [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). You don't need to follow them all in sequence - just dive into a guide that interests you!**
+**In this section you will find a variety of user guides which explain how to use **Mauro Data Mapper**. You don't need to follow them all in sequence - just dive into a guide that interests you!**
 
 
 Our current User Guides:

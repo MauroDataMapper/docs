@@ -1,4 +1,4 @@
-This user guide will explain the steps you need to follow to manually add a health dataset to [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home).
+This user guide will explain the steps you need to follow to manually add a health dataset to **Mauro Data Mapper**.
 
 ---
 

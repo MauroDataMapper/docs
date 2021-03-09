@@ -4,7 +4,7 @@ title: Enumeration Data Type
 
 ##What is an Enumeration Data Type?
 
-An **Enumeration Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). Each **Enumeration Data Type** describes a constrained set of possible Enumeration values. Enumerations are typically used for describing simple lists of data.
+An **Enumeration Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within **Mauro Data Mapper**. Each **Enumeration Data Type** describes a constrained set of possible Enumeration values. Enumerations are typically used for describing simple lists of data.
 
 ---
 

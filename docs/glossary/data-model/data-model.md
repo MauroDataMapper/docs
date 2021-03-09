@@ -9,7 +9,7 @@ A **Data Model** is a description of an existing collection of metadata, or a sp
 ---
 ##How are Data Models used?
 
-**Data Models** make the connection between the names of columns, fields or variables and our understanding of how the corresponding data is acquired, managed and interpreted. [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) acts as a directory for these **Data Models** and allows us to create, search and share these data descriptions.
+**Data Models** make the connection between the names of columns, fields or variables and our understanding of how the corresponding data is acquired, managed and interpreted. **Mauro Data Mapper** acts as a directory for these **Data Models** and allows us to create, search and share these data descriptions.
 
 Within each **Data Model** lies several [Data Classes](../data-class/data-class.md) which are groups of data that are related in some way. **Data Classes** contain [Data Elements](../data-element/data-element.md) which are the descriptions of an individual field or variable. 
 

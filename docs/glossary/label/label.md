@@ -1,5 +1,5 @@
 ##What is a Label?
-A **Label** is a name that describes and uniquely identifies each item within [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). This **Label** will appear in the **Model Tree** on the left hand side of the catalogue and at the top of the page when the item is selected. The **Label** is also used to identify the item when searched for. 
+A **Label** is a name that describes and uniquely identifies each item within **Mauro Data Mapper**. This **Label** will appear in the **Model Tree** on the left hand side of the catalogue and at the top of the page when the item is selected. The **Label** is also used to identify the item when searched for. 
 
 ![Label highlighted in Model Tree and in details panel](label-highlighted.png)
 

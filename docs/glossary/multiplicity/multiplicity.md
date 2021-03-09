@@ -1,6 +1,6 @@
 ##What is Multiplicity?
 
-An item's **Multiplicity** refers to the minimum and maximum number of times it can appear within its parent in [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home). 
+An item's **Multiplicity** refers to the minimum and maximum number of times it can appear within its parent in **Mauro Data Mapper**. 
 For example, the number of instances a particular [Data Element](../data-element/data-element.md) appears within a [Data Class](../data-class/data-class.md). 
 
 ---
@@ -10,7 +10,7 @@ For example, the number of instances a particular [Data Element](../data-element
 Every **Data Class** and **Data Element** is assigned a **Multiplicity**. Typically, the **Multiplicity** is written in the form **‘minmax**’, where **min** and **max** are integers representing the minimum and maximum number of times an item will appear within its parent. The symbol * represents an unbounded maximum.
 
 * Using this notation:
-	* Mandatory data has a minimum **Multiplicity** of 1 and a maximum **Multiplicity** of a specific integer or if there is no upper bound, then * (which represents -1 internally).  
+	* Mandatory data has a minimum **Multiplicity** of 1 and a maximum **Multiplicity** of a specific integer or if there is no upper bound, then '*' (which is represented by '-1' internally).  
 	* Optional data has a minimum **Multiplicity** of 0 and a maximum **Multiplicity** of 1 or if there is no upper bound, *.
  
 For example, each person in a [Data Model](../data-model/data-model.md) only has one date of birth and if you want to record this, then the corresponding **Multiplicity** will be 1..1. However, each person may have many prescription records, which may or may not be relevant. In this case, the **Multiplicity** would be 0..*. 

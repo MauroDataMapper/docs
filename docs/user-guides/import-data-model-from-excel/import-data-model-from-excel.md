@@ -1,4 +1,4 @@
-This user guide will explain the steps you need to follow to import a health dataset into [Mauro Data Mapper](https://modelcatalogue.cs.ox.ac.uk/mdm-ui/#/home) using an Excel spreadsheet.
+This user guide will explain the steps you need to follow to import a health dataset into **Mauro Data Mapper** using an Excel spreadsheet.
 
 ---
 
