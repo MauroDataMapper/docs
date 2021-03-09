@@ -71,6 +71,7 @@ nav:
             -   Installation:
                     -   Docker Install: 'installing/docker.md'
             -   Administration: 'installing/administration.md'
+            -   Branding: 'installing/branding.md'
             -   Plugins: 'installing/plugins.md'
             -   Migrating Old Data: 'installing/migration.md'
     -   Developer Resources:
