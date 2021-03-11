@@ -25,7 +25,7 @@ will return the complete list of visible folders.
 The `all` parameter is an alternative, and should not be specified at the same time as `offset` and `max`.
 
 
-##Response format 
+## Response format 
 
 Again consider the endpoint endpoint for listing all folders described above.
 

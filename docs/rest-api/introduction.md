@@ -1,12 +1,12 @@
 ---
 title: REST API Introduction
-summary: This page explains the purpose and architecture of the Metadata Catalogue REST API.
+summary: This page explains the purpose and architecture of the Mauro Data Mapper REST API.
 authors:
     - James Welch
 date: 19th Aug 2019
 ---
 
-The Metadata Catalogue API conforms to standard [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) principles.  The API has 
+The **Mauro Data Mapper API** conforms to standard [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) principles.  The API has 
 resource-oriented URLs, accepts XML and JSON body content (or form-encoded parameters where applicable), and can return data in XML or JSON 
 formats. Each call uses standard HTTP response codes, authentication, and verbs.
 
@@ -73,7 +73,7 @@ easily configured to make complex REST API requests.  In this set of documentati
 
 ## Testing
 
-There is a test api resource which will show whether the server api is running correctly, and whether the client has been correctly configured.  
+There is a test API resource which will show whether the server API is running correctly, and whether the client has been correctly configured.  
 
 To test this using `curl`, run the following command:
 

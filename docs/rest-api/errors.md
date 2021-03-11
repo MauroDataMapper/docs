@@ -1,13 +1,13 @@
-The Metadata Catalogue API uses [standard HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) to indicate the success or 
+The **Mauro Data Mapper API** uses [standard HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) to indicate the success or 
 the failure of an API request.  In addition, some requests also return additional status information relating to the reasons for any error or 
 failure that has occurred.    
 
 In general, codes of the form `2XX` indicate success, codes of the form `4XX` indicate an error with the request, and codes of the form `5XX` 
-indicate that an error occurred with the server during the processing of a potentially valid request.Hopefully those in the last category are rare!
+indicate that an error occurred with the server during the processing of a potentially valid request. Hopefully those in the last category are rare!
   More detail for each of the commonly-seen error codes is shown in the table below.
   
   
-##Error code tables
+## Error code tables
  
 | Code | Meaning | Description |
 |------|---------|-------------| 

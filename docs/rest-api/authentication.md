@@ -1,4 +1,4 @@
-The Metadata Catalogue stores content that may be either publicly accessible, or have access restricted to particular users or groups.  Therefore 
+**Mauro Data Mapper** stores content that may be either publicly accessible, or have access restricted to particular users or groups.  Therefore 
 the majority of API requests can be made as an anonymous user (by passing no session information in the request header), or as a logged in user (by
 passing a valid session key in the request headers.)
  
@@ -6,7 +6,7 @@ A request to the `login` will result in a new session token being generated.  Th
 identifies the current session.  These tokens should not be shared, and will automatically expire with 30mins of inactivity.  Sessions can be 
 manually terminated through a call to the `logout` resource.   At any point the validity of a session may be checked against the server.
 
-##Login
+## Login
 
 To login to the server, `POST` to the following API endpoint 
 
@@ -30,7 +30,7 @@ The request body should contain the username, and the password.  The username is
     </user>
     ```
 
-If successful, the response body will contain the user's `id`, email address, first and last names, their user role, and whether or not that 
+If successful, the response body will contain the user's `id`, email address, first and last names, and whether or not that 
 user's account has been disabled (typically false in the case of a successful login)
 
 === "Response body (JSON)"
@@ -40,8 +40,9 @@ user's account has been disabled (typically false in the case of a successful lo
         "emailAddress": "joe.bloggs@test.com",
         "firstName": "Joe",
         "lastName": "Bloggs",
-        "userRole": "EDITOR",
-        "disabled": false
+        "pending": false,        
+        "disabled": false,
+        "createdBy": "admin@test.com"
     }
     ```
     
@@ -60,30 +61,43 @@ Cookie: JSESSIONID=9257B45A4BCA750570736626C62EE74B
 
 Further requests without the session cookie will be treated as anonymous requests.
     
-##Session validation
+## Session validation
 
 In order to validate whether a session is currently active, or has expired (by logging out, or timed-out due to inactivity), 
 
-<endpoint class="get">/api/authentication/isValidSession</endpoint>   
+<endpoint class="get">/api/session/isAuthenticated</endpoint>   
 
-No request body or parameters are required for this request.  The response will be simply `true` or `false` depending on the validity of the 
-session whose `JSESSIONID` is passed in as part of the request headers
+No request body or parameters are required for this request.  The response will include a `true` or `false` value depending on the validity of the 
+session whose `JSESSIONID` is passed in as part of the request headers.
 
 === "Response body (JSON)"
     ```json
-    true
+    {
+        "authenticatedSession": true
+    }
     ```
 
-##Logout
+## Administration validation
+
+In order to validate whether a session is an administrative role,
+
+<endpoint class="get">/api/session/isApplicationAdministration</endpoint>  
+
+No request body or parameters are required for this request.  The response will include a `true` or `false` value depending on the validity of the 
+session whose `JSESSIONID` is passed in as part of the request headers.
+
+=== "Response body (JSON)"
+    ```json
+    {
+        "applicationAdministrationSession": true
+    }
+    ```
+
+## Logout
 
 Every session should ideally be closed manually, rather than leaving it to expire through inactivity.  In order to close a user session, you should
  call the logout endpoint, again including the `JSESSIONID` cookie as part of the request headers   
 
 <endpoint class="get">/api/authentication/logout</endpoint>
 
-The response should include the status `200: OK`, and the successful response is simply the following text:
-
-=== "Response body (Text)"
-    ```text
-    Successfully logged out
-    ``` 
+The response should include the status `204: No Content`, and the successful response will be empty.
