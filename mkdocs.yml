@@ -106,7 +106,7 @@ nav:
                     -   Import / Export: 'rest-api/importexport.md'
                     -   Admin functions: 'rest-api/admin.md'
             -   Client Libraries:
-                    -   Java: 'resources/client/java.md'
+                    -   Groovy / Java: 'resources/client/java.md'
                     -   Typescript: 'resources/client/typescript.md'
                     -   .NET: 'resources/client/net.md'
             -   Technical Plugins:

@@ -1,0 +1,7 @@
+uk.ac.ox.softeng.maurodatamapper
+uk.ac.ox.softeng.maurodatamapper.api.restful.client
+uk.ac.ox.softeng.maurodatamapper.api.restful.connection
+uk.ac.ox.softeng.maurodatamapper.api.restful.connection.endpoint
+uk.ac.ox.softeng.maurodatamapper.api.restful.exception
+uk.ac.ox.softeng.maurodatamapper.api.restful.render.json
+uk.ac.ox.softeng.maurodatamapper.utils.commandline
