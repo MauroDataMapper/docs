@@ -1,0 +1,1283 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MdmUserGroupsResource | @maurodatamapper/mdm-resources</title>
+	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@maurodatamapper/mdm-resources</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">@maurodatamapper/mdm-resources</a>
+				</li>
+				<li>
+					<a href="mdmusergroupsresource.html">MdmUserGroupsResource</a>
+				</li>
+			</ul>
+			<h1>Class MdmUserGroupsResource</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Controller: userGroup
+							|   GET    | /api/admin/applicationGroupRoles/${applicationGroupRoleId}/userGroups                                               | Action: index
+							|  DELETE  | /api/admin/applicationGroupRoles/${applicationGroupRoleId}/userGroups/${userGroupId}                                | Action: updateApplicationGroupRole
+							|   PUT    | /api/admin/applicationGroupRoles/${applicationGroupRoleId}/userGroups/${userGroupId}                                | Action: updateApplicationGroupRole
+							|  DELETE  | /api/userGroups/${userGroupId}/catalogueUsers/${catalogueUserId}                                                    | Action: alterMembers
+							|   PUT    | /api/userGroups/${userGroupId}/catalogueUsers/${catalogueUserId}                                                    | Action: alterMembers
+							|   POST   | /api/userGroups                                                                                                     | Action: save
+							|   GET    | /api/userGroups                                                                                                     | Action: index
+							|  DELETE  | /api/userGroups/${id}                                                                                               | Action: delete
+							|   PUT    | /api/userGroups/${id}                                                                                               | Action: update
+							|   GET    | /api/userGroups/${id}                                                                                               | Action: show
+							|   GET    | /api/${securableResourceDomainType}/${securableResourceId}/groupRoles/${groupRoleId}/userGroups                     | Action: index
+							|  DELETE  | /api/${containerDomainType}/${containerId}/userGroups/${userGroupId}/catalogueUsers/${catalogueUserId}              | Action: alterMembers
+							|   PUT    | /api/${containerDomainType}/${containerId}/userGroups/${userGroupId}/catalogueUsers/${catalogueUserId}              | Action: alterMembers
+							|   POST   | /api/${containerDomainType}/${containerId}/userGroups                                                               | Action: save
+							|   GET    | /api/${containerDomainType}/${containerId}/userGroups                                                               | Action: index
+							|  DELETE  | /api/${containerDomainType}/${containerId}/userGroups/${id}                                                         | Action: delete
+							|   PUT    | /api/${containerDomainType}/${containerId}/userGroups/${id}                                                         | Action: update
+						|   GET    | /api/${containerDomainType}/${containerId}/userGroups/${id}                                                         | Action: show</p>
+					</div>
+					<p>Controller: securableResourceGroupRole
+						|   POST   | /api/userGroups/${userGroupId}/securableResourceGroupRoles                                                          | Action: save
+						|   GET    | /api/userGroups/${userGroupId}/securableResourceGroupRoles                                                          | Action: index
+						|  DELETE  | /api/userGroups/${userGroupId}/securableResourceGroupRoles/${id}                                                    | Action: delete
+						|   PUT    | /api/userGroups/${userGroupId}/securableResourceGroupRoles/${id}                                                    | Action: update
+					|   GET    | /api/userGroups/${userGroupId}/securableResourceGroupRoles/${id}                                                    | Action: show</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="mdmresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResource</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">MdmUserGroupsResource</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmusergroupsresource.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmusergroupsresource.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#addsecurableresourcegrouprole" class="tsd-kind-icon">add<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#addtocontainer" class="tsd-kind-icon">add<wbr>ToContainer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#getfromcontainer" class="tsd-kind-icon">get<wbr>From<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#getsecurableresourcegrouprole" class="tsd-kind-icon">get<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#list" class="tsd-kind-icon">list</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#listinapplicationgrouprole" class="tsd-kind-icon">list<wbr>InApplication<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#listincontainer" class="tsd-kind-icon">list<wbr>InContainer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#listinsecurableresourceusergrouprole" class="tsd-kind-icon">list<wbr>InSecurable<wbr>Resource<wbr>User<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#removefromapplicationgrouprole" class="tsd-kind-icon">remove<wbr>From<wbr>Application<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#removefromcontainer" class="tsd-kind-icon">remove<wbr>From<wbr>Container</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#removesecurableresourcegrouprole" class="tsd-kind-icon">remove<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#removeuserfromcontainerusergroup" class="tsd-kind-icon">remove<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#removeuserfromusergroup" class="tsd-kind-icon">remove<wbr>User<wbr>From<wbr>User<wbr>Group</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#save" class="tsd-kind-icon">save</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#securableresourcegrouproles" class="tsd-kind-icon">securable<wbr>Resource<wbr>Group<wbr>Roles</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmusergroupsresource.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#updateinapplicationgrouprole" class="tsd-kind-icon">update<wbr>InApplication<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#updateincontainer" class="tsd-kind-icon">update<wbr>InContainer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#updatesecurableresourcegrouprole" class="tsd-kind-icon">update<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#updateuserfromcontainerusergroup" class="tsd-kind-icon">update<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmusergroupsresource.html#updateuserinusergroup" class="tsd-kind-icon">update<wbr>User<wbr>InUser<wbr>Group</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Mdm<wbr>User<wbr>Groups<wbr>Resource<span class="tsd-signature-symbol">(</span>resourcesConfig<span class="tsd-signature-symbol">?: </span><a href="mdmresourcesconfiguration.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResourcesConfiguration</a>, restHandler<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandler.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mdmusergroupsresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmUserGroupsResource</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L25">mdm-resource.ts:25</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourcesConfig: <a href="mdmresourcesconfiguration.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResourcesConfiguration</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandler: <a href="../interfaces/imdmresthandler.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandler</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="mdmusergroupsresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmUserGroupsResource</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="apiendpoint" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> api<wbr>Endpoint</h3>
+					<div class="tsd-signature tsd-kind-icon">api<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#apiendpoint">apiEndpoint</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L24">mdm-resource.ts:24</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="defaultrequestoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> default<wbr>Request<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Request<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#defaultrequestoptions">defaultRequestOptions</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L25">mdm-resource.ts:25</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addsecurableresourcegrouprole" class="tsd-anchor"></a>
+					<h3>add<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L141">mdm-user-groups.resource.ts:141</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addtocontainer" class="tsd-anchor"></a>
+					<h3>add<wbr>ToContainer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>ToContainer<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L116">mdm-user-groups.resource.ts:116</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L96">mdm-user-groups.resource.ts:96</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getfromcontainer" class="tsd-anchor"></a>
+					<h3>get<wbr>From<wbr>Container</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>From<wbr>Container<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L136">mdm-user-groups.resource.ts:136</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getsecurableresourcegrouprole" class="tsd-anchor"></a>
+					<h3>get<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, securableResourceGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L161">mdm-user-groups.resource.ts:161</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>securableResourceGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isguid" class="tsd-anchor"></a>
+					<h3>is<wbr>Guid</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Guid<span class="tsd-signature-symbol">(</span>stringToTest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#isguid">isGuid</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L60">mdm-resource.ts:60</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>stringToTest: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="list" class="tsd-anchor"></a>
+					<h3>list</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">(</span>queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L81">mdm-user-groups.resource.ts:81</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="listinapplicationgrouprole" class="tsd-anchor"></a>
+					<h3>list<wbr>InApplication<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">list<wbr>InApplication<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>applicationGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L51">mdm-user-groups.resource.ts:51</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>applicationGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="listincontainer" class="tsd-anchor"></a>
+					<h3>list<wbr>InContainer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">list<wbr>InContainer<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L121">mdm-user-groups.resource.ts:121</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="listinsecurableresourceusergrouprole" class="tsd-anchor"></a>
+					<h3>list<wbr>InSecurable<wbr>Resource<wbr>User<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">list<wbr>InSecurable<wbr>Resource<wbr>User<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>securableResourceDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, securableResourceId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, groupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L101">mdm-user-groups.resource.ts:101</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>securableResourceDomainType: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>securableResourceId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>groupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L86">mdm-user-groups.resource.ts:86</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removefromapplicationgrouprole" class="tsd-anchor"></a>
+					<h3>remove<wbr>From<wbr>Application<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>From<wbr>Application<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>applicationGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L56">mdm-user-groups.resource.ts:56</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>applicationGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removefromcontainer" class="tsd-anchor"></a>
+					<h3>remove<wbr>From<wbr>Container</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>From<wbr>Container<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L126">mdm-user-groups.resource.ts:126</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removesecurableresourcegrouprole" class="tsd-anchor"></a>
+					<h3>remove<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, securableResourceGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L151">mdm-user-groups.resource.ts:151</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>securableResourceGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeuserfromcontainerusergroup" class="tsd-anchor"></a>
+					<h3>remove<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, catalogueUserId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L106">mdm-user-groups.resource.ts:106</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>catalogueUserId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeuserfromusergroup" class="tsd-anchor"></a>
+					<h3>remove<wbr>User<wbr>From<wbr>User<wbr>Group</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>User<wbr>From<wbr>User<wbr>Group<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, catalogueUserId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L66">mdm-user-groups.resource.ts:66</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>catalogueUserId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="save" class="tsd-anchor"></a>
+					<h3>save</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L76">mdm-user-groups.resource.ts:76</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="securableresourcegrouproles" class="tsd-anchor"></a>
+					<h3>securable<wbr>Resource<wbr>Group<wbr>Roles</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">securable<wbr>Resource<wbr>Group<wbr>Roles<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L146">mdm-user-groups.resource.ts:146</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="simpledelete" class="tsd-anchor"></a>
+					<h3>simple<wbr>Delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Delete<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpledelete">simpleDelete</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L44">mdm-resource.ts:44</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="simpleget" class="tsd-anchor"></a>
+					<h3>simple<wbr>Get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Get<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpleget">simpleGet</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L39">mdm-resource.ts:39</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="simplepost" class="tsd-anchor"></a>
+					<h3>simple<wbr>Post</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Post<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simplepost">simplePost</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L34">mdm-resource.ts:34</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="simpleput" class="tsd-anchor"></a>
+					<h3>simple<wbr>Put</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Put<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpleput">simplePut</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L49">mdm-resource.ts:49</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="simplerequest" class="tsd-anchor"></a>
+					<h3>simple<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">simple<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simplerequest">simpleRequest</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L54">mdm-resource.ts:54</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L91">mdm-user-groups.resource.ts:91</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateinapplicationgrouprole" class="tsd-anchor"></a>
+					<h3>update<wbr>InApplication<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>InApplication<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>applicationGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L61">mdm-user-groups.resource.ts:61</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>applicationGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateincontainer" class="tsd-anchor"></a>
+					<h3>update<wbr>InContainer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>InContainer<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L131">mdm-user-groups.resource.ts:131</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatesecurableresourcegrouprole" class="tsd-anchor"></a>
+					<h3>update<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, securableResourceGroupRoleId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L156">mdm-user-groups.resource.ts:156</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>securableResourceGroupRoleId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateuserfromcontainerusergroup" class="tsd-anchor"></a>
+					<h3>update<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group<span class="tsd-signature-symbol">(</span>containerDomainType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, containerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, catalogueUserId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L111">mdm-user-groups.resource.ts:111</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>containerDomainType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>containerId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>catalogueUserId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateuserinusergroup" class="tsd-anchor"></a>
+					<h3>update<wbr>User<wbr>InUser<wbr>Group</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>User<wbr>InUser<wbr>Group<span class="tsd-signature-symbol">(</span>userGroupId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, catalogueUserId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-user-groups.resource.ts#L71">mdm-user-groups.resource.ts:71</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>userGroupId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>catalogueUserId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="mdmusergroupsresource.html" class="tsd-kind-icon">Mdm<wbr>User<wbr>Groups<wbr>Resource</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="mdmusergroupsresource.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="mdmusergroupsresource.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#addsecurableresourcegrouprole" class="tsd-kind-icon">add<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#addtocontainer" class="tsd-kind-icon">add<wbr>ToContainer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#getfromcontainer" class="tsd-kind-icon">get<wbr>From<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#getsecurableresourcegrouprole" class="tsd-kind-icon">get<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#list" class="tsd-kind-icon">list</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#listinapplicationgrouprole" class="tsd-kind-icon">list<wbr>InApplication<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#listincontainer" class="tsd-kind-icon">list<wbr>InContainer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#listinsecurableresourceusergrouprole" class="tsd-kind-icon">list<wbr>InSecurable<wbr>Resource<wbr>User<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#remove" class="tsd-kind-icon">remove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#removefromapplicationgrouprole" class="tsd-kind-icon">remove<wbr>From<wbr>Application<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#removefromcontainer" class="tsd-kind-icon">remove<wbr>From<wbr>Container</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#removesecurableresourcegrouprole" class="tsd-kind-icon">remove<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#removeuserfromcontainerusergroup" class="tsd-kind-icon">remove<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#removeuserfromusergroup" class="tsd-kind-icon">remove<wbr>User<wbr>From<wbr>User<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#save" class="tsd-kind-icon">save</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#securableresourcegrouproles" class="tsd-kind-icon">securable<wbr>Resource<wbr>Group<wbr>Roles</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="mdmusergroupsresource.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#update" class="tsd-kind-icon">update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#updateinapplicationgrouprole" class="tsd-kind-icon">update<wbr>InApplication<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#updateincontainer" class="tsd-kind-icon">update<wbr>InContainer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#updatesecurableresourcegrouprole" class="tsd-kind-icon">update<wbr>Securable<wbr>Resource<wbr>Group<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#updateuserfromcontainerusergroup" class="tsd-kind-icon">update<wbr>User<wbr>From<wbr>Container<wbr>User<wbr>Group</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="mdmusergroupsresource.html#updateuserinusergroup" class="tsd-kind-icon">update<wbr>User<wbr>InUser<wbr>Group</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
