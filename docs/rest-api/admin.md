@@ -1,11 +1,13 @@
 There are a number of endpoints which are specific to administrators: understanding the configuration of the particular instance; discovering the
  avaiable plugins, etc.
  
+ ---
+ 
 ## Currently logged in users
  
 <endpoint class="get">/api/admin/activeSessions</endpoint>
  
-This endpoint returns a list of all logged in users
+This endpoint returns a list of all logged in users.
  
 <endpoint class="post">/api/admin/activeSessions</endpoint>
  
@@ -14,6 +16,8 @@ If called in `post` mode, you can pass in user credentials, rather than basing o
 <endpoint class="delete">/api/admin/logoutAllUsers</endpoint>
 
 This call forces the termination of all active sessions.
+
+---
 
 ## Configuration
 
@@ -43,7 +47,7 @@ To find out which plugins are currently installed, use one of the following endp
 <endpoint class="get">/api/admin/plugins/dataLoaders</endpoint>
 <endpoint class="get">/api/admin/plugins/importers</endpoint>
 
-
+---
 
 ## System actions
 
@@ -51,18 +55,20 @@ To find out which plugins are currently installed, use one of the following endp
 
 This endpoint forces the rebuild of the Lucene indexes.  This is only necessary when synchronisation between database and indexes is lost; when
 the search functionality is not returning correct results.  Authenticatuin credentials can be passed as part of the request body.
+
+---
  
 ## Properties 
 
-There are a number of system-wide properties that can be updated by administrators - such as the text of any emails sent, and the email address
+There are a number of system-wide properties that can be updated by administrators, such as the text of any emails sent and the email address
  from which catalogue emails appear to be sent.
 
-Properties are composed of _keys_ and _values_. Keys can be any string with the following restrictions:
+Properties are composed of **keys** and **values**. Keys can be any string with the following restrictions:
 
-* Must be lowercase alpha characters.
-* No spaces are allowed.
-* May include periods ('.') and/or underscores ('_').
-* Must be unique.
+* Must be lowercase alpha characters
+* No spaces are allowed
+* May include periods ('.') and/or underscores ('_')
+* Must be unique
 
 ### Getting properties
   
@@ -70,7 +76,7 @@ Properties can be viewed at the following endpoint:
  
 <endpoint class="get">/api/admin/properties</endpoint>
 
-If successful, the response body will list the available properties
+If successful, the response body will list the available properties:
 
 === "Response body (JSON)"
     ```json
@@ -144,7 +150,7 @@ If successful, the new property is returned in the response body including the n
     }
     ```
 
-The property can then be updated with the `put` endpoint.
+The property can then be updated with the `put` endpoint:
 
 <endpoint class="put">/api/admin/properties</endpoint>
 
@@ -163,17 +169,23 @@ And deleted with the `delete` endpoint:
 
 <endpoint class="delete">/api/admin/properties/**{propertyId}**</endpoint>
 
-## DataModels
+---
 
-The following endpoints provide paginated lists of datamodels (for cleaning / monitoring processes).  They list those models which have been 
-deleted, superseded by new model, and superseded by new documentation, respectively:
+## Data Models
+
+The following endpoints provide paginated lists of **Data Models** (for cleaning / monitoring processes).  They list those models which have been 
+deleted, superseded by a new model, and superseded by new documentation, respectively:
 
 <endpoint class="get">/api/admin/dataModels/deleted</endpoint>
 <endpoint class="get">/api/admin/dataModels/modelSuperseded</endpoint>
 <endpoint class="get">/api/admin/dataModels/documentSuperseded</endpoint>
 
+---
 
 ## Emails
 
-Retrieve the list of emails (recipient, message, date/time) sent by the system.
+Retrieve the list of emails (recipient, message, date/time) sent by the system:
+
 <endpoint class="get">/api/admin/emails</endpoint>
+
+---
