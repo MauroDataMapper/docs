@@ -1,14 +1,16 @@
 **Mauro Data Mapper** stores content that may be either publicly accessible, or have access restricted to particular users or groups.  Therefore 
-the majority of API requests can be made as an anonymous user (by passing no session information in the request header), or as a logged in user (by
-passing a valid session key in the request headers.)
+the majority of API requests can be made as an **'anonymous user'** (by passing no session information in the request header), or as a **'logged in'** user (by
+passing a valid session key in the request headers).
  
 A request to the `login` will result in a new session token being generated.  This is typically 32 hexadecimal characters in length, and uniquely 
 identifies the current session.  These tokens should not be shared, and will automatically expire with 30mins of inactivity.  Sessions can be 
 manually terminated through a call to the `logout` resource.   At any point the validity of a session may be checked against the server.
 
+---
+
 ## Login
 
-To login to the server, `POST` to the following API endpoint 
+To login to the server, `POST` to the following API endpoint: 
 
 <endpoint class="post">/api/authentication/login</endpoint>
 
@@ -31,7 +33,7 @@ The request body should contain the username, and the password.  The username is
     ```
 
 If successful, the response body will contain the user's `id`, email address, first and last names, and whether or not that 
-user's account has been disabled (typically false in the case of a successful login)
+user's account has been disabled (typically false in the case of a successful login).
 
 === "Response body (JSON)"
     ```json
@@ -60,10 +62,12 @@ Cookie: JSESSIONID=9257B45A4BCA750570736626C62EE74B
 ```
 
 Further requests without the session cookie will be treated as anonymous requests.
+
+---
     
 ## Session validation
 
-In order to validate whether a session is currently active, or has expired (by logging out, or timed-out due to inactivity), 
+In order to validate whether a session is currently active, or has expired (by logging out, or timed-out due to inactivity): 
 
 <endpoint class="get">/api/session/isAuthenticated</endpoint>   
 
@@ -76,10 +80,11 @@ session whose `JSESSIONID` is passed in as part of the request headers.
         "authenticatedSession": true
     }
     ```
+---
 
 ## Administration validation
 
-In order to validate whether a session is an administrative role,
+In order to validate whether a session is an administrative role:
 
 <endpoint class="get">/api/session/isApplicationAdministration</endpoint>  
 
@@ -92,12 +97,15 @@ session whose `JSESSIONID` is passed in as part of the request headers.
         "applicationAdministrationSession": true
     }
     ```
+---
 
 ## Logout
 
 Every session should ideally be closed manually, rather than leaving it to expire through inactivity.  In order to close a user session, you should
- call the logout endpoint, again including the `JSESSIONID` cookie as part of the request headers   
+ call the logout endpoint, again including the `JSESSIONID` cookie as part of the request headers:   
 
 <endpoint class="get">/api/authentication/logout</endpoint>
 
-The response should include the status `204: No Content`, and the successful response will be empty.
+The response should include the status `204: No Content` and the successful response will be empty.
+
+---
