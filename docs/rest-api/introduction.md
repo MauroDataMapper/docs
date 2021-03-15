@@ -10,18 +10,22 @@ The **Mauro Data Mapper API** conforms to standard [REST](https://en.wikipedia.o
 resource-oriented URLs, accepts XML and JSON body content (or form-encoded parameters where applicable), and can return data in XML or JSON 
 formats. Each call uses standard HTTP response codes, authentication, and verbs.
 
+---
+
 ## Requests
 
 To make a REST API request, you combine:
 
 * The HTTP method: `GET`, `POST`, `PUT`, `PATCH` or `DELETE`
 * The URL to the API service - for example `http://modelcatalogue.cs.ox.ac.uk/demo/api`
-* The URI to a resource to query, update or delete
+* The URL to a resource to query, update or delete
 * One or more [HTTP request headers](#http-request-headers), for example the identifier of any session token, or a request to save data back in XML
  or 
-JSON format.
+JSON format
 
 Most calls may also require a JSON or XML body representing any new or updated data, or query parameters to filter or restrict the response. 
+
+---
 
 ## HTTP request headers
 
@@ -35,7 +39,7 @@ This header determines the format of the response body for those requests with s
 Accept: application/<format>
 ```
 
-where `<format>` can be either `xml` or `json`.
+Where `<format>` can be either `xml` or `json`.
 
 By default, the format of the response body will match that of the request body, where applicable.  
 
@@ -47,9 +51,9 @@ This header specifies the format of the request body, where applicable.  The syn
 Content-Type: application/<format>
 ```
 
-where `<format>` can be either `xml` or `json`.
+Where `<format>` can be either `xml` or `json`.
 
-By default, the request body is assumed to be JSON unless otherwise specified
+By default, the request body is assumed to be JSON unless otherwise specified.
 
 ### Cookie
 
@@ -60,8 +64,9 @@ This header stores the [session identifier](https://javarevisited.blogspot.com/2
 Cookie: JSESSIONID=<sessionid>
 ```
 
-Typically, a session identifier is 32 characters long and uses hexadecimal characters `0-9`, `A-F`
+Typically, a session identifier is 32 characters long and uses hexadecimal characters `0-9`, `A-F`.
 
+---
 
 ## Tools
 
@@ -70,6 +75,8 @@ parameters, headers, and message bodies, and preview structured responses.  It c
 
 If you're looking for a more lightweight solution, [curl](https://curl.haxx.se/docs/manpage.html) is a suitable command-line tool which can be 
 easily configured to make complex REST API requests.  In this set of documentation, requests are illustrated with the appropriate curl command.
+
+---
 
 ## Testing
 
@@ -94,7 +101,7 @@ This will return the following JSON:
     }
     ```
 
-
+---
 
 
 
