@@ -1,7 +1,9 @@
 ## Introduction
 
-The SPARQL plugin provides a compliant endpoint for executing SPARQL queries against an RDF rendering of the data. The underlying data store of Mauro
-is Postgres, and this plugin uses the [D2RQ](http://d2rq.org) library for extracting the information as RDF triples. The REST API ensures that the
+The SPARQL plugin provides a compliant endpoint for executing SPARQL queries against an RDF rendering of the data. The underlying data store of **Mauro Data Mapper**
+is Postgres, and this plugin uses the [D2RQ](http://d2rq.org) library for extracting the information as RDF triples. 
+
+The REST API ensures that the
 mapping is configured with correct access constraints so that users may only see a subset of the triples corresponding to their access privileges. In
 the most basic cases, a system administrator can query across the whole data corpus in triple form; an unauthenticated user on an instance with no
 publicly available models will not be able to see any triples.
@@ -10,15 +12,17 @@ publicly available models will not be able to see any triples.
     This plugin allows users to execute their own queries against the data store. A malicious user may write arbitrarily complex queries which
     could cause Mauro to slow down or become unresponsive. If you install this plugin, you may wish to ensure the Mauro instance is behind a firewall,
     and ensure that users know what they are doing!
+    
+---
 
 ## API Endpoints
 
-The plugin provides two (equivalent) endpoints which accept a SPARQL query as part of the request body, and return results in a variety of formats.
+The plugin provides two (equivalent) endpoints which accept a SPARQL query as part of the request body and return results in a variety of formats.
 
 <endpoint class="get">/api/sparql</endpoint>
 <endpoint class="post">/api/sparql</endpoint>
 
-The *Accept* header determines which format is returned, according to the table below:
+The **Accept** header determines which format is returned, according to the table below:
 
 <table>
   <thead>
@@ -57,7 +61,7 @@ In future, it may be possible to extend this plugin to support RDF/XML and other
 
 ### Response format
 
-For the request body given in Example 1 below, the response body will have one of the following formats:  
+For the request body given in **Example 1** below, the response body will have one of the following formats:  
 
 === "Response body (JSON)"
     ```json
@@ -125,6 +129,7 @@ For the request body given in Example 1 below, the response body will have one o
 
 
 
+---
 
 ## Example Queries
 
@@ -133,7 +138,7 @@ examples serve as a starting point for exploring the triple space.
 
 #### Example 1: Arbitrary triples
 
-Select the first 20 triples from the entire graph
+Select the first 20 triples from the entire graph:
 
 ```sparql
 SELECT ?s ?p ?o WHERE { 
@@ -143,7 +148,7 @@ SELECT ?s ?p ?o WHERE {
 
 #### Example 2: Restricting types
 
-Select the labels of all data models
+Select the labels of all **Data Models**:
 
 ```sparql
 PREFIX mdm: <http://metadata-catalogue.org/>
@@ -156,7 +161,7 @@ SELECT ?o WHERE {
 
 #### Example 3: Relating entities
 
-Find the ids of the classes which belong to a model called "Complex Test DataModel"
+Find the `id` of the classes which belong to a model called "Complex Test DataModel":
 
 ```sparql
 PREFIX mdm: <http://metadata-catalogue.org/>
@@ -171,7 +176,7 @@ SELECT ?dcl WHERE {
 
 #### Example 4: Relations, multiple results
 
-Find the enumeration values which have 'value' of "Not known": find their keys and the label of the containing data type
+Find the **Enumeration Values** which have a **'Value'** of **"Not known"**. Find their keys and the label of the containing data type:
 
 ```sparql
 PREFIX mdm: <http://metadata-catalogue.org/>
@@ -187,7 +192,7 @@ SELECT ?dtl ?evk  WHERE {
 
 #### Example 5: Finding metadata
 
-Find the `schema.org` `abstract` property from a data model
+Find the `schema.org` `abstract` property from a **Data Model**:
 
 ```sparql
 PREFIX mdm: <http://metadata-catalogue.org/>
@@ -248,7 +253,7 @@ SELECT ?code ?definition WHERE {
 } ORDER BY ASC(?code)
 ```
 
-
+---
 
 ## Links to SPARQL Tutorials
 
@@ -258,3 +263,5 @@ in the past:
 - [Apache Jena: SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html)
 - [Stardog: Learn SPARQL](https://www.stardog.com/tutorials/sparql/)
 - [W3C: SPARQL By Example](https://www.w3.org/2009/Talks/0615-qbe/)
+
+---
