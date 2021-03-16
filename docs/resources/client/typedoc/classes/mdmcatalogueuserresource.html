@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MdmCatalogueUserResource | @maurodatamapper/mdm-resources</title>
-	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources">
+	<title>MdmCatalogueUserResource | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
+	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@maurodatamapper/mdm-resources</a>
+					<a href="../index.html" class="title">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">@maurodatamapper/mdm-resources</a>
+					<a href="../modules.html">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</li>
 				<li>
 					<a href="mdmcatalogueuserresource.html">MdmCatalogueUserResource</a>
@@ -140,8 +140,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#disableapikey" class="tsd-kind-icon">disable<wbr>Api<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#enableapikey" class="tsd-kind-icon">enable<wbr>Api<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#exists" class="tsd-kind-icon">exists</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmcatalogueuserresource.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmcatalogueuserresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmcatalogueuserresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#list" class="tsd-kind-icon">list</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#listapikeys" class="tsd-kind-icon">list<wbr>Api<wbr>Keys</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmcatalogueuserresource.html#listincontainerusergroup" class="tsd-kind-icon">list<wbr>InContainer<wbr>User<wbr>Group</a></li>
@@ -183,16 +184,27 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L25">mdm-resource.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L38">mdm-resource.ts:38</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructs a new <code>MdmResource</code>.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourcesConfig: <a href="mdmresourcesconfiguration.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResourcesConfiguration</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optionally provide configuration options to this resource class. If not provided, suitable defaults will be used.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandler: <a href="../interfaces/imdmresthandler.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandler</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optionally provide a specific <a href="../interfaces/imdmresthandler.html">IMdmRestHandler</a>. If not provided, the <a href="defaultmdmresthandler.html">DefaultMdmRestHandler</a> implementation will be used.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="mdmcatalogueuserresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmCatalogueUserResource</a></h4>
@@ -209,20 +221,30 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#apiendpoint">apiEndpoint</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L24">mdm-resource.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L33">mdm-resource.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Stores the base API endpoint for all REST requests.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="defaultrequestoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> default<wbr>Request<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Request<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></div>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Request<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imdmdefaulthttprequestoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmDefaultHttpRequestOptions</a></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#defaultrequestoptions">defaultRequestOptions</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L25">mdm-resource.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L38">mdm-resource.ts:38</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Stores the default options to apply to every REST request.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -237,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L84">mdm-catalogue-user.resource.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L84">mdm-catalogue-user.resource.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -266,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L54">mdm-catalogue-user.resource.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L54">mdm-catalogue-user.resource.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -292,7 +314,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L79">mdm-catalogue-user.resource.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L79">mdm-catalogue-user.resource.ts:79</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -321,7 +343,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L104">mdm-catalogue-user.resource.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L104">mdm-catalogue-user.resource.ts:104</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -350,7 +372,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L174">mdm-catalogue-user.resource.ts:174</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L174">mdm-catalogue-user.resource.ts:174</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -379,7 +401,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L169">mdm-catalogue-user.resource.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L169">mdm-catalogue-user.resource.ts:169</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -408,7 +430,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L69">mdm-catalogue-user.resource.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L69">mdm-catalogue-user.resource.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -427,6 +449,39 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="generatequerystring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> generate<wbr>Query<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Query<wbr>String<span class="tsd-signature-symbol">(</span>queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#generatequerystring">generateQueryString</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L136">mdm-resource.ts:136</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generate a query string for a URL based on object property values provided.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A query string parameters object to convert to a string.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>A URL encoded string containing each parameter and value, or an empty string if no properties were provided.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
@@ -437,7 +492,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L144">mdm-catalogue-user.resource.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L144">mdm-catalogue-user.resource.ts:144</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -456,27 +511,36 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="isguid" class="tsd-anchor"></a>
-					<h3>is<wbr>Guid</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Guid<span class="tsd-signature-symbol">(</span>stringToTest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> is<wbr>Guid</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Guid<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#isguid">isGuid</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L60">mdm-resource.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L123">mdm-resource.ts:123</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Test if a string represents a UUID.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stringToTest: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The string to test.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>True if <code>value</code> represents a UUID.</p>
 						</li>
 					</ul>
 				</section>
@@ -490,7 +554,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L129">mdm-catalogue-user.resource.ts:129</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L129">mdm-catalogue-user.resource.ts:129</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -516,7 +580,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L154">mdm-catalogue-user.resource.ts:154</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L154">mdm-catalogue-user.resource.ts:154</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -545,7 +609,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L149">mdm-catalogue-user.resource.ts:149</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L149">mdm-catalogue-user.resource.ts:149</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -580,7 +644,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L119">mdm-catalogue-user.resource.ts:119</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L119">mdm-catalogue-user.resource.ts:119</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -609,7 +673,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L64">mdm-catalogue-user.resource.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L64">mdm-catalogue-user.resource.ts:64</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -635,7 +699,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L59">mdm-catalogue-user.resource.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L59">mdm-catalogue-user.resource.ts:59</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -661,7 +725,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L179">mdm-catalogue-user.resource.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L179">mdm-catalogue-user.resource.ts:179</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -693,7 +757,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L74">mdm-catalogue-user.resource.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L74">mdm-catalogue-user.resource.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -722,7 +786,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L134">mdm-catalogue-user.resource.ts:134</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L134">mdm-catalogue-user.resource.ts:134</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -751,7 +815,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L164">mdm-catalogue-user.resource.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L164">mdm-catalogue-user.resource.ts:164</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -780,7 +844,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L99">mdm-catalogue-user.resource.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L99">mdm-catalogue-user.resource.ts:99</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -809,7 +873,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L94">mdm-catalogue-user.resource.ts:94</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L94">mdm-catalogue-user.resource.ts:94</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -838,7 +902,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L124">mdm-catalogue-user.resource.ts:124</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L124">mdm-catalogue-user.resource.ts:124</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -864,7 +928,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L159">mdm-catalogue-user.resource.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L159">mdm-catalogue-user.resource.ts:159</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -893,7 +957,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L89">mdm-catalogue-user.resource.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L89">mdm-catalogue-user.resource.ts:89</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -920,22 +984,37 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpledelete">simpleDelete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L44">mdm-resource.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L83">mdm-resource.ts:83</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Send a HTTP <code>DELETE</code> request to the given resource.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full URL to the REST resource.</p>
+									</div>
 								</li>
 								<li>
 									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>DELETE</code> request.</p>
 						</li>
 					</ul>
 				</section>
@@ -950,22 +1029,37 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpleget">simpleGet</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L39">mdm-resource.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L71">mdm-resource.ts:71</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Send a HTTP <code>GET</code> request to the given resource.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full URL to the REST resource.</p>
+									</div>
 								</li>
 								<li>
 									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>GET</code> request.</p>
 						</li>
 					</ul>
 				</section>
@@ -980,22 +1074,37 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simplepost">simplePost</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L34">mdm-resource.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L59">mdm-resource.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Send a HTTP <code>POST</code> request to the given resource.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full URL to the REST resource.</p>
+									</div>
 								</li>
 								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data to include in the <code>POST</code> request body.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>POST</code> request.</p>
 						</li>
 					</ul>
 				</section>
@@ -1010,22 +1119,37 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simpleput">simplePut</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L49">mdm-resource.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L95">mdm-resource.ts:95</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Send a HTTP <code>PUT</code> request to the given resource.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full URL to the REST resource.</p>
+									</div>
 								</li>
 								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data to include in the <code>PUT</code> request body.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>PUT</code> request.</p>
 						</li>
 					</ul>
 				</section>
@@ -1040,22 +1164,40 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="mdmresource.html">MdmResource</a>.<a href="mdmresource.html#simplerequest">simpleRequest</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-resource.ts#L54">mdm-resource.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-resource.ts#L113">mdm-resource.ts:113</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Send a generic HTTP request to the given resource.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full URL to the REST resource.</p>
+									</div>
 								</li>
 								<li>
 									<h5>queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the request.</p>
+							<p>All details of HTTP request must be included in the <code>options</code> parameter, particularly the HTTP method:</p>
+							<pre><code class="language-ts"><span style="color: #795E26">simpleRequest</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;http://localhost/api/test&#039;</span><span style="color: #000000">, { }, { </span><span style="color: #001080">method:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;GET&#039;</span><span style="color: #000000"> });</span>
+</code></pre>
 						</li>
 					</ul>
 				</section>
@@ -1069,7 +1211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L139">mdm-catalogue-user.resource.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L139">mdm-catalogue-user.resource.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1098,7 +1240,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L109">mdm-catalogue-user.resource.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L109">mdm-catalogue-user.resource.ts:109</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1127,7 +1269,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-catalogue-user.resource.ts#L114">mdm-catalogue-user.resource.ts:114</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-catalogue-user.resource.ts#L114">mdm-catalogue-user.resource.ts:114</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1193,10 +1335,13 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="mdmcatalogueuserresource.html#exists" class="tsd-kind-icon">exists</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="mdmcatalogueuserresource.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="mdmcatalogueuserresource.html#get" class="tsd-kind-icon">get</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="mdmcatalogueuserresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1287,17 +1432,16 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>

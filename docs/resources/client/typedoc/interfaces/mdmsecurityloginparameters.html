@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IMdmDefaultHttpRequestOptions | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
+	<title>MdmSecurityLoginParameters | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
 	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</li>
 				<li>
-					<a href="imdmdefaulthttprequestoptions.html">IMdmDefaultHttpRequestOptions</a>
+					<a href="mdmsecurityloginparameters.html">MdmSecurityLoginParameters</a>
 				</li>
 			</ul>
-			<h1>Interface IMdmDefaultHttpRequestOptions</h1>
+			<h1>Interface MdmSecurityLoginParameters</h1>
 		</div>
 	</div>
 </header>
@@ -68,20 +68,11 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Type to define the options to pass to every <a href="imdmresthandler.html">IMdmRestHandler</a> to process
-							a resource. These are the default options for every request, such as particular
-						HTTP headers to use.</p>
+						<p>Parameters for login to authenticate a user.</p>
 					</div>
-					<p>This type uses an index signature to provide any property and value to this object, for example:</p>
-					<pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">options</span><span style="color: #000000">: </span><span style="color: #267F99">IMdmDefaultHttpRequestOptions</span><span style="color: #000000"> = {</span>
-<span style="color: #000000"> </span><span style="color: #001080">headers:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">     </span><span style="color: #A31515">&#039;content-type&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;application/json&#039;</span>
-<span style="color: #000000">  }</span>
-<span style="color: #000000">};</span>
-</code></pre>
 					<dl class="tsd-comment-tags">
 						<dt>see</dt>
-						<dd><p><a href="../classes/mdmresourcesconfiguration.html">MdmResourcesConfiguration</a></p>
+						<dd><p><a href="../classes/mdmsecurityresource.html">MdmSecurityResource</a></p>
 						</dd>
 					</dl>
 				</div>
@@ -90,27 +81,46 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IMdmDefaultHttpRequestOptions</span>
+						<span class="target">MdmSecurityLoginParameters</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-kind-interface">
-				<h3 class="tsd-before-signature">Indexable</h3>
-				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Type to define the options to pass to every <a href="imdmresthandler.html">IMdmRestHandler</a> to process
-							a resource. These are the default options for every request, such as particular
-						HTTP headers to use.</p>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="mdmsecurityloginparameters.html#password" class="tsd-kind-icon">password</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="mdmsecurityloginparameters.html#username" class="tsd-kind-icon">username</a></li>
+							</ul>
+						</section>
 					</div>
-					<p>This type uses an index signature to provide any property and value to this object, for example:</p>
-					<pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">options</span><span style="color: #000000">: </span><span style="color: #267F99">IMdmDefaultHttpRequestOptions</span><span style="color: #000000"> = {</span>
-<span style="color: #000000"> </span><span style="color: #001080">headers:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">     </span><span style="color: #A31515">&#039;content-type&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;application/json&#039;</span>
-<span style="color: #000000">  }</span>
-<span style="color: #000000">};</span>
-</code></pre>
-				</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="password" class="tsd-anchor"></a>
+					<h3>password</h3>
+					<div class="tsd-signature tsd-kind-icon">password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-security.resource.ts#L28">mdm-security.resource.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="username" class="tsd-anchor"></a>
+					<h3>username</h3>
+					<div class="tsd-signature tsd-kind-icon">username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-security.resource.ts#L27">mdm-security.resource.ts:27</a></li>
+						</ul>
+					</aside>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -126,7 +136,15 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="imdmdefaulthttprequestoptions.html" class="tsd-kind-icon">IMdm<wbr>Default<wbr>Http<wbr>Request<wbr>Options</a>
+						<a href="mdmsecurityloginparameters.html" class="tsd-kind-icon">Mdm<wbr>Security<wbr>Login<wbr>Parameters</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="mdmsecurityloginparameters.html#password" class="tsd-kind-icon">password</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="mdmsecurityloginparameters.html#username" class="tsd-kind-icon">username</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">

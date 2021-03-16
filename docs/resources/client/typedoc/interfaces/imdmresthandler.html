@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IMdmRestHandler | @maurodatamapper/mdm-resources</title>
-	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources">
+	<title>IMdmRestHandler | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
+	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@maurodatamapper/mdm-resources</a>
+					<a href="../index.html" class="title">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">@maurodatamapper/mdm-resources</a>
+					<a href="../modules.html">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</li>
 				<li>
 					<a href="imdmresthandler.html">IMdmRestHandler</a>
@@ -65,6 +65,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface to define a REST handler for all <code>MdmResource</code> objects to handle HTTP requests/responses.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>see</dt>
+						<dd><p><a href="../classes/defaultmdmresthandler.html">DefaultMdmRestHandler</a></p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -104,19 +116,31 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-rest-handler.ts#L32">mdm-rest-handler.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-rest-handler.ts#L91">mdm-rest-handler.ts:91</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Processes a REST resource request and returns the response and data.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The URL to the resource to request.</p>
+									</div>
 								</li>
 								<li>
 									<h5>options: <a href="imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The options as part of the request to further control the request.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The response from the REST resource request.</p>
 						</li>
 					</ul>
 				</section>
@@ -159,17 +183,16 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
