@@ -1,8 +1,8 @@
 **Mauro Data Mapper** instances are able to provide an Atom feed that publishes all finalised versions of [Data Models](../../glossary/data-model/data-model.md) in the catalogue. 
 
-This enables other **Mauro Data Mapper** instances to **subscribe** to these feeds and view the federated **Data Models** available from external catalogues. 
+This enables other **Mauro Data Mapper** instances to **subscribe** to these feeds and view the **Federated Data Models** available from external catalogues. 
 
-Furthermore, a **Mauro Data Mapper** instance has the ability to **subscribe** to one or more of these federated **Data Models** to import them into their own catalogues. This user guide will explain how. 
+Furthermore, a **Mauro Data Mapper** instance has the ability to **subscribe** to one or more of these **Federated Data Models** to import them into their own catalogues. This user guide will explain how. 
 
 ---
 
@@ -92,8 +92,6 @@ Click the **'+Add'** button at the top right of the **'Catalogues'** list. This 
 
 Enter the label, description, URL, API Key and refresh period as described above. Once completed, click **'Add subscription'** and a green notification box should appear at the bottom right of your screen confirming that the **'subscribed catalogue saved successfully'**. 
 
-> Note: Once the API key has been set on a created subscribed catalogue, it will not be viewable again from the user interface for security reasons. When editing an existing subscribed catalogue, the API key may be ignored and will not be overwritten when updated. However, you may still update the API key by entering a new value in the 'API key' form field.
-
 ![Add Subscribed Catalogue form](add-subscribed-catalogue-form.png)
 
 --- 
@@ -126,10 +124,10 @@ Click the menu icon to the right of the box to display the **Model Tree**. Selec
 
 ### 3.2 Imported Federated Data Models
 
-Once subscribed to, each **Federated Data Model** will be automatically imported into the current **Mauro Data Mapper** catalogue at the chosen target folder. The subscribed **Data Models** will be imported and appear in the catalogue at the same frequency as the **Mauro Data Mapper** server has been configured to refresh. This is defined when adding the subscribed catalogue as explained above. 
+Once subscribed to, each **Federated Data Model** will be automatically imported into the current **Mauro Data Mapper** catalogue at the chosen target folder, including the links between model versions.
 
 It is possible to manually synchronise the subscribed catalogues. To do this, select the subscribed catalogue in the **Model Tree**. In the relevant details panel, click the **'Synchronise'** button.
 
-Also, the subscription will also manage version updates to the **Federated Data Model**. For example, if initially subscribed to version **'1.0.0'** of a **Federated Data Model** and the external metadata catalogue updates this to **'2.0.0'** at a later date, the **Mauro Data Mapper** current instance will detect this on the next refresh of the Atom feed and import the latest version.
+Each subscribed catalogue will also list version updates when the current **Mauro Data Mapper** instance refreshes the Atom feed, the frequency of which is determined during configuration. New versions of a **Data Model** will appear with their updated versions listed for you to also subscribe to, which is a manual operation.
 
 ---
