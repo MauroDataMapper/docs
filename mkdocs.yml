@@ -60,11 +60,12 @@ nav:
                     -   Introduction: 'user-guides/introduction.md'
                     -   Create a Data Model: 'user-guides/create-a-data-model/create-a-data-model.md'
                     -   Document a Health Dataset: 'user-guides/document-a-health-dataset/document-a-health-dataset.md'
+                    -   Export a Data Model: 'user-guides/export-a-data-model/export-a-data-model.md'
                     -   Import a Data Model from Excel: 'user-guides/import-data-model-from-excel/import-data-model-from-excel.md'
                     -   How to search: 'user-guides/how-to-search/how-to-search.md'
                     -   Semantic links: 'user-guides/add-a-semantic-link/semantic-links.md'
-                    -   User profile: 'user-guides/user-profile/user-profile.md'
                     -   Publish / Subscribe: 'user-guides/publish-subscribe/publish-subscribe.md'
+                    -   User profile: 'user-guides/user-profile/user-profile.md'
             -   Tutorial:
                     -   Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
             -   Glossary: 'glossary/glossary.md'
