@@ -60,7 +60,7 @@ nav:
                     -   Introduction: 'user-guides/introduction.md'
                     -   Create a Data Model: 'user-guides/create-a-data-model/create-a-data-model.md'
                     -   Document a Health Dataset: 'user-guides/document-a-health-dataset/document-a-health-dataset.md'
-                    -   Export a Data Model: 'user-guides/export-a-data-model/export-a-data-model.md'
+                    -   Exporting Data Models: 'user-guides/exporting-data-models/exporting-data-models.md'
                     -   Import a Data Model from Excel: 'user-guides/import-data-model-from-excel/import-data-model-from-excel.md'
                     -   How to search: 'user-guides/how-to-search/how-to-search.md'
                     -   Semantic links: 'user-guides/add-a-semantic-link/semantic-links.md'

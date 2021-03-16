@@ -15,6 +15,11 @@ Our current User Guides:
 
 ---
 
+[Exporting Data Models](exporting-data-models/exporting-data-models.md)
+:  This user guide will explain how to export a **Data Model** using a variety of exporters including XML, JSON, XML Schema, Grails and Excel.
+
+---
+
 [Import a Data Model from Excel](import-data-model-from-excel/import-data-model-from-excel.md)
 :  This guide presents the steps for uploading a **Data Model** from an Excel Spreadsheet, and explains how you can use the import / export 
 capabilities to 'round-trip' documentation with external users.
@@ -28,6 +33,11 @@ capabilities to 'round-trip' documentation with external users.
 
 [Semantic links](add-a-semantic-link/semantic-links.md)
 : This is a short guide which explains the steps required to add, edit and delete [Semantic links](../glossary/semantic-links/semantic-links.md). 
+
+---
+
+[Publish/Subscribe](publish-subscribe/publish-subscribe.md)
+:  This guide explains how to connect to another **Mauro Data Mapper** instance to consume its Atom feed of **Federated Data Models**. Each **Federated Data Model** can then be subscribed to for use in your own **Mauro Data Mapper** instance.
 
 ---
 
