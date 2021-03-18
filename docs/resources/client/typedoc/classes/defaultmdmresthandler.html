@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DefaultMdmRestHandler | @maurodatamapper/mdm-resources</title>
-	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources">
+	<title>DefaultMdmRestHandler | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
+	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@maurodatamapper/mdm-resources</a>
+					<a href="../index.html" class="title">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">@maurodatamapper/mdm-resources</a>
+					<a href="../modules.html">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</li>
 				<li>
 					<a href="defaultmdmresthandler.html">DefaultMdmRestHandler</a>
@@ -65,6 +65,23 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Default implementation of the <a href="../interfaces/imdmresthandler.html">IMdmRestHandler</a> interface, using the <code>fetch</code> API to
+						complete HTTP requests.</p>
+					</div>
+					<p>By using the <code>fetch</code> API, all <code>process()</code> return values will become promises
+					to handle the asynchronous responses and finally return the <code>json</code> body content of each response.</p>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">handler</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">DefaultMdmRestHandler</span><span style="color: #000000">();</span>
+<span style="color: #001080">handler</span><span style="color: #000000">.</span><span style="color: #795E26">process</span><span style="color: #000000">(</span><span style="color: #001080">url</span><span style="color: #000000">, </span><span style="color: #001080">options</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">json</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> { ... });</span>
+</code></pre>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -128,9 +145,14 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/imdmresthandler.html">IMdmRestHandler</a>.<a href="../interfaces/imdmresthandler.html#process">process</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/0fd50f7/src/mdm-rest-handler.ts#L36">mdm-rest-handler.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-rest-handler.ts#L109">mdm-rest-handler.ts:109</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Processes a REST resource request and returns the response and data.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -141,6 +163,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The response from the REST resource request.</p>
 						</li>
 					</ul>
 				</section>
@@ -186,17 +209,16 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>

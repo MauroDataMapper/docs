@@ -109,7 +109,7 @@ nav:
                     -   Admin functions: 'rest-api/admin.md'
             -   Client Libraries:
                     -   Groovy / Java: 'resources/client/java.md'
-                    -   Typescript: 'resources/client/typescript.md'
+                    -   TypeScript: 'resources/client/typescript.md'
                     -   .NET: 'resources/client/net.md'
             -   Technical Plugins:
                     -   Freemarker Templating: 'plugins/freemarker.md'

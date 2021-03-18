@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MdmTermResource | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
+	<title>MdmApiPropertyResources | @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</title>
 	<meta name="description" content="Documentation for @maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@maurodatamapper/mdm-resources - v4.3.2-SNAPSHOT</a>
 				</li>
 				<li>
-					<a href="mdmtermresource.html">MdmTermResource</a>
+					<a href="mdmapipropertyresources.html">MdmApiPropertyResources</a>
 				</li>
 			</ul>
-			<h1>Class MdmTermResource</h1>
+			<h1>Class MdmApiPropertyResources</h1>
 		</div>
 	</div>
 </header>
@@ -68,25 +68,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Controller: term
-							|   GET    | /api/terminologies/${terminologyId}/terms/search                                                           | Action: search                                  |
-							|   POST   | /api/terminologies/${terminologyId}/terms/search                                                           | Action: search                                  |
-							|   GET    | /api/terminologies/${terminologyId}/terms/tree/${termId}?                                                  | Action: tree                                    |
-							|   POST   | /api/terminologies/${terminologyId}/terms                                                                  | Action: save                                    |
-							|   GET    | /api/terminologies/${terminologyId}/terms                                                                  | Action: index                                   |
-							|   GET    | /api/codeSets/${codeSetId}/terms                                                                           | Action: index                                   |
-							|  DELETE  | /api/terminologies/${terminologyId}/terms/${id}                                                            | Action: delete                                  |
-							|   PUT    | /api/terminologies/${terminologyId}/terms/${id}                                                            | Action: update                                  |
-						|   GET    | /api/terminologies/${terminologyId}/terms/${id}                                                            | Action: show</p>
+						<p>MDM resource for managing system properties in the Mauro instance.</p>
 					</div>
-					<p>Controller: termRelationship
-						|   GET    | /api/terminologies/${terminologyId}/termRelationshipTypes/${termRelationshipTypeId}/termRelationships            | Action: index                                   |
-						|   POST   | /api/terminologies/${terminologyId}/terms/${termId}/termRelationships                                            | Action: save                                    |
-						|   GET    | /api/terminologies/${terminologyId}/terms/${termId}/termRelationships                                            | Action: index                                   |
-						|   GET    | /api/terminologies/${terminologyId}/termRelationshipTypes/${termRelationshipTypeId}/termRelationships/${id}      | Action: show                                    |
-						|  DELETE  | /api/terminologies/${terminologyId}/terms/${termId}/termRelationships/${id}                                      | Action: delete                                  |
-						|   PUT    | /api/terminologies/${terminologyId}/terms/${termId}/termRelationships/${id}                                      | Action: update                                  |
-					|   GET    | /api/terminologies/${terminologyId}/terms/${termId}/termRelationships/${id}                                      | Action: show</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -96,7 +79,7 @@
 						<a href="mdmresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResource</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">MdmTermResource</span>
+								<span class="target">MdmApiPropertyResources</span>
 							</li>
 						</ul>
 					</li>
@@ -109,38 +92,32 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmtermresource.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmtermresource.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmapipropertyresources.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmapipropertyresources.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#addtermrelationships" class="tsd-kind-icon">add<wbr>Term<wbr>Relationships</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmtermresource.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#gettermrelationship" class="tsd-kind-icon">get<wbr>Term<wbr>Relationship</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmtermresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#list" class="tsd-kind-icon">list</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#removetermrelationship" class="tsd-kind-icon">remove<wbr>Term<wbr>Relationship</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#save" class="tsd-kind-icon">save</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#search" class="tsd-kind-icon">search</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmtermresource.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#termrelationships" class="tsd-kind-icon">term<wbr>Relationships</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#tree" class="tsd-kind-icon">tree</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#update" class="tsd-kind-icon">update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmtermresource.html#updatetermrelationship" class="tsd-kind-icon">update<wbr>Term<wbr>Relationship</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmapipropertyresources.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="mdmapipropertyresources.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#list" class="tsd-kind-icon">list</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#listpublic" class="tsd-kind-icon">list<wbr>Public</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#save" class="tsd-kind-icon">save</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="mdmapipropertyresources.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="mdmapipropertyresources.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
 					</div>
@@ -152,7 +129,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Mdm<wbr>Term<wbr>Resource<span class="tsd-signature-symbol">(</span>resourcesConfig<span class="tsd-signature-symbol">?: </span><a href="mdmresourcesconfiguration.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResourcesConfiguration</a>, restHandler<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandler.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mdmtermresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmTermResource</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Mdm<wbr>Api<wbr>Property<wbr>Resources<span class="tsd-signature-symbol">(</span>resourcesConfig<span class="tsd-signature-symbol">?: </span><a href="mdmresourcesconfiguration.html" class="tsd-signature-type" data-tsd-kind="Class">MdmResourcesConfiguration</a>, restHandler<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandler.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandler</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mdmapipropertyresources.html" class="tsd-signature-type" data-tsd-kind="Class">MdmApiPropertyResources</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -182,7 +159,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="mdmtermresource.html" class="tsd-signature-type" data-tsd-kind="Class">MdmTermResource</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="mdmapipropertyresources.html" class="tsd-signature-type" data-tsd-kind="Class">MdmApiPropertyResources</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -224,38 +201,6 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="addtermrelationships" class="tsd-anchor"></a>
-					<h3>add<wbr>Term<wbr>Relationships</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Term<wbr>Relationships<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L93">mdm-term.resource.ts:93</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>data: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="generatequerystring" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> generate<wbr>Query<wbr>String</h3>
@@ -293,66 +238,55 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L81">mdm-term.resource.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L111">mdm-api-properties.resource.ts:111</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP GET</code> - Gets an API property by ID.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="gettermrelationship" class="tsd-anchor"></a>
-					<h3>get<wbr>Term<wbr>Relationship</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Term<wbr>Relationship<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termRelationshipId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L113">mdm-term.resource.ts:113</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termRelationshipId: <span class="tsd-signature-type">string</span></h5>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The UUID of the property to get.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>GET</code> request.</p>
+							<p>On success, the response will be a <code>200 OK</code> and contain a response body similar to below:</p>
+							<pre><code class="language-ts"><span style="color: #000000"> {</span>
+<span style="color: #000000">     id: </span><span style="color: #A31515">&#039;c7de1358-a4ce-4d72-abca-04013f7f4acc&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     key: </span><span style="color: #A31515">&#039;test.property&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     value: </span><span style="color: #A31515">&#039;test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     category: </span><span style="color: #A31515">&#039;Test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     publiclyVisible: </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">     lastUpdatedBy: </span><span style="color: #A31515">&#039;user@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     createdBy: </span><span style="color: #A31515">&#039;admin@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">     lastUpdated: </span><span style="color: #A31515">&#039;2021-03-10T15:17:05.459Z&#039;</span>
+<span style="color: #000000"> }</span>
+</code></pre>
 						</li>
 					</ul>
 				</section>
@@ -393,28 +327,109 @@
 					<a name="list" class="tsd-anchor"></a>
 					<h3>list</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">(</span>queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L59">mdm-term.resource.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L53">mdm-api-properties.resource.ts:53</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP GET</code> - Gets a list of all API properties.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>GET</code> request.</p>
+							<p>On success, the response will be a <code>200 OK</code> and contain a response body similar to below:</p>
+							<pre><code class="language-ts"><span style="color: #000000">{</span>
+<span style="color: #000000"> count: </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000"> items: [</span>
+<span style="color: #000000">     {</span>
+<span style="color: #000000">         </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;c7de1358-a4ce-4d72-abca-04013f7f4acc&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test.property&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">publiclyVisible:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">lastUpdatedBy:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;user@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">createdBy:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;admin@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">lastUpdated:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;2021-03-10T15:17:05.459Z&#039;</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> ]</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="listpublic" class="tsd-anchor"></a>
+					<h3>list<wbr>Public</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Public<span class="tsd-signature-symbol">(</span>queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L84">mdm-api-properties.resource.ts:84</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP GET</code> - Gets a list of all publicly accessible API properties. Administrator permissions are not required for this API.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>GET</code> request.</p>
+							<p>On success, the response will be a <code>200 OK</code> and contain a response body similar to below:</p>
+							<pre><code class="language-ts"><span style="color: #000000">{</span>
+<span style="color: #000000"> count: </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000"> items: [</span>
+<span style="color: #000000">     {</span>
+<span style="color: #000000">         </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;c7de1358-a4ce-4d72-abca-04013f7f4acc&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test.property&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">category:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Test&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">publiclyVisible:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">lastUpdatedBy:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;user@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">createdBy:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;admin@test.com&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">lastUpdated:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;2021-03-10T15:17:05.459Z&#039;</span>
+<span style="color: #000000">     }</span>
+<span style="color: #000000"> ]</span>
+<span style="color: #000000">}</span>
+</code></pre>
 						</li>
 					</ul>
 				</section>
@@ -422,66 +437,44 @@
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L64">mdm-term.resource.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L154">mdm-api-properties.resource.ts:154</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP DELETE</code> - Removes an existing API property.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="removetermrelationship" class="tsd-anchor"></a>
-					<h3>remove<wbr>Term<wbr>Relationship</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Term<wbr>Relationship<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termRelationshipId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L103">mdm-term.resource.ts:103</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termRelationshipId: <span class="tsd-signature-type">string</span></h5>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The UUID of the property to remove.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional query string parameters, if required.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>DELETE</code> request.</p>
+							<p>On success, the response will be a <code>204 No Content</code> and the response body will be empty.</p>
 						</li>
 					</ul>
 				</section>
@@ -489,57 +482,39 @@
 					<a name="save" class="tsd-anchor"></a>
 					<h3>save</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L54">mdm-term.resource.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L125">mdm-api-properties.resource.ts:125</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP POST</code> - Creates a new API property.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
 								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data to use for creation.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler parameters.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="search" class="tsd-anchor"></a>
-					<h3>search</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L44">mdm-term.resource.ts:44</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>POST</code> request.</p>
+							<p>On success, the response will be a <code>200 OK</code> and the response body will be the same as that returned
+							from the <code>get()</code> function.</p>
 						</li>
 					</ul>
 				</section>
@@ -772,133 +747,48 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="termrelationships" class="tsd-anchor"></a>
-					<h3>term<wbr>Relationships</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">term<wbr>Relationships<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L98">mdm-term.resource.ts:98</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="tree" class="tsd-anchor"></a>
-					<h3>tree</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">tree<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, queryStringParams<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L49">mdm-term.resource.ts:49</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queryStringParams: <a href="../interfaces/imdmquerystringparams.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmQueryStringParams</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="update" class="tsd-anchor"></a>
 					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L69">mdm-term.resource.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-api-properties.resource.ts#L140">mdm-api-properties.resource.ts:140</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>HTTP PUT</code> - Updates an existing API property.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>data: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updatetermrelationship" class="tsd-anchor"></a>
-					<h3>update<wbr>Term<wbr>Relationship</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Term<wbr>Relationship<span class="tsd-signature-symbol">(</span>terminologyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, termRelationshipId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, restHandlerOptions<span class="tsd-signature-symbol">?: </span><a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/MauroDataMapper/mdm-resources/blob/79bfdde/src/mdm-term.resource.ts#L108">mdm-term.resource.ts:108</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>terminologyId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>termRelationshipId: <span class="tsd-signature-type">string</span></h5>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The UUID of the property to update.</p>
+									</div>
 								</li>
 								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data to use for the update.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> restHandlerOptions: <a href="../interfaces/imdmresthandleroptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMdmRestHandlerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional REST handler options, if required.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>The result of the <code>PUT</code> request.</p>
+							<p>On success, the response will be a <code>200 OK</code> and the response body will be the same as that returned
+							from the <code>get()</code> function.</p>
 						</li>
 					</ul>
 				</section>
@@ -917,73 +807,55 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="mdmtermresource.html" class="tsd-kind-icon">Mdm<wbr>Term<wbr>Resource</a>
+						<a href="mdmapipropertyresources.html" class="tsd-kind-icon">Mdm<wbr>Api<wbr>Property<wbr>Resources</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="mdmapipropertyresources.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="mdmtermresource.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a>
+								<a href="mdmapipropertyresources.html#apiendpoint" class="tsd-kind-icon">api<wbr>Endpoint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="mdmtermresource.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#addtermrelationships" class="tsd-kind-icon">add<wbr>Term<wbr>Relationships</a>
+								<a href="mdmapipropertyresources.html#defaultrequestoptions" class="tsd-kind-icon">default<wbr>Request<wbr>Options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="mdmtermresource.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a>
+								<a href="mdmapipropertyresources.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#get" class="tsd-kind-icon">get</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#gettermrelationship" class="tsd-kind-icon">get<wbr>Term<wbr>Relationship</a>
+								<a href="mdmapipropertyresources.html#get" class="tsd-kind-icon">get</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="mdmtermresource.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a>
+								<a href="mdmapipropertyresources.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#list" class="tsd-kind-icon">list</a>
+								<a href="mdmapipropertyresources.html#list" class="tsd-kind-icon">list</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#remove" class="tsd-kind-icon">remove</a>
+								<a href="mdmapipropertyresources.html#listpublic" class="tsd-kind-icon">list<wbr>Public</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#removetermrelationship" class="tsd-kind-icon">remove<wbr>Term<wbr>Relationship</a>
+								<a href="mdmapipropertyresources.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#save" class="tsd-kind-icon">save</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#search" class="tsd-kind-icon">search</a>
+								<a href="mdmapipropertyresources.html#save" class="tsd-kind-icon">save</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a>
+								<a href="mdmapipropertyresources.html#simpledelete" class="tsd-kind-icon">simple<wbr>Delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a>
+								<a href="mdmapipropertyresources.html#simpleget" class="tsd-kind-icon">simple<wbr>Get</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a>
+								<a href="mdmapipropertyresources.html#simplepost" class="tsd-kind-icon">simple<wbr>Post</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a>
+								<a href="mdmapipropertyresources.html#simpleput" class="tsd-kind-icon">simple<wbr>Put</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="mdmtermresource.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a>
+								<a href="mdmapipropertyresources.html#simplerequest" class="tsd-kind-icon">simple<wbr>Request</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#termrelationships" class="tsd-kind-icon">term<wbr>Relationships</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#tree" class="tsd-kind-icon">tree</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#update" class="tsd-kind-icon">update</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="mdmtermresource.html#updatetermrelationship" class="tsd-kind-icon">update<wbr>Term<wbr>Relationship</a>
+								<a href="mdmapipropertyresources.html#update" class="tsd-kind-icon">update</a>
 							</li>
 						</ul>
 					</li>
