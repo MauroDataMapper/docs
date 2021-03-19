@@ -1,16 +1,21 @@
 ## Introduction
 
 The TypeScript client library wraps the [REST API](../../rest-api/introduction.md) in TypeScript classes/functions to make it easy for 
-JavaScript and TypeScript developers to interact with a Mauro instance. The TypeScript library that implements communication with the back-end 
-server is available as a stand-alone repository for incorporation into other applications - for example other web interfaces, or back-end 
-functionality using `node.js`.  This is in fact the client library that the **Mauro Data Mapper** user interface uses.
+JavaScript and TypeScript developers to interact with a Mauro instance. 
+
+The TypeScript library that implements communication with the back-end 
+server is available as a stand alone repository for incorporation into other applications. For example other web interfaces, or back-end 
+functionality using `node.js`. This is in fact the client library that the **Mauro Data Mapper** user interface uses.
 
 The GitHub repository is called `mdm-resources` and is available within the [Mauro Data Mapper organisation](https://github.com/MauroDataMapper).
 
+---
 
 ## API documentation
 
 The API is documented using [TypeDoc](https://typedoc.org/) and the complete documentation can be [found here](./typedoc/index.html).
+
+---
 
 ## Layout
 
@@ -19,6 +24,8 @@ Methods to call API functions are roughly broken down by resource type, with fil
 `mdm-{resourceType}.resource.ts`
 
 There are additional utility functions available in `mdm-validator.ts` and `mdm-resource.ts`.  An `index.ts` file lists all files for inclusion.
+
+---
 
 ## Resources
 
@@ -33,6 +40,8 @@ Every class that extends [MdmResource](./typedoc/classes/mdmresource.html) can o
 * [IMdmRestHandler](./typedoc/interfaces/imdmresthandler.html) - object to the REST handler that will process the requests. If not provided, the
 [DefaultMdmRestHandler](./typedoc/classes/defaultmdmresthandler.html) will be used - see the [REST Handlers](#rest-handlers) section for further 
 details.
+
+---
 
 ## Including in applications
 
@@ -59,8 +68,10 @@ Within a TypeScript file, you can then add an `import` statement such as the fol
 import { MdmResourcesConfiguration } from '@maurodatamapper/mdm-resources';
 ```
 
-or, as illustrated in the Mauro UI application, create a custom service to pull all the classes into a single location (see 
+Or, as illustrated in the Mauro UI application, create a custom service to pull all the classes into a single location (see 
 `mdm-resources.service.ts` within the `mdm-ui` project).
+
+---
 
 ## REST Handlers
 
@@ -95,3 +106,5 @@ export class CustomMdmRestHandler implements IMdmRestHandler {
 // For every MDM resource created, pass in the custom REST handler instance instead
 const dataModelsResource = new MdmDataModelResource(null, new CustomMdmRestHandler());
 ```
+
+---
