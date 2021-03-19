@@ -37,12 +37,70 @@ As an administrator you can add, activate and deactive users. Firstly, select **
 
 ![User list](manage-users-list.png)
 
-filter
+To order the list, you can click the small arrow to the right of each column heading. This will display the list in chronological order according to that category. To order from A-Z click the arrow until it points upwards. To order from Z-A click the arrow until it points downwards.
 
-### 4.1 Activate a user
+You can also filter the user list, by clicking the filter symbol, to the right of **'repository'**. This will display three boxes at the top of the list where you can then enter either a **'Name'**, **'Email'**, or **'Organisation'** to filter the repository.
 
-### 4.2 Deactivate a user
+![Filtered user list](filtered-user-list.png)
 
+
+### 4.1 Add a new user
+
+To add a new user click the **'+Add user'** button at the top right of the **'Manage users'** page. This will bring up an **'Add User'** form which you need to complete. 
+
+![New user form](new-user-form.png)
+
+Enter the **'First name'**, **'Last name'**, **'Email'**, **'Organisation'** and **'Role in organisation'** for the new user. You then need to choose the **'Role'** of the new user by selecting **'Administrator'** or **'Editor'** from the dropdown menu. 
+
+You also need to specify the groups that the user is associated with. To do this, select the relevant groups from the dropdown menu. You can remove any pre-selected groups from the list by clicking the red cross to the right of the group you wish to delete.
+
+Once all the fields have been completed, click **'Add user'** and a green notification box should appear at the bottom right of your screen confirming that the **'User saved successfully'**. 
+
+![New user form showing dropdown menus](new-user-form-dropdown-menus.png)
+
+### 4.2 Reset password
+
+To reset a user's password, find their entry in the user's list. Click the **'Actions'** button to the right of their details and select **'Reset password'** from the dropdown menu. 
+
+A green notification box will appear at the bottom right of your screen, confirming that a **'Reset password email sent successfully'**. The user can then follow the instructions in the email to reset their password. 
+
+![Reset password option in 'Actions' dropdown menu](reset-password.png)
+
+### 4.3 Activate or Deactivate a user
+
+The details of whether a user's account is **'Active'** or **'Disabled'** is displayed in the **'Status'** column of the user list.
+
+To activate a user's account, click the **'Actions'** button to the right of the relevant user and select **'Activate'** from the dropdown menu. A green notification box will appear at the bottom right of your screen confirming that the **'User details updated successfully'**. The status of the user will now change to **'Active'**. 
+
+![Activate option in 'Actions' menu](activate-user.png)
+
+To deactivate a user's account, click the **'Actions'** button to the right of the relevant user and select **'Deactivate'** from the dropdown menu. A green notification box will appear at the bottom right of your screen confirming that the **'User details updated successfully'**. The status of the user will now change to **'Disabled'**. 
+
+![Deactivate option in 'Actions' menu](deactivate-user.png)
 
 ---
 
+## 5. Pending users
+
+To approve or reject users, select **'Pending users'** from the user profile dropdown menu. This will navigate you to a list of all the users that are waiting for approval. 
+
+To approve or reject a user, click the **'Actions'** button to the right of the relevant user and select either **'Approve user'** or **'Reject user'** from the dropdown menu. A green notification box will appear at the bottom right of your screen confirming the change. 
+
+![Pending user list](pending-user.png)
+
+---
+
+## 6. Manage groups
+
+As an administrator you can also add, edit and delete groups. To do this, select **'Manage groups'** from the user profile dropdown menu. This will navigate you to a list of all the groups.
+
+To order the list, click the small arrow to the right of **'Name'**. This will display the list in chronological A-Z when the arrow points up and from Z-A when the arrow points down.
+
+You can also filter the user list, by clicking the filter symbol to the right of **'repository'**. This will display a **'Name'** box at the top of the list where you can then enter a group name and the list will automatically filter accordingly. 
+
+
+
+### 6.1 Add a group
+
+
+---
