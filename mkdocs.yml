@@ -67,8 +67,9 @@ nav:
                     -   Publish / Subscribe: 'user-guides/publish-subscribe/publish-subscribe.md'
                     -   User profile: 'user-guides/user-profile/user-profile.md'
                     -   Admin functionality: 'user-guides/admin-functionality/admin-functionality.md'
-            -   Tutorial:
-                    -   Using the Metadata Catalogue to Document Health Datasets_original: 'tutorial/document-assets/index.md'
+            -   Tutorials:
+                    -   Introduction: 'tutorials/introduction.md'
+                    -   Semantic Links: 'tutorials/semantic-links.md'
             -   Glossary: 'glossary/glossary.md'
     -   Installing and Administration:
             -   Installation:
