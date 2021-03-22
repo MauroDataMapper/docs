@@ -92,15 +92,34 @@ To approve or reject a user, click the **'Actions'** button to the right of the 
 
 ## 6. Manage groups
 
-As an administrator you can also add, edit and delete groups. To do this, select **'Manage groups'** from the user profile dropdown menu. This will navigate you to a list of all the groups.
+As an administrator you can also add, edit and delete groups. To do this, select **'Manage groups'** from the user profile dropdown menu. This will navigate you to a list of all the groups currently stored in the repository.
+
+![List of current groups](groups-list.png)
 
 To order the list, click the small arrow to the right of **'Name'**. This will display the list in chronological A-Z when the arrow points up and from Z-A when the arrow points down.
 
 You can also filter the user list, by clicking the filter symbol to the right of **'repository'**. This will display a **'Name'** box at the top of the list where you can then enter a group name and the list will automatically filter accordingly. 
 
-
-
 ### 6.1 Add a group
 
+To add a new group, click the **'+Add'** button at the top right of the table. Enter the **'Name'** and **'Description'** of the new group and click **'Save group'**. A green notifiction box will appear at the bottom right of your screen confirming that the **'Group saved successfully'**. 
+
+![New group form](new-group-form.png)
+
+### 6.2 Edit a group
+
+To edit a group, click the **'Actions'** button to the right of the relevant group in the table. A dropdown menu will appear, click **'Edit group'**.
+
+![Groups dropdown menu](groups-actions-menu.png)
+
+This will take you to a summary page of the group, where you can amend the name and description. Make sure to select **'Save group'** to save any changes.
+
+![Edit group form](edit-group-form.png)
+
+Also displayed is a list of members, which can be found under the **'Members'** tab. Here, you can see the status, details and role of each member. You can aslo delete members by clicking the red bin icon to the right of the relevant row. Any past amendments to the group can be viewed under the **'History'** tab.
+
+### 6.2 Delete a group
+
+To delete a group, click the **'Actions'** button to the right of the relevant row and select **'Delete group'**. A green notification box will appear at the bottom right of your screen to confirm that the **'Group deleted successfully'**.
 
 ---
