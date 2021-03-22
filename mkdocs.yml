@@ -118,8 +118,4 @@ nav:
                     -   SPARQL: 'plugins/sparql.md'
     -   Community:
             -   Support: 'community/support.md'
-            -   Contribute to Documentation: 'community/contribute-documentation.md'
-            -   Contribute to Code:
-                    -   Building Plugins: 'community/build-plugins.md'
-                    -   Fixing bugs: 'community/fix-bugs.md'
-            - Sharing Models: 'community/share-models.md'
+            -   Contribute: 'community/contribute.md'
