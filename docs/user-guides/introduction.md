@@ -10,7 +10,7 @@ Our current User Guides:
 
 ---
 
-[Document a Health Dataset](document-a-health-dataset/document-a-health-dataset.md)
+[Document a Health Dataset](document-a-dataset/document-a-dataset.md)
 :  This longer guide explains how to add structure to your **Data Model** such as incorporating [Data Classes](../glossary/data-class/data-class.md) and [Data Elements](../glossary/data-element/data-element.md).
 
 ---

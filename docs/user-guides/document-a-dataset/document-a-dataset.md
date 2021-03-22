@@ -23,10 +23,10 @@ To do this, select the **Data Model** in the **Model Tree** and then click the *
 Complete the details of the new property as follows:
 
 * **Namespace**  
-	This will be used to select the correct properties by the gateway interface. Select **‘uk.ac.hdrukgateway'** from the dropdown menu.
+	This will be used to select the correct profile / selection of properties.
 
 * **Key**  
-	Enter a relevant property name such as **'contact email'**.
+	Where an existing namespace has been chosen, select a relevant property name such as **'contact email'**.  Otherwise, enter a new property name.
 	
 * **Value**  
 	This is the value of the given property, for example **‘enquiries-mydataset@hub.org’**.  
@@ -88,7 +88,7 @@ For example, in a webform, there may be a section called **'Contact details'**, 
 
 ![A Nested Data Class illustration](../../../glossary/data-class/nested-data-class.png)
 
-To add a **Nested Data Class**, click the relevant **Data Class** from the **Model Tree** and click the **'Content'** tab on the panel below the model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained above in step ['3. Create a Data Class'](document-a-health-dataset.md#create-a-data-class).
+To add a **Nested Data Class**, click the relevant **Data Class** from the **Model Tree** and click the **'Content'** tab on the panel below the model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained above in step ['3. Create a Data Class'](document-a-dataset.md#create-a-data-class).
 
 ![Add a Nested Data Class](add-nested-data-class.png)
 
@@ -104,7 +104,7 @@ Similar to adding a **Data Class**, there are two ways to import a **Data Elemen
 
 ### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
-Follow the steps in ['3.1 Create a new Data Class'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-class) until you have completed the **'Label'**, **'Description'** and **Multiplicity** fields for the **Data Element**. 
+Follow the steps in ['3.1 Create a new Data Class'](/document-a-dataset.md#create-a-new-data-class) until you have completed the **'Label'**, **'Description'** and **Multiplicity** fields for the **Data Element**. 
 
 Each **Data Element** then needs to be assigned a relevant [Data Type](../../glossary/data-type/data-type.md). This can either be selected from an existing list, or you can add a new **Data Type**. 
 
@@ -139,7 +139,7 @@ A **Data Type** can either be:
 
 You can then assign several **'Classifications'** by selecting them from the dropdown menu. 
 
-Once all fields are complete, click **'Submit Data Element'** to add the new **Data Element** to the **Data Class**. Go back to step ['5.1 Create a new Data Element'](../document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-element) and repeat the process to add other **Data Elements**.
+Once all fields are complete, click **'Submit Data Element'** to add the new **Data Element** to the **Data Class**. Go back to step ['5.1 Create a new Data Element'](/document-a-dataset.md#create-a-new-data-element) and repeat the process to add other **Data Elements**.
 
 <iframe src="https://player.vimeo.com/video/500131247" width="640" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 

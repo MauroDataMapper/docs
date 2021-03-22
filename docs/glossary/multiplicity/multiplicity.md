@@ -21,7 +21,7 @@ Furthermore, each person will only have one date of death, which again you may o
 
 ##How do you edit an item's Multiplicity?
 
-The **Multiplicity** can be found in the details panel of **Data Classes** and **Data Elements**. It is a mandatory field when adding or importing a **Data Class** or **Data Elements**, as explained in the ['Document a Health Datatset user guide'](../../user-guides/document-a-health-dataset/document-a-health-dataset.md)  and ['Import a Data Model from Excel user guide'](../../user-guides/import-data-model-from-excel/import-data-model-from-excel.md). 
+The **Multiplicity** can be found in the details panel of **Data Classes** and **Data Elements**. It is a mandatory field when adding or importing a **Data Class** or **Data Elements**, as explained in the ['Document a Health Datatset user guide'](../../user-guides/document-a-dataset/document-a-dataset.md)  and ['Import a Data Model from Excel user guide'](../../user-guides/import-data-model-from-excel/import-data-model-from-excel.md). 
 
 You can edit the **Multiplicity** of an item by selecting it in the **Model Tree** and clicking the **‘Edit’** pencil icon at the bottom right of the details panel. You will then be able to amend the **min** and **max** values of that item's **Multiplicity**.
 

@@ -23,7 +23,7 @@ There are four different **Data Types** stored within [Data Models](../data-mode
 * [Terminology Data Type](../terminology-data-type/terminology-data-type.md)  
 	A structured collection of **Enumerated Values** which have relationships between different data terms.
 	
-When adding a new **Data Type** to a **Data Element**, you will need to select the relevant **Data Type** from the dropdown menu on the **'Data Element Details'** form. For more information on how to do this, go to step ['5.1 Add Data Elements' on our Document a Health Dataset user guide'](../../user-guides/document-a-health-dataset/document-a-health-dataset.md#create-a-new-data-element)
+When adding a new **Data Type** to a **Data Element**, you will need to select the relevant **Data Type** from the dropdown menu on the **'Data Element Details'** form. For more information on how to do this, go to step ['5.1 Add Data Elements' on our Document a Health Dataset user guide'](../../user-guides/document-a-dataset/document-a-dataset.md#create-a-new-data-element)
 
 ![Data Type dropdown menu](data-type-dropdown-menu.png) 
  

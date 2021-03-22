@@ -2,7 +2,7 @@ This user guide will explain the steps you need to follow to import a health dat
 
 ---
 
-To add an existing dataset to **Mauro Data Mapper**, you can either enter all the information online as explained in the ['Document a Health Dataset user guide'](../document-a-health-dataset/document-a-health-dataset.md), or you may find it more convenient to import information automatically from an Excel spreadsheet. 
+To add an existing dataset to **Mauro Data Mapper**, you can either enter all the information online as explained in the ['Document a Health Dataset user guide'](../document-a-dataset/document-a-dataset.md), or you may find it more convenient to import information automatically from an Excel spreadsheet. 
 
 The importing functionality of **Mauro Data Mapper** allows you to import several [Data Models](../../glossary/data-model/data-model.md) using the same spreadsheet. 
 
@@ -49,7 +49,8 @@ The following columns must be completed:
 	Any other relevant properties or metadata relating to the **Data Model** can be included in additional columns to the right of the core columns. Metadata can have the following properties:
 		
 	* **Namespace**  
-		This will be used to select the correct properties by the gateway interface such as **'uk.ac.hdrukgateway'** and should be entered in **row 1** of the spreadsheet. If it is left blank, the default namespace of **ox.softeng.metadatacatalogue.plugins.excel** will be used. 
+		This will be used to select the correct profile / property selection and should be entered in **row 1** of the spreadsheet. If it is left 
+      blank, the default namespace of **ox.softeng.metadatacatalogue.plugins.excel** will be used. 
 		
 	* **Key**  
 		This is a relevant property name such as **‘contact email’** and ***must*** be entered in **row 2**. If no key is supplied, then the value will not be assigned.

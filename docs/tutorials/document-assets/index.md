@@ -72,8 +72,7 @@ Click the ‘__Properties__’  tab on the panel below, and choose the ‘__+__�
 
 ![Data model 'properties' tab](properties-tab.png)
 
-- __namespace__:	This will be used to select the correct properties by the gateway interface.  You should choose the value ‘uk.ac.hdruk.dataset
-’ from the drop-down provided
+- __namespace__:	This will be used to select the correct profile / property list.
 - __key__:	This is the property name - e.g. ‘contact email’.  You should add a property for each of the names listed below, but may add further
  properties if you wish.
 - __value__:	This is the value of the given property - e.g. ‘enquiries-mydataset@hub.org’.
