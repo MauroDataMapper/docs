@@ -3,7 +3,7 @@ This user guide will walk you through all the options and settings that are avai
 ---
 ## 1. Dashboard
 
-To access your admin dashboard, log in to **Mauro Data Mapper** and click the white arrow by your user profile to the right of the menu header. From the dropdown menu under **'Admin settings'** select **'Dashboard'** and you will be navigated to your dashboard.
+To access your admin dashboard, log in to **Mauro Data Mapper** and click the white arrow by your user profile to the right of the menu header. From the dropdown menu under **'Admin settings'** select **'Dashboard'**.
 
 ![User profile menu showing dashboard option](user-profile-menu-dashboard.png)
 
@@ -19,9 +19,9 @@ As an administrator, you can delete several elements such as [Data Models](../..
 
 To do this, select **'Model management'** from the user profile dropdown menu. Select the relevant options to filter elements by type and status and the **Model Tree** displayed at the bottom of the page will automatically filter. 
 
-Once you've found the element you wish to delete, click the checkbox until a green tick appears. You can do this for multiple elements and a summary list will be displayed on the right. Here, you will then have the option to either **'Delete Permanently'** or **'Mark as Deleted'** the list of elements. 
-
 ![Model management view](model-management.png)
+
+Once you've found the element you wish to delete, click the checkbox until a green tick appears. You can do this for multiple elements and a summary list will be displayed on the right. Here, you will then have the option to either **'Delete Permanently'** or **'Mark as Deleted'**.
 
 ---
 
@@ -37,30 +37,30 @@ As an administrator you can add, activate and deactive users. Firstly, select **
 
 ![User list](manage-users-list.png)
 
-To order the list, you can click the small arrow to the right of each column heading. This will display the list in chronological order according to that category. To order from A-Z click the arrow until it points upwards. To order from Z-A click the arrow until it points downwards.
+To order the list, you can click the small arrow to the right of each column heading. This will display the list in chronological order according to that category. To order from A-Z click the arrow until it points up. To order from Z-A click the arrow until it points down.
 
-You can also filter the user list, by clicking the filter symbol, to the right of **'repository'**. This will display three boxes at the top of the list where you can then enter either a **'Name'**, **'Email'**, or **'Organisation'** to filter the repository.
+You can also filter the user list, by clicking the filter symbol, to the right of **'repository'**. This will display three boxes at the top of the list where you can then enter either a **'Name'**, **'Email'**, or **'Organisation'** to filter the list by.
 
 ![Filtered user list](filtered-user-list.png)
 
-
 ### 4.1 Add a new user
 
-To add a new user click the **'+Add user'** button at the top right of the **'Manage users'** page. This will bring up an **'Add User'** form which you need to complete. 
+To add a new user click the **'+Add user'** button at the top right of the **'Manage users'** page. This will bring up an **'Add User'** form which you will need to complete. 
 
 ![New user form](new-user-form.png)
 
-Enter the **'First name'**, **'Last name'**, **'Email'**, **'Organisation'** and **'Role in organisation'** for the new user. You then need to choose the **'Role'** of the new user by selecting **'Administrator'** or **'Editor'** from the dropdown menu. 
+Enter the first name, last name, email, organisation and role for the new user. You then need to choose whether the new user is an **'Administrator'** or **'Editor'** from the dropdown menu in the **'Role'** field. 
 
-You also need to specify the groups that the user is associated with. To do this, select the relevant groups from the dropdown menu. You can remove any pre-selected groups from the list by clicking the red cross to the right of the group you wish to delete.
-
-Once all the fields have been completed, click **'Add user'** and a green notification box should appear at the bottom right of your screen confirming that the **'User saved successfully'**. 
+You also need to specify the groups that the user is associated with by selecting the relevant groups from the dropdown menu. You can remove any pre-selected groups from the list by clicking the red cross to the right of the group you wish to delete.
 
 ![New user form showing dropdown menus](new-user-form-dropdown-menus.png)
 
+Once all the fields have been completed, click **'Add user'** and a green notification box should appear at the bottom right of your screen confirming that the **'User saved successfully'**. 
+
+
 ### 4.2 Reset password
 
-To reset a user's password, find their entry in the user's list. Click the **'Actions'** button to the right of their details and select **'Reset password'** from the dropdown menu. 
+To reset a user's password, click the **'Actions'** button to the right of the relevant row and select **'Reset password'** from the dropdown menu. 
 
 A green notification box will appear at the bottom right of your screen, confirming that a **'Reset password email sent successfully'**. The user can then follow the instructions in the email to reset their password. 
 
@@ -68,7 +68,7 @@ A green notification box will appear at the bottom right of your screen, confirm
 
 ### 4.3 Activate or Deactivate a user
 
-The details of whether a user's account is **'Active'** or **'Disabled'** is displayed in the **'Status'** column of the user list.
+The details of whether a user's account is **'Active'** or **'Disabled'** is displayed in the **'Status'** column.
 
 To activate a user's account, click the **'Actions'** button to the right of the relevant user and select **'Activate'** from the dropdown menu. A green notification box will appear at the bottom right of your screen confirming that the **'User details updated successfully'**. The status of the user will now change to **'Active'**. 
 
@@ -96,23 +96,23 @@ As an administrator you can also add, edit and delete groups. To do this, select
 
 ![List of current groups](groups-list.png)
 
-To order the list, click the small arrow to the right of **'Name'**. This will display the list in chronological A-Z when the arrow points up and from Z-A when the arrow points down.
+To order the list, click the small arrow to the right of **'Name'**. This will display the list in chronological order from A-Z when the arrow points up and from Z-A when the arrow points down.
 
-You can also filter the user list, by clicking the filter symbol to the right of **'repository'**. This will display a **'Name'** box at the top of the list where you can then enter a group name and the list will automatically filter accordingly. 
+You can also filter the user list, by clicking the filter symbol to the right of **'repository'**. This will display a **'Name'** box at the top of the list where you can then enter a group name and the list will automatically filter.
 
 ### 6.1 Add a group
 
-To add a new group, click the **'+Add'** button at the top right of the table. Enter the **'Name'** and **'Description'** of the new group and click **'Save group'**. A green notifiction box will appear at the bottom right of your screen confirming that the **'Group saved successfully'**. 
+To add a new group, click the **'+Add'** button at the top right of the **'Manage groups'** page. Enter the **'Name'** and **'Description'** of the new group and click **'Save group'**. A green notifiction box will appear at the bottom right of your screen confirming that the **'Group saved successfully'**. 
 
 ![New group form](new-group-form.png)
 
 ### 6.2 Edit a group
 
-To edit a group, click the **'Actions'** button to the right of the relevant group in the table. A dropdown menu will appear, click **'Edit group'**.
+To edit a group, click the **'Actions'** button to the right of the relevant group and select **'Edit group'** from the dropdown menu.
 
 ![Groups dropdown menu](groups-actions-menu.png)
 
-This will take you to a summary page of the group, where you can amend the name and description. Make sure to select **'Save group'** to save any changes.
+This will take you to a summary page of the group, where you can amend the name and description. Make sure to click **'Save group'** to save any changes.
 
 ![Edit group form](edit-group-form.png)
 
@@ -121,5 +121,25 @@ Also displayed is a list of members, which can be found under the **'Members'** 
 ### 6.2 Delete a group
 
 To delete a group, click the **'Actions'** button to the right of the relevant row and select **'Delete group'**. A green notification box will appear at the bottom right of your screen to confirm that the **'Group deleted successfully'**.
+
+---
+
+## 7. Configuration
+
+As an administrator you can edit the various email templates associated with **Mauro Data Mapper** including:
+
+* Admin confirm user registration email
+* Admin registered user email
+* User invited to edit email
+* User invited to view email
+* User self registered email
+* Forgotten password email
+* Reset password email
+
+To access these templates, select **'Configuration'** from the user profile dropdown menu. If you make any changes remember to press **'Save email configuration'** at the bottom of the page. 
+
+You can also rebuild the Lucene Search Index by clicking the **'Lucene'** tab and then the **'Rebuild index'** button. 
+
+![Edit configuration templates](configuration-form.png)
 
 ---

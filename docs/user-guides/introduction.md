@@ -45,3 +45,9 @@ capabilities to 'round-trip' documentation with external users.
 :  This short guide explains how to update your User profile within the **Mauro Data Mapper** web interface and how to change your login password.
 
 ---
+
+
+[Admin functionality](admin-functionality/admin-functionality.md)
+:  This user guide will walk you through all the options and settings that are available to adminsitrators on **Mauro Data Mapper**.
+
+---
