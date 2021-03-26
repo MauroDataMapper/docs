@@ -47,6 +47,8 @@ export const environment = {
 
 !!! Note 
 	If the theme name is not provided, this will fall back to `default`.
+	
+An alternative for switching the theme for production UI builds is to set an environment variable called `MDM_UI_THEME_NAME`. This allows the theme setting to be defined as part of a wider build process, such as creating a Docker image.
 
 ### Importing Themes
 
