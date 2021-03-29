@@ -50,6 +50,8 @@ Enter the human-readable name of the API key (as described above), choose a numb
 
 ![Dialog for creating a new API Key](../../images/apikeys/apikeys-create.png)
 
+For more information about creating and managing API Keys, please see the [API Keys page](../../../rest-api/apikeys) in the REST API documentation 
+
 ---
 
 ## 2. Add a Subscribed Catalogue
