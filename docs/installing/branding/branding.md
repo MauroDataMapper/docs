@@ -1,7 +1,6 @@
 ## Introduction
 
-The **Mauro Data Mapper** Web interface can be customised to match an organisation's brand or styling. Creating a new theme requires developer effort, the
-steps of which are detailed below.
+The **Mauro Data Mapper** Web interface can be customised to match an organisation's brand or styling. Creating a new theme requires developer effort, the steps of which are detailed below.
 
 ### Angular Material
 
@@ -136,6 +135,7 @@ so the application can automatically use it for the page
   /* Add any further CSS class overrides here... */
 }
 ```
+
 ---
 
 ## Assets
@@ -179,6 +179,34 @@ Then enter a **'Key'**, **'Category'** and **'Value'**. Tick the **'Publicly vis
 
 There are configuration properties available to modify the following:
 
+* Homepage
+* Logo
+* Footer
+
+### Home Page
+
+The homepage of **Mauro Data Mapper** displays a summary of the tool as well as the most important links to help users easily navigate to the main sections. The homepage can be modified to include custom content to suit your organisation. 
+
+The homepage is split into two columns and four main sections which can each be modified. 
+
+![Homepage layout](homepage-layout.png)
+
+!!! Note
+    It is recommended to include correct HTML source and styling in these sections.
+
+* **Introduction** - `content.home.intro.left`  
+	This is usually some introduction text on the left column of the starting page
+
+* **Introduction image** - `content.home.intro.right`  
+	This is usually an image or illustration on the right column of the starting page that compliments the introduction text
+
+* **Features heading** - `content.home.detail.heading`  
+	This is usually a heading for the **'Features'** section underneath the introduction
+
+* **Feature boxes** - `content.home.detail.column1 - 3`  
+	These are three feature boxes that usually appear in the **'Features'** section underneath the introduction
+
+
 ### Logo
 
 A static asset should also be provided for the logo in the navbar component as a default, however an image URL may also be provided if the logo is
@@ -192,20 +220,6 @@ The `theme.logo.width` property is also provided to adjust the size of the logo 
 ### Footer
 
 The copyright notice can be altered in the footer by changing the `content.footer.copyright` property.
-
-### Home Page
-
-The home page content can be modified to include custom content by splitting up the page content into sections.
-
-!!! Note
-    It is recommended to include correct HTML source and styling in these sections.
-
-The following sections can be modified:
-
-* `content.home.intro.left` - this is usually text content on the left column of the starting page section
-* `content.home.intro.right` - this is usually an image to display on the right column of the starting page section
-* `content.home.detail.heading` - this is usually the heading for the detail section underneath the introduction
-* `content.home.detail.column1 - 3` - these are the feature boxes that usually appear in the detail section underneath the introduction
 
 ---
 
