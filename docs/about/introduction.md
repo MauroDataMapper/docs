@@ -55,7 +55,7 @@ to build an active community of users and developers, and encourage contribution
 
 ## Support
 
-The development of **Mauro Data Mapper** has been primarily funded by the [NIHR Oxford Biomedical Research Center](https://oxfordbrc.nihr.ac.uk) as part of the [NIHR Health Informatics Collaborative (HIC)](https://hic.nihr.ac.uk). 
+The development of **Mauro Data Mapper** has been funded by the [NIHR Oxford Biomedical Research Center](https://oxfordbrc.nihr.ac.uk) as part of the [NIHR Health Informatics Collaborative (HIC)](https://hic.nihr.ac.uk). 
 
 The **NIHR HIC** is a partnership of 27 NHS trusts and health boards, including the 20 hosting **NIHR Biomedical Research Centres (BRCs)**, working together to facilitate the equitable re-use of NHS data for translational research. 
 
