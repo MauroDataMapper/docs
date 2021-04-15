@@ -105,3 +105,9 @@ Currently undocumented
 
 
  
+<!--  LocalWords:  UML dataModel png dataType inbetween Codesets
+ -->
+<!--  LocalWords:  CodeSets codeSet CodeSet catalogueItem
+ -->
+<!--  LocalWords:  messageboard
+ -->

@@ -1,4 +1,4 @@
-The core of **Mauro Data Mapper** is based on sound theoretical principles, some of which have been developed by the Oxford team over the course of the last decade. 
+The core of **Mauro Data Mapper** is based on sound theoretical principles developed by the Oxford team over the course of the last decade. 
 
 Formal, rigorous definitions of **semantic interoperability**, have been peer-reviewed and presented at academic conferences and in journals. Some of these articles are listed below:
 

@@ -85,3 +85,8 @@ The index is built using [Apache Lucene](https://lucene.apache.org) but managed 
 The contents of the search index can be hard to inspect for debugging purposes! We use a tool called [Marple](https://github.com/flaxsearch/marple) but be sure to use a compatible version!
 
 ---
+
+<!--  LocalWords:  PostgreSQL plugins ORM h2 genericity npm etc
+ -->
+<!--  LocalWords:  javascript SPARQL Freemarker plugin Lucene
+ -->

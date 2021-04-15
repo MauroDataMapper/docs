@@ -37,7 +37,7 @@ Each **Data Model** consists of several [Data Classes](../glossary/data-class/da
 
 Within each **Data Class** is then a number of [Data Elements](../glossary/data-element/data-element.md) which are the descriptions of an individual field or variable.
 
-For example, a webform where patients enter their details would be a **Data Model**. This form could consist of two seperate sections such as **'Personal details'** and **'Contact details'** which would each be a **Data Class**. The individual entries within each of these sections, such as **'First Name'**, **'Last Name'**, **'Date of Birth'** etc, would each be a **Data Element**.
+For example, a webform where patients enter their details would be a **Data Model**. This form could consist of two separate sections such as **'Personal details'** and **'Contact details'** which would each be a **Data Class**. The individual entries within each of these sections, such as **'First Name'**, **'Last Name'**, **'Date of Birth'** etc, would each be a **Data Element**.
 
 However, there might be a section within another section on the webform, such as **'Correspondence Address'** which lies within **'Contact details'**. In this case, **'Correspondence Address'** would become a **Nested Data Class**, where the **'Contact details' Data Class** would be the parent. 
 
@@ -67,3 +67,8 @@ care, renal disease, infectious diseases, and cancer. **Mauro Data Mapper**, and
 collaboratively editing **Data Models** for research, and for generating software artefacts such as XML Schema.
 
 ---
+
+<!--  LocalWords:  iframe src frameborder fullscreen allowfullscreen
+ -->
+<!--  LocalWords:  csv webform mdm png etc plugins NIHR HIC BRCs
+ -->

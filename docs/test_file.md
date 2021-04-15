@@ -12,6 +12,9 @@ This documentation is split into several parts:
 - A set of tutorials, designed to assist users in understanding the catalogue concepts and carrying out common tasks.  Visit the first one here
 : [Using the Metadata Catalogue to Document Health Datasets](tutorials/document-assets/index.md)
 - A set of more fundamental user guides, explaining in more detail how to interact with the catalogue and detailing the options available.  Visit
- the first one here: [Creating a DataModel](user/models.md)
+ the first one here: [Creating a Data Model](user/models.md)
 - Detailed guides to the REST-style API - these pages are suitable for developers intending to write scripts or applications that programmatically
- interact with the system.  Read the [Introduction here](rest-api/introduction.md)    
+ interact with the system.  Read the [Introduction
+ here](rest-api/introduction.md)    
+<!--  LocalWords:  md
+ -->

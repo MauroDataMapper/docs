@@ -139,3 +139,8 @@ the [Installing](../docker) page.
     </tbody>
 </table>
 
+
+<!--  LocalWords:  plugins Artifactory plugin thead tr th tbody td br
+ -->
+<!--  LocalWords:  gt PostgreSQL AWS Keycloak Freemarker Sparql
+ -->

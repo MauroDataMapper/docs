@@ -127,7 +127,7 @@ once per server.
 
 Some servers have the 22 SSH port firewalled for external connections.
 If this is the case you can change the `base_images/sdk_base/ssh/config` file,
-* comment out the `Hostname` field thats currently active
+* comment out the `Hostname` field that's currently active
 * uncomment both commented out `Hostname` and `Port` fields, this will allow git to work using the 443 port which will not be blocked.
 ---
 
@@ -137,7 +137,7 @@ If this is the case you can change the `base_images/sdk_base/ssh/config` file,
 
 ### Required to be overridden
 
-The following variables need to be overriden/set when starting up a new mauro-data-mapper image.
+The following variables need to be overridden/set when starting up a new mauro-data-mapper image.
 Usually this is done in the docker-compose.yml file. It should not be done in the Dockerfile as each instance which starts up may use different
 values.
 
@@ -371,3 +371,20 @@ then any service which used `link` to `postgres` will be able to find the databa
 ## Releases
 
 All work should be done on the `develop` branch.
+
+<!--  LocalWords:  maurodatamapper Postgres postgres arg mdm ui args
+ -->
+<!--  LocalWords:  yml mauro Backend Plugins plugins runtimeOnly FQ
+ -->
+<!--  LocalWords:  gradle keycloak plugin thats Dockerfile FQDN url
+ -->
+<!--  LocalWords:  PGPASSWORD TRANSPORTSTRATEGY lucene EMAILSERVICE
+ -->
+<!--  LocalWords:  CORS emailservice mc 1GB 4GB rm virtualbox cpu env
+ -->
+<!--  LocalWords:  eval ps rmi grep qf rmv Dockviz dockviz nate deps
+ -->
+<!--  LocalWords:  Kitematic Bintray apk postgresql ENTRYPOINT CMD
+ -->
+<!--  LocalWords:  arg1 LabKey
+ -->

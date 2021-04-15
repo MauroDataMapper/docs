@@ -7,3 +7,6 @@ This philosophy lies at the heart of the Mauro Data Mapper, which not only aims 
 ![Fra Mauro map](fra-mauro-map.png)
 The Fra Mauro map of the world. Source: https://en.wikipedia.org/wiki/Fra_Mauro_map#/media/File:FraMauroDetailedMap.jpg
 
+
+<!--  LocalWords:  fra mauro png
+ -->

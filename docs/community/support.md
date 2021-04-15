@@ -3,7 +3,7 @@ our users to interact and help solve problems, share experience or offer advice.
 new [Zulip organisation](https://maurodatamapper.zulipchat.com) which we encourage all potential users to visit. 
 
 In addition to active users and
-contributors, the core development team are also active on Zulip and able to help with any technical questions. You can log into our Zulip organsiation
+contributors, the core development team are also active on Zulip and able to help with any technical questions. You can log into our Zulip organisation
 using your GitHub credentials, or alternatively ask an existing member to send you an invite.
 
 Note that although our Slack channels are still open for the core development team, we will be migrating all previous channels / conversations to
@@ -47,3 +47,5 @@ or available as part of a tagged code release.
 Visit our [Zulip organisation](https://maurodatamapper.zulipchat.com) to discuss new features and get in touch with the development team directly. 
 
 ---
+<!--  LocalWords:  Zulip JetBrains YouTrack mdm ui
+ -->
