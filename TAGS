@@ -1,0 +1,408 @@
+
+docs/index.md,59
+Here you will find everything you need to understand,5,95
+
+docs/test_file.md,407
+    Whilst these pages are under construction,7,142
+    Whilst these pages are under construction, the layout,7,142
+- An [introduction](introduction.md), to give an overview of the Metadata Catalogue,11,301
+- An [introduction](introduction.md), to give an overview of the Metadata Catalogue, its intended functionality,11,301
+- A set of tutorials,12,441
+- A set of more fundamental user guides,14,682
+
+docs/about/development-roadmap.md,116
+Development of the core Mauro platform,1,0
+Development of the core Mauro platform, its interfaces and plugins,1,0
+
+docs/about/history.md,313
+represents the third generation of this technology. In the first generation,2,141
+constraints of a data modelling language,4,429
+constraints of a data modelling language, and the approach to semantic linkage was through classification,4,429
+refinement. It was applied successfully in two large projects,5,573
+
+docs/about/introduction.md,196
+Collecting accurate and reliable data takes a huge amount of time,3,31
+Collecting accurate and reliable data takes a huge amount of time, money and resource. Therefore,3,31
+<iframe src=12,1212
+
+docs/about/mauro.md,480
+The Mauro Data Mapper is named after Fra Mauro who was a 15th century Venetian Monk and also a famous cartographer. He created the most detailed map of the world at the time,2,21
+Unlike other explorers who would embark on expeditions to gather their own data about the world,4,250
+This philosophy lies at the heart of the Mauro Data Mapper,6,631
+This philosophy lies at the heart of the Mauro Data Mapper, which not only aims to be a hub of detailed **metadata*metadata6,631
+
+docs/about/research.md,178
+The core of **Mauro Data Mapper** is based on sound theoretical principles,1,0
+Formal,3,167
+Formal, rigorous definitions of **semantic interoperability*interoperability3,167
+
+docs/community/contribute.md,81
+**Mauro Data Mapper** is an open source tool,1,0
+many ways to contribute,4,154
+
+docs/community/support.md,207
+We have an active and ever growing community of **Mauro Data Mapper** users in a variety of different application domains. As an open source project,1,0
+our users to interact and help solve problems,2,167
+
+docs/installing/docker.md,167
+system running Docker can run the Mauro Data Mapper,5,172
+system running Docker can run the Mauro Data Mapper, but please note that depending on the set-up,up5,172
+
+docs/installing/plugins.md,43
+We host a number of community plugins,1,0
+
+docs/model/glossary.md,1003
+The Metadata Catalogue supports a variety of concepts which are not new,1,0
+names,2,148
+names, or with different semantics.  In this article we give definitions to the terms we use,2,148
+A **Data Model** is a description of an existing collection of data,10,552
+data may have a minimum multiplicity of 0 and a maximum multiplicity of 1; mandatory data may have a minimum multiplicity of 18,1507
+A data class contains a number of **Data Elements**: the description of an individual field,22,1830
+A data class contains a number of **Data Elements**: the description of an individual field, variable,22,1830
+A data class contains a number of **Data Elements**: the description of an individual field, variable, column,22,1830
+label,23,1976
+label, which must be unique within its containing Data Class.  It has a description,23,1976
+label, which must be unique within its containing Data Class.  It has a description, some alternate names,23,1976
+- a **Primitive Type** such as a String,30,2313
+
+docs/resources/architecture.md,102
+**Mauro Data Mapper** is built using a fairly common layered design. At the heart is a standard,3,13
+
+docs/rest-api/admin.md,376
+There are a number of endpoints which are specific to administrators: understanding the configuration of the particular instance;1,0
+ avaiable plugins,2,146
+ currently available;25,775
+There are a number of system-wide properties that can be updated by administrators,63,1924
+(the default being `false`). Only an authenticated session can use the endpoint above,111,3652
+
+docs/rest-api/apikeys.md,82
+To enable an existing,145,6583
+To enable an existing, disabled API key,145,6583
+
+docs/rest-api/authentication.md,457
+**Mauro Data Mapper** stores content that may be either publicly accessible,1,0
+the majority of API requests can be made as an **'anonymous user'** (by passing no session information in the request header)2,146
+A request to the `login` will result in a new session token being generated.  This is typically 32 hexadecimal characters in length,5,361
+identifies the current session.  These tokens should not be shared,6,508
+To login to the server,13,804
+
+docs/rest-api/pagination.md,37
+If no parameters are passed,55,1653
+
+docs/start/creating-model.md,278
+To create a new DataModel,1,0
+To create a new DataModel, you first need to 1,0
+Once all this information has been populated,32,1299
+You will then have the option of selecting the default data types,34,1373
+Once you’ve added the relevant property’s click submit,38,1523
+
+docs/tutorials/introduction.md,297
+[User Guides](../user-guides/introduction.md)md2,112
+[User Guides](../user-guides/introduction.md), which explain _how_ to achieve things in **Mauro Data Mapper*Mapper2,112
+:  In this tutorial we explain why [Semantic links](../glossary/semantic-links/semantic-links.md) are important,10,392
+
+docs/tutorials/semantic-links.md,1694
+When defining the meaning of data,3,17
+When defining the meaning of data, it can be helpful to point to definitions elsewhere that are already known or understood. For example,3,17
+like to consider that the **'Date of Birth'** field in one dataset might mean exactly the same as **'Birth Date'** in another. In practice,4,164
+like to consider that the **'Date of Birth'** field in one dataset might mean exactly the same as **'Birth Date'** in another. In practice, however,4,164
+find that two [Data Elements](../glossary/data-element/data-element.md) share exactly the same context. Measurements might be taken using different apparatus;5,323
+differ depending on how the question is phrased or presented;6,518
+To provide a more practical approach,8,654
+definition says,9,825
+definition says, and possibly more. In the general case,9,825
+definition says, and possibly more. In the general case, this allows us to define abstract definitions of data with minimal context 9,825
+of the context. It may be that several people with expertise in how the data is captured,31,2407
+Note that there may not be any link defined between two more concrete definitions. In this example,34,2631
+of values,36,2925
+of values, or conversion algorithm,36,2925
+of values, or conversion algorithm, which allows data collected according to one definition to be converted into a form matching another definition. In this case,36,2925
+of values, or conversion algorithm, which allows data collected according to one definition to be converted into a form matching another definition. In this case, perhaps opening the document on another computer and re-running the word count. Simple mappings,36,2925
+
+docs/user-guides/introduction.md,532
+:  In this user guide we explain how to use the web interface to create a new folder and a new [Data Model](../glossary/data-model/data-model.md) from scratch,9,293
+:  This user guide will explain how to export a **Data Model** using a variety of exporters including XML,19,902
+:  This user guide will explain how to export a **Data Model** using a variety of exporters including XML, JSON,19,902
+:  This user guide will explain how to export a **Data Model** using a variety of exporters including XML, JSON, XML Schema,19,902
+
+docs/glossary/data-asset/data-asset.md,685
+A **Data Asset** contains existing data. This can be in the form of a database,12,220
+A **Data Model** which is a **Data Asset** is represented by a database icon,17,375
+When adding a **Data Model*Model27,907
+When adding a **Data Model**, select the type from the dropdown menu on the **'Data Model Details form'**. For further information on this,27,907
+When importing a **Data Model** using Excel,31,1251
+When importing a **Data Model** using Excel, you will need to specify the type in the relevant column of the [Data Model listing sheet](../../user-guides/import-data-model-from-excel/import-data-model-from-excel.md#listing-sheet). For further information on this,31,1251
+
+docs/glossary/data-class/data-class.md,1373
+A **Data Class** is a collection of data,7,52
+A **Data Class** is a collection of data, also known as [Data Elements](../data-element/data-element.md)md7,52
+A **Data Class** is a collection of data, also known as [Data Elements](../data-element/data-element.md), that are related to each other in some way. For example,7,52
+A **Data Class** is a collection of data, also known as [Data Elements](../data-element/data-element.md), that are related to each other in some way. For example, each **Data Element** could appear in the same table of a database,7,52
+**Data Classes** are the building blocks of a [Data Model](../data-model/data-model.md). Within each **Data Class** lies several **Data Elements** and these are the descriptions of an individual field,12,353
+**Data Classes** are the building blocks of a [Data Model](../data-model/data-model.md). Within each **Data Class** lies several **Data Elements** and these are the descriptions of an individual field, variable,12,353
+You can also have a **Data Class** within a **Data Class*Class14,587
+You can also have a **Data Class** within a **Data Class**, known as a **Nested Data Class*Class14,587
+For example,16,819
+For example, in a webform,16,819
+For example, in a webform, there may be a section called **'Contact details'**, which would be one **Data Class**. Within that section however,16,819
+
+docs/glossary/data-element/data-element.md,384
+A **Data Element** is a description of an individual field,7,56
+A **Data Element** is a description of an individual field, variable,7,56
+**Data Elements** that are related to each other in some way are grouped together in [Data Classes](../data-class/data-class.md). These **Data Classes** are the building blocks of [Data Models](../data-model/data-model.md). For example,13,278
+
+docs/glossary/data-model/data-model.md,312
+A **Data Model** is a description of an existing collection of metadata,7,52
+A **Data Model** is a description of an existing collection of metadata, or a specification of data that is to be collected. **Data Models** which contain existing data are known as a [Data Asset](../data-asset/data-asset.md)md7,52
+
+docs/glossary/data-type/data-type.md,614
+	This is a constrained set of possible **Enumeration values*values14,409
+	For example,15,526
+	For example, an ethnicity **Enumeration Data Type** would include a list of different ethnic categories,15,526
+	Data without further details on structure or referencing. **Primitive Data Types** include **‘String�String18,768
+When adding a new **Data Type** to a **Data Element*Element26,1283
+When adding a new **Data Type** to a **Data Element**, you will need to select the relevant **Data Type** from the dropdown menu on the **'Data Element Details'** form. For more information on how to do this,26,1283
+
+docs/glossary/dataflow/dataflow.md,3028
+A **Dataflow** is a way of describing the meaning of data. It is a visual representation of how data flows from one [Data Model](../data-model/data-model.md)md7,48
+A **Dataflow** is a way of describing the meaning of data. It is a visual representation of how data flows from one [Data Model](../data-model/data-model.md), typically a [Data Asset](../data-asset/data-asset.md)md7,48
+A **Dataflow** is a way of describing the meaning of data. It is a visual representation of how data flows from one [Data Model](../data-model/data-model.md), typically a [Data Asset](../data-asset/data-asset.md), to another. This helps users to understand where data has been extracted from,7,48
+Each **Dataflow** has a source **Data Model*Model9,427
+Each **Dataflow** has a source **Data Model**, which is where the data originated from,9,427
+Each **Dataflow** has a source **Data Model**, which is where the data originated from, and a target **Data Model*Model9,427
+The **Dataflows** relating to each **Data Asset** can be found in the **Dataflows** tab at the bottom of the details panel,15,851
+The **Dataflows** tab displays a diagram which consists of a series of annotated grey blocks connected by annotated arrows. This tab allows you to view the **Dataflows** at a **Data Model** level,17,1045
+The **Dataflows** tab displays a diagram which consists of a series of annotated grey blocks connected by annotated arrows. This tab allows you to view the **Dataflows** at a **Data Model** level, a [Data Class](../data-class/data-class.md) level and a **Data Element** level. Therefore,17,1045
+The **Dataflows** tab displays a diagram which consists of a series of annotated grey blocks connected by annotated arrows. This tab allows you to view the **Dataflows** at a **Data Model** level, a [Data Class](../data-class/data-class.md) level and a **Data Element** level. Therefore, the grey blocks can represent **Data Assets*Assets17,1045
+The **Dataflows** tab displays a diagram which consists of a series of annotated grey blocks connected by annotated arrows. This tab allows you to view the **Dataflows** at a **Data Model** level, a [Data Class](../data-class/data-class.md) level and a **Data Element** level. Therefore, the grey blocks can represent **Data Assets**, **Data Classes** or **Data Elements*Elements17,1045
+When you first click the **Dataflows** tab,23,1663
+When you first click the **Dataflows** tab, the **Data Model** view will initially be displayed. This gives a high level overview of how data flows from one **Data Asset** to another. The grey blocks represent **Data Assets** which can be databases,23,1663
+To find out information on the different components of a particular **Dataflow** and how tables of data flow from one place to another,27,1967
+To do this,29,2145
+To find out more details on the specific fields of a data product and how they have been derived,36,2432
+Again,38,2574
+Again, hover over a transformation arrow until the hand icon appears and double click. Here,38,2574
+
+docs/glossary/multiplicity/multiplicity.md,267
+For example,4,161
+Every **Data Class** and **Data Element** is assigned a **Multiplicity**. Typically,10,355
+Every **Data Class** and **Data Element** is assigned a **Multiplicity**. Typically, the **Multiplicity** is written in the form **‘minmax*minmax10,355
+
+docs/glossary/primitive-data-type/primitive-data-type.md,19
+For example,9,275
+
+docs/glossary/reference-data-type/reference-data-type.md,534
+A **Reference Data Type** is one of the four possible [Data Types](../data-type/data-type.md) within **Mauro Data Mapper**. It is used to describe relationships between different [Data Classes](../data-class/data-class.md) within the same [Data Model](../data-model/data-model.md). Typically,7,70
+By using **Reference Data Types** to link similar **Data Classes** together,13,505
+By using **Reference Data Types** to link similar **Data Classes** together, users don’t have to repeatedly add in new **Data Classes*Classes13,505
+
+docs/glossary/semantic-links/semantic-links.md,985
+The term semantics refers to the meaning of data. It is essential that whenever data is produced in one system and used in another,7,59
+Therefore,9,296
+The most common type of semantic relationship is a **‘Refines’** link. Refine means to improve and in this context it signifies improving the quality and amount of information provided. Consequently,19,542
+The most common type of semantic relationship is a **‘Refines’** link. Refine means to improve and in this context it signifies improving the quality and amount of information provided. Consequently, when one description refines another,19,542
+The most common type of semantic relationship is a **‘Refines’** link. Refine means to improve and in this context it signifies improving the quality and amount of information provided. Consequently, when one description refines another, it means that everything that is true about one description is also true about the other description,19,542
+For example,21,937
+
+docs/glossary/terminology-data-type/terminology-data-type.md,779
+**Terminology Data Types** have now been expanded in **Mauro Data Mapper** to **‘Model Reference’**. **Model References** can now point to a **Terminology*Terminology13,374
+A **Terminology** is a vocabulary,17,597
+A **Terminology** is a vocabulary, or a collection of allowable **Terms** as well as any relationships between them. A **Term** typically has a coded key and a human-readable value,17,597
+A **Terminology** is a vocabulary, or a collection of allowable **Terms** as well as any relationships between them. A **Term** typically has a coded key and a human-readable value, along with some other information. Any relationships between pairs of **Terms** can be defined,17,597
+For example,19,988
+To view information relating to a specific **Term*Term29,1654
+
+docs/installing/branding/branding.md,22
+function to 147,5255
+
+docs/resources/client/java.md,1201
+The simplest way to get started is by creating a client manually - using the url of the server that the instance is hosted on,61,2237
+class TestConnection 68,2485
+    static void main(70,2509
+The `BindingMauroDataMapperClient` creates a connection to a Mauro instance,83,2940
+As in the example above,88,3234
+As in the example above, you can connect to the Mauro instance using a [username and password](../../rest-api/authentication.md). In this case,88,3234
+The class extends `MdmCommandLineTool`MdmCommandLineTool116,4413
+The class extends `MdmCommandLineTool`, which provides an object of type `MdmConnectionOptions`MdmConnectionOptions116,4413
+object of class `DataModel`.  The latter is obviously easier to process,198,8264
+The former variant also provides an important advantage:  when a Map is bound to a Data Model within grails,200,8383
+The former variant also provides an important advantage:  when a Map is bound to a Data Model within grails, it is associated with the internal,200,8383
+in-memory database and validated.  At this point,201,8529
+in-memory database and validated.  At this point, any identifiers,201,8529
+be dropped in favour of local variants.  So,202,8675
+
+docs/resources/client/typescript.md,137
+Within a TypeScript file,65,2692
+Or,71,2876
+Or, as illustrated in the Mauro UI application,71,2876
+const dataModelsResource 107,4571
+
+docs/rest-api/resources/catalogue-item.md,70
+type 4,439
+- **id*id26,1266
+- **dateCreated*dateCreated330,15272
+
+docs/rest-api/resources/data-model.md,358
+In its simplest form,3,33
+In its simplest form, a DataModel can be represented as follows:follows3,33
+- **id*id34,1483
+This endpoint returns all the DataModels within a particular folder; again,64,3480
+Similarly,133,6353
+Similarly, to remove the user/group,group133,6353
+To allow a model to be read by any authenticated user of the system,138,6537
+
+docs/tutorials/document-assets/index.md,21
+entry can 228,15017
+
+docs/user-guides/add-a-semantic-link/semantic-links.md,1042
+Firstly,8,200
+Firstly, navigate to the source [Data Model](../../glossary/data-model/data-model.md)md8,200
+Any existing **Semantic links** are summarised in the **'Links'** table below the details panel. To add,10,540
+Any existing **Semantic links** are summarised in the **'Links'** table below the details panel. To add, edit or remove a **Semantic link*link10,540
+Any existing **Semantic links** are summarised in the **'Links'** table below the details panel. To add, edit or remove a **Semantic link**, select the **'Links'** tab,10,540
+	This is the **Data Model*Model21,1083
+	From the dropdown menu,24,1189
+	A **'Refines'** link is used when one description **'Refines'** another. In other words,26,1302
+	A **'Refines'** link is used when one description **'Refines'** another. In other words, everything that is true about the target description is also true about the source description,26,1302
+	To do this,33,1741
+	This will automatically populate the **'Target'** field and once completed,35,1952
+<iframe src=37,2188
+
+docs/user-guides/admin-functionality/admin-functionality.md,643
+To access your admin dashboard,6,152
+As an administrator,18,664
+To do this,20,866
+To access your emails,30,1450
+To access your emails, select **'Emails'** from the user profile dropdown menu. This will take you to your inbox where you can compose,30,1450
+As an administrator you can add,36,1640
+As an administrator you can add, activate and deactive users. Firstly,36,1640
+To order the list,40,2035
+You can also filter the user list,42,2310
+You can also filter the user list, by clicking the filter symbol,42,2310
+Enter the first name,52,2853
+Enter the first name, last name,52,2853
+Enter the first name, last name, email,52,2853
+
+docs/user-guides/create-a-data-model/create-a-data-model.md,834
+**Data Models** are stored in their own folders and subfolders which are displayed in the **Model Tree**. Therefore,5,161
+**Data Models** are stored in their own folders and subfolders which are displayed in the **Model Tree**. Therefore, to create a new **Data Model*Model5,161
+**Data Models** are stored in their own folders and subfolders which are displayed in the **Model Tree**. Therefore, to create a new **Data Model**, first you need to either create a new folder,5,161
+To create a new subfolder,11,656
+To add a short description to the folder,15,930
+To add a short description to the folder, select the folder in the **Model Tree** and its details will then be displayed on the right. Click the **'Edit'** pencil button and enter a description into the box. Once completed,15,930
+To add a **Data Model*Model23,1345
+
+docs/user-guides/document-a-dataset/document-a-dataset.md,453
+Datasets are stored in their own **Data Models** within **Mauro Data Mapper**. Therefore,7,193
+Datasets are stored in their own **Data Models** within **Mauro Data Mapper**. Therefore, you first need to create a new **Data Model**. To do this,7,193
+Once you have reached step 9,450
+Once you've created your **Data Model**, it's important to record further characteristics of the corresponding dataset,17,953
+To do this,19,1140
+<iframe src=21,1378
+
+docs/user-guides/exporting-data-models/exporting-data-models.md,1276
+This user guide will explain how to export a [Data Model](../../glossary/data-model/data-model.md) using a variety of exporters including XML,1,0
+This user guide will explain how to export a [Data Model](../../glossary/data-model/data-model.md) using a variety of exporters including XML, JSON,1,0
+This user guide will explain how to export a [Data Model](../../glossary/data-model/data-model.md) using a variety of exporters including XML, JSON, XML Schema,1,0
+Select the **Data Model** you wish to export in the **Model Tree** to display it's details panel. In the icon menu at the bottom right of the details panel click the **'Export as JSON,6,211
+Once selected,10,560
+Once selected, the **Data Model** will automatically start exporting into the specificed format,10,560
+Once selected, the **Data Model** will automatically start exporting into the specificed format, with a green loading bar indicating the progress. Once exported,10,560
+You can also export several **Data Models** together. To do this,18,980
+To select the **Data Models** you wish to export,20,1198
+Once you have selected the relevant **Data Models*Models24,1546
+Once you have selected the relevant **Data Models**, you then need to choose an exporter. Note that only **Excel Excel24,1546
+
+docs/user-guides/import-data-model-from-excel/import-data-model-from-excel.md,1044
+To add an existing dataset to **Mauro Data Mapper*Mapper5,146
+To add an existing dataset to **Mauro Data Mapper**, you can either enter all the information online as explained in the ['Document a Health Dataset user guide'](../document-a-dataset/document-a-dataset.md)md5,146
+To ensure all the information is imported correctly,13,663
+To ensure all the information is imported correctly, the dataset needs to be entered into a spreadsheet in a specific format. To help with this,13,663
+This standard spreadsheet contains two types of worksheets. Firstly,15,925
+This standard spreadsheet contains two types of worksheets. Firstly, there is the [Data Model listing sheet](../import-data-model-from-excel/import-data-model-from-excel.md#listing-sheet)sheet15,925
+The next sheet is the [Data Model key sheet](../import-data-model-from-excel/import-data-model-from-excel.md#key-sheet) which is titled **‘KEY_1’**. This contains all the relevant details of one **Data Model** listed in the **‘DataModels’** sheet. Therefore,17,1310
+
+docs/user-guides/publish-subscribe/publish-subscribe.md,477
+Furthermore,5,341
+All **Mauro Data Mapper** server instances expose the URL `api/feeds/all` which returns the Atom syndication data. For another server instance to view all available data in that feed,11,579
+API keys may be set up through the web interface or via the API. To create an API key,15,899
+On the top right of the menu header,18,1040
+This will take you to a list of existing API keys that belong to you. Here,22,1264
+For each API belonging to the user,26,1578
+
+docs/user-guides/user-profile/user-profile.md,223
+When logged in to **Mauro Data Mapper*Mapper7,115
+To edit your profile,11,435
+To edit your profile, select the **'My profile'** option from the dropdown menu. This will take you to a page displaying your details,11,435
+
+docs/user-guides/how-to-search/how-to-search.md,0
+
+docs/rest-api/resources/user.md,0
+
+docs/rest-api/resources/user-group.md,0
+
+docs/rest-api/resources/terminology.md,0
+
+docs/rest-api/resources/term.md,0
+
+docs/rest-api/resources/term-relationship.md,0
+
+docs/rest-api/resources/semantic-link.md,0
+
+docs/rest-api/resources/plugin.md,0
+
+docs/rest-api/resources/folder.md,0
+
+docs/rest-api/resources/enumeration-value.md,0
+
+docs/rest-api/resources/data-type.md,0
+
+docs/rest-api/resources/data-flow.md,0
+
+docs/rest-api/resources/data-flow-component.md,0
+
+docs/rest-api/resources/data-element.md,0
+
+docs/rest-api/resources/data-class.md,0
+
+docs/rest-api/resources/codeset.md,0
+
+docs/rest-api/resources/classifier.md,0
+
+docs/resources/client/net.md,0
+
+docs/glossary/label/label.md,0
+
+docs/glossary/enumeration-data-type/enumeration-data-type.md,0
+
+docs/glossary/data-standard/data-standard.md,0
+
+docs/glossary/aliases/aliases.md,0
+
+docs/user/models.md,0
+
+docs/rest-api/trees.md,0
+
+docs/rest-api/postman.md,0
+
+docs/rest-api/introduction.md,0
+
+docs/rest-api/importexport.md,0
+
+docs/rest-api/errors.md,0
+
+docs/plugins/sparql.md,0
+
+docs/plugins/freemarker.md,0
+
+docs/installing/migration.md,0
+
+docs/installing/administration.md,0
+
+docs/glossary/glossary.md,0
+
+docs/community/build-plugins.md,0
+
+docs/about/release-notes.md,0
+
+README.md,0

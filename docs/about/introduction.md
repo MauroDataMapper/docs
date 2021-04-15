@@ -1,13 +1,16 @@
 ## What is Mauro Data Mapper?
 
-Collecting accurate and reliable data takes a huge amount of time, money and resource. Therefore, it’s vital that researchers are able to extract 
-the maximum value from this data for both current and future research projects.  This is why the [University of Oxford](https://www.ox.ac.uk), with 
-funding from [National Institute for Health Research (NIHR)](https://www.nihr.ac.uk/) and additional support from [NHS Digital](https://digital.
-nhs.uk) has developed the **Mauro Data Mapper** tool.
+**Mauro Data Mapper** is a toolkit for the design and documentation of
+databases, data flows, and data standards, as well as related software
+artefacts such as data schemas and data forms.  It was originally
+developed for the description of data in clinical research, but it is
+equally applicable in other settings.
 
-**Mauro Data Mapper**, is a toolkit for combining, developing and standardising data, helping users to effectively record and analyse contextual data. This central hub of clinical informatics allows users to easily access the metadata they require, avoiding the need to repeat research tasks; saving time, reducing costs and boosting productivity. 
-
-Furthermore, by employing standard definitions, terminologies and [Data Models](../glossary/data-model/data-model.md), the data can be accurately interpreted. Therefore, users can reliably compare datasets from different sources increasing the sample size of their investigations and consequently the validity of their conclusions.
+All of these assets can be described as linked, versioned [Data
+Models](../glossary/data-model/data-model.md).  The links let us
+re-use and relate data definitions, recording and reasoning about
+semantic interoperability.  The versioning lets us keep track of
+changes in design, in implementation, or in understanding.
 
 <iframe src="https://player.vimeo.com/video/186242194" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
@@ -57,7 +60,7 @@ to build an active community of users and developers, and encourage contribution
 
 The development of **Mauro Data Mapper** has been funded by the [NIHR Oxford Biomedical Research Center](https://oxfordbrc.nihr.ac.uk) as part of the [NIHR Health Informatics Collaborative (HIC)](https://hic.nihr.ac.uk). 
 
-The **NIHR HIC** is a partnership of 27 NHS trusts and health boards, including the 20 hosting **NIHR Biomedical Research Centres (BRCs)**, working together to facilitate the equitable re-use of NHS data for translational research. 
+The **NIHR HIC** is a partnership of 28 NHS trusts and health boards, including the 20 hosting **NIHR Biomedical Research Centres (BRCs)**, working together to facilitate the equitable re-use of NHS data for translational research. 
 
 The **NIHR HIC** has established cross-site data collaborations in areas such as cardiovascular medicine, critical
 care, renal disease, infectious diseases, and cancer. **Mauro Data Mapper**, and its previous incarnation, the Metadata Catalogue, has been used for
