@@ -6,8 +6,8 @@ artefacts such as data schemas and data forms.  It was originally
 developed for the description of data in clinical research, but it is
 equally applicable in other settings.
 
-All of these assets can be described as linked, versioned [Data
-Models](../glossary/data-model/data-model.md).  The links let us
+Data and software artefacts can be described as linked, versioned
+[Data Models](../glossary/data-model/data-model.md).  The links let us
 re-use and relate data definitions, recording and reasoning about
 semantic interoperability.  The versioning lets us keep track of
 changes in design, in implementation, or in understanding.
