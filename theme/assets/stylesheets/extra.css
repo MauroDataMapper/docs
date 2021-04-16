@@ -13,7 +13,7 @@
 :root {
     /* Default color shades */
     --md-default-fg-color:               #333;
-    --md-default-bg-color:               #fff;    
+    --md-default-bg-color:               #fff;
   }
 
 [data-md-color-primary="primary"] {
@@ -26,7 +26,7 @@
     --md-text-link-color:                #1135FF;
     /* --md-code-bg-color:                  #f7fafc; */
     /* --md-code-fg-color:                  #fff; */
-    
+
     /* Footer color shades */
     --md-footer-bg-color:                #fff;
     --md-footer-fg-color:                #333;
@@ -116,7 +116,7 @@ endpoint strong {
     height: auto;
 }
 
-header.md-header, 
+header.md-header,
 header.md-header nav.md-header-nav {
     height: 100px;
 }
@@ -255,7 +255,7 @@ div.home-page-button-text span.home-page-button-summary {
 
 
 @media screen and (min-width: 60em) {
-    .md-search__input, .md-search__input:hover { 
+    .md-search__input, .md-search__input:hover {
         background-color: #fff;
     }
     .md-search__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
