@@ -54,7 +54,7 @@ To find out which plugins are currently installed, use one of the following endp
 <endpoint class="post">/api/admin/rebuildLuceneIndexes</endpoint>
 
 This endpoint forces the rebuild of the Lucene indexes.  This is only necessary when synchronisation between database and indexes is lost; when
-the search functionality is not returning correct results.  Authenticatuin credentials can be passed as part of the request body.
+the search functionality is not returning correct results.  Authentication credentials can be passed as part of the request body.
 
 ---
  

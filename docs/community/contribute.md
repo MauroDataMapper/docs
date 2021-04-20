@@ -95,6 +95,53 @@ it through these pages, or keep a pinned list within Zulip.
 
 ---
 
+## Docker installation
+
+There is an extra override docker-compose file for development, this currently opens up the ports in the Postgres container for manual connection
+
+### Building images
+
+The `.dev` compose file builds all of the images,
+the standard compose file and `.prod` versions **do not** build new images.
+
+
+**Try to keep images as small as possible**
+
+### Make use of the wait_scripts.
+
+While `-links` and `depends_on` make sure the services a service requires are brought up first Docker only waits till they are running NOT till they
+are actually ready.
+The wait scripts allow testing to make sure the service is actually available.
+
+**Note**: If requiring postgres and using any of the Alpine Linux base images then the Dockerfile  will need to add the following:
+
+`RUN apk add postgresql-client`
+
+### Use `ENTRYPOINT` & `CMD`
+
+* If not requiring any dependencies then just set `CMD ["arg1", ...]` and the args will be passed to the `ENTRYPOINT`
+* If requiring dependencies then set the `ENTRYPOINT` to the wait script and the `CMD` to `CMD ["process", "arg1", ...]`
+
+**Note**: We should be able to override the `ENTRYPOINT` in the docker-compose but for some reason its not then passing the CMD args through.
+
+### `COPY` over `ADD`
+
+Docker recommends using COPY instead of ADD unless the source is a URL or a tar file which ADD can retrieve and/or unzip.,=
+
+### `docker-compose`
+
+Careful thought about what is required and what ports need to be passed through.
+If the port only needs to be available to other docker services then use `expose`.
+If the port needs to be open outside (e.g. the LabKey port 8080) then use `ports`.
+
+If the `ports` option is used this opens the port from the service to the outside world,
+it does not affect `exposed` ports between services, so if a service (e.g. postgres with port 5432) exposes a port
+then any service which used `link` to `postgres` will be able to find the database at `postgresql://postgres:5432`
+
+## Releases
+
+All work should be done on the `develop` branch.
+
 ## Share your models
 
 The development team would be pleased to receive details of any models that we might be able to re-use - either for sharing with the community,
