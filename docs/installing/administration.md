@@ -1,12 +1,79 @@
-## Backing up the database
+## Checking version information
 
-## Restoring from backup
+Inside the web interface, the **Plugins and Modules** tab on the administrator dashboard provides information about the loaded components of the
+Mauro installation.  The first list, **Plugins**, provides a list of names and versions of components which integrate with known plugin hooks -
+for example **Importers**, **Exporters** and **Email Providers**.  The **Modules** list below provides a more comprehensive account of all Java /
+Grails components installed, including system libraries.  Each Module may include one or more Plugins.
+
+To provide automated reporting, the API call behind this dashboard may be called separately.  The `GET` urls below will return lists of plugins,
+for each named type:
+
+<endpoint class="get">/api/admin/providers/importers</endpoint>
+<endpoint class="get">/api/admin/providers/exporters</endpoint>
+<endpoint class="get">/api/admin/providers/dataLoaders</endpoint>
+<endpoint class="get">/api/admin/providers/emailers</endpoint>
+
+The endpoint below will return the list of modules:
+
+<endpoint class="get">/api/admin/modules</endpoint>
 
 ## Updating to the latest version
 
-## Checking version information
+The Docker installation repository provides an `./update` script for updating to the latest version of Mauro:
 
-## Checking availability
+```bash
+# Update an already built system
+./update
+
+Usage ./update [-b COMMIT_BRANCH] [-f COMMIT_BRANCH]
+
+-b, --back-end COMMIT_BRANCH    : The commit or branch to checkout and build for the back-end from mdm-core
+-f, --front-end COMMIT_BRANCH   : The commit or branch to checkout and build for the front-end from mdm-ui
+```
+
+When running the Docker repository from the `main` branch, this will update the running instance to the latest tagged release.  When running the
+`develop` branch of the Docker repository, this command will update to the latest `develop` branch of Core and UI components.
+
+For example, when in the Git repository, you can run:
+
+```bash
+git pull
+```
+
+followed by
+
+```bash
+./update
+```
+
+to rebuild just the Mauro Data Mapper image with the latest version.  The script will restart the container using that version.
+
+Occasionally, database migrations are required when updating to a new version.  The run automatically when the application restarts, making use of
+the [Flyway](https://flywaydb.org) versioning system.  No manual steps are required from the user.
+
+
+
+## Backing up the database
+
+In order to back up the data from a running Mauro system, it is usually sufficient to take a simple backup of the underlying Postgres database, 
+which can be achieved through standard Postgres utilities (for example, using `pg_dump`).
+
+Within the Docker repository, a simple script in `postgres/bin/snapshot-data.sh` can be used within the docker container to take a copy of the 
+underlying postgres database - this creates a file in a new folder `/database` on the container which can be copied back out to the host machine.
+
+Alternatively, you can run an `exec` command directly from the host machine - for example the command listed below:
+
+```bash
+docker-compose exec postgres pg_dump -U postgres maurodatamapper | gzip -9  > db-backup-$(date +%d-%m-%y).sql.gz 
+```
+
+will execute the `pg_dump` command on the postgres container, connecting to the `maurodatamapper` database.  The result will be zipped using the 
+`gzip` command, creating a file with today's timestamp on it.
+
+Backup requirements vary, but a typical use-case is to combine one of the backup commands listed above with a script to manage regular backups at 
+timed intervals, and deleting old backups once a certain period has passed.  Example scripts which may be adapted can be 
+found on the official Postgres Wiki [here](https://wiki.postgresql.org/wiki/Automated_Backup_on_Linux).
+
 
 ## Re-building the search index
 

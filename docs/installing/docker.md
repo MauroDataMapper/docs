@@ -137,17 +137,16 @@ This script runs the following:
 
 Once these 3 images are built the main `docker-compose` service will be able to build without the use of the `make` file.
 
-An update script runs a similar process, but can be used to update to a different version of the back-end / front-end.
+An update script can be used to update an existing, running instance to the latest version.  See 
+[Updating to the latest version](../administration#updating-to-the-latest-version) for more details.  Users should ordinarily use 
+the `./make` 
+script once only, and then afterwards only use `./update`.  However, the `./make` script can be run again in order to update the base Tomcat build 
+image - for example when security fixes have been released.  There is an additional argument for the `./make` script that will do exactly that:
 
 ```bash
-# Update an already built system
-./update
-
-Usage ./update [-b COMMIT_BRANCH] [-f COMMIT_BRANCH]
-
--b, --back-end COMMIT_BRANCH    : The commit or branch to checkout and build for the back-end from mdm-core
--f, --front-end COMMIT_BRANCH   : The commit or branch to checkout and build for the front-end from mdm-ui
+./make -u
 ```
+which performs a clean build of just the Tomcat image.
 
 Once the `./make` script has been run once, the commit/branch choice can be altered by changing the build args in the `docker-compose.yml` file.
 
