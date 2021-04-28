@@ -154,5 +154,3 @@ Response types can be explicitly added to return results so that further type ch
       // Do something here with the response...
     })
   ```
-
-foo
