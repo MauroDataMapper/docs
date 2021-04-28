@@ -91,9 +91,9 @@ To create a new data model from scratch, use the following _post_ endpoint.  Wit
 
 <endpoint class="post">/api/dataModels</endpoint>
 
-There are two types of versioning in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
+There are two ways of versioning Data Models in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
 
-<endpoint class="put">/api/dataModels/**{dataModelId}**/newVersion</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/newModelVersion</endpoint>
 
 The name must be different to the original model.
 
@@ -103,7 +103,13 @@ To create a new 'documentation version', use the following endpoint:
 
 By default, this will supersede the original data model.
 
+It is also possible to _branch_ and _fork_ Data Models to create drafts before finalising them. To create a new _branch_ from an existing Data Model:
 
+<endpoint class="put">/api/dataModels/**{dataModelId}**/newBranchModelVersion</endpoint>
+
+To create a _fork_ of the original data model:
+
+<endpoint class="put">/api/dataModels/**{dataModelId}**/newForkModel</endpoint>
 ## Update data model
 
 To edit the primitive properties of a data model, use the following endpoint, with a body similar to the JSON described at the top of this page:
@@ -124,33 +130,22 @@ To move a data model from a draft state to 'finalised', use the following endpoi
 
 ### Sharing
 
-To allow a user or user group to view or edit a model, use the following endpoint.  Here, the **type** parameter should be one of 'readable' or
- 'writeable'; the **share** parameter should be one of either 'user' or 'group', and the **shareId** parameter should be the identifier of either
-  the user or group in question.
-     
-<endpoint class="put">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**?</endpoint>
-
-Similarly, to remove the user/group, use the following _delete_ endpoint:
-
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/**{type}**/**{share}**/**{shareId}**</endpoint>
-
-
 To allow a model to be read by any authenticated user of the system, use the following endpoint:
 
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
 
 ... and to remove this flag, use the following:
 
-<endpoint class="put">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/readByAuthenticated</endpoint>
 
 Similarly, to allow the model to be publicly readable - ie. readable by any unauthenticated user of the system, 
 use the following endpoint: 
 
-<endpoint class="delete">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
 
 ... and the following to remove this flag:
 
-<endpoint class="put">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
+<endpoint class="delete">/api/dataModels/**{dataModelId}**/readByEveryone</endpoint>
 
 
 ## Delete data model
@@ -158,7 +153,7 @@ use the following endpoint:
 To delete a data model, use the following endpoint.  The **permanent** parameter is a boolean value that controls whether a 'hard' or 'soft' delete
  is used if the user is an administrator.
  
-<endpoint class="delete">/api/dataModels/**{id}**</endpoint>
+<endpoint class="delete">/api/dataModels/**{id}**?permanent=**{true/false}**</endpoint>
 
  
 ## Import / export a data model
