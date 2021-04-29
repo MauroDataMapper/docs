@@ -1,19 +1,21 @@
-We host a number of community plugins, the code for which are available in
-our [GitHub 'Plugins' organisation](https://github.com/MauroDataMapper-Plugins)
-Commits to master branches kick off a build process on our continuous integration server, and successfully-built artefacts are hosted on our instance
+We host a number of community plugins, the code for which is available in
+our [GitHub 'Plugins' organisation](https://github.com/MauroDataMapper-Plugins).
+Commits to master branches kick off a build process on our continuous integration server and successfully-built artefacts are hosted on our instance
 of [Artifactory](https://jenkins.cs.ox.ac.uk/artifactory).
 
-Below is a list of all available plugins, along with their latest version number, release date, and any dependencies it has. More details about the
-changes in each release can be found on the [Release Notes](/about/release-notes) page. To install a plugin, use the 'artefact name' as directed in
+Below is a list of all the available plugins, along with their latest version number, release date and any dependencies each has. More details about the
+changes in each release can be found on the [Release Notes](/about/release-notes) page. To install a plugin, use the **'artefact name'** as directed in
 the [Installing](../docker) page.
+
+---
 
 # Importers / Exporters
 
 <table style="width: 100%;">
     <thead>
         <tr>
-            <th style="width: 25%;"><b>Plugin Name / Version</b></th>
-            <th style="width: 20%;"><b>Release Date</b></th>
+            <th style="width: 25%;"><b>Plugin name / Version</b></th>
+            <th style="width: 20%;"><b>Release date</b></th>
             <th style="width: 25%;"><b>Artefact name</b></th>
             <th style="width: 30%;"><b>Dependencies</b></th>
         </tr>
@@ -64,13 +66,15 @@ the [Installing](../docker) page.
     </tbody>
 </table>
 
+---
+
 # Profiles
 
 <table style="width: 100%;">
     <thead>
         <tr>
-            <th style="width: 25%;"><b>Plugin Name / Version</b></th>
-            <th style="width: 20%;"><b>Release Date</b></th>
+            <th style="width: 25%;"><b>Plugin name / Version</b></th>
+            <th style="width: 20%;"><b>Release date</b></th>
             <th style="width: 25%;"><b>Artefact name</b></th>
             <th style="width: 30%;"><b>Dependencies</b></th>
         </tr>
@@ -91,13 +95,15 @@ the [Installing](../docker) page.
     </tbody>
 </table>
 
+---
+
 # Security
 
 <table style="width: 100%;">
     <thead>
         <tr>
-            <th style="width: 25%;"><b>Plugin Name / Version</b></th>
-            <th style="width: 20%;"><b>Release Date</b></th>
+            <th style="width: 25%;"><b>Plugin name / Version</b></th>
+            <th style="width: 20%;"><b>Release date</b></th>
             <th style="width: 25%;"><b>Artefact name</b></th>
             <th style="width: 30%;"><b>Dependencies</b></th>
         </tr>
@@ -112,13 +118,15 @@ the [Installing](../docker) page.
     </tbody>
 </table>
 
+---
+
 # Technical / Other
 
 <table style="width: 100%;">
     <thead>
         <tr>
-            <th style="width: 25%;"><b>Plugin Name / Version</b></th>
-            <th style="width: 20%;"><b>Release Date</b></th>
+            <th style="width: 25%;"><b>Plugin name / Version</b></th>
+            <th style="width: 20%;"><b>Release date</b></th>
             <th style="width: 25%;"><b>Artefact name</b></th>
             <th style="width: 30%;"><b>Dependencies</b></th>
         </tr>
@@ -144,3 +152,5 @@ the [Installing](../docker) page.
  -->
 <!--  LocalWords:  gt PostgreSQL AWS Keycloak Freemarker Sparql
  -->
+
+---
