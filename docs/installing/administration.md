@@ -1,9 +1,8 @@
 ## Checking version information
 
 Inside the web interface, the **Plugins and Modules** tab on the administrator dashboard provides information about the loaded components of the
-Mauro installation.  The first list, **Plugins**, provides a list of names and versions of components which integrate with known plugin hooks -
-for example **Importers**, **Exporters** and **Email Providers**.  The **Modules** list below provides a more comprehensive account of all Java /
-Grails components installed, including system libraries.  Each Module may include one or more Plugins.
+Mauro installation.  The first list, **Plugins**, provides a list of names and versions of components which integrate with known plugin hooks. For example **Importers**, **Exporters** and **Email Providers**.  The **Modules** list below provides a more comprehensive account of all Java /
+Grails components installed, including system libraries.  Each **Module** may include one or more **Plugins**.
 
 To provide automated reporting, the API call behind this dashboard may be called separately.  The `GET` urls below will return lists of plugins,
 for each named type:
@@ -17,6 +16,8 @@ The endpoint below will return the list of modules:
 
 <endpoint class="get">/api/admin/modules</endpoint>
 
+---
+
 ## Updating to the latest version
 
 The Docker installation repository provides an `./update` script for updating to the latest version of Mauro:
@@ -27,8 +28,8 @@ The Docker installation repository provides an `./update` script for updating to
 
 Usage ./update [-b COMMIT_BRANCH] [-f COMMIT_BRANCH]
 
--b, --back-end COMMIT_BRANCH    : The commit or branch to checkout and build for the back-end from mdm-core
--f, --front-end COMMIT_BRANCH   : The commit or branch to checkout and build for the front-end from mdm-ui
+-b, --back-end COMMIT_BRANCH   : The commit or branch to checkout and build for the back-end from mdm-core
+-f, --front-end COMMIT_BRANCH    : The commit or branch to checkout and build for the front-end from mdm-ui
 ```
 
 When running the Docker repository from the `main` branch, this will update the running instance to the latest tagged release.  When running the
@@ -40,18 +41,18 @@ For example, when in the Git repository, you can run:
 git pull
 ```
 
-followed by
+Followed by:
 
 ```bash
 ./update
 ```
 
-to rebuild just the Mauro Data Mapper image with the latest version.  The script will restart the container using that version.
+This will rebuild just the Mauro Data Mapper image with the latest version.  The script will restart the container using that version.
 
-Occasionally, database migrations are required when updating to a new version.  The run automatically when the application restarts, making use of
+Occasionally, database migrations are required when updating to a new version.  These run automatically when the application restarts, making use of
 the [Flyway](https://flywaydb.org) versioning system.  No manual steps are required from the user.
 
-
+---
 
 ## Backing up the database
 
@@ -59,35 +60,43 @@ In order to back up the data from a running Mauro system, it is usually sufficie
 which can be achieved through standard Postgres utilities (for example, using `pg_dump`).
 
 Within the Docker repository, a simple script in `postgres/bin/snapshot-data.sh` can be used within the docker container to take a copy of the 
-underlying postgres database - this creates a file in a new folder `/database` on the container which can be copied back out to the host machine.
+underlying postgres database. This creates a file in a new folder `/database` on the container which can be copied back out to the host machine.
 
-Alternatively, you can run an `exec` command directly from the host machine - for example the command listed below:
+Alternatively, you can run an `exec` command directly from the host machine. For example the command listed below:
 
 ```bash
 docker-compose exec postgres pg_dump -U postgres maurodatamapper | gzip -9  > db-backup-$(date +%d-%m-%y).sql.gz 
 ```
 
-will execute the `pg_dump` command on the postgres container, connecting to the `maurodatamapper` database.  The result will be zipped using the 
+This will execute the `pg_dump` command on the postgres container, connecting to the `maurodatamapper` database.  The result will be zipped using the 
 `gzip` command, creating a file with today's timestamp on it.
 
 Backup requirements vary, but a typical use-case is to combine one of the backup commands listed above with a script to manage regular backups at 
-timed intervals, and deleting old backups once a certain period has passed.  Example scripts which may be adapted can be 
+timed intervals and deleting old backups once a certain period has passed.  Example scripts which may be adapted can be 
 found on the official Postgres Wiki [here](https://wiki.postgresql.org/wiki/Automated_Backup_on_Linux).
 
+---
 
 ## Re-building the search index
 
-The search index improves the performance of searching, this content is stored in-memory (and persisted to files on disk at suitable intervals). 
+The search index improves the performance of searching and this content is stored in-memory (and persisted to files on disk at suitable intervals). 
 In some places in the **Core**, it may also be used to speed up access to particular model contents.
 
 The index is built using [Apache Lucene](https://lucene.apache.org) but managed in the code through Hibernate. 
-This means that it is always kept in sync with the database contents, but it can be re-indexed if necessary - for example if searching provides 
+This means that it is always kept in sync with the database contents, but it can be re-indexed if necessary. For example if searching provides 
 incorrect or inconsistent results.  
 
-Administrators may rebuild the Lucene index through the user interface: drop down the menu by clicking on your username in the top right of the 
-screen; choose 'Configuration', and the 'Lucene' tab, and click "Rebuild Index".
+Administrators may rebuild the Lucene index through the user interface. To do this, click the white arrow by your user profile to the right of the menu header. Select **'Configuration'** from the dropdown menu.
 
-Please do not leave the page whilst reindexing is in progress - the time required is dependent on the number of models saved in the system, but may 
+![User profile menu showing 'Configuration' option](../branding/user-profile-menu-configuration.png)
+
+This will take you to configuration page where you can click the **'Lucene'** tab and then select **'Rebuild Index'**. 
+
+
+![Lucene page in configuration settings](../lucene-page.png)
+
+
+Please do not leave the page whilst reindexing is in progress. The time required is dependent on the number of models saved in the system, but may 
 take between 5 and 10 minutes for a large system.
 
 Alternatively, an API call may be made: [see here](../rest-api/admin.md#system-actions) for details.  This `POST` call may be made with an 
@@ -95,8 +104,9 @@ existing session cookie, by passing username / password parameters as part of th
 administrator role may perform this action.
 
 The contents of the search index can be hard to inspect for debugging purposes! We use a tool called 
-[Marple](https://github.com/flaxsearch/marple) but be sure to use a compatible version!
+[Marple](https://github.com/flaxsearch/marple) but be sure to use a compatible version.
 
+---
 
 ## Docker administration
 
@@ -119,7 +129,7 @@ alias docker-rmv='docker volume rm $(docker volume ls -qf dangling=true)'
 Remove all stopped containers first then remove all tagged images.
 
 A useful tool is [Dockviz](https://github.com/justone/dockviz),
-ever since docker did away with `docker images --tree` you can't see all the layers of images and therefore how much floating mess you have.
+ever since docker did away with `docker images --tree` you can't see all the layers of images and therefore how many disconneected images you have.
 
 Add the following to the appropriate bash profile file:
 
@@ -127,8 +137,8 @@ Add the following to the appropriate bash profile file:
  alias dockviz="docker run --privileged -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
  ```
 
-Then in a new terminal you can run `dockviz images -t` to see the tree,
-the program also does dot notation files for a graphical view as well.
+Then in a new terminal you can run `dockviz images -t` to see the tree.
+The program also does dot notation files for a graphical view as well.
 
 ### Multiple compose files
 
@@ -150,6 +160,6 @@ We recommend adding the following lines to the appropriate bash profile file:
 alias docker-compose-dev="docker-compose -f docker-compose.yml -f docker-compose.dev.yml"
 alias docker-compose-prod="docker-compose -f docker-compose.yml -f docker-compose.dev.yml"
 ```
-This will allow you to start compose in dev mode without all the extra file definitions
+This will allow you to start compose in dev mode without all the extra file definitions.
 
 ---

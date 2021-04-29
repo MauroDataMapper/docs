@@ -2,9 +2,9 @@ This page describes the changes for each component: 'core', 'ui', and the variou
 is presented with version number, notable new features, notable pull requests, and any dependencies.
 
 
-For more information about the structure and architecture of the code, please see our [system architecture](/resources/architecture/) pages.
+For more information about the structure and architecture of the code, please see our [technical architecture](/resources/architecture/) pages.
 
-In general, we try to use [Semantic Versioning.](https://semver.org) In particular note that any version tagged as `0.x.y` should be considered
+In general, we try to use [Semantic Versioning](https://semver.org). In particular note that any version tagged as `0.x.y` should be considered
 'beta' or for testing purposes only. 
 
 In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), and so the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, but 'bleeding edge' features may be available within 'develop' or any feature branch.
