@@ -155,6 +155,10 @@ To delete a data model, use the following endpoint.  The **permanent** parameter
  
 <endpoint class="delete">/api/dataModels/**{id}**?permanent=**{true/false}**</endpoint>
 
+An administrator is able to restore a 'soft' deleted code set using the following endpoint:
+
+<endpoint class="put">/api/admin/dataModels/**{id}**/undoSoftDelete</endpoint>
+
  
 ## Import / export a data model
 
@@ -172,9 +176,3 @@ Similarly, to import one or more data models, the namespace, name and version of
  be the parameters for the import, including any files that are required.
 
 <endpoint class="post">/api/dataModels/import/**{importerNamespace}**/**{importerName}**/**{importerVersion}**</endpoint>
-
-
-
-
-
-
