@@ -1,4 +1,4 @@
-A Classifier can be represented as follows:
+A Classifier is a _container_ type and can be represented as follows:
 
 === "Response body (JSON)"
     ```json
@@ -25,7 +25,7 @@ of [those endpoints](catalogue-item.md)
 
 ## Child Classifiers
 
-A classifier may be composed of child classifiers. Endpoints are provided to differentiate between parent and child data classifiers.
+A classifier may contain child classifiers. Endpoints are provided to differentiate between parent and child classifiers.
 
 ## Getting information
 
