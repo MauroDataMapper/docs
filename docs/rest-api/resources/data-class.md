@@ -50,7 +50,7 @@ A DataClass may be composed of child classes to define more complex definitions 
 
 ## Multiplicity
 
-Each DataClass defines its multipicity to state how many occurances of this class should be expected in a model. Multipicities are defined in the notation `x..y`, where:
+Each DataClass defines its [multiplicity](../../../glossary/multiplicity/multiplicity) to state how many occurances of this class should be expected in a model. Multipicities are defined in the notation `x..y`, where:
 
 * `x` represents the _minimum_ multipicity.
 * `y` represents the _maximum_ multipicity.
