@@ -13,10 +13,6 @@ This endpoint returns a list of all logged in users.
  
 If called in `post` mode, you can pass in user credentials, rather than basing on an existing session.
 
-<endpoint class="delete">/api/admin/logoutAllUsers</endpoint>
-
-This call forces the termination of all active sessions.
-
 ---
 
 ## Configuration
