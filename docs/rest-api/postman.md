@@ -9,7 +9,7 @@ The [Mauro Postman repository](https://github.com/MauroDataMapper/postman-librar
 and contains sample environment configurations. To use, simply clone the repository into your local system, or download the files as follows:
 
 - Navigate to the [main branch of the GitHub repository](https://github.com/MauroDataMapper/postman-library/tree/main)
-- Choose a folder to match the version of mdm-core that you intend to run against
+- Choose a folder to match the version of `mdm-core` that you intend to run against
 - Download the two listed JSON files - one for the 'Collection' and another for the 'Environment'
 
 ---

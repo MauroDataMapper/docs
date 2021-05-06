@@ -34,24 +34,34 @@ The endpoints for using metadata properties are listed below.
 
 To retrieve all the properties for a particular object, use the following endpoint.  The metadata properties are returned in a [paginated list](../pagination.md) 
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/metadata</endpoint>
+
+Where **{catalogueItemDomainType}** can be one of:
+
+* `folders`,
+* `dataModels`,
+* `dataClasses`,
+* `dataTypes`,
+* `terminologies`,
+* `terms`, or
+* `referenceDataModels`
 
 To get a specific property (whose **id** field is known), use the following endpoint:
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/metadata/**{id}**</endpoint>
 
 To add a new property to an object you have write-access to, post a structure similar to the one displayed above (ignoring **id** and 
 **lastUpdated** fields, which will be automatically set to the following endpoint:
 
-<endpoint class="post">/api/facets/**{facetOwnerId}**/metadata</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/metadata</endpoint>
 
 To edit an existing property (whose **id** field is known), use the following endpoint:
 
-<endpoint class="put">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+<endpoint class="put">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/metadata/**{id}**</endpoint>
 
 To delete an existing property (whose **id** field is known), use the following endpoint:
 
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/metadata/**{id}**</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/metadata/**{id}**</endpoint>
 
 The following endpoint returns all known namespaces for a particular object (given by the **id** field).  To find all namespaces across the whole 
 catalogue, the final component of the URL can be left off.
@@ -127,17 +137,17 @@ subset of the users listed in **readableByUsers**
     changes to that list may not always have an affect if they are contradicted by another assertion further up the tree.
 
 
-The endpoint for getting the permissions each of DataModel, Terminology, Folder, CodeSet and Classifier are listed below.  The details for updating
+The endpoint for getting the permissions each of DataModel, ReferenceDataModel, Folder, CodeSet and Classifier are listed below.  The details for updating
  permissions are listed on their respective pages. 
 
 <endpoint class="get">/api/dataModels/**{dataModelId}**/permissions</endpoint>
-<endpoint class="get">/api/terminologies/**{terminologyId}**/permissions</endpoint>
+<endpoint class="get">/api/referenceDataModels/**{referenceDataModelId}**/permissions</endpoint>
 <endpoint class="get">/api/folders/**{folderId}**/permissions</endpoint>
 <endpoint class="get">/api/codeSets/**{codeSetId}**/permissions</endpoint>
 <endpoint class="get">/api/classifiers/**{classifierId}**/permissions</endpoint>
 
 
-##Annotations
+## Annotations
 
 Annotations, or comments, can be attached to any item in the catalogue.  The structure is as follows:
 
@@ -181,78 +191,69 @@ Annotations, or comments, can be attached to any item in the catalogue.  The str
 
 To get all the annotations for a particular object, use the following endpoint. The results are returned in a [paginated list](../pagination.md)
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/annotations</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations</endpoint>
+
+Where **{catalogueItemDomainType}** can be one of:
+
+* `folders`,
+* `dataModels`,
+* `dataClasses`,
+* `dataTypes`,
+* `terminologies`,
+* `terms`, or
+* `referenceDataModels`
 
 To get the details of a particular annotation / comment, whose **id** is known, use the following endpoint:
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{id}**</endpoint>
 
 To create a new top-level annotation, post to the following endpoint, with a body similar to the JSON above (but without the **id** and
  **lastUpdated** fields)
    
-<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations</endpoint>
 
 To delete an annotation / comment whose identifier is known, use the following _delete_ endpoint:
 
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/annotations/**{id}**</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{id}**</endpoint>
 
 ### Child annotations (responses)
 
 Comments can have child comments (or replies).  To get all the child comments for a particular comment, use the following endpoint. The
  results are returned in a [paginated list](../pagination.md)
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{annotationId}**/annotations</endpoint>
 
 To get the details of a particular child annotation / comment, whose **id** is known, use the following endpoint:
 
-<endpoint class="get">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
 
 To create a new child annotation, post to the following endpoint, with a body similar to the JSON above (but without the **id** and
  **lastUpdated** fields)
 
-<endpoint class="post">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{annotationId}**/annotations</endpoint>
 
 To delete a child annotation / comment whose identifier is known, use the following _delete_ endpoint:
 
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/annotations/**{annotationId}**/annotations/**{id}**</endpoint>
  
 
 ## Searching
 
-An advanced search is powered by Lucene.  The parameters for an advanced search can be provided as the body of a _post_ request as follows:
+An advanced search is powered by Lucene.  The parameters for an advanced search can be provided as query parameters of a _get_ request, as follows:
 
-=== "Request body (JSON)"
-    ```json 
-    {
-        "searchTerm":"smoking",
-        "limit":20,
-        "offset":0,
-        "domainTypes":[],
-        "labelOnly":false,
-        "dataModelTypes":null,
-        "classifiers":[],
-        "classifierFilter":null,
-        "lastUpdatedAfter":null,
-        "lastUpdatedBefore":null,
-        "createdAfter":null,
-        "createdBefore":null
-    }  
-    ```
-
-The fields are defined as follows:
-
-- **searchTerm** (String): the search string - this can take a number of standard search operators - for example "smoking + pregnancy"
-- **limit** (Integer): the number of results returned in a [paginated list](../pagination.md)
-- **offset** (Integer): the index of the first result returned in a [paginated list](../pagination.md)
-- **domainTypes** (Set(String)): the catalogue object types that should be searched - for example "DataModel", "DataClass
-- **labelOnly** (Boolean): whether the search should only query the label of all objects
-- **dataModelTypes** (Set(String)): the types of data model that should be searched - for example "Data Asset", "Data Standard" 
-- **classifiers** (Set(String)): a set of classifier labels, such that all results must be classified by one of those tags
-- **classifierFilter** (?? Unknown): Currently undocumented
-- **lastUpdatedAfter** (DateTime): Only include objects in the search results if they have been modified more recently than the given date
-- **lastUpdatedBefore** (DateTime): Only include objects in the search results if they have been modified earlier than the given date 
-- **createdAfter** (DateTime): Only include objects in the search results if they were created more recently than the given date
-- **createdBefore** (DateTime): Only include objects in the search results if they were created earlier than the given date 
+| Parameter | Description |
+|-----------|-------------|
+| `searchTerm` | (String): the search string - this can take a number of standard search operators - for example "smoking + pregnancy" |
+| `limit` | (Integer): the number of results returned in a [paginated list](../pagination.md) |
+| `offset` | (Integer): the index of the first result returned in a [paginated list](../pagination.md) |
+| `domainTypes` | (Set(String)): the catalogue object types that should be searched. These can include: `DataModel`, `DataClass`, `DataElement`, `DataType`, `EnumerationType`. |
+| `labelOnly` | (Boolean): whether the search should only query the label of all objects |
+| `dataModelTypes` | (Set(String)): the types of data model that should be searched - for example `Data Asset`, `Data Standard` |
+| `classifiers` | (Set(String)): a set of classifier labels, such that all results must be classified by one of those tags |
+| `lastUpdatedAfter` | (DateTime): Only include objects in the search results if they have been modified more recently than the given date |
+| `lastUpdatedBefore` | (DateTime): Only include objects in the search results if they have been modified earlier than the given date  |
+| `createdAfter` | (DateTime): Only include objects in the search results if they were created more recently than the given date |
+| `createdBefore` | (DateTime): Only include objects in the search results if they were created earlier than the given date |
 
 The response will be a [paginated list](../pagination.md) of items, where each item has the following structure:
 
@@ -287,13 +288,9 @@ where the fields are defined as follows:
 - **breadcrumbs** (List(Breadcrumb)): An ordered list of, e.g. DataModels and DataClasses to show the location of an object in the hierarchy of a
  model.  This will include, for each component of the breadcrumb, an **id**, a **label** and a **domainType**.  
 
-To search across the whole catalogue, use the following endpoint:
+To search across the whole catalogue, use the following endpoint, optionally passing the above query parameters:
  
-<endpoint class="post">/api/catalogueItems/search</endpoint>
-
-To restrict the search to items within a particular folder, use the following endpoint:
-
-<endpoint class="post">/api/folders/**{folderId}**/search</endpoint>
+<endpoint class="get">/api/tree/folders/search</endpoint>
 
 Similarly, to search within a particular data model, use the following:
 
@@ -304,7 +301,7 @@ Finally, to search within a specific Data Class, use the following:
 <endpoint class="post">/api/dataModels/**{dataModelId}**/dataClasses/**{dataClassId}**/search</endpoint>
 
 
-## Edit History
+## Item history
 
 The edit history for various catalogue items can be retrieved using the endpoints listed below.  The format of a response is a paginated list of
  edits, with the following structure:
@@ -344,26 +341,26 @@ The endpoints for getting the edit history for each of DataModel, Terminology, F
 
 ## Reference files
 
-<endpoint class="post">/api/facets/**{facetOwnerId}**/referenceFiles</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/referenceFiles</endpoint>
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/referenceFiles/**{id}**</endpoint>
-<endpoint class="put">/api/facets/**{facetOwnerId}**/referenceFiles/**{id}**</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/referenceFiles/**{id}**</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
+<endpoint class="put">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
 
 ## Summary Metadata
 
-<endpoint class="post">/api/facets/**{facetOwnerId}**/summaryMetadata</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/summaryMetadata</endpoint>
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/summaryMetadata/**{id}**</endpoint>
-<endpoint class="put">/api/facets/**{facetOwnerId}**/summaryMetadata/**{id}**</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/summaryMetadata/**{id}**</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{id}**</endpoint>
+<endpoint class="put">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{id}**</endpoint>
 
 ### Summary Metadata Reports
 
-<endpoint class="post">/api/facets/**{facetOwnerId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports</endpoint>
-<endpoint class="delete">/api/facets/**{facetOwnerId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
-<endpoint class="put">/api/facets/**{facetOwnerId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
-<endpoint class="get">/api/facets/**{facetOwnerId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
+<endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports</endpoint>
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
+<endpoint class="put">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
+<endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/summaryMetadata/**{summaryMetadataId}**/summaryMetadataReports/**{id}**</endpoint>
 
 

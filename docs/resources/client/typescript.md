@@ -7,7 +7,7 @@ The TypeScript library that implements communication with the back-end
 server is available as a stand alone repository for incorporation into other applications. For example other web interfaces, or back-end 
 functionality using `node.js`. This is in fact the client library that the **Mauro Data Mapper** user interface uses.
 
-The GitHub repository is called `mdm-resources` and is available within the [Mauro Data Mapper organisation](https://github.com/MauroDataMapper).
+The GitHub repository is called [`mdm-resources`](https://github.com/MauroDataMapper/mdm-resources) and is available within the [Mauro Data Mapper organisation](https://github.com/MauroDataMapper).
 
 ---
 
@@ -23,7 +23,7 @@ Methods to call API functions are roughly broken down by resource type, with fil
 
 `mdm-{resourceType}.resource.ts`
 
-There are additional utility functions available in `mdm-validator.ts` and `mdm-resource.ts`.  An `index.ts` file lists all files for inclusion.
+There are additional utility functions available in `mdm-resource.ts`. There are also type definitions to assist with requests and responses, which can be found in filenames of the format `mdm-{resourceType}.model.ts`.  An `index.ts` file lists all files for inclusion.
 
 ---
 
@@ -37,7 +37,7 @@ Every class that extends [MdmResource](./typedoc/classes/mdmresource.html) can o
 [constructor](./typedoc/classes/mdmresource.html#constructor):
 
 * [MdmResourcesConfiguration](./typedoc/classes/mdmresourcesconfiguration.html) - object to define configuration options for every HTTP request.
-* [IMdmRestHandler](./typedoc/interfaces/imdmresthandler.html) - object to the REST handler that will process the requests. If not provided, the
+* [MdmRestHandler](./typedoc/interfaces/mdmresthandler.html) - object to the REST handler that will process the requests. If not provided, the
 [DefaultMdmRestHandler](./typedoc/classes/defaultmdmresthandler.html) will be used - see the [REST Handlers](#rest-handlers) section for further 
 details.
 
@@ -69,13 +69,13 @@ import { MdmResourcesConfiguration } from '@maurodatamapper/mdm-resources';
 ```
 
 Or, as illustrated in the Mauro UI application, create a custom service to pull all the classes into a single location (see 
-`mdm-resources.service.ts` within the `mdm-ui` project).
+[`mdm-resources.service.ts`](https://github.com/MauroDataMapper/mdm-ui/blob/main/src/app/modules/resources/mdm-resources.service.ts) within the [`mdm-ui`](https://github.com/MauroDataMapper/mdm-ui) project).
 
 ---
 
 ## REST Handlers
 
-`mdm-resources` provides a default implementation of the [IMdmRestHandler](./typedoc/interfaces/imdmresthandler.html) called 
+`mdm-resources` provides a default implementation of the [MdmRestHandler](./typedoc/interfaces/mdmresthandler.html) called 
 [DefaultMdmRestHandler](./typedoc/classes/defaultmdmresthandler.html). This implementation uses the 
 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to complete HTTP requests and return 
 [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) on each response.
@@ -108,3 +108,49 @@ const dataModelsResource = new MdmDataModelResource(null, new CustomMdmRestHandl
 ```
 
 ---
+
+## Handling Responses
+
+All endpoints have type definitions that explicitly state their inputs for requests but generalise their response outputs. This is due to the ability to customise the [REST handler](#rest-handlers), which may return different wrapper objects around the core response definitions. Nonetheless, `mdm-resources` does provide type definitions for responses and will include them in the documentation comments and [type reference documentation](./typedoc/index.html) for the use of the downstream developer.
+
+As an example, given this endpoint function type definition:
+
+```ts
+export class MdmDataModelResource extends MdmResource {
+  get(dataModelId: string, query?: QueryParameters, options?: RequestSettings): any {
+    //...
+  }
+}
+```
+
+Response types can be explicitly added to return results so that further type checking can be performed, as in these examples:
+
+=== "fetch"
+  ```ts
+  const dataModels = new MdmDataModelResource();
+  dataModels
+    .get('679d582c-9f6c-4ce5-99c7-7fad79374637')
+    .then((response: DataModelDetailResponse) => {
+      // MdmDataModelResponse.get() states it will return `any` but will actually return
+      // Promise<DataModelDetailResponse>.
+
+      // Adding explicit type information will resolve further code that uses the response.
+
+      // Do something here with the response...
+    })
+  ```
+
+=== "Angular"
+  ```ts
+  const dataModels = new MdmDataModelResource();
+  dataModels
+    .get('679d582c-9f6c-4ce5-99c7-7fad79374637')
+    .subscribe((response: DataModelDetailResponse) => {
+      // MdmDataModelResponse.get() states it will return `any` but will actually return
+      // Observable<DataModelDetailResponse>.
+
+      // Adding explicit type information will resolve further code that uses the response.
+
+      // Do something here with the response...
+    })
+  ```

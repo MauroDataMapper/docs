@@ -1,9 +1,9 @@
 A number of plugins exist for importing and exporting Data Models, Data Flows, and Terminologies.  The endpoint for each import / export contains
  the details of the plugin to be used, which includes the namespace, the name, and the version number. 
 
-# Data Model
+## Data Model
 
-## Import
+### Import
 
 The endpoint for importing one or more models is as follows:
 
@@ -29,7 +29,7 @@ The standard importers available with a default installation are as follows:
 These fall into two basic categories - simple file-based importers, or simple database-connection importers.  The parameters for each of these
  types are detailed in the sections below.
 
-### Simple file-based importers
+#### Simple file-based importers
 
 The simple file-based importers include the Excel, XML and JSON importers.  These take the following parameters:
 
@@ -42,7 +42,7 @@ The simple file-based importers include the Excel, XML and JSON importers.  Thes
 
 All fields are mandatory.
 
-### Simple database-connection importers (example)
+#### Simple database-connection importers (example)
 
 In order to connect to a database, fields are required to build the connection string, as well as handle the resulting generated model.  Each SQL
 importer is slightly different, but the SQL Server importer serves as an adequate example:
@@ -66,9 +66,9 @@ importer is slightly different, but the SQL Server importer serves as an adequat
 Other database-connecting import plugins provide a similar list of parameters, to be documented later.
  
 
-## Export
+### Export
 
 
-# Data Flow
+## Data Flow
 
-# Terminology
+## Terminology
