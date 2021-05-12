@@ -24,13 +24,13 @@ the [Installing](../docker) page.
         <tr>
             <td><b>Excel</b><br/>2.0.0</td>
             <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.0.0</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.0.0</td>
             <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>
             <td><b>CSV</b><br/>2.0.0</td>
             <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.0.0</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.0.0</td>
             <td>Core &gt;= 4.0.0</td>
         </tr>
         <tr>

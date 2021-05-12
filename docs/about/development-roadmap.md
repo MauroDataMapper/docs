@@ -27,6 +27,7 @@ please [contact us](mailto:info@metadata-catalogue.org).
 - Terminology and Reference Data Model Import plugins for SKOS
 - A wider range of configuration options for exporting XML Schema
 - User templating for Word / PDF exports
+- Wizards for advanced import / export of models, including preview and customisation options
 
 ---
 
@@ -35,6 +36,7 @@ please [contact us](mailto:info@metadata-catalogue.org).
 - Support for a wider range of email configurations
 - Python API client library
 - Simplified cloud-based deployment
+- Setup wizard for first-time installation.
 
 
 ---
