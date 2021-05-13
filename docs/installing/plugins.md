@@ -19,49 +19,67 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>Excel</b><br/>2.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.0.0</td>
+<tr>
+            <td><b>ART Decor</b><br/>1.0.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-artdecor:1.0.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>AWS Glue</b><br/>1.3.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.3.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>CSV</b><br/>2.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:2.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>MySQL</b><br/>2.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:2.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>Oracle SQL</b><br/>3.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:3.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>PostgreSQL</b><br/>3.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:3.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>MS SQL</b><br/>3.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:3.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>Excel</b><br/>2.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>FHIR</b><br/>1.0.0-SNAPSHOT</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:1.0.0-SNAPSHOT</td>
+            <td>Core &gt;= 4.0.0-SNAPSHOT</td>
+        </tr>
+<tr>
+            <td><b>Opensafely</b><br/>1.0.0</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-opensafely:1.0.0</td>
             <td>Core &gt;= 4.0.0</td>
         </tr>
-        <tr>
-            <td><b>CSV</b><br/>2.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:2.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-        <tr>
-            <td><b>MS SQL Server</b><br/>3.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:3.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-        <tr>
-            <td><b>PostgreSQL</b><br/>3.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:3.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-        <tr>
-            <td><b>MySQL</b><br/>2.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:2.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-        <tr>
-            <td><b>Oracle SQL</b><br/>3.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:3.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-        <tr>
-            <td><b>AWS Glue</b><br/>1.1.1</td>
-            <td>10th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.1.1</td>
-            <td>Core &gt;= 4.0.0</td>
-        </tr>
-    </tbody>
+</tbody>
 </table>
 
 # Profiles
@@ -76,19 +94,31 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>schema.org</b><br/>1.2.2-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:1.2.0-SNAPSHOT</td>
-            <td>Core &gt;= 4.0.0</td>
+<tr>
+            <td><b>DCAT</b><br/>1.0.0-SNAPSHOT</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dcat:1.0.0-SNAPSHOT</td>
+            <td>Core &gt;= 4.0.0-SNAPSHOT</td>
         </tr>
-        <tr>
-            <td><b>HDR UK</b><br/>1.2.2-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:1.2.0-SNAPSHOT</td>
-            <td>Core &gt;= 4.0.0</td>
+<tr>
+            <td><b>Dementia Platform</b><br/>1.0.0-SNAPSHOT</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dementia-platform:1.0.0-SNAPSHOT</td>
+            <td>Core &gt;= 4.0.0-SNAPSHOT</td>
         </tr>
-    </tbody>
+<tr>
+            <td><b>HDR UK</b><br/>1.0.0-SNAPSHOT</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:1.0.0-SNAPSHOT</td>
+            <td>Core &gt;= 4.0.0-SNAPSHOT</td>
+        </tr>
+<tr>
+            <td><b>Schema.org</b><br/>1.0.0-SNAPSHOT</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:1.0.0-SNAPSHOT</td>
+            <td>Core &gt;= 4.0.0-SNAPSHOT</td>
+        </tr>
+</tbody>
 </table>
 
 # Security
@@ -103,13 +133,19 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>Keycloak Authentication</b><br/>1.0.1</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.0.1</td>
+<tr>
+            <td><b>Keycloak Integrated Authentication</b><br/>1.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
+        </tr>
+<tr>
+            <td><b>OpenID Connect Authentication</b><br/>1.0.0</td>
+            <td>Not Released</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:1.0.0</td>
             <td>Core &gt;= 4.0.0</td>
         </tr>
-    </tbody>
+</tbody>
 </table>
 
 # Technical / Other
@@ -124,19 +160,19 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>Freemarker Templating</b><br/>1.0.0</td>
-            <td>5th Feb 2021</td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.0.0</td>
-            <td>Core &gt;= 4.0.0</td>
+<tr>
+            <td><b>Freemarker Templating</b><br/>1.1.0</td>
+            <td>2021-03-04</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.1.0</td>
+            <td>Core &gt;= 4.2.0</td>
         </tr>
-        <tr>
-            <td><b>Sparql</b><br/>1.0.0-SNAPSHOT</td>
-            <td> ?? </td>
-            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:1.0.0-SNAPSHOT</td>
-            <td>Core &gt;= 4.0.0</td>
+<tr>
+            <td><b>SparQL</b><br/>1.1.1</td>
+            <td>2021-03-24</td>
+            <td>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:1.1.1</td>
+            <td>Core &gt;= 4.2.0</td>
         </tr>
-    </tbody>
+</tbody>
 </table>
 
 
