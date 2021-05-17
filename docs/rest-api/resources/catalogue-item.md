@@ -341,7 +341,8 @@ The endpoints for getting the edit history for each of DataModel, Terminology, F
 
 ## Reference files
 
-Reference files (or attachments) can be stored alongside various catalogue items to suppliment information about the catalogue item. Reference files have the following structure:
+Reference files (or attachments) can be stored alongside various catalogue items to supplement information about the catalogue item. Reference 
+files have the following structure:
 
 === "Response body (JSON)"
     ```json
