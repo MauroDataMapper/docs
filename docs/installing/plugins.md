@@ -73,57 +73,6 @@ the [Installing](../docker) page.
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:1.0.0</code></td>
             <td>Core &gt;= 4.5.0</td>
         </tr>
-<tr>
-            <td><b>Opensafely</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-opensafely:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-<tr>
-            <td><b>XSD</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xsd:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-</tbody>
-</table>
-
-# Profiles
-
-<table style="width: 100%;">
-    <thead>
-        <tr>
-            <th style="width: 25%;"><b>Plugin Name / Version</b></th>
-            <th style="width: 20%;"><b>Release Date</b></th>
-            <th style="width: 25%;"><b>Artefact name</b></th>
-            <th style="width: 30%;"><b>Dependencies</b></th>
-        </tr>
-    </thead>
-    <tbody>
-<tr>
-            <td><b>DCAT</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dcat:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-<tr>
-            <td><b>Dementia Platform</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dementia-platform:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-<tr>
-            <td><b>HDR UK</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-<tr>
-            <td><b>Schema.org</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:1.0.0-SNAPSHOT</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
 </tbody>
 </table>
 
@@ -143,12 +92,6 @@ the [Installing](../docker) page.
             <td><b>Keycloak Integrated Authentication</b><br/>2.0.0</td>
             <td>2021-05-17</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:2.0.0</code></td>
-            <td>Core &gt;= 4.5.0</td>
-        </tr>
-<tr>
-            <td><b>OpenID Connect Authentication</b><br/>1.0.0-SNAPSHOT</td>
-            <td>Not Released</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:1.0.0-SNAPSHOT</code></td>
             <td>Core &gt;= 4.5.0</td>
         </tr>
 </tbody>
