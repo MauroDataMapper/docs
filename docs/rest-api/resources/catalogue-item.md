@@ -341,11 +341,61 @@ The endpoints for getting the edit history for each of DataModel, Terminology, F
 
 ## Reference files
 
+Reference files (or attachments) can be stored alongside various catalogue items to supplement information about the catalogue item. Reference 
+files have the following structure:
+
+=== "Response body (JSON)"
+    ```json
+    {
+        "id": "eea67c19-1833-4125-9934-b06f45844c20",
+        "domainType": "ReferenceFile",
+        "fileName": "uploadedFile.png",
+        "fileSize": 80899,
+        "fileType": "image/png",
+        "lastUpdated": "2021-05-13T12:50:37.523Z"
+    }
+    ```
+
+The fields have the following definition:
+
+- **id** (UUID): The identifier of the returned object
+- **domainType** (String): The type of the returned object - in this case, "ReferenceFile"
+- **fileName** (String): The name of the uploaded file
+- **fileSize** (Number): The size of the uploaded reference file, in bytes
+- **fileType** (String): The MIME type of the uploaded reference file
+- **lastUpdated** (DateTime): the date and time when this modification was made
+
+To upload and attach a new reference file to a catalogue item, use the following endpoint and request payload:
+
 <endpoint class="post">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles</endpoint>
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "fileName": "uploadedFile.png",
+        "fileSize": 80899,
+        "fileType": "image/png",
+        "fileContents": [ 
+            // Array of bytes
+        ]
+    }
+    ```
+
+Where **{catalogueItemDomainType}** can be one of:
+
+* `dataModels`,
+* `terminologies`,
+* `codeSets`, or
+* `referenceDataModels`
+
+To get either a [paginated list](../pagination.md) of reference files for a catalogue item, or an individual reference file known by **{id}**:
+
 <endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles</endpoint>
-<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
-<endpoint class="put">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
 <endpoint class="get">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
+
+To delete a reference file from a catalogue item whose identifier is known, use the following delete endpoint:
+
+<endpoint class="delete">/api/**{catalogueItemDomainType}**/**{catalogueItemId}**/referenceFiles/**{id}**</endpoint>
 
 ## Summary Metadata
 
