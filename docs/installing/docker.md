@@ -73,12 +73,17 @@ If not you may see the following error:
 
 ## Git repository
 
-The **Mauro Docker** configuration repository can be found here: 
-[https://github.com/MauroDataMapper/mdm-docker](https://github.com/MauroDataMapper/mdm-docker).  
+Depending on the operating system of the server you are running on, you may first need to install `git` to checkout the Mauro application.  You 
+can read more about installing `git` on different operating systems here: [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-Different branches provide different configurations. We recommend checking out the `main` branch which will provide the latest releases of back-end and front-end.  Alternatively, you 
-can check out a specific tag to install a specific front-end / back-end combination. Tagged releases of **Docker** take the form `Ba.b.c_Fx.y.z` where 
-`a.b.c` is the tagged version of the back-end and `x.y.z` is the tagged version of the front-end.
+The **Mauro Docker** configuration repository can be found here: 
+[https://github.com/MauroDataMapper/mdm-docker](https://github.com/MauroDataMapper/mdm-docker).  Where you clone it is up to you, but on a *nix 
+system we recommend cloning into `/opt/` (for optional software packages)
+
+
+Different branches provide different configurations. We recommend checking out the `main` branch which will provide the latest releases of back-end 
+and front-end.  Alternatively, you can check out a specific tag to install a specific front-end / back-end combination. Tagged releases of 
+**Docker** take the form `Ba.b.c_Fx.y.z` where `a.b.c` is the tagged version of the back-end and `x.y.z` is the tagged version of the front-end.
 
 
 !!! Information
@@ -150,7 +155,7 @@ which performs a clean build of just the Tomcat image.
 
 Once the `./make` script has been run once, the commit/branch choice can be altered by changing the build args in the `docker-compose.yml` file.
 
-```yml
+```yaml
 mauro-data-mapper:
     build:
         context: mauro-data-mapper
@@ -160,6 +165,11 @@ mauro-data-mapper:
             ...
 ```
 
+### Default username / password
+
+The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the 
+password `password`.  We recommend changing this password on first login, and then setting up personal user accounts for individual users. 
+
 ### Additional backend Plugins
 
 Additional plugins can be found at the [Mauro Data Mapper Plugins](https://github.com/MauroDataMapper-Plugins) organisation page.
@@ -168,7 +178,7 @@ dependencies should be provided in a semi-colon separated list in the gradle sty
 dependency.
 
 For example:
-```yml
+```yaml
  mauro-data-mapper:
         build:
             context: mauro-data-mapper
@@ -180,6 +190,17 @@ Will add the keycloak plugin to the `dependencies.gradle` file:
 ```gradle
 runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.0.1
 ```
+
+### Theme
+
+Mauro comes with a default user interface theme - with the standard blue branding, and default text on the home page.  This can be overridden in 
+the `docker-compose.yml` file, with instructions provided in the [Branding guide](../installing/branding/branding).  The default theme is called 
+`default` and can be set with:
+
+```yaml
+ MDM_UI_THEME_NAME: "default"
+```
+
 
 ### Running multiple instances
 
