@@ -1,6 +1,6 @@
 Development of the core Mauro platform, its interfaces and plugins, are largely driven by the community.  A number of features planned for 
-development are listed below, in no particular order. For more information about any of these features, 
-please [contact us](mailto:info@metadata-catalogue.org).
+development are listed below, in no particular order.  Some of these features are funded and underway; others may be de-prioritised based on user 
+demand.  For more information about any of these features, please [contact us](mailto:info@metadata-catalogue.org).
 
 ---
 
@@ -37,6 +37,7 @@ please [contact us](mailto:info@metadata-catalogue.org).
 - Python API client library
 - Simplified cloud-based deployment
 - Setup wizard for first-time installation.
+- Support for DOI registration and maintenance.
 
 
 ---

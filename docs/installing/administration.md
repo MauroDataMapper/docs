@@ -163,3 +163,45 @@ alias docker-compose-prod="docker-compose -f docker-compose.yml -f docker-compos
 This will allow you to start compose in dev mode without all the extra file definitions.
 
 ---
+
+## Debugging and advanced configuration
+
+Here we present some useful hints for extending or customising the Docker setup for different configurations or use cases:
+
+**Development file override**
+
+The `docker-compose.dev.yml` can be used to override the standard `docker-compose.yml` file for development.  In its initial configuarion, 
+it opens up the ports in the Postgres container for manual connection from the host machine.  This `.dev` compose file rebuilds all of the images, 
+whereas the standard compose file and `.prod` versions **do not** build new images.
+
+**Make use of the wait_scripts**
+
+While `-links` and `depends_on` make sure the services a service requires are brought up first Docker only waits till they are running NOT till they
+are actually ready.  The wait scripts provided test responses on given ports to make sure that a given service is actually available and ready to 
+interact.
+
+**Use `COPY` over `ADD`**
+
+Docker recommends using COPY instead of ADD unless the source is a URL or a tar file which ADD can retrieve and/or unzip.
+
+**Use of `ENTRYPOINT` & `CMD`**
+
+* If not requiring any dependencies then just set `CMD ["arg1", ...]` and the args will be passed to the `ENTRYPOINT`
+* If requiring dependencies then set the `ENTRYPOINT` to the wait script and the `CMD` to `CMD ["process", "arg1", ...]`
+
+**Try to keep images as small as possible**
+
+As a general rule, we try to use the base images (e.g. of Tomcat, Postgres) and install additional packages at runtime or start-up.  This
+increases portability and cuts down on disk usage when deploying updates.
+
+**Exposing ports**
+
+Exposing ports to other services must be carefully considered, to avoid unnecessary security vulnerabilities
+
+If the port only needs to be available to other docker services then use `expose`.
+
+If the port needs to be open to the host machine or beyond, then use `ports`.
+
+If the `ports` option is used this opens the port from the service to the outside world,
+it does not affect `exposed` ports between services, so if a service (e.g. postgres with port 5432) exposes a port
+then any service which used `link` to `postgres` will be able to find the database at `postgresql://postgres:5432`

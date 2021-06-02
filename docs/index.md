@@ -1,6 +1,6 @@
 # Mauro Data Mapper: Documentation
 
-#### Welcome to the Mauro Data Mapper documentation site.
+__Welcome to the Mauro Data Mapper documentation site.__
 
 Here you will find everything you need to understand, use and navigate the **Mauro Data Mapper** tool as well as API documentation for software developers.
 

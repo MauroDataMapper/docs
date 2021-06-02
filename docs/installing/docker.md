@@ -112,13 +112,13 @@ provided to run this process on a `*nix` system and are described below.  We pla
 
 ### Make / Update
 
-```bash
+```shell
 # Build the entire system
 ./make
 
 Usage ./make [-b COMMIT_BRANCH] [-f COMMIT_BRANCH]
 
--b, --back-end COMMIT_BRANCH    : The commit or branch to checkout and build for the back-end from mdm-core
+-b, --back-end  COMMIT_BRANCH  : The commit or branch to checkout and build for the back-end from mdm-core
 -f, --front-end COMMIT_BRANCH   : The commit or branch to checkout and build for the front-end from mdm-ui
 ```
 
@@ -168,7 +168,7 @@ mauro-data-mapper:
 ### Default username / password
 
 The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the 
-password `password`.  We recommend changing this password on first login, and then setting up personal user accounts for individual users. 
+password `password`.  We *strongly recommend* changing this password on first login, and then setting up personal user accounts for individual users. 
 
 ### Additional backend Plugins
 
@@ -370,7 +370,7 @@ The default compose file will pull the correct version images from Bintray, or a
 
 ---
 
-For more information about administration of your running Docker instance, 
+For more information about administration of your running Docker instance, please see the [Administration guide](../administration)
 
 
 

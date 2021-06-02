@@ -1,6 +1,6 @@
 ## **Who is Mauro?**
-Mauro Data Mapper is named after Fra Mauro who was a 15th century Venetian Monk and also a famous cartographer. A scholar, similar to the ancient greek 
-geographer [Ptolemy](https://en.wikipedia.org/wiki/Ptolemy), Mauro created the most detailed map of the world at the time, featuring 
+Mauro Data Mapper is named after Fra Mauro who was a 15th century Venetian Monk and also a famous cartographer. A diligent scholar, and enthusiast of 
+ancient greek geographers such as [Ptolemy](https://en.wikipedia.org/wiki/Ptolemy), Mauro created the most detailed map of the world at the time, featuring 
 thousands of texts and illustrations.
 
 Unlike other explorers who would embark on expeditions to gather their own data about the world, Mauro adopted a different approach and based himself 
