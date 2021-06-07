@@ -68,9 +68,11 @@ nav:
                     -   Publish / Subscribe: 'user-guides/publish-subscribe/publish-subscribe.md'
                     -   User profile: 'user-guides/user-profile/user-profile.md'
                     -   Admin functionality: 'user-guides/admin-functionality/admin-functionality.md'
+                    -   Dynamic profiles: 'user-guides/dynamic-profiles/dynamic-profiles.md'
             -   Tutorials:
                     -   Introduction: 'tutorials/introduction.md'
                     -   Semantic Links: 'tutorials/semantic-links.md'
+                    -   Properties and profiles: 'tutorials/properties-profiles.md'
             -   Glossary: 'glossary/glossary.md'
     -   Installing and Administration:
             -   Installation:

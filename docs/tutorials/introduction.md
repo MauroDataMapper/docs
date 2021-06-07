@@ -11,5 +11,9 @@ Our current Tutorials:
 
 ---
 
+[Properties and Profiles](properties-profiles.md)
+:  This tutorial explains how to add custom information to models and model components using properties, and how to group and constrain properties 
+using profiles.
+---
    
 
