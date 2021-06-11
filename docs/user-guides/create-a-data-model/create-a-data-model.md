@@ -18,7 +18,7 @@ To add a short description to the folder, select the folder in the **Model Tree*
 
 ---
 
-## 2. Add Data Model
+## <a name="add-new-data-model"></a> 2. Add Data Model
 
 To add a **Data Model**, right click the relevant folder and select **'Add Data Model'**. A **'New Data Model'** form will appear on the right. 
 
