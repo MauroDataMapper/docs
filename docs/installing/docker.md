@@ -201,6 +201,70 @@ the `docker-compose.yml` file, with instructions provided in the [Branding guide
  MDM_UI_THEME_NAME: "default"
 ```
 
+### User Interface Feature Toggles
+
+The Mauro user interface has a set of feature toggles in place to control, at the application level, high-level features that can be enabled or disabled; for 
+instance: 
+
+* Features which are in active development, still experimental or subject to change.
+* Features which are optional and not required for the instance being created.
+
+All user interface feature toggles can be set in the `docker-compose.yml` file in the same way as all other build arguments, for example:
+
+```yaml
+mauro-data-mapper:
+        build:
+            context: mauro-data-mapper
+            args:
+                MDM_UI_FEATURE_SUBSCRIBED_CATALOGUES: "true"
+```
+
+All values for these arguments must either be `"true"` or `"false"`; the default value used if a feature toggle is not provided depends on the toggle in question.
+
+Below is a list of available user interface feature toggles to use:
+
+!!! Warning
+    It is advisable that any feature toggles marked as **In development** should only be used in test environments until fully completed.
+
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th style="width: 85%;"><b>Feature toggle</b></th>
+            <th style="width: 15%;"><b>Default value</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <code>MDM_UI_FEATURE_SUBSCRIBED_CATALOGUES</code>
+                <p>
+                    Enables the <a href="/user-guides/publish-subscribe/publish-subscribe">Subscribed Catalogues and Federated Data Models</a> feature set.
+                </p>
+            </td>
+            <td><code>true</code></td>
+        </tr>
+        <tr>
+            <td>
+                <code>MDM_UI_FEATURE_VERSIONED_FOLDERS</code>
+                <p><b>In development</b></p>
+                <p>
+                    Enables the ability to use <em>Versioned Folders</em>.
+                </p>
+            </td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
+            <td>
+                <code>MDM_UI_FEATURE_MERGE_UI_V2</code>
+                <p><b>In development</b></p>
+                <p>
+                    Enables a new user interface for the management of merging data models within the Mauro user interface.
+                </p>
+            </td>
+            <td><code>false</code></td>
+        </tr>
+    </tbody>
+</table>
 
 ### Running multiple instances
 
