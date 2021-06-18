@@ -21,61 +21,61 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><b>art-decor</b><br/>1.0.0</td>
+<tr>
+            <td><b>ART-DECOR</b><br/>1.0.0</td>
             <td>2021-03-04</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-artdecor:1.0.0</code></td>
             <td>Core &gt;= 4.2.0</td>
         </tr>
-        <tr>
+<tr>
             <td><b>AWS Glue</b><br/>1.3.0</td>
             <td>2021-03-04</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:1.3.0</code></td>
             <td>Core &gt;= 4.2.0</td>
         </tr>
-        <tr>
+<tr>
             <td><b>CSV</b><br/>3.0.0</td>
             <td>2021-05-17</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:3.0.0</code></td>
             <td>Core &gt;= 4.5.0</td>
         </tr>
-        <tr>
-            <td><b>Excel</b><br/>3.0.0</td>
-            <td>2021-05-17</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0</code></td>
-            <td>Core &gt;= 4.5.0</td>
+<tr>
+            <td><b>Excel</b><br/>4.0.0</td>
+            <td>2021-06-18</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:4.0.0</code></td>
+            <td>Core &gt;= 4.6.0</td>
         </tr>
-        <tr>
+<tr>
             <td><b>FHIR</b><br/>1.0.0</td>
             <td>2021-05-17</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:1.0.0</code></td>
             <td>Core &gt;= 4.5.0</td>
         </tr>
-        <tr>
-            <td><b>MS SQL</b><br/>3.2.0</td>
-            <td>2021-05-14</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:3.2.0</code></td>
-            <td>Core &gt;= 4.2.0</td>
+<tr>
+            <td><b>MS SQL</b><br/>5.0.0</td>
+            <td>2021-06-18</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:5.0.0</code></td>
+            <td>Core &gt;= 4.6.0</td>
         </tr>
-        <tr>
-            <td><b>MySQL</b><br/>2.2.0</td>
-            <td>2021-05-14</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:2.2.0</code></td>
-            <td>Core &gt;= 4.2.0</td>
+<tr>
+            <td><b>MySQL</b><br/>3.0.0</td>
+            <td>2021-06-18</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:3.0.0</code></td>
+            <td>Core &gt;= 4.6.0</td>
         </tr>
-        <tr>
-            <td><b>Oracle SQL</b><br/>3.2.0</td>
-            <td>2021-05-14</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:3.2.0</code></td>
-            <td>Core &gt;= 4.2.0</td>
+<tr>
+            <td><b>Oracle SQL</b><br/>4.0.0</td>
+            <td>2021-06-18</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:4.0.0</code></td>
+            <td>Core &gt;= 4.6.0</td>
         </tr>
-        <tr>
-            <td><b>PostgreSQL</b><br/>3.2.0</td>
-            <td>2021-05-14</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:3.2.0</code></td>
-            <td>Core &gt;= 4.2.0</td>
+<tr>
+            <td><b>PostgreSQL</b><br/>4.0.0</td>
+            <td>2021-06-18</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:4.0.0</code></td>
+            <td>Core &gt;= 4.6.0</td>
         </tr>
-    </tbody>
+</tbody>
 </table>
 
 ---
@@ -92,7 +92,7 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
+<tr>
             <td><b>Keycloak Integrated Authentication</b><br/>2.0.0</td>
             <td>2021-05-17</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:2.0.0</code></td>
@@ -115,19 +115,19 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-        <tr>
+<tr>
             <td><b>Freemarker Templating</b><br/>1.1.0</td>
             <td>2021-03-04</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.1.0</code></td>
             <td>Core &gt;= 4.2.0</td>
         </tr>
-        <tr>
+<tr>
             <td><b>SPARQL</b><br/>1.1.1</td>
             <td>2021-03-24</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:1.1.1</code></td>
             <td>Core &gt;= 4.2.0</td>
         </tr>
-    </tbody>
+</tbody>
 </table>
 
 <!--  LocalWords:  plugins Artifactory plugin thead tr th tbody td br
