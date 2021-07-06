@@ -60,6 +60,7 @@ capabilities to 'round-trip' documentation with external users.
 
 
 [Dynamic Profiles](dynamic-profiles/dynamic-profiles.md)
-:  Start creating your own profiles using this user guide 
+:  This user guide walks through the steps for creating and managing **dynamic 
+profiles**. These are profiles which are defined by a model elsewhere in the system.
 
 ---

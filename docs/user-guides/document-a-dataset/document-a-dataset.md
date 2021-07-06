@@ -94,7 +94,7 @@ To add a **Nested Data Class**, click the relevant **Data Class** from the **Mod
 
 ---
 
-## 5. Add [Data Elements](../../glossary/data-element/data-element.md)
+## <a name="add-data-elements"></a> 5. Add [Data Elements](../../glossary/data-element/data-element.md)
 
 Within each **Data Class** lies several **Data Elements** which are the descriptions of an individual field, variable, column or property of a data item. 
 
