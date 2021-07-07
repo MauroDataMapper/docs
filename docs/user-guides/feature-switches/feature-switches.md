@@ -1,13 +1,15 @@
 ## Introduction
 
-This user guide will walk you through the management and purpose of _feature switches_.
+This user guide will walk you through the management and purpose of **feature switches**.
 
 !!! Note
     Only administrators can view and control feature switches in the Mauro user interface.
 
+---
+
 ## What are feature switches?
 
-_Feature switches_ in the Mauro user interface allow an administrator to control which particular feature sets are enabled and visible to users of the Mauro instance running. There are several reasons why feature switches may be used:
+**Feature switches** in the Mauro user interface allow an administrator to control which particular feature sets are enabled and visible to users of the Mauro instance running. There are several reasons why feature switches may be used:
 
 1. There are some feature sets in the user interface which are optional or depend on certain plugins or instance configuration to work. 
 2. Some Mauro instances may not need particular functionality in daily running.
@@ -15,24 +17,36 @@ _Feature switches_ in the Mauro user interface allow an administrator to control
 
 In these cases, an administrator is able to switch on or off feature sets that are required or not needed, depending on the requirements of that Mauro instance.
 
+---
+
 ## Administration
 
-Feature switches are controlled via the [Configuration](../../admin-functionality/admin-functionality#7-configuration) panel using Mauro [API properties](../../../rest-api/admin/#properties).
+Feature switches can be accessed from the **'Configuration'** panel in account settings using Mauro [API properties](../../../rest-api/admin/#properties).
 
-![Feature switches example](api-properties-example.png)
+![Feature switches configuration panel example](feature-switches-configuration-panel.png)
 
 All feature switches are:
 
-1. Categorised under **Features**.
+1. Categorised under **features**.
 2. Publicly available to any user for reading (but not updating).
 
-To add a feature switch and control feature visibility:
+To add a feature switch and control feature visibility, select **'Configuration'** from the user profile dropdown menu.
 
-1. Select **'Configuration'** from the user profile dropdown menu.
-2. Under the **'Properties'** tab, either click on **'+ Add'**.
-3. Under **'Property to add'**, select any key from the list that starts with **'feature.'**
-4. Under **'Value'**, select either **'Yes'** or **'No'** to enable or disable the feature respectively.
-5. Click **'Add property'** to save your changes.
+![Configuration option in user profile dropdown menu](configuration-option-user-profile-dropdown-menu.png)
+
+Select the **'Properties'** tab and then click **'+ Add'**. An **'Add Property'** form will then appear for you to complete.
+
+![Add button on feature switches configuration panel](add-property.png)
+
+To select a property, click the **'Select the property to add'** box and a dropdown menu will appear. Select any key from the list that starts with **'feature'**. Once selected, the **'Key'** and **'Category'** fields will automatically populate. Tick the checkbox next to **'Publicly visible'** if required.
+
+![Add property dropdown menu on Add Property form](add-property-form.png)
+
+Under **'Value'**, select either **'Yes'** or **'No'** from the dropdown menu to enable or disable the feature respectively. Once completed select **'Add property'** to save your changes and a green notificaiton box should appear at the bottom right of your screen confirming that the **'Property was saved successfully'**.
+
+![Value dropdown menu on Add Property form](add-property-form-2.png)
+
+---
 
 ## Available features
 
@@ -95,3 +109,5 @@ The table below lists all the optional features that can be controlled by featur
         </tr>        
     </tbody>
 </table>
+
+---
