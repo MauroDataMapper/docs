@@ -26,6 +26,28 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>4.7.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.7.0">(GitHub Link)</a></td>
+            <td>1st July 2021</td>
+            <td>
+                <ul>
+                    <li>Bug fixes for dynamic profiles</li>
+                    <li>Further improvements for versioning, versioned folders, and merging model branches</li>
+                    <li>Other bug fixes</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>4.6.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.6.0">(GitHub Link)</a></td>
+            <td>18th June 2021</td>
+            <td>
+                <ul>
+                    <li>Bug fixes for dynamic profiles</li>
+                    <li>More endpoints for versioned folders and versioning</li>
+                    <li>Improve performance of terminology importer</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td><b>4.5.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.5.0">(GitHub Link)</a></td>
             <td>18th May 2021</td>
             <td>
@@ -116,6 +138,28 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>6.3.1</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.3.1">(GitHub Link)</a></td>
+            <td>18th June 2021</td>
+            <td>
+                <ul>
+                    <li>Basic support for external authentication</li>
+                    <li>Improved Export error handling</li>
+                    <li>Update merge tool</li>
+                    <li>Enable subscription functionality by default</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>6.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.2.0">(GitHub Link)</a></td>
+            <td>18th June 2021</td>
+            <td>
+                <ul>
+                    <li>Context view on model tree</li>
+                    <li>Versioned folder features</li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>6.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.1.0">(GitHub Link)</a></td>
             <td>18th May 2021</td>
