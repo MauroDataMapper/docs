@@ -23,14 +23,14 @@ Complete the fields as described below:
 * **Link**  
 	From the dropdown menu, select the type of **Semantic link** between **'Refines'** or **'Does Not Refine'**. 
 	
-	A **'Refines'** link is used when one description **'Refines'** another. In other words, everything that is true about the target description is also true about the source description, whilst often adding more information or context.
+	A **'Refines'** link is used when the description of the source **'Refines'** that of the target. In other words, everything that is true about the target description is also true about the source description, with the source description often adding more information or context.
 	
-	A **'Does Not Refine'** link is used when the target description is not intended as a refinement of the source description.
+	A **'Does Not Refine'** link is used when the description of the source is not intended to refine that of the target.
 	
 * **Target**  
 	Select the target description that you want to link to. 
 	
-	To do this, click **'Add target'** which will open up a seperate box. Choose whether the target description is a **Data Model** or a **Data Class** and then select the relevant item from the **Model Tree**. 
+	To do this, click **'Add target'** which will open up a seperate box. Choose whether the target is a **Data Model** or a **Data Class** and then select the relevant item from the **Model Tree**. 
 	
 	This will automatically populate the **'Target'** field and once completed, click the green tick to save and a green notification box should appear at the bottom right of your screen confirming that the **'Link saved successfuly'**.
 	
