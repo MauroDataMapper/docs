@@ -59,6 +59,11 @@ capabilities to 'round-trip' documentation with external users.
 ---
 
 
+[Feature switches](feature-switches/feature-switches.md)
+:  This user guide will walk you through **feature switches** that allow administrators to enable or disable certain Mauro features.
+
+---
+
 [Dynamic Profiles](dynamic-profiles/dynamic-profiles.md)
 :  This user guide walks through the steps for creating and managing **dynamic 
 profiles**. These are profiles which are defined by a model elsewhere in the system.
