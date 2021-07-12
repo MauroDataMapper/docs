@@ -47,6 +47,8 @@
 
 ## M
 
+[Merging](../glossary/merging/merging.md)
+
 [Multiplicity](../glossary/multiplicity/multiplicity.md) 
 
 ---
