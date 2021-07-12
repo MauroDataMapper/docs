@@ -33,6 +33,8 @@
 
 ## F
 
+[Finalise](../glossary/finalise/finalise.md)
+
 [Fork](../glossary/fork/fork.md)
 
 ---
