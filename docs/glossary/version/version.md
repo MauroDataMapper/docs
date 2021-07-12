@@ -1,6 +1,6 @@
 ## What does Version mean?
 
-A **Version** of a model represents the final _state_ of that model. Changes made to a model throughout its lifetime can be tracked by their **Version numbers** to provide a history of changes made.
+A **Version** of a model represents the final _state_ of that model. Changes made to a model throughout its lifetime can be tracked by their **Version numbers** to provide a history of changes made. All models with a version number are described as [Finalised](../finalise/finalise.md).
 
 As an example, given a new Data Model called "Test Data Model", the **Versions** could be created as such:
 

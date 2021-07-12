@@ -17,6 +17,8 @@ In this example, notice that **Model Version Tree DataModel (1.0.0)** has been b
 
 The solution for this scenario is to create one (or more) **Branches** of a model, allowing multiple editors or teams to make their own changes to the model in question without directly interfering or conflicting with other editors. Once an editor is happy that their **Branch** is complete, they may then _merge_ it with another branch to ensure that everyones changes are pulled together into one place.
 
+An alternative to branching is called [Forking](../fork/form.md), whereby a model is cloned to make new changes.
+
 ## How to create a Branch
 
 To create one or more **Branches** of a model, please refer to the user guide [How to version and merge Data Models](../../user-guides/version-data-models/version-data-models.md).

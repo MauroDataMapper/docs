@@ -17,9 +17,9 @@ In this example, **Model Version Tree DataModel (1.0.0)** has progressed to vers
 
 ## Differences with Branches
 
-At first glance, a **Fork** and a **Branch** may seem to serve the same purpose, but the key difference between them are:
+At first glance, a **Fork** and a [Branch](../branch/branch.md) may seem to serve the same purpose, but the key difference between them are:
 
-* A **Branch** is designed to be a _temporary_ deviation from the _main line_ of a model, with the intention of eventaully _merging_ it back into the _main line_ later.
+* A **Branch** is designed to be a _temporary_ deviation from the _main line_ of a model, with the intention of eventaully [merging](../merging/merging.md) it back into the _main line_ later.
 * A **Fork** is designed to be a _permanent_ deviation from the _main line_ of a model, acting as the starting point for a new version history. **Forks** are not intended to be merged back into their original starting point.
 
 ## How to create a Fork
