@@ -3,6 +3,11 @@
 
 ---
 
+## B
+[Branch](../glossary/branch/branch.md)
+
+---
+
 ## D
 [Data Asset](../glossary/data-asset/data-asset.md)  
 
@@ -61,3 +66,7 @@
 [Terminology Data Type](../glossary/terminology-data-type/terminology-data-type.md) 
 
 ---
+
+## V
+
+[Version](../glossary/version/version.md)
