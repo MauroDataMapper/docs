@@ -3,6 +3,12 @@
 
 ---
 
+## C
+
+[Classification](../glossary/classification/classification.md)
+
+---
+
 ## D
 [Data Asset](../glossary/data-asset/data-asset.md)  
 
@@ -23,6 +29,12 @@
 ## E
 
 [Enumeration Data Type](../glossary/enumeration-data-type/enumeration-data-type.md) 
+
+---
+
+## F
+
+[Folder](../glossary/folder/folder.md)
 
 ---
 
@@ -61,3 +73,7 @@
 [Terminology Data Type](../glossary/terminology-data-type/terminology-data-type.md) 
 
 ---
+
+## V
+
+[Versioned Folder](../glossary/versioned-folder/versioned-folder.md)
