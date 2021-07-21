@@ -34,6 +34,8 @@
 
 ## M
 
+[Multi-facet aware](../glossary/multi-facet-aware/multi-facet-aware.md)
+
 [Multiplicity](../glossary/multiplicity/multiplicity.md) 
 
 ---
