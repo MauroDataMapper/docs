@@ -49,11 +49,11 @@ To add a new user click the **'+Add user'** button at the top right of the **'Ma
 
 ![New user form](new-user-form.png)
 
-Enter the first name, last name, email, organisation and role for the new user. You then need to choose whether the new user is an **'Administrator'** or **'Editor'** from the dropdown menu in the **'Role'** field. 
+Enter the email address, first name, last name, organisation and role for the new user. 
 
-You also need to specify the groups that the user is associated with by selecting the relevant groups from the dropdown menu. You can remove any pre-selected groups from the list by clicking the red cross to the right of the group you wish to delete.
+You then need to add the user to the correct group to define what permissions they should have. To do this, click the **'Choose a Group'** box and select the relevant group from the dorpdown menu. 
 
-![New user form showing dropdown menus](new-user-form-dropdown-menus.png)
+![New user form showing dropdown menu](new-user-form-dropdown-menu.png)
 
 Once all the fields have been completed, click **'Add user'** and a green notification box should appear at the bottom right of your screen confirming that the **'User saved successfully'**. 
 
