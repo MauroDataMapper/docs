@@ -66,7 +66,7 @@ Once you have selected all your preferences, click **'Save preferences'** and th
 
 ---
 
-## 4. Change your password
+## <a name="change-password"></a>4. Change your password
 
 To change your password, go to the **'Password'** page under **'Account settings'**. Enter your old password in the first box and your new password in the second box. 
 
