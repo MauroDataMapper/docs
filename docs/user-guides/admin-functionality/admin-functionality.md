@@ -90,7 +90,7 @@ To approve or reject a user, click the **'Actions'** button to the right of the 
 
 ---
 
-## 6. Manage groups
+## <a name="manage-groups"></a>6. Manage groups
 
 As an administrator you can also add, edit and delete groups. To do this, select **'Manage groups'** from the user profile dropdown menu. This will navigate you to a list of all the groups currently stored in the repository.
 
