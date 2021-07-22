@@ -31,7 +31,7 @@ To access your emails, select **'Emails'** from the user profile dropdown menu. 
 
 ---
 
-## 4. Manage users 
+## <a name="manage-users"></a>4. Manage users 
 
 As an administrator you can add, activate and deactive users. Firstly, select **'Manage users'** from the user profile dropdown menu. This will navigate you to a full list of all the users within the repository. Each user's full name, email, organisation, role, any groups they are associated with as well as the status of their account will be displayed. 
 
