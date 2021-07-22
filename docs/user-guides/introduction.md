@@ -58,6 +58,10 @@ capabilities to 'round-trip' documentation with external users.
 
 ---
 
+[User permissions](permissions/permissions.md)
+:  This user guide explains the multiple levels of access to catalogue items and adminstration supported in **Mauro Data Mapper**.
+
+---
 
 [Feature switches](feature-switches/feature-switches.md)
 :  This user guide will walk you through **feature switches** that allow administrators to enable or disable certain Mauro features.
