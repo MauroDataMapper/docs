@@ -1,20 +1,18 @@
 This user guide will explain the steps you need to follow to create a new [Data Model](../../glossary/data-model/data-model.md). 
 
 ---
-## 1. Create a new folder
+## <a name="create-a-new-folder"></a>1. Create a new folder
 **Data Models** are stored in their own folders and subfolders which are displayed in the **Model Tree**. Therefore, to create a new **Data Model**, first you need to either create a new folder, or add a subfolder.
 
-To create a new folder click the **'Create a new Folder'** icon at the top right of the  **Model Tree**. Enter a **'Folder name'** and click **'Add folder'**. The new folder should now appear in the **Model Tree**. 
+Ensure the **'Models'** tab is selected above the **Model Tree**. To create a new top-level folder click the **'Create a new Folder'** icon at the top right of the  **Model Tree**. To create a new subfolder, right click on an existing folder and select **'+ Create'** and then **'Folder'** from the dropdown menu.
 
 ![Create a new Folder illustration](create-a-new-folder.png)
 
-To create a new subfolder, right click on the existing folder and select **'Add Folder'**. Enter a **'Folder name'** and click **'Add folder'**. The new subfolder should now appear in the **Model Tree**.
+A **'Create a new Folder'** dialogue box will appear. Enter a name for the folder and tick **'Version control this folder'** if you wish to create a **Versioned Folder**. Once complete, click **'Add folder'** to save your changes.
 
-![Create a new subfolder illustration](create-a-new-subfolder.png) 
+The **'Version control this folder'** option will only appear if adding to the top level of the **Model tree** or under another folder. **Versioned folders** cannot be created under other **Versioned folders**.
 
-To add a short description to the folder, select the folder in the **Model Tree** and its details will then be displayed on the right. Click the **'Edit'** pencil button and enter a description into the box. Once completed, click **'Save changes'** and the description will now display whenever the folder is selected.
-
-![Add folder description illustration](add-folder-description.png)
+![Create a new Folder dialogue box](add-folder-description.png)
 
 ---
 
