@@ -10,6 +10,11 @@ Our current User Guides:
 
 ---
 
+[Organising Data Models](organising-data-models/organising-data-models.md)
+:  This user guide summarises how to organise [Data Models](../glossary/data-model/data-model.md) including rearranging folders, adding classifiers and selecting favourites. 
+
+---
+
 [Document a Health Dataset](document-a-dataset/document-a-dataset.md)
 :  This longer guide explains how to add structure to your **Data Model** such as incorporating [Data Classes](../glossary/data-class/data-class.md) and [Data Elements](../glossary/data-element/data-element.md).
 
