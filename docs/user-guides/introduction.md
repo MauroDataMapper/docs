@@ -12,6 +12,10 @@ Our current User Guides:
 
 [Organising Data Models](organising-data-models/organising-data-models.md)
 :  This user guide summarises how to organise [Data Models](../glossary/data-model/data-model.md) including rearranging folders, adding classifiers and selecting favourites. 
+---
+
+[Finalising Data Models](finalising-data-models/finalising-data-models.md)
+:  This user guide explains how to finalise catalogue items such as **Versioned Folders** and [Data Models](../../glossary/data-model/data-model.md).
 
 ---
 
