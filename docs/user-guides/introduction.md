@@ -12,10 +12,16 @@ Our current User Guides:
 
 [Organising Data Models](organising-data-models/organising-data-models.md)
 :  This user guide summarises how to organise [Data Models](../glossary/data-model/data-model.md) including rearranging folders, adding classifiers and selecting favourites. 
+
 ---
 
 [Finalising Data Models](finalising-data-models/finalising-data-models.md)
 :  This user guide explains how to finalise catalogue items such as **Versioned Folders** and [Data Models](../../glossary/data-model/data-model.md).
+
+---
+
+[Branching, versioning and forking Data Models](branch-version-fork/branch-version-fork.md)
+:  This user guide explains how to create a new draft of a **Finalised** [Data Model](../../glossary/data-model/data-model.md) by either creating a new **Version**, a new **Branch** or a new **Fork**. It also explains how to view a merge graph of a model. 
 
 ---
 
