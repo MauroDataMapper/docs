@@ -41,12 +41,6 @@ capabilities to 'round-trip' documentation with external users.
 
 ---
 
-[How to version and merge Data Models](version-data-models/version-data-models.md)
-:  This guide explains how to create working versions of [Data Models](../glossary/data-model/data-model.md) and how to merge changes into the main branch. This ensures changes can be made without adversely affecting other users.
-
-
----
-
 [How to search](how-to-search/how-to-search.md)
 : In this guide we walk you through the searching capabilities of **Mauro Data Mapper**, including the different search types, the syntaxes used as well as tips on how to conduct specific searches. 
 
