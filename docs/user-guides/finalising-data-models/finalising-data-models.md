@@ -17,7 +17,7 @@ The following catalogue items can be **Finalised**:
 * Reference Data Models
 * Versioned Folders
 
-Any of the catalogue items above may be finalised, so long as they are:
+Any of the catalogue items above may be **Finalised**, so long as they are:
 
 * In their **Draft** state
 * On their **main** branch
