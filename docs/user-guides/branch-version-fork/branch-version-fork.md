@@ -89,7 +89,7 @@ Once completed, the new item will then be displayed in the **draft** state.
 
 ---
 
-## 4. Merge graph
+## <a name="merge-graph"></a>4. Merge graph
 
 To help you visualise and track **Versions**, **Branches** and **Forks**, Mauro has the ability to illustrate the relationships between each version of a model via a **merge graph**.
 
