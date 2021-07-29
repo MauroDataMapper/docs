@@ -1,9 +1,15 @@
 
 ## System requirements
 
-The simplest installation method is to run our preconfigured application using [Docker](https://www.docker.com).  Any operating 
-system, on a server or desktop, running **Docker** can run **Mauro Data Mapper**, but please note that some organisations may restrict the use of 
+The simplest installation method is to run our preconfigured application using [Docker](https://www.docker.com).  
+Any operating system, on a server or desktop, running **Docker** can run **Mauro Data Mapper**, but please note that some organisations may restrict the use of 
 **Docker** on virtual machines.
+
+We advise a minimum of 2 CPUs and 4GBs RAM just to run this system this does not allow for the requirements to have an operating system running as
+well. Therefore we recommend a 4 CPU and 8GB RAM server.
+
+The default install of Docker inside Linux configures the docker engine with unlimited access to the server's resources, however if running in Windows
+or Mac OS X the Docker Toolbox will need to be configured
 
 ---
 
@@ -103,93 +109,68 @@ The first of these is a standard **Postgres** container with an external volume 
 Tomcat** container, which hosts built versions of the **Mauro** application.  The **Postgres** container must be running whenever the **Mauro** application 
 starts.  The **Mauro** container persists logs and Lucene indexes to shared folders which can be found in the docker repository folder. 
 
+### Default username / password
+
+The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the
+password `password`.  We *strongly recommend* changing this password on first login, and then setting up personal user accounts for individual users.
+
 ---
 
 ## Building
 
-At present, the Mauro application must be checked out, compiled and deployed within the Mauro / Tomcat container.  Some shell scripts have been 
-provided to run this process on a `*nix` system and are described below.  We plan to streamline this process in the near future.   
-
-### Make / Update
-
-```shell
-# Build the entire system
-./make
-
-Usage ./make [-b COMMIT_BRANCH] [-f COMMIT_BRANCH]
-
--b, --back-end  COMMIT_BRANCH  : The commit or branch to checkout and build for the back-end from mdm-core
--f, --front-end COMMIT_BRANCH   : The commit or branch to checkout and build for the front-end from mdm-ui
-```
-
-The `make` command will build all the necessary base images and then perform a `docker-compose build` to complete the build.  It is preconfigured 
-within each branch of the **Mauro Docker** repository, so the `-b` and `-f` options only need specifying if you wish to configure a different build 
-configuration.
-
-This script runs the following:
-
-* Build an updated OS version of tomcat which is where the application will run 
-	
-	`mdm/tomcat:9.0.27-jdk12-adoptopenjdk-openj9`
-	
-* Build the base SDK image for building the application in 
-
-	`mdm/sdk_base:grails-4.0.6-adoptopenjdk-12-jdk-openj9`
-	
-* Build an initial image with the code checked out and dependencies installed
-	
-	`mdm/mdm_base:develop`
-
-Once these 3 images are built the main `docker-compose` service will be able to build without the use of the `make` file.
-
-An update script can be used to update an existing, running instance to the latest version.  See 
-[Updating to the latest version](../administration#updating-to-the-latest-version) for more details.  Users should ordinarily use 
-the `./make` 
-script once only, and then afterwards only use `./update`.  However, the `./make` script can be run again in order to update the base Tomcat build 
-image - for example when security fixes have been released.  There is an additional argument for the `./make` script that will do exactly that:
+Once cloned then running the standard docker-compose build command will build the images necessary to run the services.
 
 ```bash
-./make -u
+# Build the entire system
+$ ./docker-compose build
 ```
-which performs a clean build of just the Tomcat image.
+### Additional Backend Plugins
 
-Once the `./make` script has been run once, the commit/branch choice can be altered by changing the build args in the `docker-compose.yml` file.
+Additional plugins can be found at the [Mauro Data Mapper Plugins](https://github.com/MauroDataMapper-Plugins) organisation page. A complete list with
+versions can also be found in the [installation documentation](https://maurodatamapper.github.io/installing/plugins/)
+please note that while we will do our best to keep this page up-to-date there may be circumstances where it is behind, therefore we recommend using
+our official GitHub Plugins organisation to find the latest releases and all available plugins.
 
-```yaml
-mauro-data-mapper:
-    build:
-        context: mauro-data-mapper
-        args:
-            MDM_APPLICATION_COMMIT: develop
-            MDM_UI_COMMIT: develop
-            ...
-```
+Each of these can be added as `runtimeOnly` dependencies by adding them to the `ADDITIONAL_PLUGINS` build argument for the `mauro-data-mapper`
+service build.
 
-### Default username / password
-
-The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the 
-password `password`.  We *strongly recommend* changing this password on first login, and then setting up personal user accounts for individual users. 
-
-### Additional backend Plugins
-
-Additional plugins can be found at the [Mauro Data Mapper Plugins](https://github.com/MauroDataMapper-Plugins) organisation page.
-Each of these can be added as dependencies by adding them to the `ADDITIONAL_PLUGINS` build argument within the `docker-compose.yml` file.  These 
-dependencies should be provided in a semi-colon separated list in the gradle style. They will be split and each will be added as a `runtimeOnly`
+These dependencies should be provided in a semi-colon separated list in the gradle style, they will be split and each will be added as a `runtimeOnly`
 dependency.
 
-For example:
-```yaml
+Example
+
+```yml
  mauro-data-mapper:
-        build:
-            context: mauro-data-mapper
-            args:
-                ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.0.1"
+   build:
+     context: mauro-data-mapper
+     args:
+       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0"
 ```
 
-Will add the keycloak plugin to the `dependencies.gradle` file:
+Will add the Excel plugin to the `dependencies.gradle` file:
+
 ```gradle
-runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:1.0.1
+runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0
 ```
+
+#### Dynamic Versions
+
+You can use [dynamic versioning](https://docs.gradle.org/current/userguide/single_versions.html) to add dependencies, however this comes with a risk
+that it pulls a version which does not comply with your expected version of mdm-application-build/mdm-core which may cause conflicts with other
+plugins, therefore we do **not** advise this approach.
+
+Example
+
+```yml
+ mauro-data-mapper:
+   build:
+     context: mauro-data-mapper
+     args:
+       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.+"
+```
+
+This will add the latest minor version of the Excel plugin.
+
 
 ### Theme
 
@@ -219,112 +200,163 @@ If this is the case you can change the `base_images/sdk_base/ssh/config` file:
 
 ## Run environment
 
-Please see `mauro-data-mapper/Dockerfile` for all defaults.
+By adding variables to the `<service>.environment` section of the docker-compose.yml file you can pass them into the container as environment variables. These will override
+any existing configuration variables which are used by default. Any defaults and normally used environment variables can be found in the relevant service's Dockerfile at
+the `ENV` command.
 
-### Required to be overridden
+### postgres service
 
-The following variables need to be overridden/set when starting up a new mauro-data-mapper image.
-Usually this is done in the docker-compose.yml file. It should not be done in the Dockerfile as each instance which starts up may use different
-values.
+* `POSTGRES_PASSWORD` 
 
-* `MDM_FQ_HOSTNAME` 
+	This sets the postgres user password for the service, as per the documentation at [Postgres Docker Hub](https://hub.docker.com/_/postgres), 
+	t must be set for a docker postgres container. We have set a default but you can override if desired. 
+	If you do override it, you will also need to change the `PGPASSWORD` env variable in the mauro-data-mapper section.
 	
-	The fully-qualified domain name (FQDN) of the server where the catalogue will be accessed
-	
-* `MDM_PORT` 
+* `DATABASE_USERNAME` 
 
-	The port used to access the catalogue
+	This is the username which will be created inside the Postgres instance to own the database which the MDM service will use. 
+	The username is also used by the MDM service to connect to the postgres instance, 
+	therefore if you change this you *MUST* also supply it in the environment args for the MDM service
 	
-* `MDM_AUTHORITY_URL` 
+* `DATABASE_PASSWORD` 
+	
+	This is the password set for the `DATABASE_USERNAME`. It is the password used by the MDM service to connect to this postgres container.
 
-	The full URL to the location of the catalogue. This is considered a unique identifier to distinguish any instance from
-  another and therefore no 2 instances should use the same URL
+### mauro-data-mapper service
+
+!!! Information
+	Any grails configuration property found in any of the plugin.yml or application.yml files can be overridden through environment variables. 
+	They simply need to be provided in the "dot notation" form rather than the "YML new line" format.
+	e.g. application.yml
+
+	```yml
+	database:
+  		host: localhost
+	```
+
+	would be overridden by docker-compose.yml
+
+	```yml
+	services:
+  		mauro-data-mapper:
+    		environment:
+        		database.host: another-host
+
+	```
+
+However to make life simpler and to avoid too many variables in the docker-compose.yml file we have supplied 2 additional methods of overriding the defaults. This replaces all
+of the previous releases environment variables setting in docker-compose.yml.
+
+The preference order for loaded sources of properties is
+
+1. Environment Variables
+2. runtime.yml
+3. build.yml
+4. application.yml
+5. plugin.yml - there are multiple versions of these as each plugin we build may supply their own
+
+#### config/build.yml File
+
+The build.yml file is built into the MDM service when the image is built and is a standard grails configuration file. Therefore any properties which can be safely set at build
+time for the image should be set into this file. This includes any properties which may be shared between multiple instances of MDM which all start from the same image.
+
+Our recommendation is that if only running 1 instance of MDM from 1 cloned repository then you should load all your properties into the build.yml file. For this reason we have
+supplied the build.yml file with all the properties which we either require to be overridden or expect may want to be overridden.
+
+#### config/runtime.yml File
+
+The runtime.yml file will be loaded into the container via the docker-compose.yml file. This is intended as the replacement for environment variable overrides, where each
+running container might have specifically set properties which differ from a common shared image.
+
+**NOTE: Do not change the environment variable `runtime.config.path` as this denotes the path inside the container where the config file will be found**
+
+#### Required to be overridden
+
+The following variables need to be overriden/set when starting up a new mauro-data-mapper image. Usually this is done in the docker-compose.yml file. It should not be done in
+the Dockerfile as each instance which starts up may use different values.
+
+* `grails.cors.allowedOrigins` 
   
-* `MDM_AUTHORITY_NAME`
+    Should be set to a single FQDN URL which is the host where MDM will be accessed from. 
+    If using a proxy to break SSL then the origin would be the hostname where the proxy sits, not the host of the server running the docker containers. 
+    The origin must include the protocol, i.e. https or http
+
+* `maurodatamapper.authority.name` 
 	
-	A unique name used to distinguish a running MDM instance and boostrap an initial Mauro *Authority*
+	The full URL to the location of the catalogue. This is considered a unique identifier to distinguish any instance from another and therefore no 2 instances should use the same URL.
 	
-* `PGPASSWORD`
+* `maurodatamapper.authority.url` 
 	
-	This should be the password for the postgres instance being connected. When using the `docker-compose.yml` file and the configured
-  postgres instance this should be left alone
-  
-* `EMAIL_USERNAME`
+	A unique name used to distinguish a running MDM instance.
 	
-	To allow the catalogue to send emails this needs to be a valid username for the `EMAIL_HOST`
+* `simplejavamail.smtp.username` 
+
+	To allow the catalogue to send emails this needs to be a valid username for the `simplejavamail.smtp.host`
 	
-* `EMAIL_PASSWORD`
+* `simplejavamail.smtp.password` 
+
+	To allow the catalogue to send emails this needs to be a valid password for the `simplejavamail.smtp.host` and `simplejavamail.smtp.username`
 	
-	To allow the catalogue to send emails this needs to be a valid password for the `EMAIL_HOST` and `EMAIL_USERNAME`
-	
-* `EMAIL_HOST`
+* `simplejavamail.smtp.host` 
 	
 	This is the FQDN of the mail server to use when sending emails
 
 ### Optional
 
-* `CATALINA_OPTS`
+* `PGPASSWORD` 
 	
-	Java options to be passed to the **Tomcat** application server
+	This is the postgres user's password for the postgres server. 
+	This is an environment variable set to allow the MDM service to wait till the postgres service has completely finished starting up. 
+	It is only used to confirm the Postgres server is running and databases exist. After this it is not used again. 
+	**If you change `POSTGRES_PASSWORD` you must change this to match**
+  	**This can ONLY be overridden in the docker-compose.yml file**
+  	
+* `CATALINA_OPTS` 
 	
-* `DATABASE_HOST`
+	Java Opts to be passed to Tomcat **This can ONLY be overridden in the docker-compose.yml file**
 	
+* `database.host` 
+
 	The host of the database. If using docker-compose this should be left as `postgres` or changed to the name of the database service
 	
-* `DATABASE_PORT`
-	
+* `database.port` 
+
 	The port of the database
 	
-* `DATABASE_NAME`
-	
+* `database.name` 
+
 	The name of the database which the catalogue data will be stored in
 	
-* `DATABASE_USERNAME`
+* `dataSource.username` 
+
+	Username to use to connect to the database. See the Postgres service environment variables for more information.
 	
-	Username to connect to the database
+* `dataSource.password` 
+
+	Password to use to connect to the database. See the Postgres service environment variables for more information.
 	
-* `DATABASE_PASSWORD`
-	
-	Password to connect to the database
-	
-* `EMAIL_PORT`
-	
+* `simplejavamail.smtp.port` 
+
 	The port to use when sending emails
 	
-* `EMAIL_TRANSPORTSTRATEGY`
+* `simplejavamail.smtp.transportstrategy` 
 
 	The transport strategy to use when sending emails
 	
-* `SEARCH_INDEX_BASE`
-	
-	The directory to store the lucene index files in
-	
-* `EMAILSERVICE_URL`
-	
-	The url to the special email service, this will result in the alternative email system being used
-	
-* `EMAILSERVICE_USERNAME`
+* `hibernate.search.default.indexBase` 
 
-	The username for the email service needs to be valid for `EMAIL_SERVICE_URL`
-	
-* `EMAILSERVICE_PASSWORD`
-	
-	The password for the email service needs to be valid for `EMAIL_SERVICE_URL`
+	The directory to store the lucene index files in
 
 ### Environment Notes
 
 **Database**
-:   The system is designed to use the postgres service provided in the docker-compose file, therefore there should be no need to alter any of
-    these settings. Only make alterations if running postgres as a separate service outside docker-compose.
 
-**MDM_FQ_HOSTNAME** & **MDM_PORT**
-:   The provided values will be used to define the CORS allowed origins. The port will be used to define http or https
-    (443), if its not 80 or 443 then it will be added to the url generated. The host must be the host used in the web url when accessing the catalogue
-    in a web browser.
+	The system is designed to use the postgres service provided in the docker-compose file, therefore there should be no need to alter any of these settings. 
+	Only make alterations if running postgres as a separate service outside of docker-compose.
 
 **Email** 
-:   The standard email properties will allow emails to be sent to a specific SMTP server. The `emailservice` properties override this and
-    send the email to the specified email service which will then forward it onto our email SMTP server.
+
+	The standard email properties will allow emails to be sent to a specific SMTP server.
 
 ---
 
