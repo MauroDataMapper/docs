@@ -25,6 +25,11 @@ Our current User Guides:
 
 ---
 
+[Merging Data Models](merging-data-models/merging-data-models.md)
+:  This user guide explains how to merge [Data Models](../../glossary/data-model/data-model.md) including comparing and committing changes as well as how to successfully resolve conflicts.
+
+---
+
 [Document a Health Dataset](document-a-dataset/document-a-dataset.md)
 :  This longer guide explains how to add structure to your **Data Model** such as incorporating [Data Classes](../glossary/data-class/data-class.md) and [Data Elements](../glossary/data-element/data-element.md).
 
