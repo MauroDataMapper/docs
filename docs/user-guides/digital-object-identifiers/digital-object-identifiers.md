@@ -44,7 +44,7 @@ This will bring up the **'Configuration'** panel. Click the **'Properties'** tab
 
 ![Properties tab in configuration panel](properties-configuration-panel.png)
 
-An **'Add Property'** form will appear which you will need to complete. Click the **'Select the property to add'** box and select **'feature.use_digital_object_identifiers'** from the dropdown menu, which will automatically fill in additional fields. Select **'Yes'** from the **'Value'** dropdown menu and then click the **'Add property'** button.
+An **'Add Property'** form will appear which you will need to complete. Click the **'Select the property to add'** box and select **'feature.use_digital_object_identifiers'** from the dropdown menu, which will automatically fill in additional fields. Select **'Yes'** from the **'Value'** dropdown menu and then click the **'Add property'** button. A green notification box will appear at the bottom right of your screen confirming that the **'Property was saved successfully'**.
 
 ![Add property form](add-property-form.png)
 
