@@ -349,14 +349,14 @@ the Dockerfile as each instance which starts up may use different values.
 
 ### Environment Notes
 
-**Database**
+#### Database
 
-	The system is designed to use the postgres service provided in the docker-compose file, therefore there should be no need to alter any of these settings. 
-	Only make alterations if running postgres as a separate service outside of docker-compose.
+The system is designed to use the postgres service provided in the docker-compose file, therefore there should be no need to alter any of these
+settings. Only make alterations if running postgres as a separate service outside of docker-compose.
 
-**Email** 
+#### Email
 
-	The standard email properties will allow emails to be sent to a specific SMTP server.
+The standard email properties will allow emails to be sent to a specific SMTP server.
 
 ---
 
