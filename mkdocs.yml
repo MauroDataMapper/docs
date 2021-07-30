@@ -87,6 +87,7 @@ nav:
             -   Branding: 'installing/branding/branding.md'
             -   Plugins: 'installing/plugins.md'
             -   Migrating Old Data: 'installing/migration.md'
+            -   OpenID Connect Client: 'installing/openid-connect/openid-connect.md'
     -   Developer Resources:
             -   Technical Architecture: 'resources/architecture.md'
             -   REST API:
