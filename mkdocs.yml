@@ -82,7 +82,17 @@ nav:
             -   Glossary: 'glossary/glossary.md'
     -   Installing and Administration:
             -   Installation:
+                    -   Docker Setup: 'installing/docker-setup.md'
                     -   Docker Install: 'installing/docker.md'
+            -   Updating: 'installing/updating.md'
+            -   Configuring:
+                    -   Overview: 'installing/configuring/overview.md'
+                    -   Changing Database: 'installing/configuring/changing-database.md'
+                    -   MDM Core: 'installing/configuring/mdm-core-config.md'
+                    -   Default Files:
+                            -   MDM Application YML: 'installing/configuring/application.yml.md'
+                            -   Build YML: 'installing/configuring/build.yml.md'
+                            -   Runtime YML: 'installing/configuring/runtime.yml.md'
             -   Administration: 'installing/administration.md'
             -   Branding: 'installing/branding/branding.md'
             -   Plugins: 'installing/plugins.md'
