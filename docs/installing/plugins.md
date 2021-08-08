@@ -40,16 +40,22 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.5.0</td>
         </tr>
 <tr>
-            <td><b>Excel</b><br/>4.0.0</td>
-            <td>2021-06-18</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:4.0.0</code></td>
-            <td>Core &gt;= 4.6.0</td>
+            <td><b>Excel</b><br/>4.0.1</td>
+            <td>2021-07-12</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:4.0.1</code></td>
+            <td>Core &gt;= 4.7.0</td>
         </tr>
 <tr>
-            <td><b>FHIR</b><br/>1.0.0</td>
-            <td>2021-05-17</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:1.0.0</code></td>
-            <td>Core &gt;= 4.5.0</td>
+            <td><b>Digital Object Identifiers</b><br/>1.0.0</td>
+            <td>2021-08-08</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-digital-object-identifiers:1.0.0</code></td>
+            <td>Core &gt;= 4.8.0</td>
+        </tr>
+<tr>
+            <td><b>FHIR</b><br/>1.1.0</td>
+            <td>2021-08-08</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:1.1.0</code></td>
+            <td>Core &gt;= 4.8.0</td>
         </tr>
 <tr>
             <td><b>MS SQL</b><br/>5.0.0</td>
@@ -98,6 +104,12 @@ the [Installing](../docker) page.
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:2.0.0</code></td>
             <td>Core &gt;= 4.5.0</td>
         </tr>
+<tr>
+            <td><b>OpenID Connect Authentication</b><br/>1.0.0</td>
+            <td>2021-08-08</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:1.0.0</code></td>
+            <td>Core &gt;= 4.8.0</td>
+        </tr>
 </tbody>
 </table>
 
@@ -116,9 +128,9 @@ the [Installing](../docker) page.
     </thead>
     <tbody>
 <tr>
-            <td><b>Freemarker Templating</b><br/>1.2.0</td>
-            <td>2021-07-07</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.2.0</code></td>
+            <td><b>Freemarker Templating</b><br/>1.1.0</td>
+            <td>2021-03-04</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.1.0</code></td>
             <td>Core &gt;= 4.7.0</td>
         </tr>
 <tr>

@@ -17,6 +17,10 @@ between each git commit.
     If there is significant and appropriate change then a MAJOR release should be used.
     A PATCH release should only be done if the MINOR release failed and this is a release being done to fix that release failure.
 
+!!! Information
+
+    A unified view of the current build status of develop and main branches can be see [here](../build_status)
+
 You should identify the following from the repositories before starting
 
 * CORE_VERSION : The appropriate non-snapshot version from mdm-core/gradle.properties on the develop branch
@@ -26,14 +30,14 @@ You should identify the following from the repositories before starting
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start CORE_VERSION
+git flow release start ${CORE_VERSION}
 ```
 
 Update gradle.properties
 
 ```bash
-git commit -am 'Release CORE_VERSION'
-git flow release finish 'CORE_VERSION'
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish ${CORE_VERSION}
 ```
 
 Update gradle.properties to next minor snapshot
@@ -47,33 +51,39 @@ git checkout main && git push && git checkout develop && git push && git push --
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start CORE_VERSION
+git flow release start ${CORE_VERSION}
 ```
 
 Update package.json version to CORE_VERSION
 
+!!! Caution
+
+    Remove the existing `lib` dir to ensure theres no code left over.
+    (There's a ticket open to make sure the `build` command performs a clean first.)
+
 ```bash
 npm install && npm run build
-git commit -am 'Release CORE_VERSION'
-git flow release finish 'CORE_VERSION'
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish ${CORE_VERSION}
 ```
 
 Update package.json version to next snapshot CORE_VERSION
 
 ```bash
-npm install
-npm run build
+npm install && npm run build
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
 ## mdm-ui
 
-You must release mdm-resources first, or be able to use an existing release of mdm-resources
+!!! Warning
+
+    You must release mdm-resources first, or be able to use an existing release of mdm-resources
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start UI_VERSION
+git flow release start ${UI_VERSION}
 ```
 
 Update package.json
@@ -88,11 +98,11 @@ npm install
 !!! Caution
 
     MAKE SURE in `package.lock` that all the lines for mdm-resources that have a commit hash MATCH the hash for the release, 
-    if NOT then delete all entries in the lock file for mdm-resources with a commit hash (2) and run npm install again
+    if NOT then delete all entries in the lock file for mdm-resources with a commit hash and run npm install again
 
 ```bash
-git commit -am 'Release UI_VERSION'
-git flow release finish 'UI_VERSION'
+git commit -am "Release ${UI_VERSION}"
+git flow release finish ${UI_VERSION}
 ```
 
 Update package.json
@@ -111,7 +121,7 @@ The next steps are required until we get Jenkins distributing the archive to art
 Checkout the release
 
 ```bash
-git checkout UI_VERSION
+git checkout ${UI_VERSION}
 ```
 
 Perform a clean install
@@ -148,14 +158,14 @@ There will now be a `tgz` file in the `dist` folder with the name `mdm-ui-${UI_V
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start CORE_VERSION
+git flow release start ${CORE_VERSION}
 ```
 
 Update gradle.properties
 
 ```bash
-git commit -am 'Release CORE_VERSION'
-git flow release finish 'CORE_VERSION'
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish ${CORE_VERSION}
 ```
 
 Update gradle.properties to next minor snapshot
@@ -171,32 +181,49 @@ git checkout main && git push && git checkout develop && git push && git push --
 
     You will need to wait for the main branch of mdm-core to finish before proceeding on the latest plugins
 
+!!! Information
+
+    This [repository](https://github.com/MauroDataMapper-Plugins/mdm-plugins) provides useful scripts and a unified live view 
+    of the state of each branch build.
+
+### Release Order
+
+You will need to push some of the repositories in the correct order as they have dependencies on other plugins. The following plugins have a release
+order, if not listed then there is not required order.
+
+1. mdm-plugin-database
+2. mdm-plugin-testing-utils
+    1. mdm-plugin-database-mysql
+    2. mdm-plugin-database-oracle
+    3. mdm-plugin-database-postgresql
+    4. mdm-plugin-database-sqlserver
+
 ### No changes waiting to be released
 
 * You don't need to release these every time we release mdm-core
-* However you should make sure all `develop` branches are updated to `mdmCoreVersion=CORE_VERSION` and then push the update.
+* However you should make sure all `develop` branches are updated to `mdmCoreVersion=${CORE_VERSION}` and then push the update.
 * Any jobs which fail will need to have the code updated.
 * If any of the code changes are in side the code base (not test changes) then you will need to release
 * If only test code changes are needed or no changes are needed then don't do a release as we have proved it's still compatible
 
 ### Changes waiting to be released
 
-* You should make sure the `develop` branch is updated to `mdmCoreVersion=CORE_VERSION` and then push the update
+* You should make sure the `develop` branch is updated to `mdmCoreVersion=${CORE_VERSION}` and then push the update
 * Any tests which fail will need to have the code updated
 * If any of the code changes are in side the code base (not test changes) then you will need to release with an updated `mdmCoreVersion`
 * If only test code changes are needed or no changes are needed then release using the last `mdmCoreVersion` used as its still compatible
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start PLUGIN_VERSION
+git flow release start ${PLUGIN_VERSION}
 ```
 
 * Update gradle.properties
 * Update README.md "How to apply"
 
 ```bash
-git commit -am 'Release PLUGIN_VERSION'
-git flow release finish 'CORE_VERSION'
+git commit -am "Release ${PLUGIN_VERSION}"
+git flow release finish ${PLUGIN_VERSION}
 ```
 
 * Update gradle.properties to next minor snapshot
@@ -247,7 +274,10 @@ git checkout main && git push && git checkout develop && git push && git push --
 
 !!! Warning
 
-    Remember to remove the private repos from the autogenerated plugins release output
+    Remember to remove the following from the autogenerated plugins release output
+    
+    * Private Repositories
+    * Unreleased plugins
 
 * Run `./releases.sh` in mdm-plugins.
 * Documentation
@@ -256,7 +286,7 @@ git checkout main && git push && git checkout develop && git push && git push --
 * Zulip
     * Copy the below markdown block into the `announce` stream of Zulip
     * Update the versions for the applications
-    * Xopy in the plain text format of the "releases" output underneath it
+    * Copy in the plain text format of the "releases" output underneath it
 
 ```markdown
 # New Release
