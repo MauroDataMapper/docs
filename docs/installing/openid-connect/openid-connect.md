@@ -40,11 +40,22 @@ A green notification box will appear at the bottom right of your screen confirmi
 
 ### 2.3 Create OpenID Connect providers
 
-Each OpenID Connect provider service must be created and configured via the site for each provider e.g. Google, Microsoft etc. Information on how to complete this will be available soon.
+Each OpenID Connect provider service must be created and configured via the site for each provider e.g. Google, Microsoft etc. There are three providers which can be bootstrapped (added automatically when the aplication starts up) using the build configuration files.
+
+These three providers are: 
+
+* **Keycloak**  
+	Using ${openidConnectConfig.baseUrl}/realms/${openidConnectConfig.realm}/.well-known/openid-configuration
+	
+* **Google**  
+	Using https://accounts.google.com/.well-known/openid-configuration
+	
+* **Microsoft**  
+	Using https://login.microsoftonline.com/common/.well-known/openid-configuration)
 
 ### 2.4 Add providers to Mauro
 
-Once the OpenID Connect provider service has been configured, the details can be entered into Mauro. Click the white arrow next to your user icon and then select **'OpenID Connect'** from the dropdown menu. This will bring up a list of **'Open ID Connect Providers'**. Click the **'+ Add'** button and a **'Add OpenID Connect Provider'** form will appear which you will need to complete. 
+Once the OpenID Connect provider service has been configured, the details can be entered into Mauro. Remember that you can have more than one of each type of provider as long as each has a unique **Label**. Click the white arrow next to your user icon and then select **'OpenID Connect'** from the dropdown menu. This will bring up a list of **'Open ID Connect Providers'**. Click the **'+ Add'** button and a **'Add OpenID Connect Provider'** form will appear which you will need to complete. 
 
 ![Add OpenID Content Provider form](add-openid-provider.png)
 
