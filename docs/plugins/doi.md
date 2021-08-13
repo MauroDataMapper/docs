@@ -4,10 +4,10 @@ The Digital Object Identifier (DOI) plugin provides additional API endpoints tha
 
 In order to use Digital Object Identifiers, the Mauro instance must:
 
-1. Have the [Mauro Digital Object Identifier plugin](../../installing/plugins) installed.
+1. Have the **Mauro Digital Object Identifier plugin** installed.
 2. Set up and configure DataCite to acts as the DOI system.
 
-The full details of this set up can be viewed in the user guide [Using Digital Object Identifiers](../../user-guides/introduction).
+The full details of this set up can be viewed in the user guide [Using Digital Object Identifiers](../../user-guides/digital-object-identifiers/digital-object-identifiers).
 
 ## Profile
 
@@ -326,6 +326,8 @@ For any catalogue item, the current status of the DOI name on that item can be q
 
 <endpoint class="get">/api/**{multiFacetAwareDomainType}**/**{id}**/doi</endpoint>
 
+If a status exists, a `200 OK` response will be returned with this response body:
+
 === "Response body (JSON)"
     ```json
     {
@@ -343,6 +345,8 @@ The fields are as follows:
     * **final** - a DOI has been assigned and locked, finalising this catalogue item's profile.
     * **retired** - a previous DOI has been retired and can no longer be used for cross-reference.
 
+If a status does not exist on the catalogue item yet, a `404 Not Found` response will be returned.
+
 ### Submit DOI status
 
 Submitting the catalogue item and its DOI profile can only be done for **publicly readable** and **finalised** catalogue items. This is to ensure that:
@@ -353,7 +357,7 @@ Submitting the catalogue item and its DOI profile can only be done for **publicl
 !!! Information
     It may be possible to not have assigned the **Digital Object Identifiers DataCite Dataset Schema** to a catalogue item before it was finalised. To solve this issue, the DOI profile has special permissions to allow it to be edited post-finalisation, so long as the DOI is not yet in the **Final** state.
 
-    Therefore, you may use the `POST /api/**{multiFacetAwareDomainType}**/**{id}**/profiles/**{namespace}**/**{name}**` endpoint as many times as necessary to make alterations to the profile before continuing further.
+    Therefore, you may use the `POST /api/{multiFacetAwareDomainType}/{id}/profiles/{namespace}/{name}` endpoint as many times as necessary to make alterations to the profile before continuing further.
 
 To submit the catalogue item's profile to the DOI system to obtain a DOI name, use this endpoint.
 

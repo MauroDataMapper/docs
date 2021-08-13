@@ -1,7 +1,7 @@
 
 ## 1. Overview
 
-Using an optional plugin for Mauro security, it is possible to extend authentication of users in Mauro to also include OpenID Connect authentication. This allows administrators to:
+Using an optional plugin for Mauro security, it is possible to extend authentication of users in Mauro to also include [OpenID Connect](https://openid.net/) authentication. This allows administrators to:
 
 * Configure external providers that support the OpenID Connect standard, such as Google, Microsoft, etc, to be included as **'sign-in'** options for Mauro
 * Manage users of different account types to still be authenticated and authorized to use Mauro, using the existing user groups and permissions features
@@ -12,7 +12,8 @@ This allows users of Mauro to sign in, or register, using a non-Mauro account, s
 
 ## 2. Administrator setup
 
-> Note: This section applies to administrators of Mauro only.
+!!! Note
+	This section applies to administrators of Mauro only.
 
 There are a number of steps an administrator must carry out before the OpenID Connect authentication can be used by users.
 
@@ -45,7 +46,7 @@ Each OpenID Connect provider service must be created and configured via the site
 These three providers are: 
 
 * **Keycloak**  
-	Using ${openidConnectConfig.baseUrl}/realms/${openidConnectConfig.realm}/.well-known/openid-configuration
+	Using `${openidConnectConfig.baseUrl}/realms/${openidConnectConfig.realm}/.well-known/openid-configuration`
 	
 * **Google**  
 	Using https://accounts.google.com/.well-known/openid-configuration

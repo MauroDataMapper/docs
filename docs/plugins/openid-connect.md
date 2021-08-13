@@ -4,11 +4,11 @@ The page covering [authentication](../../rest-api/authentication) explains how t
 
 In order use OpenID Connect identity providers, the Mauro instance must:
 
-1. Have the [Mauro OpenID Connect Authentication plugin](../../installing/plugins) installed.
+1. Have the **Mauro OpenID Connect Authentication plugin** installed.
 2. Set up and configure one or more identity services that support the OpenID Connect protocol.
 3. Add the configuration details of each identity provider to Mauro.
 
-The full details of this set up can be viewed in the user guide [Using OpenID Connect](../../user-guides/introduction).
+The full details of this set up can be viewed in the user guide [Using OpenID Connect](../../installing/openid-connect/openid-connect).
 
 ## Authenticating users
 

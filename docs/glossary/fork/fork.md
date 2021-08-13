@@ -2,7 +2,7 @@
 
 A **Fork** is a copy of an existing **Version** of a model, with the intention of freely making many alterations to that model without affecting the original.
 
-The simplest way to understand **Forks** in Mauro is to view the **Merge Graph** of a model:
+The simplest way to understand **Forks** in Mauro is to view the [Merge Graph](../../../user-guides/branch-version-fork/branch-version-fork/#4-merge-graph) of a model:
 
 ![Model forking example](merge-graph.png)
 
@@ -24,4 +24,4 @@ At first glance, a **Fork** and a [Branch](../branch/branch.md) may seem to serv
 
 ## How to create a Fork
 
-To create a **Fork** of a model, please refer to the user guide [How to version and merge Data Models](../../user-guides/version-data-models/version-data-models.md).
+To create a **Fork** of a model, please refer to the user guide [Branching, versioning and forking Data Models](../../../user-guides/branch-version-fork/branch-version-fork).

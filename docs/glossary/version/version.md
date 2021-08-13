@@ -26,4 +26,4 @@ It is also possible to define your own custom versioning scheme.
 
 ## How are Versions created?
 
-To create a new version of a model, please refer to the user guide [How to version and merge Data Models](../../user-guides/version-data-models/version-data-models.md).
+To create a new version of a model, please refer to the user guide [Branching, versioning and forking Data Models](../../../user-guides/branch-version-fork/branch-version-fork).

@@ -12,7 +12,7 @@ The "multi-facet aware" trait can be applied to any Mauro catalogue item that ha
 
 The following Mauro catalogue items are multi-facet aware by the definition listed above:
 
-1. Classifiers
+1. [Classifiers](../../classification/classification)
 2. Code sets
 3. [Data classes](../../data-class/data-class)
 4. Data class components
@@ -23,7 +23,7 @@ The following Mauro catalogue items are multi-facet aware by the definition list
 9. [Data types](../../data-type/data-type)
 10. [Enumeration types](../../enumeration-data-type/enumeration-data-type)
 11. Enumeration values
-12. Folders
+12. [Folders](../../folder/folder)
 13. Model data types
 14. [Primitive types](../../primitive-data-type/primitive-data-type)
 15. Reference data elements
@@ -37,7 +37,7 @@ The following Mauro catalogue items are multi-facet aware by the definition list
 23. Term relationships
 24. Term relationship types
 25. Terminologies
-26. Versioned folders
+26. [Versioned folders](../../versioned-folder/versioned-folder)
 
 ## Usage in REST API
 

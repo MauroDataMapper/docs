@@ -81,7 +81,7 @@ The table below lists all the optional features that can be controlled by featur
                     for the login form to list these external identity providers to redirect and login.                    
                 </p>
                 <p>
-                    As well as enabling this feature switch, you must also install the <a href="/installing/plugins/">Mauro OpenID Connect authentication</a>
+                    As well as enabling this feature switch, you must also install the <a href="/installing/openid-connect/openid-connect/">Mauro OpenID Connect authentication</a>
                     plugin for the Mauro instance too.
                 </p>
             </td>
@@ -96,7 +96,7 @@ The table below lists all the optional features that can be controlled by featur
                     DOI metadata and submit catalogue items to a DOI system.
                 </p>
                 <p>
-                    As well as enabling this feature switch, you must also install the <a href="/installing/plugins/">Mauro Digital Object Identifiers</a>
+                    As well as enabling this feature switch, you must also install the <a href="/user-guides/digital-object-identifiers/digital-object-identifiers/">Mauro Digital Object Identifiers</a>
                     plugin for the Mauro instance too.
                 </p>
             </td>

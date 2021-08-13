@@ -1,10 +1,10 @@
-This user guide explains how to finalise catalogue items such as **Versioned Folders** and [Data Models](../../glossary/data-model/data-model.md).
+This user guide explains how to finalise catalogue items such as [Data Models](../../glossary/data-model/data-model.md) and [Versioned Folders](../../glossary/versioned-folder/versioned-folder.md).
 
 ---
 
 ## 1. Overview
 
-**Finalising** a **Data Model** means that the model if fixed to a specific version and cannot be modified further. Therefore, all the contents of that model are now **read only**. This ensures that the model represents a final state that will remain as it is forever. However, a finalised **Data Model** can be modified further by creating a new **Version**.
+**Finalising** a **Data Model** means that the model is fixed to a specific version and cannot be modified further. Therefore, all the contents of that model are now **read only**. This ensures that the model represents a final state that will remain as it is forever. However, a finalised **Data Model** can be modified further by creating a new **Version**.
 
 ---
 ## 2. Criteria
