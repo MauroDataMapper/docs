@@ -4,7 +4,7 @@ This user guide explains the multiple levels of access to catalogue items and ad
 
 ## <a name="access-levels"></a>1. Access levels
 
-In total there are nine different access levels within Mauro. These are divided into Model roles, Container roles and Application roles. 
+In total there are six different access levels within Mauro. These are divided into Model roles, Container roles and Application roles. 
 
 Each level along with it's permissions are summarised below in ascending order. 
 
@@ -49,7 +49,8 @@ When a new Mauro instance is created, a default administrator account will be cr
 
 **Password:** password
 
-**Note:** please change this password **as soon as possible** to avoid security issues. To find out how to change your password see section ['4. Change your password'](../user-profile/user-profile.md#change-password) of our ['User profile' user guide](../user-profile/user-profile.md).
+!!! Warning
+    Please change this password **as soon as possible** to avoid security issues. To find out how to change your password see section ['4. Change your password'](../user-profile/user-profile.md#change-password) of our ['User profile' user guide](../user-profile/user-profile.md).
 
 An administrator is then able to manage and create further users in Mauro via the administrator dashboard. See section ['4. Manage users'](../admin-functionality/admin-functionality.md#manage-users) of our ['Admin functionality' user guide](../admin-functionality/admin-functionality.md) to find out how to do this.
 
@@ -97,7 +98,7 @@ Catalogue items can be restricted to be globally accessible to allow them to be 
 
 These restrictions can be placed on:
 
-* Folders
+* [Folders](../../glossary/folder/folder.md)
 * [Data Models](../../glossary/data-model/data-model.md)
 * Code Sets
 * Terminologies
