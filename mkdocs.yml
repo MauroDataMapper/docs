@@ -116,6 +116,7 @@ nav:
                             -   Terminology: 'rest-api/resources/terminology.md'
                             -   User: 'rest-api/resources/user.md'
                             -   User group: 'rest-api/resources/user-group.md'
+                            -   Versioned folder: 'rest-api/resources/versioned-folder.md'
                     -   Trees: 'rest-api/trees.md'
                     -   Import / Export: 'rest-api/importexport.md'
                     -   Admin functions: 'rest-api/admin.md'
