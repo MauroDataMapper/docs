@@ -6,4 +6,4 @@ To **Merge** a model means to _combine_ the contents of one [Branch](../branch/b
 
 ## How to Merge
 
-To **Merge** branches, please refer to the user guide [How to Merge Branches](../../user-guides/merging-branches/merging-branches.md).
+To **Merge** branches, please refer to the user guide [How to Merge Branches](../../user-guides/merging-data-models/merging-data-models.md).

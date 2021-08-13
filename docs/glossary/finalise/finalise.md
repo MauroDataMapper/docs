@@ -22,4 +22,4 @@ By locking a version of a model, this prevents further unintended changes being 
 
 ## How to Finalise models
 
-To **Finalise** a model, please refer to the user guide [How to Finalise a Data Model](../../user-guides/finalise-data-models/finalise-data-models.md).
+To **Finalise** a model, please refer to the user guide [How to Finalise a Data Model](../../user-guides/finalising-data-models/finalising-data-models.md).

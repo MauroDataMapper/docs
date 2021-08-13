@@ -91,12 +91,12 @@ incorrect or inconsistent results.
 
 Administrators may rebuild the Lucene index through the user interface. To do this, click the white arrow by your user profile to the right of the menu header. Select **'Configuration'** from the dropdown menu.
 
-![User profile menu showing 'Configuration' option](../branding/user-profile-menu-configuration.png)
+![User profile menu showing 'Configuration' option](branding/user-profile-menu-configuration.png)
 
 This will take you to configuration page where you can click the **'Lucene'** tab and then select **'Rebuild Index'**. 
 
 
-![Lucene page in configuration settings](../lucene-page.png)
+![Lucene page in configuration settings](lucene-page.png)
 
 
 Please do not leave the page whilst reindexing is in progress. The time required is dependent on the number of models saved in the system, but may 

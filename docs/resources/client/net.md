@@ -6,7 +6,7 @@ The code can also be used to connect to multiple Mauro instances, for example to
 
 ## API documentation
 
-The API documentation is built using [DocFx](https://dotnet.github.io/docfx/) and is available [here](../net/api/mdmapidotnetrestful.html):
+The API documentation is built using [DocFx](https://dotnet.github.io/docfx/) and is available [here](net/api/mdmapidotnetrestful.html):
 
 ## Adding as a dependency
 

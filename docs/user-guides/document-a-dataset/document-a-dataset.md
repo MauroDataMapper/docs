@@ -86,9 +86,11 @@ A useful way of managing complex data sets is to use **Nested Data Classes** whi
 
 For example, in a webform, there may be a section called **'Contact details'**, which would be one **Data Class**. Within that section however, there may be another labelled **'Correspondence Address'**, which would be a **Nested Data Class**.  
 
-![A Nested Data Class illustration](../../../glossary/data-class/nested-data-class.png)
+![A Nested Data Class illustration](../../glossary/data-class/nested-data-class.png)
 
-To add a **Nested Data Class**, click the relevant **Data Class** from the **Model Tree** and click the **'Content'** tab on the panel below the model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained above in step ['3. Create a Data Class'](document-a-dataset.md#create-a-data-class).
+To add a **Nested Data Class**, click the relevant **Data Class** from the **Model Tree** and click the **'Content'** tab on the panel below the 
+model overview. Then click **'+ Add'** and select **'Add Data Class'** from the dropdown menu. Complete the **'New Data Class'** form as explained 
+above in step ['3. Create a Data Class'](#3-create-a-data-class).
 
 ![Add a Nested Data Class](add-nested-data-class.png)
 
@@ -104,7 +106,8 @@ Similar to adding a **Data Class**, there are two ways to import a **Data Elemen
 
 ### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
-Follow the steps in ['3.1 Create a new Data Class'](/document-a-dataset.md#create-a-new-data-class) until you have completed the **'Label'**, **'Description'** and **Multiplicity** fields for the **Data Element**. 
+Follow the steps in ['3.1 Create a new Data Class'](#31-create-a-new-data-class) until you have completed the **'Label'**, **'Description'** and 
+**Multiplicity** fields for the **Data Element**. 
 
 Each **Data Element** then needs to be assigned a relevant [Data Type](../../glossary/data-type/data-type.md). This can either be selected from an existing list, or you can add a new **Data Type**. 
 

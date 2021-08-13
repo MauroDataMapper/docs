@@ -4,7 +4,7 @@ The TypeScript client library wraps the [REST API](../../rest-api/introduction.m
 JavaScript and TypeScript developers to interact with a Mauro instance. 
 
 The TypeScript library that implements communication with the back-end 
-server is available as a stand alone repository for incorporation into other applications. For example other web interfaces, or back-end 
+server is available as a standalone repository for incorporation into other applications. For example other web interfaces, or back-end 
 functionality using `node.js`. This is in fact the client library that the **Mauro Data Mapper** user interface uses.
 
 The GitHub repository is called [`mdm-resources`](https://github.com/MauroDataMapper/mdm-resources) and is available within the [Mauro Data Mapper organisation](https://github.com/MauroDataMapper).
@@ -37,7 +37,7 @@ Every class that extends [MdmResource](./typedoc/classes/mdmresource.html) can o
 [constructor](./typedoc/classes/mdmresource.html#constructor):
 
 * [MdmResourcesConfiguration](./typedoc/classes/mdmresourcesconfiguration.html) - object to define configuration options for every HTTP request.
-* [MdmRestHandler](./typedoc/interfaces/mdmresthandler.html) - object to the REST handler that will process the requests. If not provided, the
+* [MdmRestHandler](./typedoc/interfaces/imdmresthandler.html) - object to the REST handler that will process the requests. If not provided, the
 [DefaultMdmRestHandler](./typedoc/classes/defaultmdmresthandler.html) will be used - see the [REST Handlers](#rest-handlers) section for further 
 details.
 
@@ -54,7 +54,7 @@ If you are using [NPM](https://www.npmjs.com) or [Yarn](https://yarnpkg.com), th
 You can then add a line such as the following to your `package.json` file:
 
 ```json
-"dependencies": {
+"dependencies" : {
   ...  
   "@maurodatamapper/mdm-resources": "github:MauroDataMapper/mdm-resources#{version}"
 }
@@ -75,7 +75,7 @@ Or, as illustrated in the Mauro UI application, create a custom service to pull 
 
 ## REST Handlers
 
-`mdm-resources` provides a default implementation of the [MdmRestHandler](./typedoc/interfaces/mdmresthandler.html) called 
+`mdm-resources` provides a default implementation of the [MdmRestHandler](./typedoc/interfaces/imdmresthandler.html) called 
 [DefaultMdmRestHandler](./typedoc/classes/defaultmdmresthandler.html). This implementation uses the 
 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API to complete HTTP requests and return 
 [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) on each response.
