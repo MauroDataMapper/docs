@@ -3,9 +3,16 @@
 
 ---
 
+## B
+
+[Branch](../glossary/branch/branch.md)
+
+--- 
 ## C
 
 [Classification](../glossary/classification/classification.md)
+
+
 
 ---
 
@@ -34,7 +41,11 @@
 
 ## F
 
+[Finalise](../glossary/finalise/finalise.md)
+
 [Folder](../glossary/folder/folder.md)
+
+[Fork](../glossary/fork/fork.md)
 
 ---
 
@@ -46,6 +57,13 @@
 
 ## M
 
+[Merging](../glossary/merging/merging.md)
+
+[Multi-facet aware](../glossary/multi-facet-aware/multi-facet-aware.md)
+
+
+
+
 [Multiplicity](../glossary/multiplicity/multiplicity.md) 
 
 ---
@@ -53,6 +71,8 @@
 ## P
 
 [Primitive Data Type](../glossary/primitive-data-type/primitive-data-type.md) 
+
+[Profile](../glossary/profile/profile.md)
 
 ---
 
@@ -75,5 +95,7 @@
 ---
 
 ## V
+
+[Version](../glossary/version/version.md)
 
 [Versioned Folder](../glossary/versioned-folder/versioned-folder.md)

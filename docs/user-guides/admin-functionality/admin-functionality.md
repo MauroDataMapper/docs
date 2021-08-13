@@ -31,7 +31,7 @@ To access your emails, select **'Emails'** from the user profile dropdown menu. 
 
 ---
 
-## 4. Manage users 
+## <a name="manage-users"></a>4. Manage users 
 
 As an administrator you can add, activate and deactive users. Firstly, select **'Manage users'** from the user profile dropdown menu. This will navigate you to a full list of all the users within the repository. Each user's full name, email, organisation, role, any groups they are associated with as well as the status of their account will be displayed. 
 
@@ -49,11 +49,11 @@ To add a new user click the **'+Add user'** button at the top right of the **'Ma
 
 ![New user form](new-user-form.png)
 
-Enter the first name, last name, email, organisation and role for the new user. You then need to choose whether the new user is an **'Administrator'** or **'Editor'** from the dropdown menu in the **'Role'** field. 
+Enter the email address, first name, last name, organisation and role for the new user. 
 
-You also need to specify the groups that the user is associated with by selecting the relevant groups from the dropdown menu. You can remove any pre-selected groups from the list by clicking the red cross to the right of the group you wish to delete.
+You then need to add the user to the correct group to define what permissions they should have. To do this, click the **'Choose a Group'** box and select the relevant group from the dorpdown menu. 
 
-![New user form showing dropdown menus](new-user-form-dropdown-menus.png)
+![New user form showing dropdown menu](new-user-form-dropdown-menu.png)
 
 Once all the fields have been completed, click **'Add user'** and a green notification box should appear at the bottom right of your screen confirming that the **'User saved successfully'**. 
 
@@ -90,7 +90,7 @@ To approve or reject a user, click the **'Actions'** button to the right of the 
 
 ---
 
-## 6. Manage groups
+## <a name="manage-groups"></a>6. Manage groups
 
 As an administrator you can also add, edit and delete groups. To do this, select **'Manage groups'** from the user profile dropdown menu. This will navigate you to a list of all the groups currently stored in the repository.
 
