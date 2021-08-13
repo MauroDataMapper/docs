@@ -1,22 +1,26 @@
 ## Introduction
 
 The Freemarker plugin provides additional API endpoints that allow custom queries to be run and templates to be applied to the result. This can be
-used as a lightweight way to create custom exporters, or provides an easy way to allow interchange between different systems. The functionality makes
+used as a lightweight way to create custom exporters or provides an easy way to allow interchange between different systems. The functionality makes
 use of a popular and powerful templating engine: [Apache FreeMarker](https://freemarker.apache.org).
+
+---
 
 ## Warning
 
 !!! warning 
     Allowing users to execute their own code on the server is, in general, bad practice. Badly-written templates could result in the server
-    becoming unresponsive, or consuming additional resources. The template framework has also been carefully configured to ensure a minimal amount of 
+    becoming unresponsive or consuming additional resources. The template framework has also been carefully configured to ensure a minimal amount of 
     data is accessible, but malicious templates may be able to access more data than intended.
 
-To mitigate this risk, the Freemarker templating plugin is an optional extra, and when installed, the API endpoints are only accessible by registered
-users with administrator access. It is recommended that template developers test on a local instance of Mauro in the first instance, and carefully
-iterate on templates to ensure any complex queries or loops do not accidentally cause a denial of service to the Mauro instance.
+To mitigate this risk, the Freemarker templating plugin is an optional extra and when installed, the API endpoints are only accessible by registered
+users with administrator access. It is recommended that template developers test on a local instance of Mauro in the first instance and carefully
+iterate on templates. This will ensure any complex queries or loops do not accidentally cause a denial of service to the Mauro instance.
 
 We have plans to improve the templating plugin in the future to provide greater levels of safety as well as allowing non-administrators to have access
 to the functionality in a safe manner.
+
+---
 
 ## Basic usage
 
@@ -34,6 +38,8 @@ for more details. Successful return of the API call will have, as body text, the
 Any errors in the template will result in an error being thrown, with a `message` field indicating the nature of the error and the line number of 
 the template in which the error was found.
 
+---
+
 ## Template language reference
 
 The [Apache FreeMarker pages](https://freemarker.apache.org) contain a general-purpose 
@@ -41,14 +47,16 @@ The [Apache FreeMarker pages](https://freemarker.apache.org) contain a general-p
 [detailed reference manual](https://freemarker.apache.org/docs/ref.html) for the syntax. 
 
 Other online tutorials are provided by [Lars Vogel](https://www.vogella.com/tutorials/FreeMarker/article.html) and some useful tricks are given in 
-[this article by Baeldung](https://www.baeldung.com/freemarker-operations) 
+[this article by Baeldung](https://www.baeldung.com/freemarker-operations). 
 
-You may also wish to visit our [Zulip community](https://maurodatamapper.zulipchat.com/) for help and advice - we would also like to publish 
+You may also wish to visit our [Zulip community](https://maurodatamapper.zulipchat.com/) for help and advice. We would also like to publish 
 reusable templates donated by the community on these pages. 
+
+---
 
 ## Example 1: A simple web page
 
-In this first simple example, a basic template will be applied to a data model in order to generate a simple HTML page for a given data model.
+In this first example, a basic template will be applied to a [Data Model](../glossary/data-model/data-model.md) in order to generate a simple HTML page for a given **Data Model**.
 
 The API call:
 
@@ -69,8 +77,8 @@ Is made with an appropriate API key, and the post body:
 </html>
 ```
 
-Note in the template, the variable `dataModel` represents the Data Model object with the `id` given as the URL parameter. Note also, the use of `!`
-when accessing the description o the Data Model - this is to guard against the case where the description is unset (null).
+Note in the template, the variable `dataModel` represents the **Data Model** object with the `id` given as the URL parameter. Note also, the use of `!`
+when accessing the description o the **Data Model**. This is to guard against the case where the description is unset (null).
 
 The body of the API call response is as follows:
 
@@ -87,11 +95,14 @@ The body of the API call response is as follows:
 </html>
 ```
 
-Note that this example also illustrates some shortcomings of the approach for complex transformations:  if the description were to be html
-formatted already - for example, starting with a `<p>` tag - the resulting html may be invalid. Some simple transformations are possible within the
-templating language - particularly with the use of complex macros - but the use of this plugin should be reserved for simple textual templating.  
+Note that this example also illustrates some shortcomings of the approach for complex transformations. If the description were to be html
+formatted already, for example, starting with a `<p>` tag, the resulting html may be invalid. Some simple transformations are possible within the
+templating language, particularly with the use of complex macros, but the use of this plugin should be reserved for simple textual templating.  
+
 More complex algorithms should be implemented within a custom plugin or external script, where programmatic functions and libraries are more 
 easily accessible.
+
+---
 
 ## Example 2: A CSV file of terms in a terminology
 
@@ -101,7 +112,7 @@ The API call:
 
 <endpoint class="post">/api/terminology/**{id}**/template</endpoint>
 
-Is made with an appropriate API key, and with the following text in the body:
+Is made with an appropriate API key and with the following text in the body:
 
 ```injectedfreemarker
 Code,Definition
@@ -111,10 +122,10 @@ ${term.code},${term.definition}
 ```
 
 The `<#list>` tag indicates a template chunk that is to be repeated for each item in the list - in this case the list of terms given by 
-`terminology.term`.  The `?sort_by` annotation indicates that the set of terms should be ordered before iteration.  Within these tags, the Term in 
+`terminology.term`.  The `?sort_by` annotation indicates that the set of terms should be ordered before iteration.  Within these tags, the term in 
 question is given the variable name `term`.
 
-The result is a CSV file of terms - for example:
+The result is a CSV file of terms, for example:
 
 ```csv
 Code,Definition
@@ -124,13 +135,15 @@ CTT10,Complex Test Term 10
 CTT100,Complex Test Term 100
 ```
 
+---
+
 ## Templating Diffs
 
 The plugin also provides an endpoint for templating the difference between two models.  The API endpoint:
 
 <endpoint class="post">/api/**{domainType}**/**{sourceId}**/diff/**{targetId}**/template</endpoint>
 
-compares two objects and allows the result to be templated.  The method provides the following variables for use within the template:
+Compares two objects and allows the result to be templated.  The method provides the following variables for use within the template:
 
 `sourceModel`
 :    The model to be used as the source of the diff (left-hand side), identified by `sourceId`
@@ -143,16 +156,18 @@ compares two objects and allows the result to be templated.  The method provides
 
 The structure of the `diff` object is still to be described in more detail, but a simple example is given below.
 
+---
+
 ## Example 3: Listing differences
 
-This third example gives a flavour of the templating required to examine the differences between two data models.  A more detailed example is 
+This third example gives a flavour of the templating required to examine the differences between two **Data Models**.  A more detailed example is 
 needed here, but we illustrate for a very simple template, comparing two very simple (and similar) models.
 
 Given the API call:
 
 <endpoint class="post">/api/dataModel/**{sourceId}**/diff/**{targetId}**/template</endpoint>
 
-with appropriate authentication, and the POST body:
+With appropriate authentication and the POST body:
 
 ```injectedfreemarker
 ${sourceModel.label}
@@ -173,3 +188,5 @@ Example DataModel 2
 label :: Example DataModel 1 <> Example DataModel 2
 description :: My first description <> My second description
 ```
+
+---
