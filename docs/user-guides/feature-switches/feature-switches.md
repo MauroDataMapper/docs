@@ -89,6 +89,21 @@ The table below lists all the optional features that can be controlled by featur
         </tr>
         <tr>
             <td>
+                <code>feature.use_digital_object_identifiers</code>
+                <p><b>In development</b></p>
+                <p>
+                    Enables the management of Digital Object Identifiers (DOIs) using a new <a href="/tutorials/properties-profiles/">profile</a> to store
+                    DOI metadata and submit catalogue items to a DOI system.
+                </p>
+                <p>
+                    As well as enabling this feature switch, you must also install the <a href="/installing/plugins/">Mauro Digital Object Identifiers</a>
+                    plugin for the Mauro instance too.
+                </p>
+            </td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
+            <td>
                 <code>feature.use_versioned_folders</code>
                 <p><b>In development</b></p>
                 <p>
