@@ -124,7 +124,8 @@ nav:
                     -   TypeScript: 'resources/client/typescript.md'
                     -   .NET: 'resources/client/net.md'
             -   Technical Plugins:
-                    -   Freemarker Templating: 'plugins/freemarker.md'
+                    -   OpenID Connect: 'plugins/openid-connect.md'
+                    -   Freemarker Templating: 'plugins/freemarker.md'                    
                     -   SPARQL: 'plugins/sparql.md'
     -   Community:
             -   Support: 'community/support.md'
