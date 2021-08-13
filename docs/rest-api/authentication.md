@@ -32,6 +32,11 @@ The request body should contain the username, and the password.  The username is
     </user>
     ```
 
+!!! Information
+    There is an alternative request body that can be sent if authenticating via OpenID Connect identity providers. Please
+    read the [OpenID Connect plugin information](../../plugins/openid-connect) page for further details.
+
+
 If successful, the response body will contain the user's `id`, email address, first and last names, and whether or not that 
 user's account has been disabled (typically false in the case of a successful login).
 

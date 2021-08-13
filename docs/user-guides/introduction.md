@@ -10,6 +10,26 @@ Our current User Guides:
 
 ---
 
+[Organising Data Models](organising-data-models/organising-data-models.md)
+:  This user guide summarises how to organise [Data Models](../glossary/data-model/data-model.md) including rearranging folders, adding classifiers and selecting favourites. 
+
+---
+
+[Finalising Data Models](finalising-data-models/finalising-data-models.md)
+:  This user guide explains how to finalise catalogue items such as **Versioned Folders** and [Data Models](../../glossary/data-model/data-model.md).
+
+---
+
+[Branching, versioning and forking Data Models](branch-version-fork/branch-version-fork.md)
+:  This user guide explains how to create a new draft of a **Finalised** [Data Model](../../glossary/data-model/data-model.md) by either creating a new **Version**, a new **Branch** or a new **Fork**. It also explains how to view a merge graph of a model. 
+
+---
+
+[Merging Data Models](merging-data-models/merging-data-models.md)
+:  This user guide explains how to merge [Data Models](../../glossary/data-model/data-model.md) including comparing and committing changes as well as how to successfully resolve conflicts.
+
+---
+
 [Document a Health Dataset](document-a-dataset/document-a-dataset.md)
 :  This longer guide explains how to add structure to your **Data Model** such as incorporating [Data Classes](../glossary/data-class/data-class.md) and [Data Elements](../glossary/data-element/data-element.md).
 
@@ -23,12 +43,6 @@ Our current User Guides:
 [Import a Data Model from Excel](import-data-model-from-excel/import-data-model-from-excel.md)
 :  This guide presents the steps for uploading a **Data Model** from an Excel Spreadsheet, and explains how you can use the import / export 
 capabilities to 'round-trip' documentation with external users.
-
----
-
-[How to version and merge Data Models](version-data-models/version-data-models.md)
-:  This guide explains how to create working versions of [Data Models](../glossary/data-model/data-model.md) and how to merge changes into the main branch. This ensures changes can be made without adversely affecting other users.
-
 
 ---
 
@@ -58,6 +72,10 @@ capabilities to 'round-trip' documentation with external users.
 
 ---
 
+[User permissions](permissions/permissions.md)
+:  This user guide explains the multiple levels of access to catalogue items and adminstration supported in **Mauro Data Mapper**.
+
+---
 
 [Feature switches](feature-switches/feature-switches.md)
 :  This user guide will walk you through **feature switches** that allow administrators to enable or disable certain Mauro features.
@@ -67,5 +85,10 @@ capabilities to 'round-trip' documentation with external users.
 [Dynamic Profiles](dynamic-profiles/dynamic-profiles.md)
 :  This user guide walks through the steps for creating and managing **dynamic 
 profiles**. These are profiles which are defined by a model elsewhere in the system.
+
+---
+
+[Digital Object Identifiers](digital-object-identifiers/digital-object-identifiers.md)
+:  This user guide explains how to set-up the **Mauro Digital Object Identifier plugin** to allow you to use, edit and remove DOI profiles. You will also find out how to create, submit and retire profile names. 
 
 ---

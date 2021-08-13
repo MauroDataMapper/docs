@@ -91,9 +91,9 @@ To create a new data model from scratch, use the following _post_ endpoint.  Wit
 
 <endpoint class="post">/api/dataModels</endpoint>
 
-There are two ways of versioning Data Models in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
+There are two ways of versioning Data Models in the catalogue.  To create an entirely new version of an existing model, please use the following endpoint with no request body:
 
-<endpoint class="put">/api/dataModels/**{dataModelId}**/newModelVersion</endpoint>
+<endpoint class="put">/api/dataModels/**{dataModelId}**/newBranchModelVersion</endpoint>
 
 The name must be different to the original model.
 
@@ -107,9 +107,24 @@ It is also possible to _branch_ and _fork_ Data Models to create drafts before f
 
 <endpoint class="put">/api/dataModels/**{dataModelId}**/newBranchModelVersion</endpoint>
 
+=== "Request body (JSON)"
+    ```json
+    {
+        "branchName": "newBranch"
+    }
+    ```
+
 To create a _fork_ of the original data model:
 
 <endpoint class="put">/api/dataModels/**{dataModelId}**/newForkModel</endpoint>
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "label": "newForkLabel"        
+    }
+    ```
+
 ## Update data model
 
 To edit the primitive properties of a data model, use the following endpoint, with a body similar to the JSON described at the top of this page:
@@ -176,3 +191,165 @@ Similarly, to import one or more data models, the namespace, name and version of
  be the parameters for the import, including any files that are required.
 
 <endpoint class="post">/api/dataModels/import/**{importerNamespace}**/**{importerName}**/**{importerVersion}**</endpoint>
+
+## Finalise a data model
+
+To _finalise_ a data model means to lock it to a particular version and make it read-only; only new versions can be created to make further modifications after that point. 
+Use this endpoint with a similar payloads described below to finalise a data model.
+
+<endpoint class="put">/api/dataModels/**{id}**/finalise</endpoint>
+
+To automatically let Mauro choose the next version number, set the **versionChange** property to either `'Major'`, `'Minor'` or `'Patch'`.
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "versionChange": "Major" | "Minor" | "Patch"
+    }
+    ```
+
+Mauro uses [Semantic Versioning](https://semver.org/) rules to determine the next appropriate version number based on the **versionChange** value provided.
+
+To optionally choose your own version number, provide this payload. If **versionChange** is `'Custom'`, then **version** must also be provided.
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "versionChange": "Custom",
+        "version": "1.2.3.4"
+    }
+    ```
+
+In all cases you may also supply an optional _tag name_ to assign with the finalised version to help provide more context, as follows:
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "versionChange": "Major" | "Minor" | "Patch",
+        "versionTag": "My first version"
+    }
+    ```
+
+## Merging data models
+
+If [creating branches](#create-data-model) of data models, it is possible to merge the data values from one data model to another. The first step is to calculate the _differences_ between two data models, as follows:
+
+<endpoint class="get">/api/dataModels/**{sourceId}**/mergeDiff/**{targetId}**?isLegacy=false</endpoint>
+
+=== "Response body (JSON)"
+    ```json
+    {
+        "sourceId": "f9a4e390-6259-4616-b725-d45524851a82",
+        "targetId": "f5841f3f-7a63-4aa2-9c72-a64305d44dcf",
+        "path": "dm:Model Version Tree DataModel$interestingBranch",
+        "label": "Model Version Tree DataModel",
+        "count": 8,
+        "diffs": [
+            {
+                "fieldName": "author",
+                "path": "dm:Model Version Tree DataModel$interestingBranch@author",
+                "sourceValue": "Mauro User",
+                "targetValue": "Dante",
+                "commonAncestorValue": "Dante",
+                "isMergeConflict": false,
+                "type": "modification"
+            },                        
+            {
+                "fieldName": "organisation",
+                "path": "dm:Model Version Tree DataModel$interestingBranch@organisation",
+                "sourceValue": "Mauro",
+                "targetValue": "Baal",
+                "commonAncestorValue": "Baal",
+                "isMergeConflict": false,
+                "type": "modification"
+            },
+            {
+                "path": "dm:Model Version Tree DataModel$interestingBranch|ann:Test Comment",
+                "isMergeConflict": false,
+                "isSourceModificationAndTargetDeletion": false,
+                "type": "creation"
+            },
+            {
+                "path": "dm:Model Version Tree DataModel$interestingBranch|dc:Test Data Class",
+                "isMergeConflict": false,
+                "isSourceModificationAndTargetDeletion": false,
+                "type": "creation"
+            },
+            {
+                "path": "dm:Model Version Tree DataModel$interestingBranch|md:v1Versioning.com.mdk1",
+                "isMergeConflict": false,
+                "isSourceDeletionAndTargetModification": false,
+                "type": "deletion"
+            },
+            {
+                "fieldName": "value",
+                "path": "dm:Model Version Tree DataModel$interestingBranch|md:org.datacite.creator@value",
+                "sourceValue": "Peter Monks",
+                "targetValue": "Mauro Administrator",
+                "commonAncestorValue": null,
+                "isMergeConflict": true,
+                "type": "modification"
+            },
+            {
+                "fieldName": "value",
+                "path": "dm:Model Version Tree DataModel$interestingBranch|md:test.com.testProperty@value",
+                "sourceValue": "Oliver Freeman",
+                "targetValue": "Peter Monks",
+                "commonAncestorValue": null,
+                "isMergeConflict": true,
+                "type": "modification"
+            },
+            {
+                "path": "dm:Model Version Tree DataModel$interestingBranch|ru:Bootstrapped versioning V2Model Rule|rr:sql",
+                "isMergeConflict": false,
+                "isSourceModificationAndTargetDeletion": false,
+                "type": "creation"
+            }
+        ]
+    }
+    ```
+
+The **diffs** collection will hold each change found between the two data models and how they relate.
+
+All changes need to be manually organised into _patches_ so that they can be applied to the target data model. Then the following endpoint is used to commit:
+
+<endpoint class="put">/api/dataModels/**{sourceId}**/mergeInto/**{targetId}**?isLegacy=false</endpoint>
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "changeNotice": "Change comment",
+        "deleteBranch": false,
+        "patch": {
+            "sourceId": "f9a4e390-6259-4616-b725-d45524851a82",
+            "targetId": "f5841f3f-7a63-4aa2-9c72-a64305d44dcf",
+            "label": "Model Version Tree DataModel",
+            "count": 3,
+            "patches": [
+                {
+                    "path": "dm:Model Version Tree DataModel$interestingBranch|ru:Bootstrapped versioning V2Model Rule|rr:sql",
+                    "isMergeConflict": false,
+                    "isSourceModificationAndTargetDeletion": false,
+                    "type": "creation"
+                },
+                {
+                    "fieldName": "author",
+                    "path": "dm:Model Version Tree DataModel$interestingBranch@author",
+                    "sourceValue": "Mauro User",
+                    "targetValue": "Mauro User",
+                    "commonAncestorValue": "Dante",
+                    "isMergeConflict": false,
+                    "type": "modification"
+                },  
+                {
+                    "path": "dm:Model Version Tree DataModel$interestingBranch|md:v1Versioning.com.mdk1",
+                    "isMergeConflict": false,
+                    "isSourceDeletionAndTargetModification": false,
+                    "type": "deletion"
+                },
+            ]
+        }
+    }
+    ```
+
+The key point is to set the **targetValue** of every patch item to change - this value is what will be written to the target data model when committing the merge.
