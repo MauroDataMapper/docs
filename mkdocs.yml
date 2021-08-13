@@ -124,9 +124,10 @@ nav:
                     -   Groovy / Java: 'resources/client/java.md'
                     -   TypeScript: 'resources/client/typescript.md'
                     -   .NET: 'resources/client/net.md'
-            -   Technical Plugins:
+            -   Technical Plugins:                        
+                    -   Digital Object Identifier (DOI): 'plugins/doi.md'
+                    -   Freemarker Templating: 'plugins/freemarker.md'
                     -   OpenID Connect: 'plugins/openid-connect.md'
-                    -   Freemarker Templating: 'plugins/freemarker.md'                    
                     -   SPARQL: 'plugins/sparql.md'
     -   Community:
             -   Support: 'community/support.md'
