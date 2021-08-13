@@ -8,7 +8,7 @@ Ensure the **'Models'** tab is selected above the **Model Tree**. To create a ne
 
 ![Create a new Folder illustration](create-a-new-folder.png)
 
-A **'Create a new Folder'** dialogue box will appear. Enter a name for the folder and tick **'Version control this folder'** if you wish to create a **Versioned Folder**. Once complete, click **'Add folder'** to save your changes.
+A **'Create a new Folder'** dialogue box will appear. Enter a name for the folder and tick **'Version control this folder'** if you wish to create a [Versioned Folder](../../glossary/versioned-folder/versioned-folder.md). Once complete, click **'Add folder'** to save your changes.
 
 The **'Version control this folder'** option will only appear if adding to the top level of the **Model Tree** or under another folder. **Versioned folders** cannot be created under other **Versioned folders**.
 

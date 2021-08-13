@@ -12,23 +12,23 @@ There are three ways to organise **Data Models** in a Mauro catalogue:
 
 ### 1.1 Folder
 
-A folder is a container that can store **Data Models** and other folders.
+A [folder](../../glossary/folder/folder.md) is a container that can store **Data Models** and other folders.
 
 ### 1.2 Versioned folders
 
-A **versioned folder** shares the same properties as a folder but also shares additional properties typically used by a **Data Model**. A versioned folder is able to store models and/or folders, but can also be version controlled like a **Data Model**. This means that the entire folder can be:
+A [versioned folder](../../glossary/versioned-folder/versioned-folder.md) shares the same properties as a folder but also shares additional properties typically used by a **Data Model**. A versioned folder is able to store models and/or folders, but can also be version controlled like a **Data Model**. This means that the entire folder can be:
 
-* Finalised
-* Branched
-* Versioned
-* Forked
-* Merged
+* [Finalised](../../glossary/finalise/finalise.md)
+* [Branched](../../glossary/branch/branch.md)
+* [Versioned](../../glossary/version/version.md)
+* [Forked](../../glossary/fork/fork.md)
+* [Merged](../../glossary/merging/merging.md)
 
 Finalising a versioned folder is the same as finalising every single, individual model within that folder, but in one action.
 
 ### 1.3 Classifier 
 
-A **Classifier** is a container type which acts like a tag on a catalogue item. A **Classifier** can be attached to one or more catalogue items, such as models, as a way of grouping items together.
+A [Classifier](../../glossary/classification/classification.md) is a container type which acts like a tag on a catalogue item. A **Classifier** can be attached to one or more catalogue items, such as models, as a way of grouping items together.
 
 ---
 
