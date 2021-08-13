@@ -4,7 +4,7 @@ This user guide explains how to create a new draft of a **Finalised** [Data Mode
 
 ## 1. Overview
 
-When a **Data Model** is **Finalised** it cannot be modified any further in that state. It represents the final state/contents of that model for a particular version.
+When a **Data Model** is [finalised](../../glossary/finalise/finalise.md) it cannot be modified any further in that state. It represents the final state/contents of that model for a particular version.
 
 To find out how to **Finalise** catalogue items, visit our ['Finalising Data Models' user guide](../finalising-data-models/finalising-data-models.md).
 

@@ -4,13 +4,13 @@ This user guide explains how to merge [Data Models](../../glossary/data-model/da
 
 ## 1. Overview
 
-When working with multiple **Branches** on the same model, it is likely that these multiple branch versions will have modifications such as additions, deletions and edits. Eventually, it will be necessary to **merge** all these back into one single draft version of the model. This is why every model has a **main** branch which acts as a single branching point and is also where models are **Finalised** from.
+When working with multiple [branches](../../glossary/branch/branch.md) on the same model, it is likely that these multiple branch versions will have modifications such as additions, deletions and edits. Eventually, it will be necessary to **merge** all these back into one single draft version of the model. This is why every model has a **main** branch which acts as a single branching point and is also where models are [finalised](../../glossary/finalise/finalise.md) from.
 
-**Merging** models is quite a complex task as it's important not to lose any potential changes during the merge process. This is why a special user interface has been designed for you to:
+**Merging** models is quite a complex task, as it is important not to lose any potential changes during the merge process. This is why a special user interface has been designed for you to:
 
-* Review all changes that have occurred
-* Assist in resolving **conflicts** which are any changes that have occurred in two models that do not automatically align
-* Commit the changes you wish to make to a model
+* Review all changes that have occurred.
+* Assist in resolving **conflicts**, which are any changes that have occurred in two models that do not automatically align.
+* Commit the changes you wish to make to a model.
 
 **Merging** can be applied to **Data Models** or **Versioned Folders** and includes merging changes within the model hierarchy as well. For example, changes made to [Data Classes](../../glossary/data-class/data-class.md) also count as modifications to a **Data Model**, and so on.
 
@@ -21,10 +21,10 @@ When working with multiple **Branches** on the same model, it is likely that the
 As **merging** is an advanced user concept, the following terms will be used throughout this user guide:
 
 * **Source**  
-	The model or folder where changes are coming **from**. For example, the source would typically be a branch that is not the **main** branch 
+	The model or folder where changes are coming **from**. For example, the source would typically be a branch that is not the **main** branch.
 
 * **Target**  
-	The model or folder where changes are going **to**. This is usually the **main** branch, but is not always the case 
+	The model or folder where changes are going **to**. This is usually the **main** branch, but is not always the case.
 	
 * **Change**  
 	Any field that has changed between **Source** and **Target**. These will be:
