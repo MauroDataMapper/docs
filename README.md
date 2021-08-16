@@ -2,7 +2,13 @@
 
 This repository is for the documentation of the Mauro Data Mapper
 
-It is built using [MkDocs](https://www.mkdocs.org), which uses Markdown syntax, and a custom theme.
+## Requirements
+
+* [MkDocs](https://www.mkdocs.org) : pip install mkdocs
+* [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions) : pip install pymdown-extensions
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material) : pip install mkdocs-material
+
+
 
 After installing MkDocs, you can clone this directory, and from inside run:
 

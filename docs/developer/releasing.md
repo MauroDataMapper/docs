@@ -265,7 +265,7 @@ git flow release finish "B${CORE_VERSION}_F${UI_VERSION}"
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
-## Announce & Document
+## Document & Announce
 
 !!! Information
 
@@ -279,14 +279,19 @@ git checkout main && git push && git checkout develop && git push && git push --
     * Private Repositories
     * Unreleased plugins
 
+
+### Documentation
+
 * Run `./releases.sh` in mdm-plugins.
-* Documentation
-    * Remove the private repositories from the HTML format and copy into the `docs/installing/plugins.md` file
-    * Release the docs
-* Zulip
-    * Copy the below markdown block into the `announce` stream of Zulip
-    * Update the versions for the applications
-    * Copy in the plain text format of the "releases" output underneath it
+* Remove the private repositories from the HTML format and copy into the `docs/installing/plugins.md` file
+* Release the docs
+
+### Zulip Announce
+
+* Run `./releases.sh` in mdm-plugins.
+* Copy the below markdown block into the `announce` stream of Zulip
+* Update the versions for the applications
+* Copy in the plain text format of the "releases" output underneath it
 
 ```markdown
 # New Release
@@ -297,3 +302,41 @@ git checkout main && git push && git checkout develop && git push && git push --
 | RESTful API | `4.7.0` |
 | UI | `6.3.1` |
 ```
+
+### Github
+
+Each of the repositories requires the tag to be released and links to the issues fixed supplied.
+
+* Navigate to the supplied tags page
+* Select the latest tag and choose "Create release"
+* Copy in the appropriate text from the below list, making sure to update 
+  * the stated YouTrack version to the tag being released
+  * the stated Github milestone
+
+`mdm-core`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
+    ```markdown
+    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
+    and [Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+    ```
+`mdm-ui`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-ui/tags)
+    ```markdown
+    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23F6.4.0)
+    and [MileStones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
+    ```
+`mdm-application`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
+    ```markdown
+    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
+    and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+    and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
+    ```
+`mdm-docker`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-docker/tags)
+    ```markdown
+    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0%20%23F6.4.0)
+    and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+    and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
+    and [UI Milestones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
+    ```
