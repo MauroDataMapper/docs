@@ -47,10 +47,30 @@ An **'Add Property'** form will appear which you will need to complete. Click th
 
 ![Add property form](add-property-form.png)
 
-### 2.3 DOI and DataCite configuration
+### 2.3 DataCite configuration
 
 !!! Information
 	To be completed soon.
+
+### 2.4 Mauro configuration
+
+Once enabled and your DataCite API is configured, there are some additional API properties to configure in Mauro before using the plugin. These can be found in the **Configuration** > **Properties** administration table, under the **Digital Object Identifier Properties** group.
+
+![Mauro configuration](mauro-configuration.png)
+
+* **username** - the username to connect to the DataCite API for authentication.
+* **password** - the password to connect to the DataCite API for authentication.
+* **prefix** - the unique prefix identifier representing this organisation. DataCite will provide this.
+* **endpoint** - the base URL to the DataCite API.
+
+Initially, the plugin will automatically add these with the value of "NOT_SET"; change these values once you have them available.
+
+One final API property to ensure is set is the **Site URL** under the **Site** group. The **Site URL** property is used by the plugin to submit to DataCite, so that all links to the requested DOI get redirected back to the correct Mauro instance.
+
+!!! Warning
+	It is important to set the **Site URL** property, otherwise the Digital Object Identifier (DOI) plugin will be unable to submit profiles to DataCite correctly.
+
+![Site URL](mauro-site-url.png)
 
 ---
 
