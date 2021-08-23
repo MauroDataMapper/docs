@@ -76,7 +76,7 @@ One final API property to ensure is set is the **Site URL** under the **Site** g
 
 ## 3. Using the profile
 
-Assuming all the setup steps were carried out above, catalogue items should now be able to use a new [profile](https://maurodatamapper.github.io/tutorials/properties-profiles/) called **'Digital Object Identifiers DataCite Dataset Schema**'.
+Assuming all the setup steps were carried out above, catalogue items should now be able to use a new [profile](../../../tutorials/properties-profiles/) called **'Digital Object Identifiers DataCite Dataset Schema**'.
 
 ### 3.1 Add the profile
 
@@ -91,21 +91,25 @@ Expand the **'Default profile'** list and click **'Add new profile...'**. Select
 
 The DOI profile will present a number of fields which will be recorded as metadata against the catalogue item. These profile field values will also be submitted to the DOI system when a DOI name is requested, so it is important to ensure that the values entered into the profile are as accurate as possible.
 
-The profile fields are grouped into three sections:
+The profile fields are grouped into a number of sections:
 
-1. Mandatory DataCite DOI Fields
-2. Recommended DataCite DOI Fields
-3. Additional DataCite DOI Fields
+1. Predefined/Supplied Fields
+2. Primary Creator
+3. Additional Mandatory Fields
+4. Additional Optional Title Section
+5. Additional Optional Description Section
+6. Primary Contributor
+7. Additional Optional Fields
 
-Only **'Mandatory DataCite DOI Fields'** are required when submitting the catalogue item to register in the DOI system. Clicking on the help icons next to each field name will provide a description of what the field represents.
+The **Predefined/Supplied Fields** are special, read-only fields in the profile. These are used and modified internally by Mauro to track important details about the DOI name, such as the state, identifier, and so on. These are provided in read-only view to the user but are automatically controlled during DOI submission.
 
-The **'Identifier'** field is a special field which will store the DOI name once the DOI system has created one. Although this profile field is editable like all others, it should **not** be manually changed by a user, especially when it contains a value - Mauro will automatically populate this field for you.
+There are a number of sections and fields in the profile, though only a few a strictly mandatory to submit to the DOI system (marked with a "*" symbol next to their field name). Clicking on the help icons next to each field name will provide a description of what the field represents.
 
 The profile will appear in read-only form when viewing the catalogue item. If you want to edit the profile, first make sure the **'Digital Object Identifiers DataCite Dataset Schema'** profile is selected in the profile selection list and then click the **'Edit'** button. 
 
 ![An example of a DOI profile](doi-profile.png)
 
-This will bring up a **'Edit Profile'** form which you will then be able to make changes to. Once you have finished, click **'Save'**. 
+This will bring up an **'Edit Profile'** form which you will then be able to make changes to. Once you have finished, click **'Save'**. 
 
 !!! Information 
 	You are able to save changes to a profile without ensuring that the profile is fully valid. For example, some fields may say **'This field is mandatory'**, but changes can be saved temporarily without such fields being filled in. To test that the profile is valid, click on the **'Validate'** button, then review any validation alerts that appear in each field.
@@ -128,7 +132,7 @@ A notification box will then appear asking if you are sure you want to remove th
 
 The **'Identifier'** profile field will store the DOI name once the catalogue item has been submitted to the DOI system, for instance `10.1109/5.771073`. To store this DOI name, the catalogue item must first be submitted to the DOI system. 
 
-To do this, select the relevant catalogue item from the **Model Tree** that you want to submit. The item must be **finalised** and publicly readable to anyone. Once the details panel has appeared on the right of your screen, click the **'Description'** tab to view the profiles. Then click the three vertical dot menu to the right of the **'Edit'** button and select **'DOI submission'** from the dropdown menu. 
+To do this, select the relevant catalogue item from the **Model Tree** that you want to submit. The item must be [finalised](../../finalising-data-models/finalising-data-models/) and [publicly readable](../../permissions/permissions/#5-manage-user-and-group-access) to anyone. Once the details panel has appeared on the right of your screen, click the **'Description'** tab to view the profiles. Then click the three vertical dot menu to the right of the **'Edit'** button and select **'DOI submission'** from the dropdown menu. 
 
 ![DOI submission state options in dropdown menu](doi-submission-options.png)
 
@@ -143,11 +147,16 @@ You will then have two possible states to generate the DOI name:
 !!! Information
 	The **'Digital Object Identifiers DataCite Dataset Schema'** profile does not need to be selected to carry out this step, nor does it have to be created yet. Mauro will automatically handle the creation of the DOI profile if it does not already exist.
 
-Before submitting, an **'Edit Profile'** form will appear which will allow you to review the profile fields and make any necessary changes before submitting to the DOI system. Once you are happy with the profile, click the **'Submit'** button and a green notification box will appear at the bottom right of your screen to confirm the change and the **'Identifier'** field will be populated with the newly created DOI name.
+Before submitting, an **'Edit Profile'** form will appear which will allow you to review the profile fields and make any necessary changes before submitting to the DOI system. 
 
-![Edit Profile form before DOI submission](pre-submission-form.png)
+!!! Information
+	It is recommended to use the **Validate** button to ensure that all profile fields are valid before submitting.
+
+Once you are happy with the profile, click the **'Submit'** button and a green notification box will appear at the bottom right of your screen to confirm the change and the **'Identifier'** field will be populated with the newly created DOI name.
 
 You may continue making changes to any **Draft** DOI profiles by repeating the same steps above. However, once changing to the **Final** state, you will have one last opportunity to review/modify the profile before it is fixed in place forever.
+
+![A submitted DOI](doi-submitted.png)
 
 ---
 
