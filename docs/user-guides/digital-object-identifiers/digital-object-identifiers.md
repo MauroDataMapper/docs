@@ -47,10 +47,9 @@ An **'Add Property'** form will appear which you will need to complete. Click th
 
 ![Add property form](add-property-form.png)
 
-### 2.3 DataCite configuration
+### 2.3 DataCite membership
 
-!!! Information
-	To be completed soon.
+In order to create DOIs you will need to be a member (regular, or consortium-based) of DataCite. Please read the [Become a Member](https://datacite.org/become.html) DataCite pages to understand how to do this.
 
 ### 2.4 Mauro configuration
 
