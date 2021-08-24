@@ -46,10 +46,10 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.7.0</td>
         </tr>
 <tr>
-            <td><b>Digital Object Identifiers</b><br/>1.0.0</td>
-            <td>2021-08-08</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-digital-object-identifiers:1.0.0</code></td>
-            <td>Core &gt;= 4.8.0</td>
+            <td><b>Digital Object Identifiers</b><br/>1.1.0</td>
+            <td>2021-08-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-digital-object-identifiers:1.1.0</code></td>
+            <td>Core &gt;= 4.9.0</td>
         </tr>
 <tr>
             <td><b>FHIR</b><br/>1.1.0</td>
@@ -58,28 +58,28 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.8.0</td>
         </tr>
 <tr>
-            <td><b>MS SQL</b><br/>5.0.0</td>
-            <td>2021-06-18</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:5.0.0</code></td>
-            <td>Core &gt;= 4.6.0</td>
+            <td><b>MS SQL</b><br/>5.1.0</td>
+            <td>2021-08-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:5.1.0</code></td>
+            <td>Core &gt;= 4.9.0</td>
         </tr>
 <tr>
-            <td><b>MySQL</b><br/>3.0.0</td>
-            <td>2021-06-18</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:3.0.0</code></td>
-            <td>Core &gt;= 4.6.0</td>
+            <td><b>MySQL</b><br/>3.1.0</td>
+            <td>2021-08-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:3.1.0</code></td>
+            <td>Core &gt;= 4.9.0</td>
         </tr>
 <tr>
-            <td><b>Oracle SQL</b><br/>4.0.0</td>
-            <td>2021-06-18</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:4.0.0</code></td>
-            <td>Core &gt;= 4.6.0</td>
+            <td><b>Oracle SQL</b><br/>4.1.0</td>
+            <td>2021-08-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:4.1.0</code></td>
+            <td>Core &gt;= 4.9.0</td>
         </tr>
 <tr>
-            <td><b>PostgreSQL</b><br/>4.0.0</td>
-            <td>2021-06-18</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:4.0.0</code></td>
-            <td>Core &gt;= 4.6.0</td>
+            <td><b>PostgreSQL</b><br/>4.1.0</td>
+            <td>2021-08-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:4.1.0</code></td>
+            <td>Core &gt;= 4.9.0</td>
         </tr>
 </tbody>
 </table>
