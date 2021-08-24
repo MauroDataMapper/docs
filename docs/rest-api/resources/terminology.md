@@ -71,7 +71,7 @@ This endpoint provides the default information about a terminology, as per the J
 
 There are two ways of versioning terminologies in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
 
-<endpoint class="put">/api/terminology/**{terminologyId}**/newModelVersion</endpoint>
+<endpoint class="put">/api/terminology/**{terminologyId}**/newBranchModelVersion</endpoint>
 
 The name must be different to the original model.
 
@@ -85,9 +85,23 @@ It is also possible to _branch_ and _fork_ code sets to create drafts before fin
 
 <endpoint class="put">/api/terminology/**{terminologyId}**/newBranchModelVersion</endpoint>
 
+=== "Request body (JSON)"
+    ```json
+    {
+        "branchName": "newBranch"
+    }
+    ```
+
 To create a _fork_ of the original terminology:
 
 <endpoint class="put">/api/terminology/**{terminologyId}**/newForkModel</endpoint>
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "label": "newForkLabel"        
+    }
+    ```
 
 ## Update terminology
 

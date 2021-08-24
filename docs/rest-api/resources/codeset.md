@@ -75,7 +75,7 @@ To create a new code set from scratch, use the following _post_ endpoint.  Withi
 
 There are two ways of versioning code set in the catalogue.  To create an entirely new version of a model, please use the following endpoint:
 
-<endpoint class="put">/api/codeSets/**{codeSetId}**/newModelVersion</endpoint>
+<endpoint class="put">/api/codeSets/**{codeSetId}**/newBranchModelVersion</endpoint>
 
 The name must be different to the original model.
 
@@ -89,9 +89,23 @@ It is also possible to _branch_ and _fork_ code sets to create drafts before fin
 
 <endpoint class="put">/api/codeSets/**{codeSetId}**/newBranchModelVersion</endpoint>
 
+=== "Request body (JSON)"
+    ```json
+    {
+        "branchName": "newBranch"
+    }
+    ```
+
 To create a _fork_ of the original data model:
 
 <endpoint class="put">/api/codeSets/**{codeSetId}**/newForkModel</endpoint>
+
+=== "Request body (JSON)"
+    ```json
+    {
+        "label": "newForkLabel"        
+    }
+    ```
 
 ## Update code set
 
