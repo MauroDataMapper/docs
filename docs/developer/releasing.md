@@ -37,7 +37,7 @@ Update gradle.properties
 
 ```bash
 git commit -am "Release ${CORE_VERSION}"
-git flow release finish ${CORE_VERSION}
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
 ```
 
 Update gradle.properties to next minor snapshot
@@ -62,15 +62,15 @@ Update package.json version to CORE_VERSION
     (There's a ticket open to make sure the `build` command performs a clean first.)
 
 ```bash
-npm install && npm run build
+rm -rf lib && npm ci && npm run build
 git commit -am "Release ${CORE_VERSION}"
-git flow release finish ${CORE_VERSION}
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
 ```
 
 Update package.json version to next snapshot CORE_VERSION
 
 ```bash
-npm install && npm run build
+rm -rf lib && npm ci && npm run build
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
@@ -102,7 +102,7 @@ npm install
 
 ```bash
 git commit -am "Release ${UI_VERSION}"
-git flow release finish ${UI_VERSION}
+git flow release finish -m "${UI_VERSION}" ${UI_VERSION}
 ```
 
 Update package.json
@@ -165,7 +165,7 @@ Update gradle.properties
 
 ```bash
 git commit -am "Release ${CORE_VERSION}"
-git flow release finish ${CORE_VERSION}
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
 ```
 
 Update gradle.properties to next minor snapshot
@@ -223,7 +223,7 @@ git flow release start ${PLUGIN_VERSION}
 
 ```bash
 git commit -am "Release ${PLUGIN_VERSION}"
-git flow release finish ${PLUGIN_VERSION}
+git flow release finish -m "${PLUGIN_VERSION}" ${PLUGIN_VERSION}
 ```
 
 * Update gradle.properties to next minor snapshot
@@ -261,7 +261,7 @@ If it all comes up.
 
 ```bash
 git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
-git flow release finish "B${CORE_VERSION}_F${UI_VERSION}"
+git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
