@@ -67,5 +67,16 @@ overrides, where each running container might have specifically set properties w
 
 !!! Danger
 
-    Do not change the environment variable `runtime.config.path` as this denotes the path inside the container where the config file will be found
+    Do not change the environment variable `runtime.config.path` as this denotes the path inside the container where the config file will be found.
+    If you wish to load a different runtime.yml file then you should alter the `volumes` mapping in the docker-compose.yml file.
+
+### Defining a different location for the runtime.yml to load
+
+If you wish to store your runtime.yml file in an alternative location to the folder inside the mdm-docker cloned repository, 
+then you will need to alter the `volumes` mapping in the `docker-compose.yml` file. 
+The line to change is `- ./mauro-data-mapper/config/runtime.yml:/usr/local/tomcat/conf/runtime.yml`,
+the first part of this is the local location (outside docker container) where the yml file can be found,
+you should not alter the second half (after the `:`) as this is where the yml file is mounted into the container and where MDM expects to find it.
+
+
 
