@@ -45,7 +45,7 @@ On Linux the docker machine is the host machine so there is no need to build or 
 If using the **Native Docker** then edit the preferences of the **Docker** application and increase the RAM to at least 4GB. You will probably need to
 restart **Docker** after doing this.
 
-### Docker toolbox
+### Docker Toolbox
 
 If using the **Docker Toolbox** then you will need to perform the following in a **'docker'** terminal:
 

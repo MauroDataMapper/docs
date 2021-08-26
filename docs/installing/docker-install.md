@@ -1,6 +1,6 @@
 !!! Information
 
-	 See the [Docker Setup](./docker-setup) section before installing Mauro using Docker.
+	 See the [Docker Setup](docker-setup.md) section before installing Mauro using Docker.
 
 
 ## Git repository

@@ -83,7 +83,7 @@ nav:
     -   Installing and Administration:
             -   Installation:
                     -   Docker Setup: 'installing/docker-setup.md'
-                    -   Docker Install: 'installing/docker.md'
+                    -   Docker Install: 'installing/docker-install.md'
             -   Updating: 'installing/updating.md'
             -   Configuring:
                     -   Overview: 'installing/configuring/overview.md'
