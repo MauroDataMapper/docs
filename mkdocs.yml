@@ -21,29 +21,29 @@ extra_javascript:
 markdown_extensions:
     - admonition
     - footnotes
-    - pymdownx.highlight:
-          use_pygments: true
-          linenums: true
+    -   pymdownx.highlight:
+            use_pygments: true
+            linenums: true
     - pymdownx.tabbed
     - pymdownx.inlinehilite
-    - toc:
-          permalink: true
+    -   toc:
+            permalink: true
     - meta
     - pymdownx.arithmatex
-    - pymdownx.betterem:
-          smart_enable: all
+    -   pymdownx.betterem:
+            smart_enable: all
     - pymdownx.caret
     - pymdownx.critic
     - pymdownx.details
-    - pymdownx.emoji:
-          emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    -   pymdownx.emoji:
+            emoji_generator: !!python/name:pymdownx.emoji.to_svg
     - pymdownx.inlinehilite
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.smartsymbols
     - pymdownx.superfences
-    - pymdownx.tasklist:
-          custom_checkbox: true
+    -   pymdownx.tasklist:
+            custom_checkbox: true
     - pymdownx.tilde
     - def_list
 nav:
@@ -92,8 +92,9 @@ nav:
                     -   Changing Database: 'installing/configuring/changing-database.md'
                     -   MDM Core: 'installing/configuring/mdm-core-config.md'
                     -   Plugins:
-                            - OpenID Connect: 'plugins/configuring/oic.md'
-                            -  Digital Object Identifiers: 'plugins/configuring/doi.md'
+                            -   Digital Object Identifiers: 'plugins/configuring/doi.md'
+                            -   FHIR Importer: 'plugins/configuring/fhir.md'
+                            -   OpenID Connect: 'plugins/configuring/oic.md'
                     -   Default Files:
                             -   MDM Application YML: 'installing/configuring/application.yml.md'
                             -   Build YML: 'installing/configuring/build.yml.md'
@@ -138,7 +139,7 @@ nav:
                     -   Groovy / Java: 'resources/client/java.md'
                     -   TypeScript: 'resources/client/typescript.md'
                     -   .NET: 'resources/client/net.md'
-            -   Technical Plugins:                        
+            -   Technical Plugins:
                     -   Digital Object Identifier (DOI): 'plugins/rest-api/doi.md'
                     -   Freemarker Templating: 'plugins/rest-api/freemarker.md'
                     -   OpenID Connect: 'plugins/rest-api/openid-connect.md'
