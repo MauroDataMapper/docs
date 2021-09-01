@@ -2,14 +2,13 @@
 
 The simplest installation method is to run our preconfigured application using [Docker](https://www.docker.com).  
 Any operating system, on a server or desktop, running **Docker** can run **Mauro Data Mapper**, but please note that some organisations may restrict
-the use of
-**Docker** on virtual machines.
+the use of **Docker** on virtual machines.
 
-We advise a minimum of 2 CPUs and 4GBs RAM just to run this system this does not allow for the requirements to have an operating system running as
+We advise a minimum of 2 CPUs and 4GBs RAM just to run this system. This does not allow for the requirements to have an operating system running as
 well. Therefore we recommend a 4 CPU and 8GB RAM server.
 
-The default install of Docker inside Linux configures the docker engine with unlimited access to the server's resources, however if running in Windows
-or Mac OS X the Docker Toolbox will need to be configured
+The default install of Docker inside Linux configures the docker engine with unlimited access to the server's resources. However, if running in Windows
+or Mac OS X the Docker Toolbox will need to be configured.
 
 ---
 
@@ -23,13 +22,12 @@ To run **Mauro Data Mapper**, the minimum versions are as follows:
 * **Docker Engine:** 19.03.8
 * **Docker Compose:** 1.25.5
 
-!!! Warning If you're running on Ubuntu the default version of `docker-compose` installed with apt-get is currently 1.17.1, and you might get the
-error message:
-```
-Building docker compose ERROR: Need service name for --build-arg option
-```
-In this case, you should uninstall `docker-compose` and re-install directly from Docker, following
-[the instructions here](https://docs.docker.com/compose/install/).
+!!! Warning 
+    If you are running on Ubuntu, the default version of `docker-compose` installed with apt-get is currently 1.17.1, and you might get the error message:
+    ```
+    Building docker compose ERROR: Need service name for --build-arg option
+    ```
+    In this case, you should uninstall `docker-compose` and re-install directly from Docker, following [the instructions here](https://docs.docker.com/compose/install/).
 
 ---
 

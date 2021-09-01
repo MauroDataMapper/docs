@@ -1,4 +1,4 @@
-Below is the default build.yml file built into the MDM image
+Below is the default `build.yml` file built into the MDM image.
 
 ```yaml
 ---

@@ -38,13 +38,16 @@ starts.  The **Mauro** container persists logs and Lucene indexes to shared fold
 ### Default username / password
 
 The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the
-password `password`.  We *strongly recommend* changing this password on first login, and then setting up personal user accounts for individual users.
+password `password`.  
+
+!!! Warning
+    We **strongly recommend** changing this password on first login, and then setting up personal user accounts for individual users.
 
 ---
 
 ## Building
 
-Once cloned then running the standard docker-compose build command will build the images necessary to run the services.
+Once cloned then running the standard `docker-compose` build command will build the images necessary to run the services.
 
 ```bash
 # Build the entire system
@@ -53,9 +56,9 @@ $ ./docker-compose build
 ### Additional Backend Plugins
 
 Additional plugins can be found at the [Mauro Data Mapper Plugins](https://github.com/MauroDataMapper-Plugins) organisation page. A complete list with
-versions can also be found in the [installation documentation](https://maurodatamapper.github.io/installing/plugins/)
-please note that while we will do our best to keep this page up-to-date there may be circumstances where it is behind, therefore we recommend using
-our official GitHub Plugins organisation to find the latest releases and all available plugins.
+versions can also be found in the [installation documentation](https://maurodatamapper.github.io/installing/plugins/).
+Please note that while we will do our best to keep this page up-to-date, there may be circumstances where it is behind. Therefore, we recommend using
+our official [GitHub Plugins organisation](https://github.com/MauroDataMapper-Plugins) to find the latest releases and all available plugins.
 
 Each of these can be added as `runtimeOnly` dependencies by adding them to the `ADDITIONAL_PLUGINS` build argument for the `mauro-data-mapper`
 service build.
@@ -63,7 +66,7 @@ service build.
 These dependencies should be provided in a semi-colon separated list in the gradle style, they will be split and each will be added as a `runtimeOnly`
 dependency.
 
-Example
+Example:
 
 ```yaml
  mauro-data-mapper:
@@ -73,7 +76,7 @@ Example
        ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0"
 ```
 
-Will add the Excel plugin to the `dependencies.gradle` file:
+This will add the Excel plugin to the `dependencies.gradle` file:
 
 ```gradle
 runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0
@@ -82,8 +85,8 @@ runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0
 #### Dynamic Versions
 
 You can use [dynamic versioning](https://docs.gradle.org/current/userguide/single_versions.html) to add dependencies, however this comes with a risk
-that it pulls a version which does not comply with your expected version of mdm-application-build/mdm-core which may cause conflicts with other
-plugins, therefore we do **not** advise this approach.
+that it pulls a version which does not comply with your expected version of `mdm-application-build/mdm-core` ,which may cause conflicts with other
+plugins. Therefore, we do **not** advise this approach.
 
 Example
 
@@ -126,7 +129,7 @@ If this is the case you can change the `base_images/sdk_base/ssh/config` file:
 
 ## Run environment
 
-By adding variables to the `<service>.environment` section of the docker-compose.yml file you can pass them into the container as environment variables. These will override
+By adding variables to the `<service>.environment` section of the `docker-compose.yml` file, you can pass them into the container as environment variables. These will override
 any existing configuration variables which are used by default. Any defaults and normally used environment variables can be found in the relevant service's Dockerfile at
 the `ENV` command.
 
@@ -134,15 +137,15 @@ the `ENV` command.
 
 * `POSTGRES_PASSWORD` 
 
-	This sets the postgres user password for the service, as per the documentation at [Postgres Docker Hub](https://hub.docker.com/_/postgres), 
-	t must be set for a docker postgres container. We have set a default but you can override if desired. 
-	If you do override it, you will also need to change the `PGPASSWORD` env variable in the mauro-data-mapper section.
+	This sets the postgres user password for the service. As per the documentation at [Postgres Docker Hub](https://hub.docker.com/_/postgres), 
+	it must be set for a docker postgres container. We have set a default but you can override if desired. 
+	If you do override it, you will also need to change the `PGPASSWORD` environment variable in the mauro-data-mapper section.
 	
 * `DATABASE_USERNAME` 
 
 	This is the username which will be created inside the Postgres instance to own the database which the MDM service will use. 
 	The username is also used by the MDM service to connect to the postgres instance, 
-	therefore if you change this you *MUST* also supply it in the environment args for the MDM service
+	therefore if you change this you **must**** also supply it in the environment args for the MDM service.
 	
 * `DATABASE_PASSWORD`
 
@@ -150,8 +153,8 @@ the `ENV` command.
 
 ### mauro-data-mapper service
 
-There is a huge amount of variables which either need to be set or can be overridden depending on what plugins have been installed and what features
-you want. Therefore you can find all the information on configuring MDM [here](../configuring/overview).
+There are a large amount of variables which either need to be set or can be overridden depending on what plugins have been installed and what features
+you want. Therefore, you can find all the information on configuring MDM [here](../configuring/overview).
 
 There are 2 environment variables which are not used directly by MDM and these are both optional to be overridden in the compose file.
 
@@ -160,12 +163,16 @@ There are 2 environment variables which are not used directly by MDM and these a
   This is the postgres user's password for the postgres server. This is an environment variable set to allow the MDM service to wait till the postgres
   service has completely finished starting up. It is only used to confirm the Postgres server is running and databases exist. After this it is not
   used again.
-  **If you change `POSTGRES_PASSWORD` you must change this to match**
-  **This can ONLY be overridden in the docker-compose.yml file**
+
+!!! Note
+    If you change `POSTGRES_PASSWORD` you must change this to match. This can **only**** be overridden in the `docker-compose.yml` file.
 
 * `CATALINA_OPTS`
 
-  Java Opts to be passed to Tomcat **This can ONLY be overridden in the docker-compose.yml file**
+  Java Opts to be passed to Tomcat.
+
+!!! Note  
+    This can **only** be overridden in the `docker-compose.yml` file.
 
 ### Environment Notes
 
@@ -214,7 +221,7 @@ $ docker-compose-prod up -d [SERVICE]
 ```
 
 If you run everything in the background use `Kitematic` to see the individual container logs.
-You can do this if running in the foreground and its easier as it splits each of the containers up.
+You can do this if running in the foreground and it is easier as it splits each of the containers up.
 
 If only starting a service when you stop, the service docker will **not** stop the dependencies that were started to allow the named service to start.
 

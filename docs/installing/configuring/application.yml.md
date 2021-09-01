@@ -1,4 +1,4 @@
-Below is the default application.yml file included in the main application.
+Below is the default `application.yml` file included in the main application.
 
 ```yaml
 database:

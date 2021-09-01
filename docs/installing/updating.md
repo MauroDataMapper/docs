@@ -1,8 +1,11 @@
 # Updating to the latest version
 
-Updating an already running system can be performed in 1 of 2 ways. The **preferred** method would be to pull the latest version tag from the
-repository and then rebuild the mauro-data-mapper service. However this may be hard if multiple changes have been made to the `docker-compose.yml` and
-you're not familiar enough with git to handle stashing and merging.
+Updating an already running system can be performed in one of two ways. 
+
+## Pull from latest tag
+
+The _preferred_ method would be to pull the latest version tag from the
+[mdm-docker repository](https://github.com/MauroDataMapper/mdm-docker) and then rebuild the mauro-data-mapper service. However this may be hard if multiple changes have been made to the `docker-compose.yml` and you are not familiar enough with git to handle stashing and merging.
 
 ```bash
 # Update an already built system
@@ -21,6 +24,8 @@ $ docker-compose build mauro-data-mapper
 $ docker-compose up -d mauro-data-mapper
 ```
 
+## Update script
+
 The alternative method is to use the update command script and pass in the new versions you want to update to. The downside with this method is if we
 have made any changes to the Dockerfiles or base versions you will not have them.
 
@@ -31,6 +36,8 @@ $ ./update -b <BACKEND_VERSION> -f <FRONTEND VERSION>
 ```
 
 This will rebuild just the Mauro Data Mapper image with the latest version.
+
+## Database migrations
 
 Occasionally, database migrations are required when updating to a new version. These run automatically when the application restarts, making use of
 the [Flyway](https://flywaydb.org) versioning system. No manual steps are required from the user.
