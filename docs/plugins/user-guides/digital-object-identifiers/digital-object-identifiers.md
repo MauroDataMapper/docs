@@ -1,4 +1,4 @@
-This user guide explains how to set-up the [Mauro Digital Object Identifier plugin](../../plugins/doi.md) to allow you to use, edit and remove DOI profiles. You will also find out how to create, submit and retire profile names. 
+This user guide explains how to set-up the [Mauro Digital Object Identifier plugin](../../../plugins/rest-api/doi.md) to allow you to use, edit and remove DOI profiles. You will also find out how to create, submit and retire profile names. 
 
 ---
 
@@ -10,15 +10,15 @@ The Mauro plugin for managing DOI names connects to the [DataCite](https://datac
 
 DOI names can only be applied to **public** and **finalised** Mauro catalogue items, to ensure that their contents remain fixed in time. The following catalogue items can have DOI names attached to them:
 
-* [Data Model](../../glossary/data-model/data-model.md)
-* [Data Class](../../glossary/data-class/data-class.md)
-* [Data Element](../../glossary/data-element/data-element.md)
-* [Data Type](../../glossary/data-type/data-type.md)
+* [Data Model](../../../glossary/data-model/data-model.md)
+* [Data Class](../../../glossary/data-class/data-class.md)
+* [Data Element](../../../glossary/data-element/data-element.md)
+* [Data Type](../../../glossary/data-type/data-type.md)
 * Code Set
 * Terminology
 * Term
 * Reference Data Model
-* [Versioned Folder](../../glossary/versioned-folder/versioned-folder.md)
+* [Versioned Folder](../../../glossary/versioned-folder/versioned-folder.md)
 
 ---
 

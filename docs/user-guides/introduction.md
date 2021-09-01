@@ -88,7 +88,7 @@ profiles**. These are profiles which are defined by a model elsewhere in the sys
 
 ---
 
-[Digital Object Identifiers](digital-object-identifiers/digital-object-identifiers.md)
+[Digital Object Identifiers](../plugins/user-guides/digital-object-identifiers/digital-object-identifiers.md)
 :  This user guide explains how to set-up the **Mauro Digital Object Identifier plugin** to allow you to use, edit and remove DOI profiles. You will also find out how to create, submit and retire profile names. 
 
 ---

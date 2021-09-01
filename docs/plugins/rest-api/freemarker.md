@@ -56,7 +56,7 @@ reusable templates donated by the community on these pages.
 
 ## Example 1: A simple web page
 
-In this first example, a basic template will be applied to a [Data Model](../glossary/data-model/data-model.md) in order to generate a simple HTML page for a given **Data Model**.
+In this first example, a basic template will be applied to a [Data Model](../../glossary/data-model/data-model.md) in order to generate a simple HTML page for a given **Data Model**.
 
 The API call:
 
