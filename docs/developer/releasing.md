@@ -299,7 +299,7 @@ Each of the repositories requires the tag to be released and links to the issues
     and [MileStones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
     ```
 `mdm-application`
-: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
+: [Tags Page](https://github.com/MauroDataMapper/mdm-application-build/tags)
     ```markdown
     See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
     and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
