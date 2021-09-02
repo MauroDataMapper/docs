@@ -56,13 +56,8 @@ git flow release start ${CORE_VERSION}
 
 Update package.json version to CORE_VERSION
 
-!!! Caution
-
-    Remove the existing `lib` dir to ensure theres no code left over.
-    (There's a ticket open to make sure the `build` command performs a clean first.)
-
 ```bash
-rm -rf lib && npm ci && npm run build
+npm install && npm run build
 git commit -am "Release ${CORE_VERSION}"
 git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
 ```
@@ -70,7 +65,7 @@ git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
 Update package.json version to next snapshot CORE_VERSION
 
 ```bash
-rm -rf lib && npm ci && npm run build
+npm install && npm run build
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
@@ -115,40 +110,6 @@ npm install
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
-
-The next steps are required until we get Jenkins distributing the archive to artifactory
-
-Checkout the release
-
-```bash
-git checkout ${UI_VERSION}
-```
-
-Perform a clean install
-
-```bash
-npm ci
-```
-
-Build the distribution
-
-```bash
-npm run dist
-```
-
-There will now be a `tgz` file in the `dist` folder with the name `mdm-ui-${UI_VERSION}.tgz`. This needs to be deployed to artifactory.
-
-1. Navigate to https://jenkins.cs.ox.ac.uk/ui/packages and log in.
-1. Navigate to https://jenkins.cs.ox.ac.uk/ui/repos/tree/General/libs-release-local%2Fuk%2Fac%2Fox%2Fsofteng%2Fmaurodatamapper
-1. Click 'Deploy' in the top right
-1. Choose 'Single Deploy' and drop in the tgz file from the `dist` folder
-1. Check then "Deploy as Maven Artifact"
-    * Group ID : `uk.ac.ox.softeng.maurodatamapper`
-    * Artifact ID : `mdm-ui`
-    * Version : UI_VERSION
-    * Classifier : LEAVE BLANK
-    * Type: `tgz`
-1. Click "Deploy"
 
 ## mdm-application-build
 
@@ -282,9 +243,21 @@ git checkout main && git push && git checkout develop && git push && git push --
 
 ### Documentation
 
+This should be performed inside the `docs` repository.
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
+```
+
 * Run `./releases.sh` in mdm-plugins.
-* Remove the private repositories from the HTML format and copy into the `docs/installing/plugins.md` file
-* Release the docs
+* Remove the private repositories from the HTML format and copy into the `installing/plugins.md` file
+
+```bash
+git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
+git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
+git checkout main && git push && git checkout develop && git push && git push --tags
+```
 
 ### Zulip Announce
 
