@@ -259,23 +259,6 @@ git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
-### Zulip Announce
-
-* Run `./releases.sh` in mdm-plugins.
-* Copy the below markdown block into the `announce` stream of Zulip
-* Update the versions for the applications
-* Copy in the plain text format of the "releases" output underneath it
-
-```markdown
-# New Release
-
-| Application | Version |
-|-----------------|-----------|
-| Docker | `B4.7.0_F6.3.1` |
-| RESTful API | `4.7.0` |
-| UI | `6.3.1` |
-```
-
 ### Github
 
 Each of the repositories requires the tag to be released and links to the issues fixed supplied.
@@ -313,3 +296,25 @@ Each of the repositories requires the tag to be released and links to the issues
     and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
     and [UI Milestones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
     ```
+
+### Zulip Announce
+
+!!! Caution
+
+    Make sure you've done all the github releases first otherwise the release notes wont contain anything useful
+
+* Run `./releases.sh` in mdm-plugins.
+* Copy the below markdown block into the `announce` stream of Zulip
+* Update the versions for the applications
+* Update the tag version for the release notes
+* Copy in the plain text format of the "releases" output underneath it
+
+```markdown
+# New Release
+
+| Application | Version | Release Notes |
+|----|-----|-----|
+| Docker | `B4.9.0_F6.5.0` | https://github.com/MauroDataMapper/mdm-docker/releases/tag/B4.9.0_F6.5.0 |
+| RESTful API | `4.9.0` | https://github.com/MauroDataMapper/mdm-application-build/releases/tag/4.9.0 |
+| UI | `6.5.0` | https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.5.0 |
+```
