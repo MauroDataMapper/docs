@@ -1,19 +1,22 @@
 This page describes the changes for each component: 'core', 'ui', and the various centrally-maintained plugins and client libraries. For each, a table
 is presented with version number, notable new features, notable pull requests, and any dependencies.
 
-
 For more information about the structure and architecture of the code, please see our [technical architecture](/resources/architecture/) pages.
 
-In general, we try to use [Semantic Versioning](https://semver.org). In particular note that any version tagged as `0.x.y` should be considered
-'beta' or for testing purposes only. 
+We use [Semantic Versioning](https://semver.org) for all repositories, please note that anything labelled with `-SNAPSHOT` is under development and should be considered 
+potentially unstable.
 
-In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), and so the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, but 'bleeding edge' features may be available within 'develop' or any feature branch.
+In our code repositories, we use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), 
+and so the 'main / [master](https://github.com/github/renaming)' branch may be considered stable, 
+but 'bleeding edge' features may be available within 'develop' or any feature branch.
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
+The current full release is **B4.9.0_F6.5.0**.
+
 ---
 
-## Core
+## Core API
 
 [GitHub](https://github.com/MauroDataMapper/mdm-core)
 <table width="100%">
@@ -25,6 +28,33 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>4.10.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.10.0">(GitHub Link)</a></td>
+            <td>2nd September 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>4.9.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.9.0">(GitHub Link)</a></td>
+            <td>24th August 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>4.8.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.8.0">(GitHub Link)</a></td>
+            <td>7th August 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>4.7.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.7.0">(GitHub Link)</a></td>
             <td>1st July 2021</td>
@@ -139,8 +169,35 @@ Please see our [Installing Plugins](/installing/plugins) pages for details about
     </thead>
     <tbody>
         <tr>
+            <td><b>6.6.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.6.0">(GitHub Link)</a></td>
+            <td>2nd September 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>6.5.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.5.0">(GitHub Link)</a></td>
+            <td>24th August 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><b>6.4.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.4.0">(GitHub Link)</a></td>
+            <td>7th August 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td><b>6.3.1</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.3.1">(GitHub Link)</a></td>
-            <td>18th June 2021</td>
+            <td>1st July 2021</td>
             <td>
                 <ul>
                     <li>Basic support for external authentication</li>
