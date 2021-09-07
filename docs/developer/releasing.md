@@ -87,7 +87,7 @@ Update package.json
 * `"@maurodatamapper/mdm-resources": "git+https://github.com/MauroDataMapper/mdm-resources.git#CORE_VERSION",`
 
 ```bash
-npm install
+rm package-lock.json && npm install
 ```
 
 !!! Caution
@@ -106,7 +106,7 @@ Update package.json
 * `"@maurodatamapper/mdm-resources": "git+https://github.com/MauroDataMapper/mdm-resources.git#develop",`
 
 ```bash
-npm install
+rm package-lock.json && npm install
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
