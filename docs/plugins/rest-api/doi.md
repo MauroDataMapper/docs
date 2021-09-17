@@ -1,6 +1,6 @@
 ## Introduction
 
-The Digital Object Identifier (DOI) plugin provides additional API endpoints that allow the integration of any Mauro [multi-facet aware](../../glossary/multi-facet-aware/multi-facet-aware) catalogue item to be recorded in a DOI system; this then allows unique, permanent identifiers to those catalogue items that can then be distributed across documents or articles over the web to act as links back to the Mauro content. The DOI system always ensures that a DOI name will always refer to a Mauro catalogue item as long as the DOI name is known. The plugin uses [DataCite](https://datacite.org/index.html) as the repository of Mauro DOI names; more information can be found at the DataCite website.
+The Digital Object Identifier (DOI) plugin provides additional API endpoints that allow the integration of any Mauro [multi-facet aware](../../../glossary/multi-facet-aware/multi-facet-aware) catalogue item to be recorded in a DOI system; this then allows unique, permanent identifiers to those catalogue items that can then be distributed across documents or articles over the web to act as links back to the Mauro content. The DOI system always ensures that a DOI name will always refer to a Mauro catalogue item as long as the DOI name is known. The plugin uses [DataCite](https://datacite.org/index.html) as the repository of Mauro DOI names; more information can be found at the DataCite website.
 
 In order to use Digital Object Identifiers, the Mauro instance must:
 
