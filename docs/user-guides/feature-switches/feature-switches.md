@@ -75,7 +75,6 @@ The table below lists all the optional features that can be controlled by featur
         <tr>
             <td>
                 <code>feature.use_open_id_connect</code>
-                <p><b>In development</b></p>
                 <p>
                     Enables the user interface for administrators to create/edit/remove OpenID Connect provider details to Mauro, and
                     for the login form to list these external identity providers to redirect and login.                    
@@ -90,7 +89,6 @@ The table below lists all the optional features that can be controlled by featur
         <tr>
             <td>
                 <code>feature.use_digital_object_identifiers</code>
-                <p><b>In development</b></p>
                 <p>
                     Enables the management of Digital Object Identifiers (DOIs) using a new <a href="/tutorials/properties-profiles/">profile</a> to store
                     DOI metadata and submit catalogue items to a DOI system.
@@ -105,22 +103,20 @@ The table below lists all the optional features that can be controlled by featur
         <tr>
             <td>
                 <code>feature.use_versioned_folders</code>
-                <p><b>In development</b></p>
                 <p>
-                    Enables the ability to use <em>Versioned Folders</em>.
+                    Enables the ability to use <a href="/glossary/versioned-folder/versioned-folder/">Versioned Folders</a>.
                 </p>
             </td>
-            <td><code>false</code></td>
+            <td><code>true</code></td>
         </tr>
         <tr>
             <td>
                 <code>feature.use_merge_diff_ui</code>
-                <p><b>In development</b></p>
                 <p>
-                    Enables a new user interface for the management of merging data models within the Mauro user interface.
+                    Enables a new user interface for the management of merging data models within the Mauro user interface. See the <a href="user-guides/merging-data-models/merging-data-models/">Merging Data Models</a> user guide for more details.
                 </p>
             </td>
-            <td><code>false</code></td>
+            <td><code>true</code></td>
         </tr>        
     </tbody>
 </table>

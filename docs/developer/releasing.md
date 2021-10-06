@@ -87,7 +87,7 @@ Update package.json
 * `"@maurodatamapper/mdm-resources": "git+https://github.com/MauroDataMapper/mdm-resources.git#CORE_VERSION",`
 
 ```bash
-npm install
+rm package-lock.json && npm install
 ```
 
 !!! Caution
@@ -106,7 +106,7 @@ Update package.json
 * `"@maurodatamapper/mdm-resources": "git+https://github.com/MauroDataMapper/mdm-resources.git#develop",`
 
 ```bash
-npm install
+rm package-lock.json && npm install
 git commit -am 'Next snapshot'
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
@@ -240,18 +240,61 @@ git checkout main && git push && git checkout develop && git push && git push --
     * Private Repositories
     * Unreleased plugins
 
+### Github
+
+Each of the repositories requires the tag to be released and links to the issues fixed supplied.
+
+* Navigate to the supplied tags page
+* Select the latest tag and choose "Create release"
+* Copy in the appropriate text from the below list, making sure to update
+    * the stated YouTrack version to the tag being released
+    * the stated Github milestone
+
+`mdm-core`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
+```markdown
+See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
+and [Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+```
+
+`mdm-ui`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-ui/tags)
+```markdown
+See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23F6.4.0)
+and [MileStones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
+```
+
+`mdm-application`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-application-build/tags)
+```markdown
+See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
+and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
+```
+
+`mdm-docker`
+: [Tags Page](https://github.com/MauroDataMapper/mdm-docker/tags)
+```markdown
+See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0%20%23F6.4.0)
+and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
+and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
+and [UI Milestones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
+```
 
 ### Documentation
 
-This should be performed inside the `docs` repository.
+!!! Caution
+
+    Make sure you've done all the github releases first otherwise the release notes won't contain anything useful
+
+This should be performed inside the [docs](https://github.com/MauroDataMapper/docs) repository.
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
 git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
 ```
 
-* Run `./releases.sh` in mdm-plugins.
-* Remove the private repositories from the HTML format and copy into the `installing/plugins.md` file
+* Perform the updates as per the 2 sub-sections ([Main Release](#main-release), [Plugins Release](#plugins-release)) below
 
 ```bash
 git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
@@ -259,57 +302,75 @@ git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
+#### Main Release
+
+Update `docs/about/release-notes.md` file.
+
+The `td` sections, in order, are:
+Add
+ 1. Release version & link to the release in Github
+ 2. Release date
+ 3. Major Changes: This is an `ul` so each change should be wrapped in an `li` element
+
+* Update the "Current Full Release" line:
+
+```markdown
+The current full release is **B${CORE_VERSION}_F${UI_VERSION}**.
+```
+
+* Add the following block with updated versions to the top of the `## Core API` section:
+
+```html
+<tr>
+    <td><b>4.10.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.10.0">(GitHub Link)</a></td>
+    <td>2nd September 2021</td>
+    <td>
+        <ul>
+            <li></li>
+        </ul>
+    </td>
+</tr>
+```
+
+* Add the following block with updated versions to the top of the `## UI` section:
+
+```html
+<tr>
+    <td><b>6.6.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.6.0">(GitHub Link)</a></td>
+    <td>2nd September 2021</td>
+    <td>
+        <ul>
+            <li></li>
+        </ul>
+    </td>
+</tr>
+```
+
+#### Plugins Release
+  * Run `./releases.sh` in mdm-plugins.
+  * Remove the private repositories from the HTML format and copy into the `docs/installing/plugins.md` file
+
+
+
+
 ### Zulip Announce
+
+!!! Caution
+
+    Make sure you've done all the github releases first otherwise the release notes won't contain anything useful
 
 * Run `./releases.sh` in mdm-plugins.
 * Copy the below markdown block into the `announce` stream of Zulip
 * Update the versions for the applications
+* Update the tag version for the release notes
 * Copy in the plain text format of the "releases" output underneath it
 
 ```markdown
 # New Release
 
-| Application | Version |
-|-----------------|-----------|
-| Docker | `B4.7.0_F6.3.1` |
-| RESTful API | `4.7.0` |
-| UI | `6.3.1` |
+| Application | Version | Release Notes |
+|----|-----|-----|
+| Docker | `B4.9.0_F6.5.0` | https://github.com/MauroDataMapper/mdm-docker/releases/tag/B4.9.0_F6.5.0 |
+| RESTful API | `4.9.0` | https://github.com/MauroDataMapper/mdm-application-build/releases/tag/4.9.0 |
+| UI | `6.5.0` | https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.5.0 |
 ```
-
-### Github
-
-Each of the repositories requires the tag to be released and links to the issues fixed supplied.
-
-* Navigate to the supplied tags page
-* Select the latest tag and choose "Create release"
-* Copy in the appropriate text from the below list, making sure to update 
-  * the stated YouTrack version to the tag being released
-  * the stated Github milestone
-
-`mdm-core`
-: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
-    ```markdown
-    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
-    and [Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
-    ```
-`mdm-ui`
-: [Tags Page](https://github.com/MauroDataMapper/mdm-ui/tags)
-    ```markdown
-    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23F6.4.0)
-    and [MileStones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
-    ```
-`mdm-application`
-: [Tags Page](https://github.com/MauroDataMapper/mdm-core/tags)
-    ```markdown
-    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0)
-    and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
-    and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
-    ```
-`mdm-docker`
-: [Tags Page](https://github.com/MauroDataMapper/mdm-docker/tags)
-    ```markdown
-    See [Issues fixed](https://metadatacatalogue.myjetbrains.com/youtrack/issues/MC?q=%23Released%20%23B4.8.0%20%23F6.4.0)
-    and [Core Milestones](https://github.com/MauroDataMapper/mdm-core/issues?q=is%3Aissue+milestone%3A4.8.0)
-    and [Application Milestones](https://github.com/MauroDataMapper/mdm-application-build/issues?q=is%3Aissue+milestone%3A4.8.0)
-    and [UI Milestones](https://github.com/MauroDataMapper/mdm-ui/issues?q=is%3Aissue+milestone%3A6.4.0)
-    ```
