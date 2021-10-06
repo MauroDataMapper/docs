@@ -47,13 +47,22 @@ see the [OIC Userguide](../user-guides/openid-connect/openid-connect.md) for mor
 `maurodatamapper.openidConnect.microsoft.enabled`
 : Defaults to false. If enabled then the other google properties will need to be provided.
 
+`maurodatamapper.openidConnect.microsoft.tenantId`
+: The Directory (tenant) id assigned to the Azure AD
+
+`maurodatamapper.openidConnect.microsoft.accountId`
+: The account id or type to use for this app. This is either going to be something like the tenant id, "organizations" or "common", 
+it will be decided by the Authentication -> Supported Account Types. It will be used to build the discovery document URL. 
+If unsure what to use, click the "Endpoints" button in the Azure overview and examine the "OpenID Connect metadata document" endpoint,
+this field should be whatever is in the URL between `login.microsoftonline.com/` and `/v2.0`.
+
 `maurodatamapper.openidConnect.microsoft.clientId`
 : The client id used to identify and authenticate the MDM service.
 
 `maurodatamapper.openidConnect.microsoft.clientSecret`
 : The client id used to identify and authenticate the MDM service.
 
-* `discoveryDocumentUrl`: https://login.microsoftonline.com/common/.well-known/openid-configuration
+* `discoveryDocumentUrl`: https://login.microsoftonline.com/${accountId}/v2.0/.well-known/openid-configuration
 * `imageUrl`: https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_logo.jpg
 
 ### KeyCloak
