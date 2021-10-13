@@ -12,7 +12,7 @@ but 'bleeding edge' features may be available within 'develop' or any feature br
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
-The current full release is **B4.9.0_F6.5.0**.
+The current full release is **B4.10.0_F6.6.0**.
 
 ---
 
@@ -33,7 +33,9 @@ The current full release is **B4.9.0_F6.5.0**.
             <td>2nd September 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Add API endpoints for editing Reference Data Models</li>
+                    <li>Configurable bootstrapping in production mode</li>
+                    <li>Many improvements and bug-fixes to Versioned Folders, merging and branching</li>
                 </ul>
             </td>
         </tr>
@@ -42,7 +44,8 @@ The current full release is **B4.9.0_F6.5.0**.
             <td>24th August 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Allow profiles to be editable after finalisation</li>
+                    <li>Add derived field types for profiles</li>
                 </ul>
             </td>
         </tr>
@@ -51,7 +54,12 @@ The current full release is **B4.9.0_F6.5.0**.
             <td>7th August 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Updates to branching and finalising for Versioned Folders</li>
+                    <li>Speed increase on finalising models</li>
+                    <li>Add rules to merge functionality</li>
+                    <li>Handle system configuration in multiple .yml files</li>
+                    <li>Various improvements to base import functionality</li>
+                    <li>Other bug fixes</li>
                 </ul>
             </td>
         </tr>
@@ -169,11 +177,22 @@ The current full release is **B4.9.0_F6.5.0**.
     </thead>
     <tbody>
         <tr>
+            <td><b>6.6.1</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.6.1">(GitHub Link)</a></td>
+            <td>22nd September 2021</td>
+            <td>
+                <ul>
+                    <li>Open ID Connect redirect issue fixed</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td><b>6.6.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.6.0">(GitHub Link)</a></td>
             <td>2nd September 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Term search within Terminology fixed</li>
+                    <li>Fix for advanced search within a folder</li>
+                    <li>Improvements to merge diff tool</li>
                 </ul>
             </td>
         </tr>
@@ -182,7 +201,11 @@ The current full release is **B4.9.0_F6.5.0**.
             <td>24th August 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Improvements to profiles and other DOI profile functionality</li>
+                    <li>Fix to favourite highlighting</li>
+                    <li>DataFlow presentation no-longer using paginated call</li>
+                    <li>Open ID Connect conformance issue resolved</li>
+                    <li>Various other bug fixes and layout improvements</li>
                 </ul>
             </td>
         </tr>
@@ -191,7 +214,14 @@ The current full release is **B4.9.0_F6.5.0**.
             <td>7th August 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Fix for making models publicly readable</li>
+                    <li>DOI functionality (requires plugin)</li>
+                    <li>Multiple updates to model merging tool</li>
+                    <li>Fix to merge graph for Versioned Folders</li>
+                    <li>Drag-and-drop ordering for Data Elements</li>
+                    <li>"Select all" option for adding Terms to a Codeset</li>
+                    <li>Tree icons for model items</li>
+                    <li>Various other bug fixes</li>
                 </ul>
             </td>
         </tr>
