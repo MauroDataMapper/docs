@@ -64,22 +64,22 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.9.0</td>
         </tr>
 <tr>
-            <td><b>MySQL</b><br/>3.1.0</td>
-            <td>2021-08-24</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:3.1.0</code></td>
-            <td>Core &gt;= 4.9.0</td>
+            <td><b>MySQL</b><br/>4.0.0</td>
+            <td>2021-10-22</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:4.0.0</code></td>
+            <td>Core &gt;= 4.10.0</td>
         </tr>
 <tr>
-            <td><b>Oracle SQL</b><br/>4.1.0</td>
-            <td>2021-08-24</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:4.1.0</code></td>
-            <td>Core &gt;= 4.9.0</td>
+            <td><b>Oracle SQL</b><br/>5.0.0</td>
+            <td>2021-10-22</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:5.0.0</code></td>
+            <td>Core &gt;= 4.10.0</td>
         </tr>
 <tr>
-            <td><b>PostgreSQL</b><br/>4.1.0</td>
-            <td>2021-08-24</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:4.1.0</code></td>
-            <td>Core &gt;= 4.9.0</td>
+            <td><b>PostgreSQL</b><br/>5.0.0</td>
+            <td>2021-10-22</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:5.0.0</code></td>
+            <td>Core &gt;= 4.10.0</td>
         </tr>
 </tbody>
 </table>
@@ -105,10 +105,10 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.5.0</td>
         </tr>
 <tr>
-            <td><b>OpenID Connect Authentication</b><br/>1.0.0</td>
-            <td>2021-08-08</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:1.0.0</code></td>
-            <td>Core &gt;= 4.8.0</td>
+            <td><b>OpenID Connect Authentication</b><br/>1.1.0</td>
+            <td>2021-10-06</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:1.1.0</code></td>
+            <td>Core &gt;= 4.10.0</td>
         </tr>
 </tbody>
 </table>
