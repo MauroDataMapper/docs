@@ -58,10 +58,10 @@ the [Installing](../docker) page.
             <td>Core &gt;= 4.8.0</td>
         </tr>
 <tr>
-            <td><b>MS SQL</b><br/>5.1.0</td>
-            <td>2021-08-24</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:5.1.0</code></td>
-            <td>Core &gt;= 4.9.0</td>
+            <td><b>MS SQL</b><br/>6.0.0</td>
+            <td>2021-11-01</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:6.0.0</code></td>
+            <td>Core &gt;= 4.10.0</td>
         </tr>
 <tr>
             <td><b>MySQL</b><br/>4.0.0</td>
