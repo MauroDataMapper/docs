@@ -12,7 +12,7 @@ but 'bleeding edge' features may be available within 'develop' or any feature br
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
-The current full release is **B4.10.0_F6.6.0**.
+The current full release is **B4.11.0_F6.7.0**.
 
 ---
 
@@ -28,6 +28,15 @@ The current full release is **B4.10.0_F6.6.0**.
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>4.11.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.11.0">(GitHub Link)</a></td>
+            <td>3rd November 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>4.10.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/4.10.0">(GitHub Link)</a></td>
             <td>2nd September 2021</td>
@@ -176,6 +185,15 @@ The current full release is **B4.10.0_F6.6.0**.
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>6.7.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.7.0">(GitHub Link)</a></td>
+            <td>3rd November 2021</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>6.6.1</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.6.1">(GitHub Link)</a></td>
             <td>22nd September 2021</td>
