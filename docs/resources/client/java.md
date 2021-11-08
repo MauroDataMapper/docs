@@ -29,7 +29,7 @@ In order to include the Mauro client library in your Java / Groovy project, use 
 
     dependencies {
         ...
-        compile "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-api-java-restful:{version}"
+        compile "uk.ac.ox.softeng.maurodatamapper:mdm-api-java-restful:{version}"
     }
     ```
 === "Maven"
