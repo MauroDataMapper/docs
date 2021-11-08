@@ -33,7 +33,7 @@ The current full release is **B4.11.0_F6.7.0**.
             <td>3rd November 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Updates and bug-fixes for Profiles, Subscribed Catalogues, Reference Data Models and more</li>
                 </ul>
             </td>
         </tr>
@@ -190,7 +190,9 @@ The current full release is **B4.11.0_F6.7.0**.
             <td>3rd November 2021</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Update admin session dashboard</li>
+                    <li>Features for importing / extending data model components</li>
+                    <li>Many updates and bug-fixes to a range of components (see full list on GitHub)</li>
                 </ul>
             </td>
         </tr>
