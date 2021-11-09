@@ -1,5 +1,7 @@
 site_name: Documentation
-copyright: 'Copyright © 2021 University of Oxford and Health and Social Care Information Centre, also known as NHS Digital'
+copyright: 'Copyright © 2021 University of Oxford and Health and Social Care
+      Information Centre, also known as NHS Digital.  <a href="/privacy-policy/">Privacy Policy</a>'
+strict: true
 theme:
     name: 'material'
     custom_dir: 'theme/'
@@ -20,6 +22,7 @@ extra_javascript:
     - assets/javascripts/extra.js
 markdown_extensions:
     - admonition
+    - attr_list
     - footnotes
     -   pymdownx.highlight:
             use_pygments: true
@@ -46,6 +49,16 @@ markdown_extensions:
             custom_checkbox: true
     - pymdownx.tilde
     - def_list
+extra:
+  analytics:
+    provider: google
+    property: G-R16Z5NZY27
+  consent:
+    title: Cookie consent
+    description: We use cookies to recognize your repeated visits and preferences, as well
+         as to measure the effectiveness of our documentation and whether users
+         find what they're searching for. With your consent, you're helping us to
+         make our documentation better.
 nav:
     -   Home: 'index.md'
     -   About:
