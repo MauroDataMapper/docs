@@ -18,7 +18,7 @@ Each level along with it's permissions are summarised below in ascending order.
 
 ### Author
 * As **Reviewer** (above) plus:
-* Add and edit descriptions
+* Add and edit descriptions on models
 
 ### Editor
 * As **Author** (above) plus:
@@ -29,6 +29,8 @@ Each level along with it's permissions are summarised below in ascending order.
 ### Container Administrator
 * As **Editor** (above) plus:
 * Permanently delete models
+* Add and Edit descriptions on containers (folders, classifications) 
+* Delete containers (folders, classifications)
 
 ### Container Group Administrator
 * As **Container Administrator** (above) plus:
@@ -101,6 +103,7 @@ These restrictions can be placed on:
 * [Folders](../../glossary/folder/folder.md)
 * [Data Models](../../glossary/data-model/data-model.md)
 * Code Sets
+* [Classifications](../../glossary/classification/classification.md)
 * Terminologies
 * Reference Data Models
 
@@ -146,7 +149,7 @@ You then need to select which **access level** you would like to assign to the g
   * **Reviewer**
   * **Author**
   * **Editor**
-  * **Container Administrator** (Folders only)
+  * **Container Administrator** (Folders and Classifications only)
   * **Container Group Administrator** (Folders only)
 
 Once you've decided on a suitable **access level**, click the **'Search...'** box under **'Access Level'** and select the relevant access option. Then click the green tick to the right of the row to save your changes.
