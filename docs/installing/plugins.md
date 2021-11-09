@@ -167,8 +167,8 @@ the [Installing](../docker) page.
     <tbody>
 <tr>
             <td><b>Freemarker Templating</b><br/>1.1.0</td>
-            <td>2021-03-04</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.1.0</code></td>
+            <td>2021-07-07</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:1.2.0</code></td>
             <td>Core &gt;= 4.7.0</td>
         </tr>
 <tr>
