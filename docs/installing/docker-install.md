@@ -104,7 +104,7 @@ This will add the latest minor version of the Excel plugin.
 ### Theme
 
 Mauro comes with a default user interface theme - with the standard blue branding, and default text on the home page.  This can be overridden in 
-the `docker-compose.yml` file, with instructions provided in the [Branding guide](../installing/branding/branding).  The default theme is called 
+the `docker-compose.yml` file, with instructions provided in the [Branding guide](../branding/branding).  The default theme is called 
 `default` and can be set with:
 
 ```yaml
