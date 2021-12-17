@@ -6,9 +6,8 @@ with a Mauro instance. The library makes use of the mdm-core grails application,
 validation.
 
 The REST API library can connect to a remote Mauro instance, and is typically used to perform bulk operations such as importing and exporting models,
-such as when scripting a complex import. This is often the easiest way to experiment with importing before
-[building a Grails Plugin](../../community/build-plugins.md). The code can also be used to connect to multiple Mauro instances, for example to copy
-models from one instance to another.
+such as when scripting a complex import. This is often the easiest way to experiment with importing before building a Grails Plugin.
+The code can also be used to connect to multiple Mauro instances, for example to copy models from one instance to another.
 
 ## API documentation
 
