@@ -81,6 +81,7 @@ nav:
                     -   Branching, versioning and forking Data Models: 'user-guides/branch-version-fork/branch-version-fork.md'
                     -   Merging Data Models: 'user-guides/merging-data-models/merging-data-models.md'
                     -   Document a Dataset: 'user-guides/document-a-dataset/document-a-dataset.md'
+                    -   Bulk editing: 'user-guides/bulk-editing/bulk-editing.md'
                     -   Exporting Data Models: 'user-guides/exporting-data-models/exporting-data-models.md'
                     -   Import a Data Model from Excel: 'user-guides/import-data-model-from-excel/import-data-model-from-excel.md'
                     -   How to search: 'user-guides/how-to-search/how-to-search.md'
