@@ -161,6 +161,7 @@ nav:
                     -   Freemarker Templating: 'plugins/rest-api/freemarker.md'
                     -   OpenID Connect: 'plugins/rest-api/openid-connect.md'
                     -   SPARQL: 'plugins/rest-api/sparql.md'
+                    -   Command-line database importers: 'plugins/cli/remote-database-importers.md'
     -   Community:
             -   Support: 'community/support.md'
             -   Contribute: 'community/contribute.md'
