@@ -5,6 +5,11 @@ between each git commit.
 
 !!! Warning
 
+    The main release cycle should be performed using Jenkins, not done manually. 
+    However plugins & documentation do still need to be done manually
+
+!!! Warning
+
     You will need git flow installed in the command line to be able to perform the release.
     Installation instructions are [here](https://github.com/nvie/gitflow/wiki/Installation).
     You will also need to make sure all your repositories are initialised as git-flow repositories.
