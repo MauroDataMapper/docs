@@ -14,6 +14,10 @@ theme:
     font:
         text: Nunito Sans
         code: Nunito Sans
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
 plugins:
     - search
 extra_css:
@@ -157,6 +161,9 @@ nav:
                     -   Freemarker Templating: 'plugins/rest-api/freemarker.md'
                     -   OpenID Connect: 'plugins/rest-api/openid-connect.md'
                     -   SPARQL: 'plugins/rest-api/sparql.md'
+            -   Releasing:
+                    - Release Process: 'developer/releasing.md'
+                    - System Build Status: 'developer/build_status.md'
     -   Community:
             -   Support: 'community/support.md'
             -   Contribute: 'community/contribute.md'

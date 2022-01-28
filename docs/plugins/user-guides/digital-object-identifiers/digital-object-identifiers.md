@@ -4,7 +4,8 @@ This user guide explains how to set-up the [Mauro Digital Object Identifier plug
 
 ## 1. Overview
 
-Using an optional plugin for Mauro, it is possible to submit Mauro catalogue items from your catalogue to a [Digital Object Identifie (DOI)](https://www.doi.org/) system. This allows persistent, unique identifiers to be recorded in a DOI system to act as network links back to your Mauro catalogue items. The benefits are that the catalogue item may change over time, but the DOI name will remain fixed, always resolving back to the correct catalogue item, making them very useful for citations.
+Using an optional plugin for Mauro, it is possible to submit Mauro catalogue items from your catalogue to a 
+[Digital Object Identifier (DOI)](https://www.doi.org/) system. This allows persistent, unique identifiers to be recorded in a DOI system to act as network links back to your Mauro catalogue items. The benefits are that the catalogue item may change over time, but the DOI name will remain fixed, always resolving back to the correct catalogue item, making them very useful for citations.
 
 The Mauro plugin for managing DOI names connects to the [DataCite](https://datacite.org/) system to create and manage DOIs with **DataCite Fabrica**.
 
