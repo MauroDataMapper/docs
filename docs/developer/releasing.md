@@ -31,114 +31,10 @@ You should identify the following from the repositories before starting
 * CORE_VERSION : The appropriate non-snapshot version from mdm-core/gradle.properties on the develop branch
 * UI_VERSION : The appropriate non-snapshot version from mdm-ui/package.json on the develop branch
 
-## mdm-core
+## Jenkins Release
 
-```bash
-git checkout main && git pull && git checkout develop && git pull
-git flow release start ${CORE_VERSION}
-```
-
-Update gradle.properties
-
-```bash
-git commit -am "Release ${CORE_VERSION}"
-git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
-```
-
-Update gradle.properties to next minor snapshot
-
-```bash
-git commit -am 'Next snapshot'
-git checkout main && git push && git checkout develop && git push && git push --tags
-```
-
-## mdm-resources
-
-```bash
-git checkout main && git pull && git checkout develop && git pull
-git flow release start ${CORE_VERSION}
-```
-
-Update package.json version to CORE_VERSION
-
-```bash
-npm install && npm run build
-git commit -am "Release ${CORE_VERSION}"
-git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
-```
-
-Update package.json version to next snapshot CORE_VERSION
-
-```bash
-npm install && npm run build
-git commit -am 'Next snapshot'
-git checkout main && git push && git checkout develop && git push && git push --tags
-```
-
-## mdm-ui
-
-!!! Warning
-
-    You must release mdm-resources first, or be able to use an existing release of mdm-resources
-
-```bash
-git checkout main && git pull && git checkout develop && git pull
-git flow release start ${UI_VERSION}
-```
-
-Update package.json
-
-* `version` to UI_VERSION
-* `"@maurodatamapper/mdm-resources"` to CORE_VERSION
-
-```bash
-npm install
-```
-
-!!! Caution
-
-    MAKE SURE in `package.lock` that all the lines for mdm-resources that have a commit hash MATCH the hash for the release, 
-    if NOT then delete all entries in the lock file for mdm-resources with a commit hash and run npm install again
-
-```bash
-git commit -am "Release ${UI_VERSION}"
-git flow release finish -m "${UI_VERSION}" ${UI_VERSION}
-```
-
-Update package.json
-
-* `version` to next minor snapshot UI_VERSION
-
-```bash
-npm install
-git commit -am 'Next snapshot'
-git checkout main && git push && git checkout develop && git push && git push --tags
-```
-
-## mdm-application-build
-
-!!! Warning
-
-    You will need to wait for the main branch of mdm-core to finish before proceeding on the latest mdm-application-build
-
-```bash
-git checkout main && git pull && git checkout develop && git pull
-git flow release start ${CORE_VERSION}
-```
-
-Update gradle.properties
-
-```bash
-git commit -am "Release ${CORE_VERSION}"
-git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
-```
-
-Update gradle.properties to next minor snapshot
-
-```bash
-git commit -am 'Next snapshot'
-git checkout main && git push && git checkout develop && git push && git push --tags
-```
+Use the `mdm-release/release` job, filling in the requested parameters.
+Sit back and relax.
 
 ## MDM plugins
 
@@ -162,6 +58,8 @@ order, if not listed then there is not required order.
     2. mdm-plugin-database-oracle
     3. mdm-plugin-database-postgresql
     4. mdm-plugin-database-sqlserver
+3. mdm-plugin-profile-schema-org
+   1. mdm-plugin-profile-hdruk
 
 ### No changes waiting to be released
 
@@ -196,37 +94,6 @@ git flow release finish -m "${PLUGIN_VERSION}" ${PLUGIN_VERSION}
 
 ```bash
 git commit -am 'Next snapshot'
-git checkout main && git push && git checkout develop && git push && git push --tags
-```
-
-## mdm-docker
-
-!!! Warning
-
-    You will need to wait for the main branch of mdm-application-build and mdm-ui to finish before proceeding
-
-```bash
-git checkout main && git pull && git checkout develop && git pull
-git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
-```
-
-Update docker-compose.yml
-
-* The 2 commit ARGS
-* The image tag to `B${CORE_VERSION}_F${UI_VERSION}`
-
-Dry run and check it comes up as expected
-
-```bash
-docker-compose build
-docker-compose up
-```
-
-If it all comes up.
-
-```bash
-git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
-git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
@@ -374,4 +241,148 @@ The current full release is **B${CORE_VERSION}_F${UI_VERSION}**.
 | Docker | `B4.9.0_F6.5.0` | https://github.com/MauroDataMapper/mdm-docker/releases/tag/B4.9.0_F6.5.0 |
 | RESTful API | `4.9.0` | https://github.com/MauroDataMapper/mdm-application-build/releases/tag/4.9.0 |
 | UI | `6.5.0` | https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.5.0 |
+```
+
+## Manual Release Process
+
+In the event Jenkins is unavailable follow the process below to release the systems Jenkins would release
+
+### mdm-core
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start ${CORE_VERSION}
+```
+
+Update gradle.properties
+
+```bash
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
+```
+
+Update gradle.properties to next minor snapshot
+
+```bash
+git commit -am 'Next snapshot'
+git checkout main && git push && git checkout develop && git push && git push --tags
+```
+
+### mdm-resources
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start ${CORE_VERSION}
+```
+
+Update package.json version to CORE_VERSION
+
+```bash
+npm install && npm run build
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
+```
+
+Update package.json version to next snapshot CORE_VERSION
+
+```bash
+npm install && npm run build
+git commit -am 'Next snapshot'
+git checkout main && git push && git checkout develop && git push && git push --tags
+```
+
+### mdm-ui
+
+!!! Warning
+
+    You must release mdm-resources first, or be able to use an existing release of mdm-resources
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start ${UI_VERSION}
+```
+
+Update package.json
+
+* `version` to UI_VERSION
+* `"@maurodatamapper/mdm-resources"` to CORE_VERSION
+
+```bash
+npm install
+```
+
+!!! Caution
+
+    MAKE SURE in `package.lock` that all the lines for mdm-resources that have a commit hash MATCH the hash for the release, 
+    if NOT then delete all entries in the lock file for mdm-resources with a commit hash and run npm install again
+
+```bash
+git commit -am "Release ${UI_VERSION}"
+git flow release finish -m "${UI_VERSION}" ${UI_VERSION}
+```
+
+Update package.json
+
+* `version` to next minor snapshot UI_VERSION
+
+```bash
+npm install
+git commit -am 'Next snapshot'
+git checkout main && git push && git checkout develop && git push && git push --tags
+```
+
+### mdm-application-build
+
+!!! Warning
+
+    You will need to wait for the main branch of mdm-core to finish before proceeding on the latest mdm-application-build
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start ${CORE_VERSION}
+```
+
+Update gradle.properties
+
+```bash
+git commit -am "Release ${CORE_VERSION}"
+git flow release finish -m "${CORE_VERSION}" ${CORE_VERSION}
+```
+
+Update gradle.properties to next minor snapshot
+
+```bash
+git commit -am 'Next snapshot'
+git checkout main && git push && git checkout develop && git push && git push --tags
+```
+
+### mdm-docker
+
+!!! Warning
+
+    You will need to wait for the main branch of mdm-application-build and mdm-ui to finish before proceeding
+
+```bash
+git checkout main && git pull && git checkout develop && git pull
+git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
+```
+
+Update docker-compose.yml
+
+* The 2 commit ARGS
+* The image tag to `B${CORE_VERSION}_F${UI_VERSION}`
+
+Dry run and check it comes up as expected
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+If it all comes up.
+
+```bash
+git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
+git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
+git checkout main && git push && git checkout develop && git push && git push --tags
 ```
