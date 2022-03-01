@@ -4,7 +4,11 @@ The following variables need to be overriden or set when building or starting up
 
 `grails.cors.allowedOrigins`
 : Should be set to a single fully qualified domain name (FQDN) URL which is the host where MDM will be accessed from. If using a proxy to break SSL then the origin would be the
-hostname where the proxy sits, not the host of the server running the docker containers. The origin must include the protocol, i.e. `https` or `http`.
+hostname where the proxy sits, not the host of the server running the docker containers. The origin must include the protocol, i.e. `https` or `http`. 
+At the same time the `grails.cors.allowedOriginPatterns` property should be overriden to `[]` to ensure the "allow all" option is prevented.
+
+`grails.cors.allowedOriginPatterns`
+: MUST be overriden to `[]` to prevent "allow all"
 
 `maurodatamapper.authority.name`
 : A unique name used to distinguish a running MDM instance.

@@ -162,6 +162,9 @@ nav:
                     -   OpenID Connect: 'plugins/rest-api/openid-connect.md'
                     -   SPARQL: 'plugins/rest-api/sparql.md'
                     -   Command-line database importers: 'plugins/cli/remote-database-importers.md'
+            -   Releasing:
+                    - Release Process: 'developer/releasing.md'
+                    - System Build Status: 'developer/build_status.md'
     -   Community:
             -   Support: 'community/support.md'
             -   Contribute: 'community/contribute.md'
