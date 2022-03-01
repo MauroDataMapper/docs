@@ -35,6 +35,11 @@ Our current User Guides:
 
 ---
 
+[Bulk editing](bulk-editing/bulk-editing.md)
+:  This user guide will explain how to modify multiple catalogue items at once using [Profiles](../glossary/profile/profile.md).
+
+---
+
 [Exporting Data Models](exporting-data-models/exporting-data-models.md)
 :  This user guide will explain how to export a **Data Model** using a variety of exporters including XML, JSON, XML Schema, Grails and Excel.
 
