@@ -13,11 +13,13 @@ theme:
     favicon: assets/images/favicon.ico
     font:
         text: Nunito Sans
-        code: Nunito Sans
+        code: Source Code Pro
     features:
         - navigation.instant
         - navigation.tracking
         - navigation.top
+        - navigation.tabs
+        - navigation.indexes
 plugins:
     - search
 extra_css:
@@ -74,7 +76,7 @@ nav:
             -   Development Roadmap: 'about/development-roadmap.md'
     -   Using Mauro:
             -   User Guides:
-                    -   Introduction: 'user-guides/introduction.md'
+                    -   User Guides: 'user-guides/index.md'
                     -   Create a Data Model: 'user-guides/create-a-data-model/create-a-data-model.md'
                     -   Organising Data Models: 'user-guides/organising-data-models/organising-data-models.md'
                     -   Finalising Data Models: 'user-guides/finalising-data-models/finalising-data-models.md'

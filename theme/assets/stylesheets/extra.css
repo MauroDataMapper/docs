@@ -101,8 +101,13 @@ endpoint strong {
     /* color: #b71c1c;  */
     /* color: #9e9e9e; */
 }
+
 .md-typeset code {
-    font-size: 16px;
+    font-size: 13px;
+}
+
+.md-typeset pre {
+    font-size: 13px;
 }
 
 .md-header-nav__button.md-logo img {
@@ -273,4 +278,22 @@ div.home-page-button-text span.home-page-button-summary {
       .md-search__input+.md-search__icon {
           color: grey;
       }
+}
+
+.md-top svg {
+    height: auto !important;
+    width: auto !important;
+}
+
+a.md-top:is(:focus, :hover) {
+    color: white;
+    background-color: #002147;
+}
+
+.md-top {
+    border-radius: 0.8rem;
+}
+
+.md-sidebar__inner {
+    margin-left: -0.6rem
 }
