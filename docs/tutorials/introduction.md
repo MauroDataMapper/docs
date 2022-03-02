@@ -1,5 +1,5 @@
 These tutorials are intended to provide more information about particular aspects of functionality. Unlike the 
-[User Guides](../user-guides/introduction.md), which explain _how_ to achieve things in **Mauro Data Mapper**, these Tutorials will explain _why_ such 
+[User Guides](../user-guides/index.md), which explain _how_ to achieve things in **Mauro Data Mapper**, these Tutorials will explain _why_ such 
 functionality is available and how it is intended to be used.
 
 Our current Tutorials:
