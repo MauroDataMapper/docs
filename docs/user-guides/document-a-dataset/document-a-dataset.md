@@ -106,7 +106,7 @@ Similar to adding a **Data Class**, there are two ways to import a **Data Elemen
 
 ### <a name="create-a-new-data-element"></a> **5.1 Create a New Data Element**
 
-Follow the steps in ['3.1 Create a new Data Class'](#31-create-a-new-data-class) until you have completed the **'Label'**, **'Description'** and 
+Follow the steps in ['3.1 Create a new Data Class'](#31-create-a-new-data-class) until you have completed the **[Label](../../glossary/label/label.md)**, **Description** and 
 **Multiplicity** fields for the **Data Element**. 
 
 Each **Data Element** then needs to be assigned a relevant [Data Type](../../glossary/data-type/data-type.md). This can either be selected from an existing list, or you can add a new **Data Type**. 

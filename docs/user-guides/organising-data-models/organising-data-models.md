@@ -46,7 +46,7 @@ To create a **Classifier** make sure the **'Classifications'** tab above the **M
 
 ![Add Classifier icon under Classifications tab](add-classifier.png)
 
-This will bring up a **'Create a new Classifier'** dialogue box. Enter a **Classifier** name and click **'Add Classifier'**.
+This will bring up a **'Create a new Classifier'** dialogue box. Enter a **Classifier** name ([Label](../../glossary/label/label.md)) and click **'Add Classifier'**.
 
 ![Create a new Classifier dialogue box](create-a-new-classifier-box.png)
 
