@@ -56,9 +56,9 @@ order, if not listed then there is not required order.
 2. mdm-plugin-testing-utils
     1. mdm-plugin-database-mysql
     2. mdm-plugin-database-oracle
-    3. mdm-plugin-database-postgresql
-    4. mdm-plugin-database-sqlserver
-3. mdm-plugin-profile-schema-org
+3. mdm-plugin-database-postgresql
+4. mdm-plugin-database-sqlserver
+5. mdm-plugin-profile-schema-org
    1. mdm-plugin-profile-hdruk
 
 ### No changes waiting to be released
