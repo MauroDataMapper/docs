@@ -28,6 +28,7 @@ between each git commit.
 
 You should identify the following from the repositories before starting
 
+* RELEASE_VERSION : The quarterly release version. e.g. 2022.2
 * CORE_VERSION : The appropriate non-snapshot version from mdm-core/gradle.properties on the develop branch
 * UI_VERSION : The appropriate non-snapshot version from mdm-ui/package.json on the develop branch
 
@@ -53,12 +54,12 @@ You will need to push some of the repositories in the correct order as they have
 order, if not listed then there is not required order.
 
 1. mdm-plugin-database
-2. mdm-plugin-testing-utils
-    1. mdm-plugin-database-mysql
-    2. mdm-plugin-database-oracle
-    3. mdm-plugin-database-postgresql
-    4. mdm-plugin-database-sqlserver
-3. mdm-plugin-profile-schema-org
+   1. mdm-plugin-testing-utils
+      1. mdm-plugin-database-oracle
+2. mdm-plugin-database-mysql
+3. mdm-plugin-database-postgresql
+4. mdm-plugin-database-sqlserver
+5. mdm-plugin-profile-schema-org
    1. mdm-plugin-profile-hdruk
 
 ### No changes waiting to be released
@@ -159,14 +160,14 @@ This should be performed inside the [docs](https://github.com/MauroDataMapper/do
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
+git flow release start "${RELEASE_VERSION}"
 ```
 
 * Perform the updates as per the 2 sub-sections ([Main Release](#main-release), [Plugins Release](#plugins-release)) below
 
 ```bash
-git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
-git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
+git commit -am "Release ${RELEASE_VERSION}"
+git flow release finish -m "${RELEASE_VERSION}" "${RELEASE_VERSION}"
 git checkout main && git push && git checkout develop && git push && git push --tags
 ```
 
@@ -183,7 +184,7 @@ Add
 * Update the "Current Full Release" line:
 
 ```markdown
-The current full release is **B${CORE_VERSION}_F${UI_VERSION}**.
+The current full release is **${RELEASE_VERSION}** (a.k.a B${CORE_VERSION}_F${UI_VERSION}).
 ```
 
 * Add the following block with updated versions to the top of the `## Core API` section:
@@ -238,7 +239,7 @@ The current full release is **B${CORE_VERSION}_F${UI_VERSION}**.
 
 | Application | Version | Release Notes |
 |----|-----|-----|
-| Docker | `B4.9.0_F6.5.0` | https://github.com/MauroDataMapper/mdm-docker/releases/tag/B4.9.0_F6.5.0 |
+| Docker | `2022.2` | https://github.com/MauroDataMapper/mdm-docker/releases/tag/2022.2 |
 | RESTful API | `4.9.0` | https://github.com/MauroDataMapper/mdm-application-build/releases/tag/4.9.0 |
 | UI | `6.5.0` | https://github.com/MauroDataMapper/mdm-ui/releases/tag/6.5.0 |
 ```
@@ -364,7 +365,7 @@ git checkout main && git push && git checkout develop && git push && git push --
 
 ```bash
 git checkout main && git pull && git checkout develop && git pull
-git flow release start "B${CORE_VERSION}_F${UI_VERSION}"
+git flow release start "${RELEASE_VERSION}"
 ```
 
 Update docker-compose.yml
@@ -382,7 +383,9 @@ docker-compose up
 If it all comes up.
 
 ```bash
-git commit -am "Release B${CORE_VERSION}_F${UI_VERSION}"
-git flow release finish -m "B${CORE_VERSION}_F${UI_VERSION}" "B${CORE_VERSION}_F${UI_VERSION}"
-git checkout main && git push && git checkout develop && git push && git push --tags
+git commit -am "Release ${RELEASE_VERSION}"
+git flow release finish -m "${RELEASE_VERSION}" "${RELEASE_VERSION}"
+git checkout main 
+git tag "B${CORE_VERSION}_F${UI_VERSION}"
+git push && git checkout develop && git push && git push --tags
 ```

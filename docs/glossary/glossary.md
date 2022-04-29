@@ -78,6 +78,8 @@
 
 ## R
 
+[Reference Data Model](../glossary/reference-data-model/reference-data-model.md) 
+
 [Reference Data Type](../glossary/reference-data-type/reference-data-type.md) 
 
 ---

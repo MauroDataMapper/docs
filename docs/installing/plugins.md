@@ -21,71 +21,71 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-<tr>
-            <td><b>ART-DECOR</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-artdecor:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>ART-DECOR</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-artdecor:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>AWS Glue</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>AWS Glue</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-awsglue:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>CSV</b><br/>4.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:4.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>CSV</b><br/>4.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:4.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>Excel</b><br/>5.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:5.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Digital Object Identifiers</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-digital-object-identifiers:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>Digital Object Identifiers</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-digital-object-identifiers:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Excel</b><br/>5.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:5.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>FHIR</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>FHIR</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>MS SQL</b><br/>7.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:7.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>MS SQL</b><br/>8.0.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:8.0.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>MySQL</b><br/>6.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:6.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>MySQL</b><br/>7.0.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:7.0.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
+        <tr>
             <td><b>Oracle SQL</b><br/>6.0.0</td>
             <td>2022-01-28</td>
             <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:6.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+            <td>Core == 5.0.0</td>
         </tr>
-<tr>
-            <td><b>PostgreSQL</b><br/>6.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:6.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>PostgreSQL</b><br/>7.0.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:7.0.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>XSD</b><br/>1.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xsd:1.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>XSD</b><br/>1.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xsd:1.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
 </tbody>
 </table>
@@ -104,29 +104,29 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-<tr>
-            <td><b>DCAT</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dcat:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>DCAT</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dcat:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>Dementia Platform</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dementia-platform:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Dementia Platform</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-dementia-platform:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>HDR UK</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>HDR UK</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>Schema.org</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Schema.org</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
 </tbody>
 </table>
@@ -142,17 +142,17 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-<tr>
-            <td><b>Keycloak Integrated Authentication</b><br/>3.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:3.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Keycloak Integrated Authentication</b><br/>3.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-keycloak:3.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>OpenID Connect Authentication</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>OpenID Connect Authentication</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-authentication-openid-connect:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
 </tbody>
 </table>
@@ -171,17 +171,17 @@ the [Installing](../docker) page.
         </tr>
     </thead>
     <tbody>
-<tr>
-            <td><b>Freemarker Templating</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>Freemarker Templating</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-freemarker:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
-<tr>
-            <td><b>SPARQL</b><br/>2.0.0</td>
-            <td>2022-01-28</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:2.0.0</code></td>
-            <td>Core &gt;= 5.0.0</td>
+        <tr>
+            <td><b>SPARQL</b><br/>2.1.0</td>
+            <td>2022-04-29</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-sparql:2.1.0</code></td>
+            <td>Core &gt;= 5.1.0</td>
         </tr>
 </tbody>
 </table>

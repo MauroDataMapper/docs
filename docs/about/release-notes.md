@@ -12,7 +12,7 @@ but 'bleeding edge' features may be available within 'develop' or any feature br
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
-The current full release is **2022.1** (a.k.a B5.0.0_F7.0.0).
+The current full release is **2022.2** (a.k.a B5.1.0_F7.1.0).
 
 ---
 
@@ -28,6 +28,15 @@ The current full release is **2022.1** (a.k.a B5.0.0_F7.0.0).
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>5.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.1.0">(GitHub Link)</a></td>
+            <td>29th April 2022</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>5.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.0.0">(GitHub Link)</a></td>
             <td>28th January 2022</td>
@@ -197,6 +206,15 @@ The current full release is **2022.1** (a.k.a B5.0.0_F7.0.0).
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td><b>7.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.1.0">(GitHub Link)</a></td>
+            <td>29th April 2022</td>
+            <td>
+                <ul>
+                    <li></li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td><b>7.0.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.0.0">(GitHub Link)</a></td>
             <td>28th January 2022</td>
