@@ -6,7 +6,7 @@ The search function within **Mauro Data Mapper** is extremely powerful and allow
 
 There are several different ways to search for an item within **Mauro Data Mapper**. 
 
-### 1.1 Search Models
+### 1.1 Search model tree
 
 The first method of searching is to use the search box on the top left of the finder panel above the **Model Tree**. Here, you can search **'Models'**, **'Classifications'** and **'Favourites'** by clicking the relevant tab and then entering the search term in the search box. 
 
@@ -18,47 +18,33 @@ To refresh the results, click the **'Search'** icon or the **'Reload Data Models
 
 ![Models search](models-search.png)
 
-### 1.2 Main search
+### 1.2 Search catalogue
 
-Another method of searching is to use the main search box which can be found under the **'Search'** tab in the header. Once again, as you type your search, the results list will automatically filter, with the number of results displayed at the top of the list. You can then click on a result that you're interested in and the details panel will open up in a new tab in your browser.
+Another method of searching is to use the main search box for the entire catalogue, which can be found under the **'Search'** tab in the header. Simply enter your search term(s) and click the **'Search'** button to start searching.
 
-![Main search](main-search.png)
+![Simple search](simple-search.png)
 
+To use more advanced search options, click on the **'Advanced'** button to expand the advanced search controls. These will allow you use more refined filters, such as:
 
-### 1.3 Advanced search
+1. A _context_ to restrict to - such as a top level data model.
+2. Which _domain types_ to search for.
+3. _Date ranges_ to restrict to.
 
-To conduct a more specific search you can use **Advanced search**. To the right of the main search box under the **'Search'** tab in the header, click **'Advanced'**. This will display a variety of different options to filter your search by. 
+And so on.
 
 ![Advanced search](advanced-search.png)
 
+The list of search results will then provide details on all the catalogue items found that match your search criteria. You can interactively adjust the filters along the left side of the screen, as well as control sorting. Click on any **'View details'** link to be taken directly to that catalogue item.
 
-#### Restrict your search
+![Search results](search-results.png)
 
-Firstly, enter the search term in the main search box and the results list will automtically filter at the bottom of the page. You can then restrict your search to a particular **Folder**, **Data Model** or **Data Class** by clicking the menu icon to the right of the '**Restrict your search to:'** box. This will display the **Model Tree**, from which you can select the relevant item. 
+### 1.3 Search within a model
 
-![Restrict search](restrict-search.png)
+Finally, you can also search within **Data Models** directly, as well as **Folders** and **Versioned Folders**. This is equivalent to performing a catalogue-wide search (as described above) but automatically restricted by a model context. When viewing a **Data Model**, click on the **magnifier** tab icon to view the search area, then enter your search term(s). Search results are then listed and automatically constrained to both the parent model and relevant domain types for that model.
 
+Clicking on the **'Refine search'** link will take you to the main catalogue search results page, allowing you to control the filtering manually.
 
-#### Domain Types & Search Type
-
-You also have the option to filter by **'Domain Types'**. This allows you to specify whether you want to search **Data Models**, **Data Classes**, [Data Elements](../../glossary/data-element/data-element.md), [Data Types](../../glossary/data-type/data-type.md) or **Enumeration Values** by selecting the relevant boxes. 
-
-You can also define the **'Search Type'**. If you only want to search in the title of elements and not in the **descriptions**, **metadata** or [aliases](../../glossary/aliases/aliases.md), then tick the **‘Title only’** box. Alternatively, select **‘Exact match’** to search for the exact search term throughout the entire catalogue.
-
-![Domain Types and Search Type options](domain-search-type.png)
-
-
-#### Date ranges
-
-Advanced search also allows you to specify a range of dates so that you can filter results by when they were **'Last Updated'** or **'Created'**. Enter the relevant date in the format of **dd/mm/yyyy** or click the **‘Calendar’** icon to the right of each date box. This will display a small calendar where you can select the relevant date which will automatically populate the date box. 
-
-![Calendar view of date range search](search-dates.png)
-
-#### Classifiers
-
-In some cases you can also filter your search by **Classifiers** by clicking the **‘Classifiers’** box and selecting the relevant options from the dropdown menu.  
-
-![Classifiers dropdown menu](search-classifiers.png)
+![Search within model](search-within-model.png)
 
 ---
 
