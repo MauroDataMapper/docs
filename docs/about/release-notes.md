@@ -12,7 +12,7 @@ but 'bleeding edge' features may be available within 'develop' or any feature br
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
-The current full release is **2022.2** (a.k.a B5.1.0_F7.1.0).
+The current full release is **2022.3** (a.k.a B5.2.0_F7.2.0).
 
 ---
 
@@ -28,12 +28,25 @@ The current full release is **2022.2** (a.k.a B5.1.0_F7.1.0).
         </tr>
     </thead>
     <tbody>
+		<tr>
+			<td><b>5.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.2.0">(GitHub Link)</a></td>
+			<td>18th August 2022</td>
+			<td>
+				<ul>
+					<li>Updated to Grails 5.1.9</li>
+					<li>Federation support for subscribing to Atom feeds</li>
+					<li>Permissions fixes and improvements</li>
+				</ul>
+			</td>
+		</tr>
         <tr>
             <td><b>5.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.1.0">(GitHub Link)</a></td>
             <td>29th April 2022</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Updated to Groovy 3.0.10</li>
+					<li>Improvements to Reference Data Models</li>
+					<li>Performance fixes and improvements</li>
                 </ul>
             </td>
         </tr>
@@ -206,12 +219,23 @@ The current full release is **2022.2** (a.k.a B5.1.0_F7.1.0).
         </tr>
     </thead>
     <tbody>
+		<tr>
+			<td><b>7.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.2.0">(GitHub Link)</a></td>
+			<td>18th August 2022</td>
+			<td>
+				<ul>
+					<li>Updates to Search pages</li>
+					<li>Updates to Bulk Editor</li>
+					<li>Display of asynchronous jobs</li>
+				</ul>
+			</td>
+		</tr>
         <tr>
             <td><b>7.1.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.1.0">(GitHub Link)</a></td>
             <td>29th April 2022</td>
             <td>
                 <ul>
-                    <li></li>
+                    <li>Updates and fixes to UI components including navigation tree, dialogs, and editors</li>
                 </ul>
             </td>
         </tr>
