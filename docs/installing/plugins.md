@@ -34,10 +34,10 @@ the [Installing](../docker) page.
             <td>Core &gt;= 5.2.0</td>
         </tr>
         <tr>
-            <td><b>CSV</b><br/>4.2.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:4.2.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>CSV</b><br/>4.3.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-csv:4.3.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
             <td><b>Digital Object Identifiers</b><br/>2.2.0</td>
@@ -52,34 +52,40 @@ the [Installing](../docker) page.
             <td>Core &gt;= 5.2.0</td>
         </tr>
         <tr>
-            <td><b>FHIR</b><br/>2.2.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:2.2.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>FHIR</b><br/>2.3.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-fhir:2.3.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>MS SQL</b><br/>8.1.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:8.1.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>MS SQL</b><br/>8.2.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-sqlserver:8.2.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>MySQL</b><br/>7.1.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:7.1.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>MySQL</b><br/>7.2.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-mysql:7.2.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>Oracle SQL</b><br/>6.1.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:6.1.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>Oracle SQL</b><br/>6.2.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-oracle:6.2.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>PostgreSQL</b><br/>7.1.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:7.1.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>PostgreSQL</b><br/>7.2.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-database-postgresql:7.2.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
+        </tr>
+        <tr>
+            <td><b>XMI</b><br/>1.0.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xmi-visualparadigm:1.0.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
             <td><b>XSD</b><br/>1.2.0</td>
@@ -117,16 +123,16 @@ the [Installing](../docker) page.
             <td>Core &gt;= 5.2.0</td>
         </tr>
         <tr>
-            <td><b>HDR UK</b><br/>2.2.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:2.2.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>HDR UK</b><br/>2.3.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-hdruk:2.3.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>Schema.org</b><br/>2.2.0</td>
-            <td>2022-08-16</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:2.2.0</code></td>
-            <td>Core &gt;= 5.2.0</td>
+            <td><b>Schema.org</b><br/>2.3.0</td>
+            <td>2023-02-24</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-profile-schema-org:2.3.0</code></td>
+            <td>Core &gt;= 5.3.0</td>
         </tr>
 </tbody>
 </table>
@@ -185,6 +191,7 @@ the [Installing](../docker) page.
         </tr>
 </tbody>
 </table>
+
 
 
 
