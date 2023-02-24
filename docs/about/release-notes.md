@@ -12,7 +12,7 @@ but 'bleeding edge' features may be available within 'develop' or any feature br
 
 Please see our [Installing Plugins](/installing/plugins) pages for details about build artefacts and dependencies.
 
-The current full release is **2022.3** (a.k.a B5.2.0_F7.2.0).
+The current full release is **2023.1** (a.k.a B5.3.0_F7.3.0).
 
 ---
 
@@ -28,6 +28,19 @@ The current full release is **2022.3** (a.k.a B5.2.0_F7.2.0).
         </tr>
     </thead>
     <tbody>
+		<tr>
+			<td><b>5.3.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.3.0">(GitHub Link)</a></td>
+			<td>24th February 2023</td>
+			<td>
+				<ul>
+					<li>Updated to Grails 5.3.2 and Groovy 3.0.11</li>
+					<li>Pagination, listing and folder tree fixes</li>
+					<li>Federation support for subscribing to OAuth-secured feeds</li>
+					<li>Initial support for running on Amazon Aurora RDS</li>
+					<li>Other fixes and performance improvements</li>
+				</ul>
+			</td>
+		</tr>
 		<tr>
 			<td><b>5.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-core/releases/tag/5.2.0">(GitHub Link)</a></td>
 			<td>18th August 2022</td>
@@ -219,6 +232,18 @@ The current full release is **2022.3** (a.k.a B5.2.0_F7.2.0).
         </tr>
     </thead>
     <tbody>
+		<tr>
+			<td><b>7.3.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.3.0">(GitHub Link)</a></td>
+			<td>24th February 2023</td>
+			<td>
+				<ul>
+					<li>Updates to Profiles, Favourites, and Code Sets</li>
+					<li>Wizards for creating Reference Data Types and Models</li>
+					<li>Visual improvements</li>
+					<li>Other improvements and fixes</li>
+				</ul>
+			</td>
+		</tr>
 		<tr>
 			<td><b>7.2.0</b><br/><a href="https://github.com/MauroDataMapper/mdm-ui/releases/tag/7.2.0">(GitHub Link)</a></td>
 			<td>18th August 2022</td>
