@@ -11,7 +11,7 @@ pipeline {
                 sh 'mkdir -p maurodatamapper.github.io'
                 dir('maurodatamapper.github.io') {
                     git branch: 'main',
-                        credentialsId: 'a5fcd1ec-fe02-4d19-b81a-0ff94cfe0977',
+                        credentialsId: 'joe-github-deploy-key',
                         url: 'git@github.com:MauroDataMapper/maurodatamapper.github.io.git'
                 }
             }
