@@ -4,7 +4,7 @@ copyright: 'Copyright © 2021 University of Oxford and Health and Social Care
 strict: true
 theme:
     name: 'material'
-    custom_dir: 'theme/'
+    custom_dir: 'theme'
     palette:
         scheme: default
         primary: 'primary'
