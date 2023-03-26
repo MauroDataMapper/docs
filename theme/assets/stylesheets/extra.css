@@ -202,17 +202,18 @@ div.home-page-button {
     margin: 0.8em;
     float: left;
     height: 9em;
-
+    background-color: white;
 }
 
 
 div.home-page-button:hover {
     /*border: 2px solid var(--md-accent-fg-color);*/
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.44), 0 5px 10px 0 rgba(0,0,0,0.10);
+    box-shadow: 0 5px 10px 0 rgba(255,255,255,0.44), 0 5px 10px 0 rgba(255,255,255,0.10);
+    color: var(--md-accent-fg-color);
 }
 
 div.home-page-button:hover a {
-    color: #002147;
+    color: #507197;
 
 }
 
@@ -297,3 +298,4 @@ a.md-top:is(:focus, :hover) {
 .md-sidebar__inner {
     margin-left: -0.6rem
 }
+
