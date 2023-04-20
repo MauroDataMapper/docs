@@ -1,10 +1,9 @@
 site_name: Documentation
-copyright: 'Copyright © 2021 University of Oxford and Health and Social Care
-      Information Centre, also known as NHS Digital.  <a href="/privacy-policy/">Privacy Policy</a>'
+copyright: 'Copyright © 2023 University of Oxford and NHS England.  <a href="/privacy-policy/">Privacy Policy</a>'
 strict: true
 theme:
     name: 'material'
-    custom_dir: 'theme/'
+    custom_dir: 'theme'
     palette:
         scheme: default
         primary: 'primary'
@@ -13,11 +12,14 @@ theme:
     favicon: assets/images/favicon.ico
     font:
         text: Nunito Sans
-        code: Nunito Sans
+        code: Source Code Pro
     features:
         - navigation.instant
         - navigation.tracking
         - navigation.top
+        - navigation.tabs
+        - navigation.indexes
+        - navigation.path
 plugins:
     - search
 extra_css:
@@ -74,7 +76,7 @@ nav:
             -   Development Roadmap: 'about/development-roadmap.md'
     -   Using Mauro:
             -   User Guides:
-                    -   Introduction: 'user-guides/introduction.md'
+                    -   User Guides: 'user-guides/index.md'
                     -   Create a Data Model: 'user-guides/create-a-data-model/create-a-data-model.md'
                     -   Organising Data Models: 'user-guides/organising-data-models/organising-data-models.md'
                     -   Finalising Data Models: 'user-guides/finalising-data-models/finalising-data-models.md'

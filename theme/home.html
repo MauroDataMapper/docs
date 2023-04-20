@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block tabs %}
+{{ super() }}
+<!-- Additional styles for landing page -->
+<style>
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+        .md-sidebar--primary {
+            display: none;
+        }
+    }
+    
+</style>
+<div class="md-home">
+    <div class=" md-grid">
+        <div class="column home_left">
+            <h2>Mauro Data Mapper</h2>
+            <h1>Documentation</h1>
+
+            <p><em>Welcome to the Mauro Data Mapper documentation site.</em></p>
+
+            <p>Here you will find everything you need to understand, use and navigate the <b>Mauro Data Mapper</b> tool as well as API documentation for software developers.</p>
+
+            <p>To browse through the documentation, use the menu at the top of the page. Alternatively, click the buttons on the right-hand side to go straight to our most popular pages.</p>
+        </div>
+
+        <div class="column home_right">
+            <a href="about/introduction">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/About%20icon_edited.jpg"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">About</span>
+                        <span class="home-page-button-summary">Discover more about Mauro Data Mapper, its history, and the plans for the future</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="glossary/glossary">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Glossary%20icon_edited.jpg"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">Glossary</span>
+                        <span class="home-page-button-summary">Understand the terminology and how it's used</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="user-guides/introduction">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/User%20guides%20icon_edited.jpg"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">User Guides</span>
+                        <span class="home-page-button-summary">Learn how to use Mauro Data Mapper yourself</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="tutorials/introduction">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Tutorials%20icon_edited.jpg"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">Tutorials</span>
+                        <span class="home-page-button-summary">Study the full capabilities of Mauro Data Mapper and how it can benefit your work</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="rest-api/introduction">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/API%20documentation%20icon_edited.png"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">API Documentation</span>
+                        <span class="home-page-button-summary">Find out how to write scripts and applications to interact with Mauro Data Mapper</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="community/support">
+                <div class="home-page-button">
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Community%20icon_edited.jpg"/>
+                    </div>
+                    <div class="home-page-button-text">
+                        <span class="home-page-button-title">Community</span>
+                        <span class="home-page-button-summary">Find support and contribute to our code and documentation</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<img id="home-wave" src="assets/images/home-wave.svg"/>
+
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
