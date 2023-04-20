@@ -10,42 +10,6 @@
 {{ super() }}
 <!-- Additional styles for landing page -->
 <style>
-    .md-home {
-        background-color: #002147;
-    }
-
-    .md-typeset h1, .md-typeset h2 {
-        color: white;
-    }
-
-    .home_left {
-        float: left;
-        width: 39%;
-        color: white;
-        font-size: 14pt;
-
-    }
-
-    .home_right {
-        float: right;
-        width: 59%;
-        padding-bottom: 2em;
-        padding-top: 2em;
-
-    }
-
-    #home-wave {
-        width: 100%;
-        height: 5em;
-    }
-
-
-    /* Hide table of contents */
-    @media screen and (min-width: 60em) {
-        .md-sidebar--secondary {
-            display: none;
-        }
-    }
 
     /* Hide navigation */
     @media screen and (min-width: 76.25em) {
@@ -53,22 +17,11 @@
             display: none;
         }
     }
-
-    .home_left h1 {
-        font-size: 2.6em;
-        line-height: 1.4em;
-        margin: -0.6em 0 0 0;
-    }
-
-    .home_left h2 {
-        font-size: 1.6em;
-        font-weight: normal !important;
-    }
-
+    
 </style>
 <div class="md-home">
     <div class=" md-grid">
-        <div class="home_left">
+        <div class="column home_left">
             <h2>Mauro Data Mapper</h2>
             <h1>Documentation</h1>
 
@@ -79,10 +32,12 @@
             <p>To browse through the documentation, use the menu at the top of the page. Alternatively, click the buttons on the right-hand side to go straight to our most popular pages.</p>
         </div>
 
-        <div class="home_right">
+        <div class="column home_right">
             <a href="about/introduction">
                 <div class="home-page-button">
-                    <img src="home/About%20icon_edited.jpg"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/About%20icon_edited.jpg"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">About</span>
                         <span class="home-page-button-summary">Discover more about Mauro Data Mapper, its history, and the plans for the future</span>
@@ -92,7 +47,9 @@
 
             <a href="glossary/glossary">
                 <div class="home-page-button">
-                    <img src="home/Glossary%20icon_edited.jpg"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Glossary%20icon_edited.jpg"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">Glossary</span>
                         <span class="home-page-button-summary">Understand the terminology and how it's used</span>
@@ -102,7 +59,9 @@
 
             <a href="user-guides/introduction">
                 <div class="home-page-button">
-                    <img src="home/User%20guides%20icon_edited.jpg"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/User%20guides%20icon_edited.jpg"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">User Guides</span>
                         <span class="home-page-button-summary">Learn how to use Mauro Data Mapper yourself</span>
@@ -112,7 +71,9 @@
 
             <a href="tutorials/introduction">
                 <div class="home-page-button">
-                    <img src="home/Tutorials%20icon_edited.jpg"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Tutorials%20icon_edited.jpg"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">Tutorials</span>
                         <span class="home-page-button-summary">Study the full capabilities of Mauro Data Mapper and how it can benefit your work</span>
@@ -122,7 +83,9 @@
 
             <a href="rest-api/introduction">
                 <div class="home-page-button">
-                    <img src="home/API%20documentation%20icon_edited.png"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/API%20documentation%20icon_edited.png"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">API Documentation</span>
                         <span class="home-page-button-summary">Find out how to write scripts and applications to interact with Mauro Data Mapper</span>
@@ -132,7 +95,9 @@
 
             <a href="community/support">
                 <div class="home-page-button">
-                    <img src="home/Community%20icon_edited.jpg"/>
+                    <div class="home-page-button-img-frame">
+                        <img src="home/Community%20icon_edited.jpg"/>
+                    </div>
                     <div class="home-page-button-text">
                         <span class="home-page-button-title">Community</span>
                         <span class="home-page-button-summary">Find support and contribute to our code and documentation</span>

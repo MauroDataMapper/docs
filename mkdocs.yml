@@ -20,6 +20,7 @@ theme:
         - navigation.top
         - navigation.tabs
         - navigation.indexes
+        - navigation.path
 plugins:
     - search
 extra_css:
