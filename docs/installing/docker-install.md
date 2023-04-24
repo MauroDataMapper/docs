@@ -10,13 +10,12 @@ can read more about installing `git` on different operating systems here: [Getti
 
 The **Mauro Docker** configuration repository can be found here: 
 [https://github.com/MauroDataMapper/mdm-docker](https://github.com/MauroDataMapper/mdm-docker).  Where you clone it is up to you, but on a *nix 
-system we recommend cloning into `/opt/` (for optional software packages)
-
+system we recommend cloning into `/opt/` (for optional software packages).
 
 Different branches provide different configurations. We recommend checking out the `main` branch which will provide the latest releases of back-end 
-and front-end.  Alternatively, you can check out a specific tag to install a specific front-end / back-end combination. Tagged releases of 
-**Docker** take the form `Ba.b.c_Fx.y.z` where `a.b.c` is the tagged version of the back-end and `x.y.z` is the tagged version of the front-end.
-
+and front-end.  Alternatively, you can check out a specific tag to install a specific release. Tagged releases of 
+**Mauro Docker** take the form `YYYY.Q[.P]`, where YYYY.Q is the year and quarter of the release, and .P is an optional point release. For example, 2023.1.1 is point release 1 in
+Q1 of 2023.
 
 !!! Information
     If you're running on an internal server with SSH access forbidden by a firewall, you can use the following link to access the repository via 
@@ -26,18 +25,18 @@ and front-end.  Alternatively, you can check out a specific tag to install a spe
 
 ## Overview
 
-The **Docker Compose** configuration defines two interacting containers: 
+The **Docker Compose** configuration defines two interacting containers:
 
 * Postgres 12 [`postgres`] - Postgres Database
 * Mauro Data Mapper [`maurodatamapper`] - Mauro Data Mapper
 
 The first of these is a standard **Postgres** container with an external volume for persistent storage.  The second builds on the standard **Apache 
 Tomcat** container, which hosts built versions of the **Mauro** application.  The **Postgres** container must be running whenever the **Mauro** application 
-starts.  The **Mauro** container persists logs and Lucene indexes to shared folders which can be found in the docker repository folder. 
+starts.  The **Mauro** container persists logs and Lucene indexes to shared folders which can be found in the Docker repository folder. 
 
 ### Default username / password
 
-The docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the
+The Docker installation is empty on initialisation - it comes with one pre-configured user: with the username `admin@maurodatamapper.com` and the
 password `password`.  
 
 !!! Warning
@@ -47,12 +46,13 @@ password `password`.
 
 ## Building
 
-Once cloned then running the standard `docker-compose` build command will build the images necessary to run the services.
+Once cloned then running the standard `docker compose` build command will build the images necessary to run the services.
 
 ```bash
 # Build the entire system
-$ ./docker-compose build
+$ docker compose build
 ```
+
 ### Additional Backend Plugins
 
 Additional plugins can be found at the [Mauro Data Mapper Plugins](https://github.com/MauroDataMapper-Plugins) organisation page. A complete list with
@@ -63,7 +63,7 @@ our official [GitHub Plugins organisation](https://github.com/MauroDataMapper-Pl
 Each of these can be added as `runtimeOnly` dependencies by adding them to the `ADDITIONAL_PLUGINS` build argument for the `mauro-data-mapper`
 service build.
 
-These dependencies should be provided in a semi-colon separated list in the gradle style, they will be split and each will be added as a `runtimeOnly`
+These dependencies should be provided in a semicolon separated list in the Gradle style, they will be split and each will be added as a `runtimeOnly`
 dependency.
 
 Example:
@@ -73,13 +73,13 @@ Example:
    build:
      context: mauro-data-mapper
      args:
-       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0"
+       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:5.2.0"
 ```
 
 This will add the Excel plugin to the `dependencies.gradle` file:
 
 ```gradle
-runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.0.0
+runtimeOnly uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:5.2.0
 ```
 
 #### Dynamic Versions
@@ -95,7 +95,7 @@ Example
    build:
      context: mauro-data-mapper
      args:
-       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:3.+"
+       ADDITIONAL_PLUGINS: "uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-excel:5.+"
 ```
 
 This will add the latest minor version of the Excel plugin.
@@ -114,16 +114,8 @@ the `docker-compose.yml` file, with instructions provided in the [Branding guide
 
 ### Running multiple instances
 
-If running multiple docker-compose instances then they will all make use of the same initial images, therefore you only need to run the `./make` 
-script once per server.
-
-### SSH firewalled servers
-
-Some servers have the 22 SSH port firewalled for external connections.
-If this is the case you can change the `base_images/sdk_base/ssh/config` file:
-
-* Comment out the `Hostname` field that's currently active
-* Uncomment both commented out `Hostname` and `Port` fields, this will allow git to work using the 443 port which will not be blocked
+If running multiple Mauro Docker instances then they can all make use of the same initial images, therefore you only need to run the `docker compose build` command once per
+server.
 
 ---
 
@@ -178,8 +170,8 @@ There are 2 environment variables which are not used directly by MDM and these a
 
 #### Database
 
-The system is designed to use the postgres service provided in the docker-compose file, therefore there should be no need to alter any of these
-settings. Only make alterations if running postgres as a separate service outside of docker-compose.
+The system is designed to use the Postgres service provided in the docker-compose file, therefore there should be no need to alter any of these
+settings. Only make alterations if running Postgres as a separate service outside of Docker Compose.
 
 #### Email
 
@@ -193,31 +185,28 @@ The standard email properties will allow emails to be sent to a specific SMTP se
 
 Before running please read the [parameters](#run-environment) section first.
 
-With `docker` and `docker-compose` installed, run the following:
+With `docker` (with `docker compose`) installed, run the following:
 
 ```bash
 # Build all the images
-$ docker-compose-dev build
+$ docker compose build
 
 # Start all the components up
-$ docker-compose up -d
+$ docker compose up -d
 
 # To only start 1 service
 # This will also start up any of the services the named service depends on (defined by `links` or `depends_on`)
-$ docker-compose up [SERVICE]
+$ docker compose up [SERVICE]
 
 # To push all the output to the background add `-d`
-$ docker-compose up -d [SERVICE]
+$ docker compose up -d [SERVICE]
 
 # Stop background running and remove the containers
-$ docker-compose down
+$ docker compose down
 
 # To update an already running service
-$ docker-compose-dev build [SERVICE]
-$ docker-compose up -d --no-deps [SERVICE]
-
-# To run in production mode
-$ docker-compose-prod up -d [SERVICE]
+$ docker compose build [SERVICE]
+$ docker compose up -d --no-deps [SERVICE]
 ```
 
 If you run everything in the background use `Kitematic` to see the individual container logs.
