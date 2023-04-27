@@ -14,6 +14,13 @@ For example, there can only be one **Data Class** called **â€˜Personal detailsâ€
 
 In some cases, two different **Data Models** could consist of a **Data Class** with the same **Label**, such as **'Personal details'**. However, because these two **Data Classes** are each associated with their own unique parent **Data Model**, then this is acceptable. Only when two items are within the same parent must they each have a unique **Label**.  
 
+!!! Warning
+	The following special characters are not permitted in labels, and will produce an error message:
+
+	- `@`
+	- `$`
+	- `|`
+
 ---
 
 ##How do you edit a Label?
