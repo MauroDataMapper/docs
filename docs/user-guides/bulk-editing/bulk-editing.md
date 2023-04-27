@@ -20,7 +20,7 @@ Select a model currently in a **draft** state from the **Model Tree**. Once the 
 
 ![Select a Model](select-data-model.png)
 
-## 2. Selectng Items and Profiles
+## 2. Selecting Items and Profiles
 
 Before proceeding to the bulk editor, you must first select your item(s) and the **Profiles** to edit. First choose which **domain type** to use for the items; only one child domain type can be edited at a time, and the available options will depend on which top-level model you chose.
 
@@ -88,7 +88,7 @@ For example:
 
 ![Date editor](date-editor.png)
 
-Some cells may also appear uneditable, this will be because of the way the **Profile** works - either because the profilee field is read-only, or some profile fields can be configured to infer metadata from other parts of the model.
+Some cells may also appear uneditable, this will be because of the way the **Profile** works - either because the profile field is read-only, or some profile fields can be configured to infer metadata from other parts of the model.
 
 ![Read-only fields](read-only-fields.png)
 
