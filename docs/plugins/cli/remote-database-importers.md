@@ -9,9 +9,9 @@ the same for the different tools, and they each read a configuration file with s
 The provided command line tools are:
 
 | Database plugin | CLI tool name |
-| :-------- | :--- |
+| :-------------- | :------------ |
 | mdm-plugin-database-mysql | `mysql-remote-database-importer` |
-| mdm-plugin-database-oracle | `oracle-remote-database-importer` |x
+| mdm-plugin-database-oracle | `oracle-remote-database-importer` |
 | mdm-plugin-database-postgresql | `postgres-remote-database-importer` |
 | mdm-plugin-database-sqlserver | `sqlserver-remote-database-importer` |
 
@@ -100,7 +100,7 @@ export.dataModel.name=Model from Postgres DB
 A DataModel named 'Model from Postgres DB' is imported from the database 'metadata_simple' on the Postgres database at `localhost` (on default port 5432), to the Mauro
 instance at `http://localhost:8080`, and is placed in the top level folder with ID `8b5523d9-dfd2-4185-a49c-51b9e2f4c515`.
 
-### Buildling command-line tools
+### Building command-line tools
 
 To build a command line tool from one of the database importer plugin projects, run `gradle distTar` to build a Unix distribution or `gradle distZip` to build a Windows
 distribution. The outputs are found in the `build/distributions` directory. Extract the output and run the script inside the `bin` directory.

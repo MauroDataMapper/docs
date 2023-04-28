@@ -82,9 +82,9 @@ the [Installing](../docker) page.
             <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
-            <td><b>XMI</b><br/>1.0.0</td>
-            <td>2023-02-24</td>
-            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xmi-visualparadigm:1.0.0</code></td>
+            <td><b>XMI</b><br/>1.0.1</td>
+            <td>2023-04-26</td>
+            <td><code>uk.ac.ox.softeng.maurodatamapper.plugins:mdm-plugin-xmi-visualparadigm:1.0.1</code></td>
             <td>Core &gt;= 5.3.0</td>
         </tr>
         <tr>
