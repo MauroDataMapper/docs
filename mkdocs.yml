@@ -20,8 +20,14 @@ theme:
         - navigation.tabs
         - navigation.indexes
         - navigation.path
+        - search.highlight
+        - search.share
+        - search.suggest
 plugins:
-    - search
+    - search:
+        lang: en
+        separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
 extra_css:
     - assets/stylesheets/extra.css
 extra_javascript:
