@@ -55,7 +55,7 @@ component and can be installed using `npm`, the standard package manager for jav
 
 ## User Interface
 
-The web-based user interface is defined in [Angular 9](https://angular.io) using the [Angular Material](https://material.angular.io) library for
+The web-based user interface is defined in [Angular 14](https://angular.io) using the [Angular Material](https://material.angular.io) library for
 look-and-feel. It is a self-contained, single-page web application which makes use of some additional typescript libraries (for rendering diagrams,
 providing notifications, etc) on top of the standard ones provided by Angular. 
 
