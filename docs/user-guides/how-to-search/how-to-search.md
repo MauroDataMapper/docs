@@ -62,14 +62,14 @@ The search syntaxes that **Mauro Data Mapper** supports are:
 * **OR** using **|**
 * **NOT** using **–**
 * To search for different suffixes use * e.g. prefix* 
-* To search for an exact phrase use **“”** e.g. “example phrase”
+* To search for an exact phrase use **""** e.g. "example phrase"
 * To add precedence to search terms, use **()** e.g. (important) example
 * To search for similar terms (fuzzy string searching) use **~2** e.g. smoke~2 will return smokes, smake etc
-* To search for similar phrases use **“”** and **~2** e.g. “cigarette smoke”~3
+* To search for similar phrases use **""** and **~2** e.g. "cigarette smoke"~3
 
 For example, if you are interested in information relating to smoking. Searching **‘smoking’** will return a list of results. However, if you want to be more generic you can type __‘smoke*’__ which will search for smoking, smoker, smoked etc. 
 
-To look at information relating to smoking and pregnancy you can type __‘smok*+pregnancy’__ which will return results that include both pregnancy and the different variants of smoking.  
+To look at information relating to smoking and pregnancy you can type __'smok*+pregnancy'__ which will return results that include both pregnancy and the different variants of smoking.  
 
 ### 2.2 Search examples
 
@@ -90,7 +90,7 @@ The **Label** and **Key** entries are indexed using a **WordDelimiter analyser**
 * Capital letters
 * Full stops
 
-These individual words are referred to as **‘Keys’** and once the search term has been split up into its various keys, these are then saved and used to conduct the search. Therefore, the results will only match the keys and not the whole search phrase.
+These individual words are referred to as **'Keys'** and once the search term has been split up into its various keys, these are then saved and used to conduct the search. Therefore, the results will only match the keys and not the whole search phrase.
 
 For example:
 
