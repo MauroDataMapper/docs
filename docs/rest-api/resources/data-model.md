@@ -199,23 +199,23 @@ Use this endpoint with a similar payloads described below to finalise a data mod
 
 <endpoint class="put">/api/dataModels/**{id}**/finalise</endpoint>
 
-To automatically let Mauro choose the next version number, set the **versionChange** property to either `'Major'`, `'Minor'` or `'Patch'`.
+To automatically let Mauro choose the next version number, set the **versionChangeType** property to either `'Major'`, `'Minor'` or `'Patch'`.
 
 === "Request body (JSON)"
     ```json
     {
-        "versionChange": "Major" | "Minor" | "Patch"
+        "versionChangeType": "Major" | "Minor" | "Patch"
     }
     ```
 
-Mauro uses [Semantic Versioning](https://semver.org/) rules to determine the next appropriate version number based on the **versionChange** value provided.
+Mauro uses [Semantic Versioning](https://semver.org/) rules to determine the next appropriate version number based on the **versionChangeType** value provided.
 
-To optionally choose your own version number, provide this payload. If **versionChange** is `'Custom'`, then **version** must also be provided.
+To optionally choose your own version number, provide this payload. If **versionChangeType** is `'Custom'`, then **version** must also be provided.
 
 === "Request body (JSON)"
     ```json
     {
-        "versionChange": "Custom",
+        "versionChangeType": "Custom",
         "version": "1.2.3.4"
     }
     ```
@@ -225,7 +225,7 @@ In all cases you may also supply an optional _tag name_ to assign with the final
 === "Request body (JSON)"
     ```json
     {
-        "versionChange": "Major" | "Minor" | "Patch",
+        "versionChangeType": "Major" | "Minor" | "Patch",
         "versionTag": "My first version"
     }
     ```

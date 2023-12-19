@@ -47,9 +47,9 @@ To find out which plugins are currently installed, use one of the following endp
 
 ## System actions
 
-<endpoint class="post">/api/admin/rebuildLuceneIndexes</endpoint>
+<endpoint class="post">/api/admin/rebuildHibernateSearchIndexes</endpoint>
 
-This endpoint forces the rebuild of the Lucene indexes.  This is only necessary when synchronisation between database and indexes is lost; when
+This endpoint forces the rebuild of the indexes used for searching (built using Hibernate Search and Lucene).  This is only necessary when synchronisation between database and indexes is lost; when
 the search functionality is not returning correct results.  Authentication credentials can be passed as part of the request body.
 
 ---
