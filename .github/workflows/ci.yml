@@ -44,7 +44,6 @@ jobs:
               run: pip install git+https://${{secrets.MKDOCS_INSIDERS_TOKEN}}@github.com/squidfunk/mkdocs-material-insiders.git
 
             - name: Checkout maurodatamapper.github.io
-              # working-directory: ./mdm-resources
               uses: actions/checkout@v4
               with:
                   repository: MauroDataMapper/maurodatamapper.github.io
@@ -54,7 +53,7 @@ jobs:
 
             - name: Deploy
               working-directory: ./maurodatamapper.github.io
-              run: mkdocs gh-deploy --force --config-file ../docs/mkdocs.yml --remote-branch main
+              run: mkdocs gh-deploy --config-file ../docs/mkdocs.yml --remote-branch main
 
             - name: Send a stream message
               if: ${{ success() }} || ${{ failure() }}
