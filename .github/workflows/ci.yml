@@ -18,14 +18,6 @@ jobs:
               with:
                 path: ./docs
 
-            - name: Install GH CLI
-              uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
-              with:
-                  gh-cli-version: 2.32.0
-
-            - run: gh auth status
-
-
             - name: Configure Git Credentials
               run: |
                   git config user.name github-actions[bot]
