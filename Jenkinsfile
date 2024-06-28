@@ -25,21 +25,21 @@ pipeline {
             }
         }
 
-        stage('Deploy main') {
-            when {
-                allOf {
-                    branch 'main'
-                    expression {
-                        currentBuild.currentResult == 'SUCCESS'
-                    }
-                }
-            }
-            steps {
-                dir('maurodatamapper.github.io') {
-                    sh "mkdocs gh-deploy  --config-file ../mkdocs.yml --remote-branch main"
-                }
-            }
-        }
+//        stage('Deploy main') {
+//            when {
+//                allOf {
+//                    branch 'main'
+//                    expression {
+//                        currentBuild.currentResult == 'SUCCESS'
+//                    }
+//                }
+//            }
+//            steps {
+//                dir('maurodatamapper.github.io') {
+//                    sh "mkdocs gh-deploy  --config-file ../mkdocs.yml --remote-branch main"
+//                }
+//            }
+//        }
     }
 
     post {

@@ -1,0 +1,60 @@
+name: Publish
+on:
+    push:
+        branches:
+            - develop
+permissions:
+    contents: write
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        if: github.event.repository.fork == false
+        defaults:
+            run:
+                working-directory: ./docs
+        steps:
+            - uses: actions/checkout@v4
+            - name: Configure Git Credentials
+              run: |
+                  git config user.name github-actions[bot]
+                  git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            - uses: actions/setup-python@v5
+              with:
+                  python-version: 3.x
+            - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+            - uses: actions/cache@v4
+              with:
+                  key: mkdocs-material-${{ env.cache_id }}
+                  path: .cache
+                  restore-keys: |
+                      mkdocs-material-
+            - run: apt-get install pngquant
+            - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+
+            - name: Checkout github.io
+              # working-directory: ./mdm-resources
+              uses: actions/checkout@v4
+              with:
+                  repository: MauroDataMapper/maurodatamapper.github.io
+                  ref: refs/heads/main # change this to test against another branch
+                  path: ./maurodatamapper.github.io
+
+
+            - name: deploy
+              working-directory: ./maurodatamapper.github.io
+              run: mkdocs gh-deploy --force --config-file ../docs/mkdocs.yml --remote-branch main
+
+            - name: Send a stream message
+              if: ${{ success() }} || ${{ failure() }}
+              uses: zulip/github-actions-zulip/send-message@v1
+              with:
+                  api-key: ${{ secrets.ZULIP_API_KEY }}
+                  email: "githubactionsbot-bot@maurodatamapper.zulipchat.com"
+                  organization-url: "https://maurodatamapper.zulipchat.com"
+                  to: "build/github-actions"
+                  type: "stream"
+                  topic: "${{github.repository}}"
+                  content: "${{ job.status == 'success' && ':check_mark:' || ':cross_mark:' }} ${{github.repository}} : **${{github.ref}}**\nGitHub Actions build result: **${{ job.status }}**\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+env:
+    GH_TOKEN: ${{ secrets.GH_TOKEN }}
