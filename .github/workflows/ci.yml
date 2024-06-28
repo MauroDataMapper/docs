@@ -12,9 +12,13 @@ jobs:
         if: github.event.repository.fork == false
         defaults:
             run:
-                working-directory: ./docs
+                working-directory: ./docs # Only applies to `run` steps
         steps:
             - uses: actions/checkout@v4
+              with:
+                path: ./docs
+
+
             - name: Configure Git Credentials
               run: |
                   git config user.name github-actions[bot]
