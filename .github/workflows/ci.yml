@@ -41,7 +41,7 @@ jobs:
 ##
 
             - name: Install mkdoce-material-insiders
-              run: pip install git+https://${secrets.GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+              run: pip install git+https://${{secrets.GH_TOKEN}}@github.com/squidfunk/mkdocs-material-insiders.git
 
             - name: Checkout github.io
               # working-directory: ./mdm-resources
