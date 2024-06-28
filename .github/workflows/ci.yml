@@ -19,7 +19,9 @@ jobs:
               run: |
                   git config user.name github-actions[bot]
                   git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-            - uses: actions/setup-python@v5
+
+            - name: Setup Python
+              uses: actions/setup-python@v5
               with:
                   python-version: 3.x
 
@@ -50,6 +52,12 @@ jobs:
                   ref: refs/heads/main # change this to test against another branch
                   path: ./maurodatamapper.github.io
 
+
+            - name: List
+              working-directory: ./maurodatamapper.github.io
+              run: | 
+                ls .
+                ls ../docs
 
             - name: Deploy
               working-directory: ./maurodatamapper.github.io
