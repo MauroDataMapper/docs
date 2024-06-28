@@ -22,15 +22,26 @@ jobs:
             - uses: actions/setup-python@v5
               with:
                   python-version: 3.x
-            - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-            - uses: actions/cache@v4
+
+            - name: Generate Cache ID
+              run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+
+
+            - name: Cache the key
+              uses: actions/cache@v4
               with:
                   key: mkdocs-material-${{ env.cache_id }}
                   path: .cache
                   restore-keys: |
                       mkdocs-material-
-            - run: apt-get install pngquant
-            - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+
+##            This step is only necessary if you want to use the built-in optimize plugin to automatically compress images.
+##
+##            - run: apt-get install pngquant
+##
+
+            - name: Install mkdoce-material-insiders
+              run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
 
             - name: Checkout github.io
               # working-directory: ./mdm-resources
