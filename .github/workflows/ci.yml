@@ -55,6 +55,7 @@ jobs:
                   repository: MauroDataMapper/maurodatamapper.github.io
                   ref: refs/heads/main # change this to test against another branch
                   path: ./maurodatamapper.github.io
+                  token: ${{secrets.GITHUB_TOKEN}}
 
 
             - name: List
