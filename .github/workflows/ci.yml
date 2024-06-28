@@ -41,9 +41,9 @@ jobs:
 ##
 
             - name: Install mkdoce-material-insiders
-              run: pip install git+https://${{secrets.GH_TOKEN}}@github.com/squidfunk/mkdocs-material-insiders.git
+              run: pip install git+https://${{secrets.MKDOCS_INSIDERS_TOKEN}}@github.com/squidfunk/mkdocs-material-insiders.git
 
-            - name: Checkout github.io
+            - name: Checkout maurodatamapper.github.io
               # working-directory: ./mdm-resources
               uses: actions/checkout@v4
               with:
@@ -52,7 +52,7 @@ jobs:
                   path: ./maurodatamapper.github.io
 
 
-            - name: deploy
+            - name: Deploy
               working-directory: ./maurodatamapper.github.io
               run: mkdocs gh-deploy --force --config-file ../docs/mkdocs.yml --remote-branch main
 
