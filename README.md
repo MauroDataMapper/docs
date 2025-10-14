@@ -8,9 +8,12 @@ This repository is for the documentation of the Mauro Data Mapper
 * [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions) : pip install pymdown-extensions
 * [Material for MkDocs](https://squidfunk.github.io/mkdocs-material) : pip install mkdocs-material
 
-
-
 After installing MkDocs, you can clone this directory, and from inside run:
+
+```$bash
+$ pip install -e plugins
+```
+And from then onwards run:
 
 ```$bash
 $ mkdocs serve

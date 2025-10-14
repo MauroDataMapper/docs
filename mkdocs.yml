@@ -27,6 +27,11 @@ plugins:
     - search:
         lang: en
         separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+    - docker-tags:
+        user: maurodatamapper
+        repo: mauro
+        json_output: docs/docker-tags.json
+        md_output: docs/download/docker-table.md
 
 extra_css:
     - assets/stylesheets/extra.css
@@ -61,6 +66,7 @@ markdown_extensions:
             custom_checkbox: true
     - pymdownx.tilde
     - def_list
+    - pymdownx.snippets
 extra:
   analytics:
     provider: google
@@ -70,7 +76,7 @@ extra:
     description: We use cookies to recognize your repeated visits and preferences, as well
          as to measure the effectiveness of our documentation and whether users
          find what they're searching for. With your consent, you're helping us to
-         make our documentation better.
+         make our site better.
 nav:
     -   Home: 'index.md'
     -   About:
@@ -177,3 +183,7 @@ nav:
     -   Community:
             -   Support: 'community/support.md'
             -   Contribute: 'community/contribute.md'
+    -   Download:
+            -   Docker images: 'download/docker.md'
+            -   Configure and run: 'download/configure.md'
+            -   Update: 'download/update.md'
