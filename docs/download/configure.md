@@ -6,38 +6,40 @@ An installation of **Mauro Data Mapper** has three (3) components:
 
 ## The all-in-one docker image
 The all-in-one docker image holds all three components for simplicity, and it will run without further configuration.
-However, to be able to use Mauro, you will need to be able to (1) sign in
-to the user interface, and (2) to persist the data held by the database when the container is restarted. For these
-the creation of three folders/directories and one file is required.
+However, to be able to use Mauro, you will need to be able to
 
-This kind of container exposes these mount points:
+1. sign in to the user interface or API, and
+2. to persist the data held by the database when the container is restarted.
 
-| Mount point              | Purpose                     | Required |
-|--------------------------|-----------------------------|----------|
-| /opt/init                | Start up with configuration | Yes      |
-| /var/lib/postgresql/data | Persists Postgres data      | Yes      |
-| /var/logs                | Logging                     | No       |
-| /database                | Database snapshots          | No       |
+Some additional configuration, in the form of specifically three folders/directories and one file, is required.
 
-which can be used to access, and persist files used by the docker container.
-Of these */opt/init* and */var/lib/postgresql/data* are essential for use.
+To be able to access and persist files used by the docker container, these file mount points are exposed for use:
 
-And these TCP ports:
+| Mount point              | Purpose                 | Required?                            |
+|--------------------------|-------------------------|--------------------------------------|
+| /opt/init                | Start up configuration  | <span style="color:green">Yes</span> |
+| /var/lib/postgresql/data | Persist Postgres data   | <span style="color:green">Yes</span> |
+| /var/logs                | Logging                 | No                                   |
+| /database                | Hold database snapshots | No                                   |
+
+Of these */opt/init* and */var/lib/postgresql/data* must be set up.
+
+To access REST API, and the Postgres database, the docker container also exposes these TCP ports for use:
 
 | Port  | Purpose                  |
 |-------|--------------------------|
 | 8080  | REST API, User interface |
 | 5432  | Postgres database        |
 
-which can be used to access the user interface and also the REST API (8080), and the Postgres database (5432) .
+The docker run command will need port 8080 open to access the user interface and/or the Mauro backend REST API service. 
 
 ### Start-up
 
 #### Configuration
-As the docker container starts up the components, it will look under */opt/init* for configuration files, scripts,
+On running the image as a docker container, */opt/init* is scanned for configuration files, scripts,
 plugins, and other resources.
 
-There are two sub-directories under */opt/init*:
+Under */opt/init* there are two sub-directories involved in start-up:
 
 <pre>
 /opt/init/
@@ -45,29 +47,42 @@ There are two sub-directories under */opt/init*:
     | - micronaut/
 </pre>
 
-| Sub&#160;directory | Start up actions                                                                                                                                                                                      |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| postgres/          | *.sh* scripts will be run<br/>*.sql* will be run in Postgres                                                                                                                                          |
-| micronaut/         | *.sh* scripts will be run<br/>*.jar* files loaded as plugins<br/>*application.yml* installed as Micronaut's configuration<br/>*all other files* will be copied to Micronaut's *resources/* directory. |
+| Sub&#160;directory | Start up actions                                                                                                                                                                                                               |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| postgres/          | *.sh* shell scripts will be run<br/>*.sql* will be run by Postgres                                                                                                                                                             |
+| micronaut/         | *.sh* shell scripts will be run<br/>*.jar* Java ARchive files set up as Mauro plugins<br/>*application.yml* installed as Micronaut's configuration<br/>*all other files* will be copied to Micronaut's *resources/* directory. |
 
-Use /opt/init at start up to include any plugins as *.jar* files, and set your own version of *application.yml*
+Use */opt/init* to include any plugins as *.jar* files, and set your own version of *application-mauro.yml* like this:
 
 <pre>
 /opt/init/
     | - postgres/
     | - micronaut/
-        | - application.yml
+        | - application-mauro.yml
         | - yourFavouritePlugin.jar
 </pre>
 
-#### Database
-The start-up will also look under */var/lib/postgresql/data* for any existing Postgres database files.
-If none are found, it will initialise the database in that directory and then process */opt/init/postgres*
+The minimal set-up for */opt/init/* looks like this:
 
 <pre>
 /opt/init/
-        | - postgres/
-        | - micronaut/
+    | - micronaut/
+        | - application-mauro.yml
+</pre>
+
+#### Database
+At start-up */var/lib/postgresql/data* will be checked for any existing Postgres database files.
+If none are found, the database will be initialised creating an empty database.
+Once the database has been established, the contents of */opt/init/postgres* will be processed.
+
+The file structure now looks like:
+
+<pre>
+/opt/init/
+    | - postgres/
+    | - micronaut/
+        | - application-mauro.yml
+
 /var/lib/postgresql/data
     | - Many
     | - Files
@@ -79,100 +94,183 @@ If none are found, it will initialise the database in that directory and then pr
 
 #### Example start-up configuration and run
 
-For example, create a directory tree for your docker container to use:
+Putting this all together, create a directory tree available for your docker container to use:
 
+##### 1. Create directories
 <pre>
 /my/docker/files/
     | - data/
     | - init/
         | - micronaut/
-            | - application.yml
+            | - application-mauro.yml
 </pre>
 
 Where *data/* is going to be where the Postgres database files are kept, and *init/micronaut/* is where the
-configuration *application.yml* is going to go.
+configuration *application-mauro.yml* is going to go.
 
-Fill in *application.yml* with some configuration:
+##### 2. Configure users, groups, API keys
+Fill in *application-mauro.yml* with some configuration:
 
 ```yaml
-micronaut:
-  application:
-    name: sandbox
-    client:
-      connect-timeout: 11s
+mauro:
+  users:
+    -   email: admin@maurodatamapper.com
+        first-name: admin
+        last-name: admin
+        temp-password: a_password
+  groups:
+    -   name: Administrators
+        is-admin: true
+        members:
+          - admin@maurodatamapper.com
+  api-keys:
+    -   name: My first API Key
+        email: admin@maurodatamapper.com
+        refreshable: true
+        expiry: 2027-12-31
+```
 
-  server:
-    port: 8080
-    max-request-size: 500mb
-    multipart:
-      max-file-size: 500mb
-    cors:
-      enabled: true
-  router:
-    static-resources:
-      default:
-        paths: classpath:public
-        mapping: /**
-        enabled: true
-      swagger:
-        paths: classpath:META-INF/swagger
-        mapping: /swagger/**
-      swagger-ui:
-        paths: classpath:META-INF/swagger/views/swagger-ui
-        mapping: /swagger-ui/**
-  security:
-    enabled: true
-    authentication: session
-    redirect:
-      enabled: false
-    endpoints:
-      login:
-        enabled: true
-        path: '/api/authentication/login'
-      logout:
-        enabled: true
-        path: '/api/authentication/logout'
-        get-allowed: true
-      oauth:
-        enabled: true
-    reject-not-found: false
-    authentication-provider-strategy: any
+##### 3. Pull docker
+Pull a docker image (see [Docker images](./docker.md) for the list):
 
-  caches:
-    items-cache:
-      initial-capacity: 10000
-      maximum-weight: 1_000_000_000
-      expire-after-write: 1h
-      record-stats: true
-    security-cache:
-      initial-capacity: 10000
-      maximum-weight: 1_000_000_000
-      expire-after-write: 1h
-      record-stats: true
-    api-property-cache:
-      initial-capacity: 1000
-      maximum-weight: 1_000_000_000
-      expire-after-write: 1h
-      record-stats: true
+```bash
+docker pull maurodatamapper/mauro:0.0.1-beta
+```
 
-endpoints:
-  routes:
-    enabled: true
-    sensitive: true
-  beans:
-    enabled: true
-    sensitive: true
-  flyway:
-    enabled: true
-    sensitive: true
-  caches:
-    enabled: true
-    sensitive: true
+##### 4. Start container
+Start a container with user interface port open and local directories mounted:
 
-jackson:
-  serialization:
-    writeDatesAsTimestamps: false
+```bash
+docker run --rm -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data -it maurodatamapper/mauro:0.0.1-beta
+```
 
+##### 5. View in browser
+Visit http://<span/>yourhostname:8080/ in your browser.
+
+The above *application-mauro.yml* has some *mauro:* configuration for users, groups, and API keys.
+Sign in with those credentials. In the above example that would be:
+
+*admin@<span/>maurodatamapper.com*<br/>
+*a_password*
+
+Once set-up:
+
+ * Stopping the container will shutdown cleanly.
+ * The *docker run* command will start it again.
+ * You can edit the start up files, and restart the container again.
+ * You can replace the docker image with a newer version using the *docker pull* command,
+stop the previous container, and start the new one.
+
+### Bootstrapping users, groups and api keys
+
+Edit */opt/init/micronaut/application-mauro.yml* to look similar to this:
+
+```yaml
+mauro:
+    users:
+        -   email: admin@maurodatamapper.com
+            first-name: admin
+            last-name: admin
+            temp-password: mypassword
+    groups:
+        -   name: Administrators
+            description: optional description
+            is-admin: true
+            members:
+                - admin@maurodatamapper.com
+    api-keys:
+        -   name: My first API Key
+            email: admin@maurodatamapper.com
+            key: optional UID key
+            refreshable: true
+            expiry: 2027-12-31
+```
+#### Users
+
+| Field          | Purpose                              | Mandatory? |
+|----------------|--------------------------------------|------------|
+| email          | is the user name as an email address | Yes        |
+| first-name     | First name                           | Yes        |
+| last-name      | Last name                            | Yes        |
+| temp-password  | A temporary/initial password         | Yes        |
+
+#### Groups
+
+| Field       | Purpose                                             | Mandatory? | Default |
+|-------------|-----------------------------------------------------|------------|---------|
+| name        | is the user name as an email address                | Yes        |         |
+| description | Description of the group                            | No         | Blank   |
+| is-admin    | Whether the members of the group are administrators | No         | false   |
+| members     | A list of usernames                                 | No         | Empty   |
+
+#### Api-keys
+
+| Field       | Purpose                                                          | Mandatory? | Default              |
+|-------------|------------------------------------------------------------------|------------|----------------------|
+| name        | A unique name for the API key                                    | Yes        |                      |
+| email       | The user the key belongs to                                      | Yes        |                      |
+| key         | A given API key                                                  | No         | Creates a new key    |
+| expiry      | yyyy-MM-dd date when the key will expire                         | No         | 1 Year from creation |
+| refreshable | When the key expires, it may be refreshed with a new expiry date | No         | false                |
+
+For any optional field, if you don't wish to set a value for it,
+omit it from the configuration rather than including it as blank.
+
+### Running the container
+
+#### Foreground
+To run the container in the foreground, you can use:
+```bash
+docker run --rm -it -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.1-beta
+```
+
+| Part                                              | Meaning                                                                                                                                                                                              | 
+|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| docker run                                        | The docker command                                                                                                                                                                                   |
+| --rm                                              | Remove the container when it stops                                                                                                                                                                   | 
+| -it                                               | You can use CTRL-C to exit the container from the command line, and see the start-up trace<br/>-i means --interactive Keep STDIN open even if not attached<br/> -t means --tty Allocate a pseudo-TTY | 
+| -p 8080:8080                                      | Publish to the host's port 8080 from the container's port 8080                                                                                                                                       | 
+| -v /my/docker/files/init:/opt/init:ro             | Create a mount from:<br/>/my/docker/files/init<br/> that surfaces at:<br/>/opt/init<br/> in the container, in read-only mode (ro)                                                                    | 
+| -v /my/docker/files/data:/var/lib/postgresql/data | Create a mount from:<br/>/my/docker/files/data<br/> that surfaces at:<br/>/var/lib/postgresql/data in the container                                                                                  | 
+| maurodatamapper/mauro:0.0.1-beta                  | The image to run                                                                                                                                                                                     |
+
+#### Background
+To run the container in the background, you can use:
+```bash
+docker run --rm -d -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.1-beta
+```
+
+| Part | Meaning                                                     |
+|------|-------------------------------------------------------------|
+| -d   | --detach Run container in background and print container ID |
+
+You can see it running in docker:
+```bash
+docker ps
+```
+
+And stop it with:
+```bash
+docker stop <CONTAINER ID>
+```
+
+### Running the container with existing data
+
+#### Option 1 existing database
+
+Put a pre-existing postgres database into your *data/* directory
+
+#### Option 2 SQL import
+
+Put some import *.sql* scripts into your *init/postgres* directory for one start-up.
+
+### Data source
+
+For both options, you may want to change the default *DATABASE_NAME*, *DATABASE_USERNAME*, or *DATABASE_PASSWORD*
+
+Edit *init/micronaut/application-datasources.yml* :
+
+```yaml
 datasources:
   default:
     url: jdbc:postgresql://localhost:5432/sandbox
@@ -181,96 +279,18 @@ datasources:
     dialect: POSTGRES
     db-type: postgres
     driver-class-name: org.postgresql.Driver
-
-
-javamail:
-  authentication:
-    username: $$username$$ # Replace me!
-    password: $$password$$ # Replace me!
-  properties:
-    mail:
-      smtp:
-        port: 587 # Replace me!
-        auth: true
-        starttls:
-          enable: true
-        host: $$host$$ # Replace me!
-
-mauro:
-  federation:
-    subscribed-catalogues.max: 50
-  audit:
-    scope: ALL
-  users:
-    -   email: admin@maurodatamapper.com
-        first-name: admin
-        last-name: admin
-        temp-password: a_password
-  groups:
-    -   name: Administrators
-        isAdmin: true
-        members:
-          - admin@maurodatamapper.com
-  api-keys:
-    -   name: My first API Key
-        email: admin@maurodatamapper.com
-        refreshable: true
-        expiry: 2025-12-31
 ```
 
-Pull a docker image (see [Docker images](./docker.md) for the list):
+Create *env.list* with corresponding values:
+```dotenv
+DATABASE_NAME=sandbox
+DATABASE_USERNAME=sandbox
+DATABASE_PASSWORD=sandbox
+```
+
+And then run the container with these environment variables set: DATABASE_NAME, DATABASE_USERNAME, DATABASE_PASSWORD ,
+using *--env-file*
 
 ```bash
-docker pull maurodatamapper/mauro:0.0.1-beta
+docker run .... --env-file env.list
 ```
-
-Start a container with user interface port open and local directories mounted:
-
-```bash
-docker run --rm -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data -it maurodatamapper/mauro:0.0.1-beta
-```
-
-Visit http://<span/>yourhostname:8080/ in your browser.
-
-The above *application.yml* has some *micronaut.mauro:* configuration for users, groups, and API keys.
-Sign in with those credentials, in the above example that would be:
-
-*admin@<span/>maurodatamapper.com*<br/>
-*a_password*
-
-### Bootstrapping users, groups and api keys
-
-Before you can sign in to Mauro, you need configure a user.
-This is done via the application.yml file that is passed to the container via */opt/init/micronaut/application.yml*
-to configure Micronaut. See above.
-
-    users:
-        -   email: admin@maurodatamapper.com
-            first-name: admin
-            last-name: admin
-            temp-password: mypassword
-    groups:
-        -   name: Administrators
-            isAdmin: true
-            members:
-                - admin@maurodatamapper.com
-    api-keys:
-        -   name: My first API Key
-            email: admin@maurodatamapper.com
-            refreshable: true
-            expiry: 2025-12-31
-
-### Running the container
-
-Point the container at your *init/* directory, and expose the port micronaut is running on:
-
-    # docker run --rm -p 8080:8080 -v /path/to/your/init:/opt/init:ro -it maurodatamapper/mauro:0.0.2-SNAPSHOT
-
-To persist the data between shutdown and startup, you must also connect the container to */var/lib/postgresql/data* as read/write.
-
-## Running the container with existing data
-
-Either import *.sql* scripts are present in */opt/init/postgres* to be imported at startup, or a pre-existing postgres database
-is present in */var/lib/postgresql/data*. In both these cases, make sure that the datasource for postgres matches up with the
-*application.yml* configuration
-
