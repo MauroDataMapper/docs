@@ -6,7 +6,7 @@ An installation of **Mauro Data Mapper** has three (3) components:
 
 ## The all-in-one docker image
 The all-in-one docker image holds all three components for simplicity, and it will run without further configuration.
-However, to be able to use Mauro, you will need to be able to
+However, to be able to use Mauro, you will need to be able to:
 
 1. sign in to the user interface or API, and
 2. to persist the data held by the database when the container is restarted.
@@ -24,14 +24,14 @@ To be able to access and persist files used by the docker container, these file 
 
 Of these */opt/init* and */var/lib/postgresql/data* must be set up.
 
-To access REST API, and the Postgres database, the docker container also exposes these TCP ports for use:
+To access REST API, and the Postgres database, the docker container also exposes these TCP ports for possible use:
 
 | Port  | Purpose                  |
 |-------|--------------------------|
 | 8080  | REST API, User interface |
 | 5432  | Postgres database        |
 
-The docker run command will need port 8080 open to access the user interface and/or the Mauro backend REST API service. 
+The docker run command should have port 8080 open so that there is access to the user interface and/or the Mauro backend REST API service. 
 
 ### Start-up
 
@@ -72,7 +72,7 @@ The minimal set-up for */opt/init/* looks like this:
 
 #### Database
 At start-up */var/lib/postgresql/data* will be checked for any existing Postgres database files.
-If none are found, the database will be initialised creating an empty database.
+If none are found, the database will be initialised by creating an empty database.
 Once the database has been established, the contents of */opt/init/postgres* will be processed.
 
 The file structure now looks like:
@@ -134,15 +134,18 @@ mauro:
 Pull a docker image (see [Docker images](./docker.md) for the list):
 
 ```bash
-docker pull maurodatamapper/mauro:0.0.1-beta
+docker pull maurodatamapper/mauro:0.0.2-beta
 ```
 
 ##### 4. Start container
 Start a container with user interface port open and local directories mounted:
 
 ```bash
-docker run --rm -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data -it maurodatamapper/mauro:0.0.1-beta
+docker run --rm -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data -it maurodatamapper/mauro:0.0.2-beta
 ```
+
+(The above will start the container in the foreground - which is useful for seeing trace and interacting through the terminal.
+Read on to find a detailed description of the docker command, for example running the container in the background.)
 
 ##### 5. View in browser
 Visit http://<span/>yourhostname:8080/ in your browser.
@@ -221,7 +224,7 @@ omit it from the configuration rather than including it as blank.
 #### Foreground
 To run the container in the foreground, you can use:
 ```bash
-docker run --rm -it -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.1-beta
+docker run --rm -it -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.2-beta
 ```
 
 | Part                                              | Meaning                                                                                                                                                                                              | 
@@ -232,12 +235,12 @@ docker run --rm -it -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/do
 | -p 8080:8080                                      | Publish to the host's port 8080 from the container's port 8080                                                                                                                                       | 
 | -v /my/docker/files/init:/opt/init:ro             | Create a mount from:<br/>/my/docker/files/init<br/> that surfaces at:<br/>/opt/init<br/> in the container, in read-only mode (ro)                                                                    | 
 | -v /my/docker/files/data:/var/lib/postgresql/data | Create a mount from:<br/>/my/docker/files/data<br/> that surfaces at:<br/>/var/lib/postgresql/data in the container                                                                                  | 
-| maurodatamapper/mauro:0.0.1-beta                  | The image to run                                                                                                                                                                                     |
+| maurodatamapper/mauro:0.0.2-beta                  | The image to run                                                                                                                                                                                     |
 
 #### Background
 To run the container in the background, you can use:
 ```bash
-docker run --rm -d -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.1-beta
+docker run --rm -d -p 8080:8080 -v /my/docker/files/init:/opt/init:ro -v /my/docker/files/data:/var/lib/postgresql/data maurodatamapper/mauro:0.0.2-beta
 ```
 
 | Part | Meaning                                                     |
