@@ -20,3 +20,9 @@ $ mkdocs serve
 ```
 
 This will build and run the site in 'responsive' mode, rebuilding when changes are made.
+
+Note: pip can be called pip3
+Note: mkdocs may not be in your bin PATH. On a Mac it is found under your home directory/Library/Python/3.*/bin
+Note: export PATH="$PATH:...."
+
+

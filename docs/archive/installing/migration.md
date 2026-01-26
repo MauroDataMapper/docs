@@ -45,6 +45,6 @@ The scripts all execute using the defaults as if you have built the system using
 
 ## Notes
 
-Please be aware that [DataFlows](../glossary/dataflow/dataflow.md)  are currently not migrated using this system, and may need to be manually migrated, or exported / imported.
+Please be aware that [DataFlows](../../glossary/dataflow/dataflow.md)  are currently not migrated using this system, and may need to be manually migrated, or exported / imported.
 
 ---

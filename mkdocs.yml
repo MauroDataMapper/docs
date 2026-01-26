@@ -32,6 +32,8 @@ plugins:
         repo: mauro
         json_output: docs/docker-tags.json
         md_output: docs/download/docker-table.md
+        md_pull_output: docs/download/docker-pull.md
+        md_image_output: docs/download/docker-image.md
 
 extra_css:
     - assets/stylesheets/extra.css
@@ -86,6 +88,19 @@ nav:
             -   Mauro: 'about/mauro.md'
             -   Release Notes: 'about/release-notes.md'
             -   Development Roadmap: 'about/development-roadmap.md'
+    -   Download:
+            -   Quick start: 'download/quick-start.md'
+            -   Docker images: 'download/docker.md'
+            -   Configuration:
+                -   Background: 'download/configure.md'
+                -   Example: 'download/example.md'
+                -   Users, Groups, API Keys: 'download/users-groups-keys.md'
+                -   Host configuration: 'download/CORS.md'
+                -   Data sources: 'download/datasource.md'
+                -   OpenID Connect: 'download/openid-connect.md'
+                -   Static content: 'download/static-content.md'
+            -   Running the container: 'download/run.md'
+            -   Updating: 'download/update.md'
     -   Using Mauro:
             -   User Guides:
                     -   User Guides: 'user-guides/index.md'
@@ -114,27 +129,6 @@ nav:
                     -   Semantic Links: 'tutorials/semantic-links.md'
                     -   Properties and profiles: 'tutorials/properties-profiles.md'
             -   Glossary: 'glossary/glossary.md'
-    -   Installing and Administration:
-            -   Installation:
-                    -   Docker Setup: 'installing/docker-setup.md'
-                    -   Docker Install: 'installing/docker-install.md'
-            -   Updating: 'installing/updating.md'
-            -   Configuring:
-                    -   Overview: 'installing/configuring/overview.md'
-                    -   Changing Database: 'installing/configuring/changing-database.md'
-                    -   MDM Core: 'installing/configuring/mdm-core-config.md'
-                    -   Plugins:
-                            -   Digital Object Identifiers: 'plugins/configuring/doi.md'
-                            -   FHIR Importer: 'plugins/configuring/fhir.md'
-                            -   OpenID Connect: 'plugins/configuring/oic.md'
-                    -   Default Files:
-                            -   MDM Application YML: 'installing/configuring/application.yml.md'
-                            -   Build YML: 'installing/configuring/build.yml.md'
-                            -   Runtime YML: 'installing/configuring/runtime.yml.md'
-            -   Administration: 'installing/administration.md'
-            -   Branding: 'installing/branding/branding.md'
-            -   Plugins: 'installing/plugins.md'
-            -   Migrating Old Data: 'installing/migration.md'
     -   Developer Resources:
             -   Technical Architecture: 'resources/architecture.md'
             -   REST API:
@@ -183,7 +177,25 @@ nav:
     -   Community:
             -   Support: 'community/support.md'
             -   Contribute: 'community/contribute.md'
-    -   Download:
-            -   Docker images: 'download/docker.md'
-            -   Configure and run: 'download/configure.md'
-            -   Update: 'download/update.md'
+    -   Archive:
+            -   Installing and Administration:
+                    -   Installation:
+                            -   Docker Setup: 'archive/installing/docker-setup.md'
+                            -   Docker Install: 'archive/installing/docker-install.md'
+                    -   Updating: 'archive/installing/updating.md'
+                    -   Configuring:
+                            -   Overview: 'archive/installing/configuring/overview.md'
+                            -   Changing Database: 'archive/installing/configuring/changing-database.md'
+                            -   MDM Core: 'archive/installing/configuring/mdm-core-config.md'
+                            -   Plugins:
+                                    -   Digital Object Identifiers: 'plugins/configuring/doi.md'
+                                    -   FHIR Importer: 'plugins/configuring/fhir.md'
+                                    -   OpenID Connect: 'plugins/configuring/oic.md'
+                            -   Default Files:
+                                    -   MDM Application YML: 'archive/installing/configuring/application.yml.md'
+                                    -   Build YML: 'archive/installing/configuring/build.yml.md'
+                                    -   Runtime YML: 'archive/installing/configuring/runtime.yml.md'
+                    -   Administration: 'archive/installing/administration.md'
+                    -   Branding: 'archive/installing/branding/branding.md'
+                    -   Plugins: 'archive/installing/plugins.md'
+                    -   Migrating Old Data: 'archive/installing/migration.md'

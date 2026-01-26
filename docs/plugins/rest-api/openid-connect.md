@@ -8,7 +8,7 @@ In order use OpenID Connect identity providers, the Mauro instance must:
 2. Set up and configure one or more identity services that support the OpenID Connect protocol.
 3. Add the configuration details of each identity provider to Mauro.
 
-The full details of this set up can be viewed in the user guide [Using OpenID Connect](../../installing/openid-connect/openid-connect).
+The full details of this set up can be viewed in the user guide [Using OpenID Connect](../../archive/installing/openid-connect/openid-connect).
 
 ## Authenticating users
 

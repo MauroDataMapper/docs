@@ -15,6 +15,8 @@ class DockerTagsPlugin(BasePlugin):
         ('retries', config_options.Type(int, default=3)),
         ('cache_max_age', config_options.Type(int, default=3600)),
         ('md_output', config_options.Type(str, required=True)),
+        ('md_pull_output', config_options.Type(str, required=True)),
+        ('md_image_output', config_options.Type(str, required=True)),
     )
 
     def on_pre_build(self, config):
@@ -26,6 +28,8 @@ class DockerTagsPlugin(BasePlugin):
         retries = self.config['retries']
         cache_max_age = self.config['cache_max_age']
         md_path = self.config['md_output']
+        md_pull_path = self.config['md_pull_output']
+        md_image_path = self.config['md_image_output']
 
         # Check cache freshness
         if os.path.exists(output_path):
@@ -94,3 +98,34 @@ class DockerTagsPlugin(BasePlugin):
                 f.write(f"| `{name}` | {arch_str} | {size_mb} | {last_updated} | `{pull_cmd}` |\n")
 
         print(f"Markdown table written to {md_path}")
+
+
+        # Write pull command
+        os.makedirs(os.path.dirname(md_pull_path), exist_ok=True)
+        with open(md_pull_path, "w") as f:
+
+            # Sort by last_updated descending
+            all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
+
+            for tag in all_tags:
+                pull_cmd = f"docker pull {user}/{repo}:{name}"
+
+                f.write(f"{pull_cmd}\n")
+                break
+
+        print(f"Markdown pull written to {md_pull_path}")
+
+        # Write the docker image tag
+        os.makedirs(os.path.dirname(md_image_path), exist_ok=True)
+        with open(md_image_path, "w") as f:
+
+            # Sort by last_updated descending
+            all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
+
+            for tag in all_tags:
+                image = f"{user}/{repo}:{name}"
+
+                f.write(f"{image}\n")
+                break
+
+        print(f"Image tag written to {md_image_path}")
