@@ -17,6 +17,7 @@ class DockerTagsPlugin(BasePlugin):
         ('md_output', config_options.Type(str, required=True)),
         ('md_pull_output', config_options.Type(str, required=True)),
         ('md_image_output', config_options.Type(str, required=True)),
+        ('md_ready_output', config_options.Type(str, required=True)),
     )
 
     def on_pre_build(self, config):
@@ -30,6 +31,7 @@ class DockerTagsPlugin(BasePlugin):
         md_path = self.config['md_output']
         md_pull_path = self.config['md_pull_output']
         md_image_path = self.config['md_image_output']
+        md_ready_path = self.config['md_ready_output']
 
         # Check cache freshness
         if os.path.exists(output_path):
@@ -129,3 +131,14 @@ class DockerTagsPlugin(BasePlugin):
                 break
 
         print(f"Image tag written to {md_image_path}")
+
+        # Write the ready configuration
+        os.makedirs(os.path.dirname(md_ready_path), exist_ok=True)
+        url = f"https://raw.githubusercontent.com/MauroDataMapper/mauro-micronaut/refs/heads/develop/ready-configuration/index.md"
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+        data = response.text
+        with open(md_ready_path, "w", encoding="utf-8") as f:
+            f.write(data)
+
+        print(f"Ready configuration written to {md_ready_path}")

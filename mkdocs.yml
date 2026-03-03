@@ -34,6 +34,7 @@ plugins:
         md_output: docs/download/docker-table.md
         md_pull_output: docs/download/docker-pull.md
         md_image_output: docs/download/docker-image.md
+        md_ready_output: docs/download/docker-ready.md
 
 extra_css:
     - assets/stylesheets/extra.css

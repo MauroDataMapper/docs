@@ -12,6 +12,7 @@ cd ~
 mkdir mdm_data
 ```
 ## Download some configuration
+--8<-- "docs/download/docker-ready.md"
 
 ## Run it!
 
