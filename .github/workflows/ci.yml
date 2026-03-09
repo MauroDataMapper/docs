@@ -57,7 +57,7 @@ jobs:
                   repository: MauroDataMapper/maurodatamapper.github.io
                   ref: refs/heads/main
                   path: ./maurodatamapper.github.io
-                  token: ${{ secrets.SECRET_PAT }}
+                  token: ${{ secrets.ACCESS_TOKEN }}
                   
             - name: Deploy
               working-directory: ./maurodatamapper.github.io
