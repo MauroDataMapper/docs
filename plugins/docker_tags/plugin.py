@@ -69,14 +69,14 @@ class DockerTagsPlugin(BasePlugin):
 
         print(f"Wrote {len(all_tags)} tags to {output_path}")
 
+        # Sort by last_updated descending
+        all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
+
         # Write Markdown table
         os.makedirs(os.path.dirname(md_path), exist_ok=True)
         with open(md_path, "w") as f:
             f.write("| Tag  | Architectures  | Size (MB)  | Last Updated  | Pull Command  |\n")
             f.write("|------|----------------|------------|---------------|---------------|\n")
-
-            # Sort by last_updated descending
-            all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
 
             for tag in all_tags:
                 name = tag.get("name", "")
@@ -106,10 +106,8 @@ class DockerTagsPlugin(BasePlugin):
         os.makedirs(os.path.dirname(md_pull_path), exist_ok=True)
         with open(md_pull_path, "w") as f:
 
-            # Sort by last_updated descending
-            all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
-
             for tag in all_tags:
+                name = tag.get("name", "")
                 pull_cmd = f"docker pull {user}/{repo}:{name}"
 
                 f.write(f"{pull_cmd}\n")
@@ -121,10 +119,8 @@ class DockerTagsPlugin(BasePlugin):
         os.makedirs(os.path.dirname(md_image_path), exist_ok=True)
         with open(md_image_path, "w") as f:
 
-            # Sort by last_updated descending
-            all_tags.sort(key=lambda t: t.get("last_updated", ""), reverse=True)
-
             for tag in all_tags:
+                name = tag.get("name", "")
                 image = f"{user}/{repo}:{name}"
 
                 f.write(f"{image}\n")
