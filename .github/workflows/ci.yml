@@ -45,8 +45,11 @@ jobs:
 ##            - run: apt-get install pngquant
 ##
 
-            - name: Install mkdoce-material-insiders
+            - name: Install mkdocs-material-insiders
               run: pip install mkdocs-material
+
+            - name: Install plugins
+              run: pip install -e plugins
 
             - name: Checkout maurodatamapper.github.io
               uses: actions/checkout@v4
@@ -54,7 +57,6 @@ jobs:
                   repository: MauroDataMapper/maurodatamapper.github.io
                   ref: refs/heads/main
                   path: ./maurodatamapper.github.io
-                  token: ${{secrets.MKDOCS_INSIDERS_TOKEN}}
 
             - name: Deploy
               working-directory: ./maurodatamapper.github.io
