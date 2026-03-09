@@ -63,7 +63,7 @@ This will take you to configuration page where you can click the **'Lucene'** ta
 Please do not leave the page whilst reindexing is in progress. The time required is dependent on the number of models saved in the system, but may 
 take between 5 and 10 minutes for a large system.
 
-Alternatively, an API call may be made: [see here](../rest-api/admin.md#system-actions) for details.  This `POST` call may be made with an 
+Alternatively, an API call may be made: [see here](../../rest-api/admin.md#system-actions) for details.  This `POST` call may be made with an 
 existing session cookie, by passing username / password parameters as part of the call, or by passing an API Key.  Only those with system 
 administrator role may perform this action.
 

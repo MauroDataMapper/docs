@@ -1,10 +1,31 @@
-## What is Mauro Data Mapper?
+**Mauro Data Mapper** is a toolkit that provides a single, structured place to describe your data: what it means, how it is used,
+and where it comes from.
 
-**Mauro Data Mapper** is a toolkit for the design and documentation of
+## Why use Mauro?
+
+Data is at its most useful when people can trust and understand it, and Mauro makes that possible by allowing you to:
+
+* Document your data models and metadata in a structured and searchable way
+* Safely version and share your data models
+* Collaborate through a web interface
+* Link datasets and data standards together, connecting data definitions, code lists, and meanings
+* Trace provenance through dataflows
+* Maintain data governance standards
+* Curate catalogues of metadata
+
+Anyone who needs to make data understandable, reusable, or standardised can benefit from Mauro, such as:
+
+* Data managers and stewards who maintain data quality and governance
+* Researchers and analysts who need clear definitions and provenance for the data they use
+* Modellers creating and evolving data models
+* Policy makers and domain experts who need to review, approve, and publish data assets
+
+Use **Mauro Data Mapper** for the design and documentation of
 databases, data flows, and data standards, as well as related software
 artefacts such as data schemas and data forms.  It was originally
 developed for the description of data in clinical research, but it is
 equally applicable in other settings.
+
 
 Data and software artefacts can be described as linked, versioned
 [Data Models](../glossary/data-model/data-model.md).  The links let us
@@ -26,7 +47,7 @@ For example, consider a blood pressure reading. Although this has standard units
 
 ## How does Mauro Data Mapper work?
 
-The **Mauro Data Mapper** is a web based tool which stores and manages descriptions of data. These can be descriptions of data already collected, such as databases or csv files. Or these can be descriptions of data you wish to collect or transfer between organisations, such as a specification for a webform or an XML schema. 
+The **Mauro Data Mapper** is a web based tool that stores and manages descriptions of data. These can be descriptions of data already collected, such as databases or csv files. Or these can be descriptions of data you wish to collect or transfer between organisations, such as a specification for a webform or an XML schema. 
 
 **Mauro Data Mapper** represents both types of descriptions of data as **Data Models**. These are defined as a structured collection of metadata and effectively model the data that they describe.
 
@@ -46,6 +67,42 @@ However, there might be a section within another section on the webform, such as
 ![Flowchart of Webform Data Model example](../glossary/data-model/data-model-flowchart.png)
 
 By organising metadata in this way, **Mauro Data Mapper** allows users to easily search data but also automatically import database schemas and export forms; helping to record data in standardised formats.
+
+---
+
+## Application areas
+
+There are many possible, and yet to be discovered, applications for **Mauro Data Mapper**; here are a few examples.
+Please feel free to contact us or engage with the Mauro community if you have an questions about using Mauro.
+
+* **System integrators, enterprise architects, API designers, digital transformation teams** need a clear,
+shared model of what data means across multiple systems or services. Mauro becomes a data contract space / the source of
+truth for how systems exchange information. E.g. defining a model for a data warehouse or API gateway so everyone knows
+which fields mean what and how they relate.
+* **Knowledge engineers, semantic web specialists, librarians, ontology builders** need structured vocabularies, taxonomies,
+or concept hierarchies. Mauro supports versioning, relationships, and visual exploration of metadata models, making it
+ideal for evolving controlled vocabularies. E.g. maintaining and publishing domain-specific terminology sets or
+linked-data ontologies
+* **Regulators, compliance officers** define and maintain standards that multiple organisations
+adhere to. Mauro provides a transparent way to publish and update official data definitions,
+schemas, and validation rules. E.g. an open register of government data standards or reporting schemas
+* **Research data managers, lab information system owners, academic consortia** need to record precisely what data
+structures were used in a study or experiment. Mauro preserves model versions, relationships, and provenance.
+E.g. tracking changes in a data model across research projects or between collaborating institutions
+* **Data engineers, analytics platform teams, product managers** for data-as-a-service treat datasets as products and
+need to document, version, and communicate what each dataset contains. Mauro provides the metadata catalogue and
+documentation backbone for internal or customer-facing data products. E.g. a company publishing standardised analytics
+datasets with clear metadata and definitions
+* **Universities, data literacy trainers, open data educators** need to understand how data is structured and described,
+not just used. Mauro acts as an educational sandbox for exploring and comparing data models.
+E.g. teaching data modelling, metadata standards, or FAIR data principles interactively
+* **Engineers, urban planners, environmental scientists** build systems that depend on well-defined data structures and
+relationships. Mauro manages the data models behind complex systems, ensuring that
+"the digital version of the real world" stays consistent.
+E.g. managing evolving schemas for smart city or environmental monitoring platforms
+* **Chief Data Officers, data strategists, consultants** need visibility into what data exists, where it lives,
+and how it connects. Mauro provides an inventory of data assets and models.
+E.g. using Mauro as the metadata layer beneath a wider data governance platform or data mesh initiative
 
 ---
 

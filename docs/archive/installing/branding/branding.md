@@ -44,9 +44,9 @@ export const environment = {
 };
 ```
 
-!!! Note 
-	If the theme name is not provided, this will fall back to `default`.
-	
+!!! Note
+If the theme name is not provided, this will fall back to `default`.
+
 An alternative for switching the theme for production UI builds is to set an environment variable called `MDM_UI_THEME_NAME`. This allows the theme setting to be defined as part of a wider build process, such as creating a Docker image.
 
 ### Importing Themes
@@ -73,9 +73,9 @@ Import more theme SASS files here to make them available to the app
 // More SASS files imported here...
 ```
 
-!!! Note 
-    Remember that **Angular Material** requires all themes to be precompiled, so all SASS files must be imported to include them as options. Only one
-    theme will appear at a time though.
+!!! Note
+Remember that **Angular Material** requires all themes to be precompiled, so all SASS files must be imported to include them as options. Only one
+theme will appear at a time though.
 
 ### Creating Themes
 
@@ -92,7 +92,7 @@ in summary, you will need to define:
 2. The **typography** settings to use for text/font
 
 The Material mixins should then be included within a top-level CSS selector named after the theme. This CSS selector will be applied to the body of
-the HTML page and therefore affect all DOM elements below it. 
+the HTML page and therefore affect all DOM elements below it.
 
 The theme file should effectively include the following steps:
 
@@ -156,25 +156,25 @@ Sign in and click the white arrow by your user profile on the right of the menu 
 
 ![User profile dropdown menu](user-profile-menu-configuration.png)
 
-Click the **'Properties'** tab to view a list of properties, with the cog icon indicating a system property. 
+Click the **'Properties'** tab to view a list of properties, with the cog icon indicating a system property.
 
 ![Properties page](properties-page.png)
 
-To edit or delete a property, click the three vetical dots to the right of the relevant row and choose either **'Edit'** or **'Delete'** from the dropdown menu. 
+To edit or delete a property, click the three vetical dots to the right of the relevant row and choose either **'Edit'** or **'Delete'** from the dropdown menu.
 
-To add a new property click the **'+Add'** button at the top right of the page which will take you to an **'Add Property'** form. 
+To add a new property click the **'+Add'** button at the top right of the page which will take you to an **'Add Property'** form.
 
 ![Add property form](add-property.png)
 
-Firstly, select a property you want to add from the dropdown menu. 
+Firstly, select a property you want to add from the dropdown menu.
 ![Property dropdown menu](property-dropdown-menu.png)
 
-Then enter a **'Key'**, **'Category'** and **'Value'**. Tick the **'Publicly visible'** box if it applies. Once the form is completed, click **'Add property'** and a green notifciaiton box should appear at the bottom right of your screen, confirming the changes. 
+Then enter a **'Key'**, **'Category'** and **'Value'**. Tick the **'Publicly visible'** box if it applies. Once the form is completed, click **'Add property'** and a green notifciaiton box should appear at the bottom right of your screen, confirming the changes.
 
 
 !!! Note
-    It may be necessary to manually adjust the HTML source to set correct styling/markup for the content. This can be done by clicking on 
-    the `</>` **'Change Mode'** toolbar button in each form edit field.
+It may be necessary to manually adjust the HTML source to set correct styling/markup for the content. This can be done by clicking on
+the **'Change Mode'** toolbar button in each form edit field.
 
 
 There are configuration properties available to modify the following:
@@ -185,26 +185,26 @@ There are configuration properties available to modify the following:
 
 ### Home Page
 
-The homepage of **Mauro Data Mapper** displays a summary of the tool as well as the most important links to help users easily navigate to the main sections. The homepage can be modified to include custom content to suit your organisation. 
+The homepage of **Mauro Data Mapper** displays a summary of the tool as well as the most important links to help users easily navigate to the main sections. The homepage can be modified to include custom content to suit your organisation.
 
-The homepage is split into two columns and four main sections which can each be modified. 
+The homepage is split into two columns and four main sections which can each be modified.
 
 ![Homepage layout](homepage-layout.png)
 
 !!! Note
-    It is recommended to include correct HTML source and styling in these sections.
+It is recommended to include correct HTML source and styling in these sections.
 
 * **Introduction** - `content.home.intro.left`  
-	This is usually some introduction text on the left column of the starting page
+  This is usually some introduction text on the left column of the starting page
 
 * **Introduction image** - `content.home.intro.right`  
-	This is usually an image or illustration on the right column of the starting page that compliments the introduction text
+  This is usually an image or illustration on the right column of the starting page that compliments the introduction text
 
 * **Features heading** - `content.home.detail.heading`  
-	This is usually a heading for the **'Features'** section underneath the introduction
+  This is usually a heading for the **'Features'** section underneath the introduction
 
 * **Feature boxes** - `content.home.detail.column1 - 3`  
-	These are three feature boxes that usually appear in the **'Features'** section underneath the introduction
+  These are three feature boxes that usually appear in the **'Features'** section underneath the introduction
 
 
 ### Logo

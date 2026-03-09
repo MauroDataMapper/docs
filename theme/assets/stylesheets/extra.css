@@ -314,14 +314,14 @@ div.home-page-button-text span.home-page-button-summary {
 }
 
 .home_left {
-    width: 39%;
+    width: 38%;
     color: white;
     font-size: 14pt;
-
 }
 
 .home_right {
-    width: 59%;
+    padding-left: 1rem;
+    width: 58%;
     padding-bottom: 2em;
     padding-top: 2em;
 
@@ -392,4 +392,50 @@ a.md-top:is(:focus, :hover) {
 .md-tabs__item {
     padding-left: 0 !important;
     padding-right: 1rem !important;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer
+}
+
+button, html [type="button"] {
+    -webkit-appearance: button;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #00796B;
+    border-color: #00796B;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #326099;
+    border-color: #326099;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 14pt;
+    line-height: 1.5;
+    border-radius: .25rem;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.btn-space {
+    margin-right: 0.6em
+}
+
+.md-nav__item .md-nav__link--active {
+    font-weight: bold !important;
+}
+
+.mdm {
+    color: #D9AF55
 }
