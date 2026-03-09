@@ -57,7 +57,8 @@ jobs:
                   repository: MauroDataMapper/maurodatamapper.github.io
                   ref: refs/heads/main
                   path: ./maurodatamapper.github.io
-
+                  token: ${{ secrets.SECRET_PAT }}
+                  
             - name: Deploy
               working-directory: ./maurodatamapper.github.io
               run: mkdocs gh-deploy --config-file ../docs/mkdocs.yml --remote-branch main
